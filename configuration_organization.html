@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>å¦‚ä½•ç»„ç»‡é…ç½®æ–‡ä»¶ &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="é…ç½®" href="index.html"/>
+        <link rel="next" title="å‘½ä»¤è¡Œ" href="../console/index.html"/>
+        <link rel="prev" title="WebæœåŠ¡å™¨çš„é…ç½®" href="web_server_configuration.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a> &raquo;</li>
+      
+          <li><a href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a> &raquo;</li>
+      
+    <li>å¦‚ä½•ç»„ç»‡é…ç½®æ–‡ä»¶</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="configuration_organization.txt.htm" tppabs="http://symfony.cn/docs/_sources/cookbook/configuration/configuration_organization.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-to-organize-configuration-files">
+<span id="index-0"></span><h1>å¦‚ä½•ç»„ç»‡é…ç½®æ–‡ä»¶<a class="headerlink" href="#how-to-organize-configuration-files" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>The default Symfony Standard Edition defines three
+<a class="reference internal" href="environments.html" tppabs="http://symfony.cn/docs/cookbook/configuration/environments.html"><em>execution environments</em></a> called
+<code class="docutils literal"><span class="pre">dev</span></code>, <code class="docutils literal"><span class="pre">prod</span></code> and <code class="docutils literal"><span class="pre">test</span></code>. An environment simply represents a way to
+execute the same codebase with different configurations.</p>
+<p>In order to select the configuration file to load for each environment, Symfony
+executes the <code class="docutils literal"><span class="pre">registerContainerConfiguration()</span></code> method of the <code class="docutils literal"><span class="pre">AppKernel</span></code>
+class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Kernel</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Loader\LoaderInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AppKernel</span> <span class="k">extends</span> <span class="nx">Kernel</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">registerContainerConfiguration</span><span class="p">(</span><span class="nx">LoaderInterface</span> <span class="nv">$loader</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/config/config_&#39;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEnvironment</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;.yml&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This method loads the <code class="docutils literal"><span class="pre">app/config/config_dev.yml</span></code> file for the <code class="docutils literal"><span class="pre">dev</span></code>
+environment and so on. In turn, this file loads the common configuration file
+located at <code class="docutils literal"><span class="pre">app/config/config.yml</span></code>. Therefore, the configuration files of the
+default Symfony Standard Edition follow this structure:</p>
+<div class="highlight-text"><div class="highlight"><pre>&lt;your-project&gt;/
+â”œâ”€ app/
+â”‚  â””â”€ config/
+â”‚     â”œâ”€ config.yml
+â”‚     â”œâ”€ config_dev.yml
+â”‚     â”œâ”€ config_prod.yml
+â”‚     â”œâ”€ config_test.yml
+â”‚     â”œâ”€ parameters.yml
+â”‚     â”œâ”€ parameters.yml.dist
+â”‚     â”œâ”€ routing.yml
+â”‚     â”œâ”€ routing_dev.yml
+â”‚     â””â”€ security.yml
+â”œâ”€ src/
+â”œâ”€ vendor/
+â””â”€ web/
+</pre></div>
+</div>
+<p>This default structure was chosen for its simplicity â€” one file per environment.
+But as any other Symfony feature, you can customize it to better suit your needs.
+The following sections explain different ways to organize your configuration
+files. In order to simplify the examples, only the <code class="docutils literal"><span class="pre">dev</span></code> and <code class="docutils literal"><span class="pre">prod</span></code>
+environments are taken into account.</p>
+<div class="section" id="different-directories-per-environment">
+<h2>Different Directories per Environment<a class="headerlink" href="#different-directories-per-environment" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Instead of suffixing the files with <code class="docutils literal"><span class="pre">_dev</span></code> and <code class="docutils literal"><span class="pre">_prod</span></code>, this technique
+groups all the related configuration files under a directory with the same
+name as the environment:</p>
+<div class="highlight-text"><div class="highlight"><pre>&lt;your-project&gt;/
+â”œâ”€ app/
+â”‚  â””â”€ config/
+â”‚     â”œâ”€ common/
+â”‚     â”‚  â”œâ”€ config.yml
+â”‚     â”‚  â”œâ”€ parameters.yml
+â”‚     â”‚  â”œâ”€ routing.yml
+â”‚     â”‚  â””â”€ security.yml
+â”‚     â”œâ”€ dev/
+â”‚     â”‚  â”œâ”€ config.yml
+â”‚     â”‚  â”œâ”€ parameters.yml
+â”‚     â”‚  â”œâ”€ routing.yml
+â”‚     â”‚  â””â”€ security.yml
+â”‚     â””â”€ prod/
+â”‚        â”œâ”€ config.yml
+â”‚        â”œâ”€ parameters.yml
+â”‚        â”œâ”€ routing.yml
+â”‚        â””â”€ security.yml
+â”œâ”€ src/
+â”œâ”€ vendor/
+â””â”€ web/
+</pre></div>
+</div>
+<p>To make this work, change the code of the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpKernel/KernelInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpKernel/KernelInterface.html#method_registerContainerConfiguration'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpKernel/KernelInterface.html#method_registerContainerConfiguration" title="Symfony\Component\HttpKernel\KernelInterface::registerContainerConfiguration()"><span class="pre">registerContainerConfiguration()</span></a></code>
+method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Kernel</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Loader\LoaderInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AppKernel</span> <span class="k">extends</span> <span class="nx">Kernel</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">registerContainerConfiguration</span><span class="p">(</span><span class="nx">LoaderInterface</span> <span class="nv">$loader</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/config/&#39;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEnvironment</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/config.yml&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then, make sure that each <code class="docutils literal"><span class="pre">config.yml</span></code> file loads the rest of the configuration
+files, including the common files. For instance, this would be the imports
+needed for the <code class="docutils literal"><span class="pre">app/config/dev/config.yml</span></code> file:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/dev/config.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;../common/config.yml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;parameters.yml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;security.yml&#39;</span> <span class="p-Indicator">}</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/dev/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/symfony</span>
+<span class="s">        http://symfony.com/schema/dic/symfony/symfony-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;../common/config.xml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;parameters.xml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;security.xml&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/dev/config.php</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;../common/config.php&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;parameters.php&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;security.php&#39;</span><span class="p">);</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p>Due to the way in which parameters are resolved, you cannot use them to
+build paths in imports dynamically. This means that something like the
+following doesn&#8217;t work:</p>
+<div class="last configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&quot;%kernel.root_dir%/parameters.yml&quot;</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;%kernel.root_dir%/parameters.yml&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;%kernel.root_dir%/parameters.yml&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="semantic-configuration-files">
+<h2>Semantic Configuration Files<a class="headerlink" href="#semantic-configuration-files" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>A different organization strategy may be needed for complex applications with
+large configuration files. For instance, you could create one file per bundle
+and several files to define all application services:</p>
+<div class="highlight-text"><div class="highlight"><pre>&lt;your-project&gt;/
+â”œâ”€ app/
+â”‚  â””â”€ config/
+â”‚     â”œâ”€ bundles/
+â”‚     â”‚  â”œâ”€ bundle1.yml
+â”‚     â”‚  â”œâ”€ bundle2.yml
+â”‚     â”‚  â”œâ”€ ...
+â”‚     â”‚  â””â”€ bundleN.yml
+â”‚     â”œâ”€ environments/
+â”‚     â”‚  â”œâ”€ common.yml
+â”‚     â”‚  â”œâ”€ dev.yml
+â”‚     â”‚  â””â”€ prod.yml
+â”‚     â”œâ”€ routing/
+â”‚     â”‚  â”œâ”€ common.yml
+â”‚     â”‚  â”œâ”€ dev.yml
+â”‚     â”‚  â””â”€ prod.yml
+â”‚     â””â”€ services/
+â”‚        â”œâ”€ frontend.yml
+â”‚        â”œâ”€ backend.yml
+â”‚        â”œâ”€ ...
+â”‚        â””â”€ security.yml
+â”œâ”€ src/
+â”œâ”€ vendor/
+â””â”€ web/
+</pre></div>
+</div>
+<p>Again, change the code of the <code class="docutils literal"><span class="pre">registerContainerConfiguration()</span></code> method to
+make Symfony aware of the new file organization:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Kernel</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Loader\LoaderInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AppKernel</span> <span class="k">extends</span> <span class="nx">Kernel</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">registerContainerConfiguration</span><span class="p">(</span><span class="nx">LoaderInterface</span> <span class="nv">$loader</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/config/environments/&#39;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEnvironment</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;.yml&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Following the same technique explained in the previous section, make sure to
+import the appropriate configuration files from each main file (<code class="docutils literal"><span class="pre">common.yml</span></code>,
+<code class="docutils literal"><span class="pre">dev.yml</span></code> and <code class="docutils literal"><span class="pre">prod.yml</span></code>).</p>
+</div>
+<div class="section" id="advanced-techniques">
+<h2>Advanced Techniques<a class="headerlink" href="#advanced-techniques" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Symfony loads configuration files using the
+<a class="reference internal" href="introduction-13.html" tppabs="http://symfony.cn/docs/components/config/introduction.html"><em>Config component</em></a>, which provides some
+advanced features.</p>
+<div class="section" id="mix-and-match-configuration-formats">
+<h3>Mix and Match Configuration Formats<a class="headerlink" href="#mix-and-match-configuration-formats" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Configuration files can import files defined with any other built-in configuration
+format (<code class="docutils literal"><span class="pre">.yml</span></code>, <code class="docutils literal"><span class="pre">.xml</span></code>, <code class="docutils literal"><span class="pre">.php</span></code>, <code class="docutils literal"><span class="pre">.ini</span></code>):</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;parameters.yml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;services.xml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;security.yml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;legacy.php&#39;</span> <span class="p-Indicator">}</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/symfony</span>
+<span class="s">        http://symfony.com/schema/dic/symfony/symfony-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;parameters.yml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;services.xml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;security.yml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;legacy.php&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;parameters.yml&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;services.xml&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;security.yml&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;legacy.php&#39;</span><span class="p">);</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">The <code class="docutils literal"><span class="pre">IniFileLoader</span></code> parses the file contents using the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/function.parse-ini-file.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/function.parse-ini-file.php'" tppabs="http://php.net/manual/en/function.parse-ini-file.php" title="parse_ini_file"><span class="pre">parse_ini_file</span></a></code> function. Therefore, you can only set
+parameters to string values. Use one of the other loaders if you want
+to use other data types (e.g. boolean, integer, etc.).</p>
+</div>
+<p>If you use any other configuration format, you have to define your own loader
+class extending it from <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DependencyInjection/Loader/FileLoader.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DependencyInjection/Loader/FileLoader.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DependencyInjection/Loader/FileLoader.html" title="Symfony\Component\DependencyInjection\Loader\FileLoader"><span class="pre">FileLoader</span></a></code>.
+When the configuration values are dynamic, you can use the PHP configuration
+file to execute your own logic. In addition, you can define your own services
+to load configurations from databases or web services.</p>
+</div>
+<div class="section" id="global-configuration-files">
+<h3>Global Configuration Files<a class="headerlink" href="#global-configuration-files" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Some system administrators may prefer to store sensitive parameters in files
+outside the project directory. Imagine that the database credentials for your
+website are stored in the <code class="docutils literal"><span class="pre">/etc/sites/mysite.com/parameters.yml</span></code> file. Loading
+this file is as simple as indicating the full file path when importing it from
+any other configuration file:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;parameters.yml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;/etc/sites/mysite.com/parameters.yml&#39;</span> <span class="p-Indicator">}</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/symfony</span>
+<span class="s">        http://symfony.com/schema/dic/symfony/symfony-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;parameters.yml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;/etc/sites/mysite.com/parameters.yml&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;parameters.yml&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;/etc/sites/mysite.com/parameters.yml&#39;</span><span class="p">);</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Most of the time, local developers won&#8217;t have the same files that exist on the
+production servers. For that reason, the Config component provides the
+<code class="docutils literal"><span class="pre">ignore_errors</span></code> option to silently discard errors when the loaded file
+doesn&#8217;t exist:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;parameters.yml&#39;</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&#39;/etc/sites/mysite.com/parameters.yml&#39;</span><span class="p-Indicator">,</span> <span class="nv">ignore_errors</span><span class="p-Indicator">:</span> <span class="nv">true</span> <span class="p-Indicator">}</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/symfony</span>
+<span class="s">        http://symfony.com/schema/dic/symfony/symfony-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;parameters.yml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;/etc/sites/mysite.com/parameters.yml&quot;</span> <span class="na">ignore-errors=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;parameters.yml&#39;</span><span class="p">);</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;/etc/sites/mysite.com/parameters.yml&#39;</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>As you&#8217;ve seen, there are lots of ways to organize your configuration files. You
+can choose one of these or even create your own custom way of organizing the
+files. Don&#8217;t feel limited by the Standard Edition that comes with Symfony. For even
+more customization, see &#8220;<a class="reference internal" href="override_dir_structure.html" tppabs="http://symfony.cn/docs/cookbook/configuration/override_dir_structure.html"><em>å¦‚ä½•é‡è½½Symfonyé»˜è®¤çš„ç›®å½•ç»“æ„</em></a>&#8221;.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html" class="btn btn-neutral float-right" title="å‘½ä»¤è¡Œ">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="web_server_configuration.html" tppabs="http://symfony.cn/docs/cookbook/configuration/web_server_configuration.html" class="btn btn-neutral" title="WebæœåŠ¡å™¨çš„é…ç½®"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

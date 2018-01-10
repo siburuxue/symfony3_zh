@@ -1,0 +1,796 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Form Events &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="Form" href="index.html"/>
+        <link rel="next" title="HttpFoundation" href="../http_foundation/index.html"/>
+        <link rel="prev" title="Creating a custom Type Guesser" href="type_guesser.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+          <li><a href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a> &raquo;</li>
+      
+    <li>Form Events</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="form_events.txt.htm" tppabs="http://symfony.cn/docs/_sources/components/form/form_events.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="form-events">
+<span id="index-0"></span><h1>Form Events<a class="headerlink" href="#form-events" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>The Form component provides a structured process to let you customize your
+forms, by making use of the <a class="reference internal" href="introduction-10.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/introduction.html"><em>EventDispatcher</em></a>
+component. Using form events, you may modify information or fields at
+different steps of the workflow: from the population of the form to the
+submission of the data from the request.</p>
+<p>Registering an event listener is very easy using the Form component.</p>
+<p>For example, if you wish to register a function to the
+<code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code> event, the following code lets you add a field,
+depending on the request values:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormEvent</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormEvents</span><span class="p">;</span>
+
+<span class="nv">$listener</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nx">FormEvent</span> <span class="nv">$event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">};</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">()</span>
+    <span class="c1">// add form fields</span>
+    <span class="o">-&gt;</span><span class="na">addEventListener</span><span class="p">(</span><span class="nx">FormEvents</span><span class="o">::</span><span class="na">PRE_SUBMIT</span><span class="p">,</span> <span class="nv">$listener</span><span class="p">);</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+<div class="section" id="the-form-workflow">
+<h2>The Form Workflow<a class="headerlink" href="#the-form-workflow" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="the-form-submission-workflow">
+<h3>The Form Submission Workflow<a class="headerlink" href="#the-form-submission-workflow" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<img alt="../../_images/general_flow.png" class="align-center" src="general_flow.png" tppabs="http://symfony.cn/docs/_images/general_flow.png" />
+</div>
+<div class="section" id="pre-populating-the-form-formevents-pre-set-data-and-formevents-post-set-data">
+<h3>1) Pre-populating the Form (<code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code> and <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code>)<a class="headerlink" href="#pre-populating-the-form-formevents-pre-set-data-and-formevents-post-set-data" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<img alt="../../_images/set_data_flow.png" class="align-center" src="set_data_flow.png" tppabs="http://symfony.cn/docs/_images/set_data_flow.png" />
+<p>Two events are dispatched during pre-population of a form, when
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_setData'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_setData" title="Symfony\Component\Form\Form::setData()"><span class="pre">Form::setData()</span></a></code>
+is called: <code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code> and <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code>.</p>
+<div class="section" id="a-the-formevents-pre-set-data-event">
+<h4>A) The <code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code> Event<a class="headerlink" href="#a-the-formevents-pre-set-data-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code> event is dispatched at the beginning of the
+<code class="docutils literal"><span class="pre">Form::setData()</span></code> method. It can be used to:</p>
+<ul class="simple">
+<li>Modify the data given during pre-population;</li>
+<li>Modify a form depending on the pre-populated data (adding or removing fields dynamically).</li>
+</ul>
+<p><a class="reference internal" href="#component-form-event-table"><span>Form Events Information Table</span></a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="65%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model data</td>
+<td><code class="docutils literal"><span class="pre">null</span></code></td>
+</tr>
+<tr class="row-odd"><td>Normalized data</td>
+<td><code class="docutils literal"><span class="pre">null</span></code></td>
+</tr>
+<tr class="row-even"><td>View data</td>
+<td><code class="docutils literal"><span class="pre">null</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">During <code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code>,
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_setData'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_setData" title="Symfony\Component\Form\Form::setData()"><span class="pre">Form::setData()</span></a></code>
+is locked and will throw an exception if used. If you wish to modify
+data, you should use
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormEvent.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormEvent.html#method_setData'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormEvent.html#method_setData" title="Symfony\Component\Form\FormEvent::setData()"><span class="pre">FormEvent::setData()</span></a></code>
+instead.</p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title"><code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code> in the Form component</p>
+<p class="last">The <code class="docutils literal"><span class="pre">collection</span></code> form type relies on the
+<code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\Core\EventListener\ResizeFormListener</span></code>
+subscriber, listening to the <code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code> event in order
+to reorder the form&#8217;s fields depending on the data from the pre-populated
+object, by removing and adding all form rows.</p>
+</div>
+</div>
+<div class="section" id="b-the-formevents-post-set-data-event">
+<h4>B) The <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code> Event<a class="headerlink" href="#b-the-formevents-post-set-data-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code> event is dispatched at the end of the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_setData'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_setData" title="Symfony\Component\Form\Form::setData()"><span class="pre">Form::setData()</span></a></code>
+method. This event is mostly here for reading data after having pre-populated
+the form.</p>
+<p><a class="reference internal" href="#component-form-event-table"><span>Form Events Information Table</span></a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model data</td>
+<td>Model data injected into <code class="docutils literal"><span class="pre">setData()</span></code></td>
+</tr>
+<tr class="row-odd"><td>Normalized data</td>
+<td>Model data transformed using a model transformer</td>
+</tr>
+<tr class="row-even"><td>View data</td>
+<td>Normalized data transformed using a view transformer</td>
+</tr>
+</tbody>
+</table>
+<div class="sidebar">
+<p class="first sidebar-title"><code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code> in the Form component</p>
+<div class="versionadded">
+<p><span class="versionmodified">2.4 æ–°ç‰ˆåŠŸèƒ½: </span>The data collector extension was introduced in Symfony 2.4.</p>
+</div>
+<p class="last">The <code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\DataCollector\EventListener\DataCollectorListener</span></code>
+class is subscribed to listen to the <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code> event
+in order to collect information about the forms from the denormalized
+model and view data.</p>
+</div>
+</div>
+</div>
+<div class="section" id="submitting-a-form-formevents-pre-submit-formevents-submit-and-formevents-post-submit">
+<h3>2) Submitting a Form (<code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code>, <code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code> and <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code>)<a class="headerlink" href="#submitting-a-form-formevents-pre-submit-formevents-submit-and-formevents-post-submit" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<img alt="../../_images/submission_flow.png" class="align-center" src="submission_flow.png" tppabs="http://symfony.cn/docs/_images/submission_flow.png" />
+<p>Three events are dispatched when
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest" title="Symfony\Component\Form\Form::handleRequest()"><span class="pre">Form::handleRequest()</span></a></code>
+or <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit" title="Symfony\Component\Form\Form::submit()"><span class="pre">Form::submit()</span></a></code> are
+called: <code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code>, <code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code>,
+<code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code>.</p>
+<div class="section" id="a-the-formevents-pre-submit-event">
+<h4>A) The <code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code> Event<a class="headerlink" href="#a-the-formevents-pre-submit-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code> event is dispatched at the beginning of the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit" title="Symfony\Component\Form\Form::submit()"><span class="pre">Form::submit()</span></a></code> method.</p>
+<p>It can be used to:</p>
+<ul class="simple">
+<li>Change data from the request, before submitting the data to the form;</li>
+<li>Add or remove form fields, before submitting the data to the form.</li>
+</ul>
+<p><a class="reference internal" href="#component-form-event-table"><span>Form Events Information Table</span></a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model data</td>
+<td>Same as in <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code></td>
+</tr>
+<tr class="row-odd"><td>Normalized data</td>
+<td>Same as in <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code></td>
+</tr>
+<tr class="row-even"><td>View data</td>
+<td>Same as in <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="sidebar">
+<p class="first sidebar-title"><code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code> in the Form component</p>
+<p class="last">The <code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\Core\EventListener\TrimListener</span></code>
+subscriber subscribes to the <code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code> event in order to
+trim the request&#8217;s data (for string values).
+The <code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\Csrf\EventListener\CsrfValidationListener</span></code>
+subscriber subscribes to the <code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code> event in order to
+validate the CSRF token.</p>
+</div>
+</div>
+<div class="section" id="b-the-formevents-submit-event">
+<h4>B) The <code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code> Event<a class="headerlink" href="#b-the-formevents-submit-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code> event is dispatched just before the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit" title="Symfony\Component\Form\Form::submit()"><span class="pre">Form::submit()</span></a></code> method
+transforms back the normalized data to the model and view data.</p>
+<p>It can be used to change data from the normalized representation of the data.</p>
+<p><a class="reference internal" href="#component-form-event-table"><span>Form Events Information Table</span></a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model data</td>
+<td>Same as in <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code></td>
+</tr>
+<tr class="row-odd"><td>Normalized data</td>
+<td>Data from the request reverse-transformed from the request using a view transformer</td>
+</tr>
+<tr class="row-even"><td>View data</td>
+<td>Same as in <code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">At this point, you cannot add or remove fields to the form.</p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title"><code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code> in the Form component</p>
+<p class="last">The <code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\Core\EventListener\ResizeFormListener</span></code>
+subscribes to the <code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code> event in order to remove the
+fields that need to be removed whenever manipulating a collection of forms
+for which <code class="docutils literal"><span class="pre">allow_delete</span></code> has been enabled.</p>
+</div>
+</div>
+<div class="section" id="c-the-formevents-post-submit-event">
+<h4>C) The <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code> Event<a class="headerlink" href="#c-the-formevents-post-submit-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code> event is dispatched after the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_submit" title="Symfony\Component\Form\Form::submit()"><span class="pre">Form::submit()</span></a></code> once the
+model and view data have been denormalized.</p>
+<p>It can be used to fetch data after denormalization.</p>
+<p><a class="reference internal" href="#component-form-event-table"><span>Form Events Information Table</span></a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model data</td>
+<td>Normalized data reverse-transformed using a model transformer</td>
+</tr>
+<tr class="row-odd"><td>Normalized data</td>
+<td>Same as in <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code></td>
+</tr>
+<tr class="row-even"><td>View data</td>
+<td>Normalized data transformed using a view transformer</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">At this point, you cannot add or remove fields to the form.</p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title"><code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code> in the Form component</p>
+<div class="versionadded">
+<p><span class="versionmodified">2.4 æ–°ç‰ˆåŠŸèƒ½: </span>The data collector extension was introduced in Symfony 2.4.</p>
+</div>
+<p class="last">The <code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\DataCollector\EventListener\DataCollectorListener</span></code>
+subscribes to the <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code> event in order to collect
+information about the forms.
+The <code class="docutils literal"><span class="pre">Symfony\Component\Form\Extension\Validator\EventListener\ValidationListener</span></code>
+subscribes to the <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code> event in order to
+automatically validate the denormalized object, and update the normalized
+as well as the view&#8217;s representations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="registering-event-listeners-or-event-subscribers">
+<h2>Registering Event Listeners or Event Subscribers<a class="headerlink" href="#registering-event-listeners-or-event-subscribers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>In order to be able to use Form events, you need to create an event listener
+or an event subscriber, and register it to an event.</p>
+<p>The name of each of the &#8220;form&#8221; events is defined as a constant on the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormEvents.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormEvents.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormEvents.html" title="Symfony\Component\Form\FormEvents"><span class="pre">FormEvents</span></a></code> class.
+Additionally, each event callback (listener or subscriber method) is passed a
+single argument, which is an instance of
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormEvent.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormEvent.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormEvent.html" title="Symfony\Component\Form\FormEvent"><span class="pre">FormEvent</span></a></code>. The event object contains a
+reference to the current state of the form, and the current data being
+processed.</p>
+<table border="1" class="docutils" id="component-form-event-table">
+<colgroup>
+<col width="33%" />
+<col width="44%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><code class="docutils literal"><span class="pre">FormEvents</span></code> Constant</th>
+<th class="head">Event&#8217;s Data</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">form.pre_set_data</span></code></td>
+<td><code class="docutils literal"><span class="pre">FormEvents::PRE_SET_DATA</span></code></td>
+<td>Model data</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">form.post_set_data</span></code></td>
+<td><code class="docutils literal"><span class="pre">FormEvents::POST_SET_DATA</span></code></td>
+<td>Model data</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">form.pre_bind</span></code></td>
+<td><code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code></td>
+<td>Request data</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">form.bind</span></code></td>
+<td><code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code></td>
+<td>Normalized data</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">form.post_bind</span></code></td>
+<td><code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code></td>
+<td>View data</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">2.3 æ–°ç‰ˆåŠŸèƒ½: </span>Before Symfony 2.3, <code class="docutils literal"><span class="pre">FormEvents::PRE_SUBMIT</span></code>, <code class="docutils literal"><span class="pre">FormEvents::SUBMIT</span></code>
+and <code class="docutils literal"><span class="pre">FormEvents::POST_SUBMIT</span></code> were called <code class="docutils literal"><span class="pre">FormEvents::PRE_BIND</span></code>,
+<code class="docutils literal"><span class="pre">FormEvents::BIND</span></code> and <code class="docutils literal"><span class="pre">FormEvents::POST_BIND</span></code>.</p>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">The <code class="docutils literal"><span class="pre">FormEvents::PRE_BIND</span></code>, <code class="docutils literal"><span class="pre">FormEvents::BIND</span></code> and
+<code class="docutils literal"><span class="pre">FormEvents::POST_BIND</span></code> constants will be removed in version 3.0 of
+Symfony.
+The event names still keep their original values, so make sure you use the
+<code class="docutils literal"><span class="pre">FormEvents</span></code> constants in your code for forward compatibility.</p>
+</div>
+<div class="section" id="event-listeners">
+<h3>Event Listeners<a class="headerlink" href="#event-listeners" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>An event listener may be any type of valid callable.</p>
+<p>Creating and binding an event listener to the form is very easy:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormEvent</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormEvents</span><span class="p">;</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;show_email&#39;</span><span class="p">,</span> <span class="s1">&#39;checkbox&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">addEventListener</span><span class="p">(</span><span class="nx">FormEvents</span><span class="o">::</span><span class="na">PRE_SUBMIT</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">FormEvent</span> <span class="nv">$event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+        <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Check whether the user has chosen to display his email or not.</span>
+        <span class="c1">// If the data was submitted previously, the additional value that is</span>
+        <span class="c1">// included in the request variables needs to be removed.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">true</span> <span class="o">===</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;show_email&#39;</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nb">unset</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]);</span>
+            <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$user</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+<p>When you have created a form type class, you can use one of its methods as a
+callback for better readability:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">class</span> <span class="nc">SubscriptionType</span> <span class="k">extends</span> <span class="nx">AbstractType</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">);</span>
+        <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;show_email&#39;</span><span class="p">,</span> <span class="s1">&#39;checkbox&#39;</span><span class="p">);</span>
+        <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">addEventListener</span><span class="p">(</span>
+            <span class="nx">FormEvents</span><span class="o">::</span><span class="na">PRE_SET_DATA</span><span class="p">,</span>
+            <span class="k">array</span><span class="p">(</span><span class="nv">$this</span><span class="p">,</span> <span class="s1">&#39;onPreSetData&#39;</span><span class="p">)</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onPreSetData</span><span class="p">(</span><span class="nx">FormEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="event-subscribers">
+<h3>Event Subscribers<a class="headerlink" href="#event-subscribers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Event subscribers have different uses:</p>
+<ul class="simple">
+<li>Improving readability;</li>
+<li>Listening to multiple events;</li>
+<li>Regrouping multiple listeners inside a single class.</li>
+</ul>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventSubscriberInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormEvent</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormEvents</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AddEmailFieldListener</span> <span class="k">implements</span> <span class="nx">EventSubscriberInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getSubscribedEvents</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+            <span class="nx">FormEvents</span><span class="o">::</span><span class="na">PRE_SET_DATA</span> <span class="o">=&gt;</span> <span class="s1">&#39;onPreSetData&#39;</span><span class="p">,</span>
+            <span class="nx">FormEvents</span><span class="o">::</span><span class="na">PRE_SUBMIT</span>   <span class="o">=&gt;</span> <span class="s1">&#39;onPreSubmit&#39;</span><span class="p">,</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onPreSetData</span><span class="p">(</span><span class="nx">FormEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+        <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+        <span class="c1">// Check whether the user from the initial data has chosen to</span>
+        <span class="c1">// display his email or not.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">true</span> <span class="o">===</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">isShowEmail</span><span class="p">())</span> <span class="p">{</span>
+            <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onPreSubmit</span><span class="p">(</span><span class="nx">FormEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+        <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Check whether the user has chosen to display his email or not.</span>
+        <span class="c1">// If the data was submitted previously, the additional value that</span>
+        <span class="c1">// is included in the request variables needs to be removed.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">true</span> <span class="o">===</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;show_email&#39;</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nb">unset</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]);</span>
+            <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$user</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To register the event subscriber, use the addEventSubscriber() method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;show_email&#39;</span><span class="p">,</span> <span class="s1">&#39;checkbox&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">addEventSubscriber</span><span class="p">(</span><span class="k">new</span> <span class="nx">AddEmailFieldListener</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html" class="btn btn-neutral float-right" title="HttpFoundation">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="type_guesser.html" tppabs="http://symfony.cn/docs/components/form/type_guesser.html" class="btn btn-neutral" title="Creating a custom Type Guesser"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>éƒ¨ç½²åˆ°Microsoft Azure Website Cloud &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="éƒ¨ç½²" href="index.html"/>
+        <link rel="next" title="éƒ¨ç½²åˆ°Heroku Cloud" href="heroku.html"/>
+        <link rel="prev" title="å¦‚ä½•éƒ¨ç½²Symfonyåº”ç”¨" href="tools.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a> &raquo;</li>
+      
+          <li><a href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a> &raquo;</li>
+      
+    <li>éƒ¨ç½²åˆ°Microsoft Azure Website Cloud</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="azure-website.txt" tppabs="http://symfony.cn/docs/_sources/cookbook/deployment/azure-website.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="deploying-to-microsoft-azure-website-cloud">
+<span id="index-0"></span><h1>éƒ¨ç½²åˆ°Microsoft Azure Website Cloud<a class="headerlink" href="#deploying-to-microsoft-azure-website-cloud" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>This step by step cookbook describes how to deploy a small Symfony web
+application to the Microsoft Azure Website cloud platform. It will explain how
+to setup a new Azure website including configuring the right PHP version and
+global environment variables. The document also shows how to you can leverage
+Git and Composer to deploy your Symfony application to the cloud.</p>
+<div class="section" id="setting-up-the-azure-website">
+<h2>Setting up the Azure Website<a class="headerlink" href="#setting-up-the-azure-website" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>To setup a new Microsoft Azure Website, first <a class="reference external" href="javascript:if(confirm('https://signup.live.com/signup.aspx  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://signup.live.com/signup.aspx'" tppabs="https://signup.live.com/signup.aspx">signup with Azure</a> or sign in
+with your credentials. Once you&#8217;re connected to your <a class="reference external" href="javascript:if(confirm('https://manage.windowsazure.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://manage.windowsazure.com/'" tppabs="https://manage.windowsazure.com/">Azure Portal</a> interface,
+scroll down to the bottom and select the <strong>New</strong> panel. On this panel, click
+<strong>Web Site</strong> and choose <strong>Custom Create</strong>:</p>
+<img alt="Create a new custom Azure Website" src="step-01.png" tppabs="http://symfony.cn/docs/_images/step-01.png" />
+<div class="section" id="step-1-create-web-site">
+<h3>Step 1: Create Web Site<a class="headerlink" href="#step-1-create-web-site" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Here, you will be prompted to fill in some basic information.</p>
+<img alt="Setup the Azure Website" src="step-02.png" tppabs="http://symfony.cn/docs/_images/step-02.png" />
+<p>For the URL, enter the URL that you would like to use for your Symfony application,
+then pick <strong>Create new web hosting plan</strong> in the region you want. By default, a
+<em>free 20 MB SQL database</em> is selected in the database dropdown list. In this
+tutorial, the Symfony app will connect to a MySQL database. Pick the
+<strong>Create a new MySQL database</strong> option in the dropdown list. You can keep
+the <strong>DefaultConnection</strong> string name. Finally, check the box
+<strong>Publish from source control</strong> to enable a Git repository and go to the
+next step.</p>
+</div>
+<div class="section" id="step-2-new-mysql-database">
+<h3>Step 2: New MySQL Database<a class="headerlink" href="#step-2-new-mysql-database" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>On this step, you will be prompted to setup your MySQL database storage with a
+database name and a region. The MySQL database storage is provided by Microsoft
+in partnership with ClearDB. Choose the same region you selected for the hosting
+plan configuration in the previous step.</p>
+<img alt="Setup the MySQL database" src="step-03.png" tppabs="http://symfony.cn/docs/_images/step-03.png" />
+<p>Agree to the terms and conditions and click on the right arrow to continue.</p>
+</div>
+<div class="section" id="step-3-where-is-your-source-code">
+<h3>Step 3: Where Is your Source Code<a class="headerlink" href="#step-3-where-is-your-source-code" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Now, on the third step, select a <strong>Local Git repository</strong> item and click
+on the right arrow to configure your Azure Website credentials.</p>
+<img alt="Setup a local Git repository" src="step-04.png" tppabs="http://symfony.cn/docs/_images/step-04.png" />
+</div>
+<div class="section" id="step-4-new-username-and-password">
+<h3>Step 4: New Username and Password<a class="headerlink" href="#step-4-new-username-and-password" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Great! You&#8217;re now on the final step. Create a username and a secure password:
+these will become essential identifiers to connect to the FTP server and
+also to push your application code to the Git repository.</p>
+<img alt="Configure Azure Website credentials" src="step-05.png" tppabs="http://symfony.cn/docs/_images/step-05.png" />
+<p>Congratulations! Your Azure Website is now up and running. You can check
+it by browsing to the Website url you configured in the first step. You should
+see the following display in your web browser:</p>
+<img alt="Azure Website is running" src="step-06.png" tppabs="http://symfony.cn/docs/_images/step-06.png" />
+<p>The Microsoft Azure portal also provides a complete control panel for the Azure
+Website.</p>
+<img alt="Azure Website Control Panel" src="step-07.png" tppabs="http://symfony.cn/docs/_images/step-07.png" />
+<p>Your Azure Website is ready! But to run a Symfony site, you need to configure
+just a few additional things.</p>
+</div>
+</div>
+<div class="section" id="configuring-the-azure-website-for-symfony">
+<h2>Configuring the Azure Website for Symfony<a class="headerlink" href="#configuring-the-azure-website-for-symfony" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>This section of the tutorial details how to configure the correct version of PHP
+to run Symfony. It also shows you how to enable some mandatory PHP extensions
+and how to properly configure PHP for a production environment.</p>
+<div class="section" id="configuring-the-latest-php-runtime">
+<h3>Configuring the latest PHP Runtime<a class="headerlink" href="#configuring-the-latest-php-runtime" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Even though Symfony only requires PHP 5.3.3 to run, it&#8217;s always recommended
+to use the most recent PHP version whenever possible. PHP 5.3 is no longer
+supported by the PHP core team, but you can update it easily in Azure.</p>
+<p>To update your PHP version on Azure, go to the <strong>Configure</strong> tab of the control
+panel and select the version you want.</p>
+<img alt="Enabling the most recent PHP runtime from Azure Website Control Panel" src="step-08.png" tppabs="http://symfony.cn/docs/_images/step-08.png" />
+<p>Click the <strong>Save</strong> button in the bottom bar to save your changes and restart
+the web server.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p>Choosing a more recent PHP version can greatly improve runtime performance.
+PHP 5.5 ships with a new built-in PHP accelerator called OPCache that
+replaces APC. On an Azure Website, OPCache is already enabled and there
+is no need to install and setup APC.</p>
+<p>The following screenshot shows the output of a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/function.phpinfo.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/function.phpinfo.php'" tppabs="http://php.net/manual/en/function.phpinfo.php" title="phpinfo"><span class="pre">phpinfo</span></a></code> script
+run from an Azure Website to verify that PHP 5.5 is running with
+OPCache enabled.</p>
+<img alt="OPCache Configuration" class="last" src="step-09.png" tppabs="http://symfony.cn/docs/_images/step-09.png" />
+</div>
+</div>
+<div class="section" id="tweaking-php-ini-configuration-settings">
+<h3>Tweaking php.ini Configuration Settings<a class="headerlink" href="#tweaking-php-ini-configuration-settings" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Microsoft Azure allows you to override the <code class="docutils literal"><span class="pre">php.ini</span></code> global configuration
+settings by creating a custom <code class="docutils literal"><span class="pre">.user.ini</span></code> file under the project root
+directory (<code class="docutils literal"><span class="pre">site/wwwroot</span></code>).</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="c1">; .user.ini</span>
+<span class="na">expose_php</span> <span class="o">=</span> <span class="s">Off</span>
+<span class="na">memory_limit</span> <span class="o">=</span> <span class="s">256M</span>
+<span class="na">upload_max_filesize</span> <span class="o">=</span> <span class="s">10M</span>
+</pre></div>
+</div>
+<p>None of these settings <em>needs</em> to be overridden. The default PHP configuration
+is already pretty good, so this is just an example to show how you can easily
+tweak PHP internal settings by uploading your custom <code class="docutils literal"><span class="pre">.ini</span></code> file.</p>
+<p>You can either manually create this file on your Azure Website FTP server under
+the <code class="docutils literal"><span class="pre">site/wwwroot</span></code> directory or deploy it with Git. You can get your FTP
+server credentials from the Azure Website Control panel under the <strong>Dashboard</strong>
+tab on the right sidebar. If you want to use Git, simply put your <code class="docutils literal"><span class="pre">.user.ini</span></code>
+file at the root of your local repository and push your commits to your Azure
+Website repository.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">This cookbook has a section dedicated to explaining how to configure your
+Azure Website Git repository and how to push the commits to be deployed. See
+<a class="reference internal" href="#deploying-from-git">Deploying from Git</a>. You can also learn more about configuring PHP
+internal settings on the official <a class="reference external" href="javascript:if(confirm('http://blogs.msdn.com/b/silverlining/archive/2012/07/10/configuring-php-in-windows-azure-websites-with-user-ini-files.aspx  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blogs.msdn.com/b/silverlining/archive/2012/07/10/configuring-php-in-windows-azure-websites-with-user-ini-files.aspx'" tppabs="http://blogs.msdn.com/b/silverlining/archive/2012/07/10/configuring-php-in-windows-azure-websites-with-user-ini-files.aspx">PHP MSDN documentation</a> page.</p>
+</div>
+</div>
+<div class="section" id="enabling-the-php-intl-extension">
+<h3>Enabling the PHP intl Extension<a class="headerlink" href="#enabling-the-php-intl-extension" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>This is the tricky part of the guide! At the time of writing this cookbook,
+Microsoft Azure Website provided the <code class="docutils literal"><span class="pre">intl</span></code> extension, but it&#8217;s not enabled
+by default. To enable the <code class="docutils literal"><span class="pre">intl</span></code> extension, there is no need to upload
+any DLL files as the <code class="docutils literal"><span class="pre">php_intl.dll</span></code> file already exists on Azure. In fact,
+this file just needs to be moved into the custom website extension directory.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">The Microsoft Azure team is currently working on enabling the <code class="docutils literal"><span class="pre">intl</span></code> PHP
+extension by default. In the near future, the following steps will no
+longer be necessary.</p>
+</div>
+<p>To get the <code class="docutils literal"><span class="pre">php_intl.dll</span></code> file under your <code class="docutils literal"><span class="pre">site/wwwroot</span></code> directory, simply
+access the online <strong>Kudu</strong> tool by browsing to the following url:</p>
+<div class="highlight-text"><div class="highlight"><pre>https://[your-website-name].scm.azurewebsites.net
+</pre></div>
+</div>
+<p><strong>Kudu</strong> is a set of tools to manage your application. It comes with a file
+explorer, a command line prompt, a log stream and a configuration settings summary
+page. Of course, this section can only be accessed if you&#8217;re logged in to
+your main Azure Website account.</p>
+<img alt="The Kudu Panel" src="step-10.png" tppabs="http://symfony.cn/docs/_images/step-10.png" />
+<p>From the Kudu front page, click on the <strong>Debug Console</strong> navigation item in the
+main menu and choose <strong>CMD</strong>. This should open the <strong>Debug Console</strong> page
+that shows a file explorer and a console prompt below.</p>
+<p>In the console prompt, type the following three commands to copy the original
+<code class="docutils literal"><span class="pre">php_intl.dll</span></code> extension file into a custom website <code class="docutils literal"><span class="pre">ext/</span></code> directory. This
+new directory must be created under the main directory <code class="docutils literal"><span class="pre">site/wwwroot</span></code>.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>site<span class="se">\w</span>wwroot
+<span class="nv">$ </span>mkdir ext
+<span class="nv">$ </span>copy <span class="s2">&quot;D:\Program Files (x86)\PHP\v5.5\ext\php_intl.dll&quot;</span> ext
+</pre></div>
+</div>
+<p>The whole process and output should look like this:</p>
+<img alt="Executing commands in the online Kudu Console prompt" src="step-11.png" tppabs="http://symfony.cn/docs/_images/step-11.png" />
+<p>To complete the activation of the <code class="docutils literal"><span class="pre">php_intl.dll</span></code> extension, you must tell
+Azure Website to load it from the newly created <code class="docutils literal"><span class="pre">ext</span></code> directory. This can be
+done by registering a global <code class="docutils literal"><span class="pre">PHP_EXTENSIONS</span></code> environment variable from
+the <strong>Configure</strong> tab of the main Azure Website Control panel.</p>
+<p>In the <strong>app settings</strong> section, register the <code class="docutils literal"><span class="pre">PHP_EXTENSIONS</span></code> environment
+variable with the value <code class="docutils literal"><span class="pre">ext\php_intl.dll</span></code> as shown in the screenshot below:</p>
+<img alt="Registering custom PHP extensions" src="step-12.png" tppabs="http://symfony.cn/docs/_images/step-12.png" />
+<p>Hit &#8220;save&#8221; to confirm your changes and restart the web server. The PHP <code class="docutils literal"><span class="pre">Intl</span></code>
+extension should now be available in your web server environment. The following
+screenshot of a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/function.phpinfo.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/function.phpinfo.php'" tppabs="http://php.net/manual/en/function.phpinfo.php" title="phpinfo"><span class="pre">phpinfo</span></a></code> page verifies the <code class="docutils literal"><span class="pre">intl</span></code> extension is
+properly enabled:</p>
+<img alt="Intl extension is enabled" src="step-13.png" tppabs="http://symfony.cn/docs/_images/step-13.png" />
+<p>Great! The PHP environment setup is now complete. Next, you&#8217;ll learn how
+to configure the Git repository and push code to production. You&#8217;ll also
+learn how to install and configure the Symfony app after it&#8217;s deployed.</p>
+</div>
+<div class="section" id="deploying-from-git">
+<h3>Deploying from Git<a class="headerlink" href="#deploying-from-git" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>First, make sure Git is correctly installed on your local machine using the
+following command in your terminal:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git --version
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">Get your Git from the <a class="reference external" href="javascript:if(confirm('http://git-scm.com/download  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git-scm.com/download'" tppabs="http://git-scm.com/download">git-scm.com</a> website and follow the instructions
+to install and configure it on your local machine.</p>
+</div>
+<p>In the Azure Website Control panel, browse the <strong>Deployment</strong> tab to get the
+Git repository URL where you should push your code:</p>
+<img alt="Git deployment panel" src="step-14.png" tppabs="http://symfony.cn/docs/_images/step-14.png" />
+<p>Now, you&#8217;ll want to connect your local Symfony application with this remote
+Git repository on Azure Website. If your Symfony application is not yet stored
+with Git, you must first create a Git repository in your Symfony application
+directory with the <code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code> command and commit to it with the <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code>
+command.</p>
+<p>Also, make sure your Symfony repository has a <code class="docutils literal"><span class="pre">.gitignore</span></code> file at its root
+directory with at least the following contents:</p>
+<div class="highlight-text"><div class="highlight"><pre>/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/app/SymfonyRequirements.php
+/build/
+/vendor/
+/bin/
+/composer.phar
+/web/app_dev.php
+/web/bundles/
+/web/config.php
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">.gitignore</span></code> file asks Git not to track any of the files and directories
+that match these patterns. This means these files won&#8217;t be deployed to the Azure
+Website.</p>
+<p>Now, from the command line on your local machine, type the following at the
+root of your Symfony project:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git remote add azure https://&lt;username&gt;@&lt;your-website-name&gt;.scm.azurewebsites.net:443/&lt;your-website-name&gt;.git
+<span class="nv">$ </span>git push azure master
+</pre></div>
+</div>
+<p>Don&#8217;t forget to replace the values enclosed by <code class="docutils literal"><span class="pre">&lt;</span></code> and <code class="docutils literal"><span class="pre">&gt;</span></code> with your custom
+settings displayed in the <strong>Deployment</strong> tab of your Azure Website panel. The
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">remote</span></code> command connects the Azure Website remote Git repository and
+assigns an alias to it with the name <code class="docutils literal"><span class="pre">azure</span></code>. The second <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></code> command
+pushes all your commits to the remote <code class="docutils literal"><span class="pre">master</span></code> branch of your remote <code class="docutils literal"><span class="pre">azure</span></code>
+Git repository.</p>
+<p>The deployment with Git should produce an output similar to the screenshot
+below:</p>
+<img alt="Deploying files to the Git Azure Website repository" src="step-15.png" tppabs="http://symfony.cn/docs/_images/step-15.png" />
+<p>The code of the Symfony application has now been deployed to the Azure Website
+which you can browse from the file explorer of the Kudu application. You should
+see the <code class="docutils literal"><span class="pre">app/</span></code>, <code class="docutils literal"><span class="pre">src/</span></code> and <code class="docutils literal"><span class="pre">web/</span></code> directories under your <code class="docutils literal"><span class="pre">site/wwwroot</span></code>
+directory on the Azure Website filesystem.</p>
+</div>
+<div class="section" id="configure-the-symfony-application">
+<h3>Configure the Symfony Application<a class="headerlink" href="#configure-the-symfony-application" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>PHP has been configured and your code has been pushed with Git. The last
+step is to configure the application and install the third party dependencies
+it requires that aren&#8217;t tracked by Git. Switch back to the online <strong>Console</strong>
+of the Kudu application and execute the following commands in it:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>site<span class="se">\w</span>wwroot
+<span class="nv">$ </span>curl -sS https://getcomposer.org/installer <span class="p">|</span> php
+<span class="nv">$ </span>php -d <span class="nv">extension</span><span class="o">=</span>php_intl.dll composer.phar install
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">curl</span></code> command retrieves and downloads the Composer command line tool and
+installs it at the root of the <code class="docutils literal"><span class="pre">site/wwwroot</span></code> directory. Then, running
+the Composer <code class="docutils literal"><span class="pre">install</span></code> command downloads and installs all necessary third-party
+libraries.</p>
+<p>This may take a while depending on the number of third-party dependencies
+you&#8217;ve configured in your <code class="docutils literal"><span class="pre">composer.json</span></code> file.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">The <code class="docutils literal"><span class="pre">-d</span></code> switch allows you to quickly override/add any <code class="docutils literal"><span class="pre">php.ini</span></code> settings.
+In this command, we are forcing PHP to use the <code class="docutils literal"><span class="pre">intl</span></code> extension, because
+it is not enabled by default in Azure Website at the moment. Soon, this
+<code class="docutils literal"><span class="pre">-d</span></code> option will no longer be needed since Microsoft will enable the
+<code class="docutils literal"><span class="pre">intl</span></code> extension by default.</p>
+</div>
+<p>At the end of the <code class="docutils literal"><span class="pre">composer</span> <span class="pre">install</span></code> command, you will be prompted to fill in
+the values of some Symfony settings like database credentials, locale, mailer
+credentials, CSRF token protection, etc. These parameters come from the
+<code class="docutils literal"><span class="pre">app/config/parameters.yml.dist</span></code> file.</p>
+<img alt="Configuring Symfony global parameters" src="step-16.png" tppabs="http://symfony.cn/docs/_images/step-16.png" />
+<p>The most important thing in this cookbook is to correctly setup your database
+settings. You can get your MySQL database settings on the right sidebar of the
+<strong>Azure Website Dashboard</strong> panel. Simply click on the
+<strong>View Connection Strings</strong> link to make them appear in a pop-in.</p>
+<img alt="MySQL database settings" src="step-17.png" tppabs="http://symfony.cn/docs/_images/step-17.png" />
+<p>The displayed MySQL database settings should be something similar to the code
+below. Of course, each value depends on what you&#8217;ve already configured.</p>
+<div class="highlight-text"><div class="highlight"><pre>Database=mysymfonyMySQL;Data Source=eu-cdbr-azure-north-c.cloudapp.net;User Id=bff2481a5b6074;Password=bdf50b42
+</pre></div>
+</div>
+<p>Switch back to the console and answer the prompted questions and provide the
+following answers. Don&#8217;t forget to adapt the values below with your real values
+from the MySQL connection string.</p>
+<div class="highlight-text"><div class="highlight"><pre>database_driver: pdo_mysql
+database_host: u-cdbr-azure-north-c.cloudapp.net
+database_port: null
+database_name: mysymfonyMySQL
+database_user: bff2481a5b6074
+database_password: bdf50b42
+// ...
+</pre></div>
+</div>
+<p>Don&#8217;t forget to answer all the questions. It&#8217;s important to set a unique random
+string for the <code class="docutils literal"><span class="pre">secret</span></code> variable. For the mailer configuration, Azure Website
+doesn&#8217;t provide a built-in mailer service. You should consider configuring
+the host-name and credentials of some other third-party mailing service if
+your application needs to send emails.</p>
+<img alt="Configuring Symfony" src="step-18.png" tppabs="http://symfony.cn/docs/_images/step-18.png" />
+<p>Your Symfony application is now configured and should be almost operational. The
+final step is to build the database schema. This can easily be done with the
+command line interface if you&#8217;re using Doctrine. In the online <strong>Console</strong> tool
+of the Kudu application, run the following command to mount the tables into your
+MySQL database.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console doctrine:schema:update --force
+</pre></div>
+</div>
+<p>This command builds the tables and indexes for your MySQL database. If your
+Symfony application is more complex than a basic Symfony Standard Edition, you
+may have additional commands to execute for setup (see <a class="reference internal" href="tools.html" tppabs="http://symfony.cn/docs/cookbook/deployment/tools.html"><em>å¦‚ä½•éƒ¨ç½²Symfonyåº”ç”¨</em></a>).</p>
+<p>Make sure that your application is running by browsing the <code class="docutils literal"><span class="pre">app.php</span></code> front
+controller with your web browser and the following url:</p>
+<div class="highlight-bash"><div class="highlight"><pre>http://&lt;your-website-name&gt;.azurewebsites.net/web/app.php
+</pre></div>
+</div>
+<p>If Symfony is correctly installed, you should see the front page of your Symfony
+application showing.</p>
+</div>
+<div class="section" id="configure-the-web-server">
+<h3>Configure the Web Server<a class="headerlink" href="#configure-the-web-server" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>At this point, the Symfony application has been deployed and works perfectly on
+the Azure Website. However, the <code class="docutils literal"><span class="pre">web</span></code> folder is still part of the url, which
+you definitely don&#8217;t want. But don&#8217;t worry! You can easily configure the web
+server to point to the <code class="docutils literal"><span class="pre">web</span></code> folder and remove the <code class="docutils literal"><span class="pre">web</span></code> in the URL (and
+guarantee that nobody can access files outside of the <code class="docutils literal"><span class="pre">web</span></code> directory.)</p>
+<p>To do this, create and deploy (see previous section about Git) the following
+<code class="docutils literal"><span class="pre">web.config</span></code> file. This file must be located at the root of your project
+next to the <code class="docutils literal"><span class="pre">composer.json</span></code> file. This file is the Microsoft IIS Server
+equivalent to the well-known <code class="docutils literal"><span class="pre">.htaccess</span></code> file from Apache. For a Symfony
+application, configure it with the following content:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- web.config --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+  <span class="nt">&lt;system.webServer&gt;</span>
+    <span class="nt">&lt;rewrite&gt;</span>
+      <span class="nt">&lt;rules&gt;</span>
+        <span class="nt">&lt;clear</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">&quot;BlockAccessToPublic&quot;</span> <span class="na">patternSyntax=</span><span class="s">&quot;Wildcard&quot;</span> <span class="na">stopProcessing=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;match</span> <span class="na">url=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;conditions</span> <span class="na">logicalGrouping=</span><span class="s">&quot;MatchAll&quot;</span> <span class="na">trackAllCaptures=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;add</span> <span class="na">input=</span><span class="s">&quot;{URL}&quot;</span> <span class="na">pattern=</span><span class="s">&quot;/web/*&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;/conditions&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">&quot;CustomResponse&quot;</span> <span class="na">statusCode=</span><span class="s">&quot;403&quot;</span> <span class="na">statusReason=</span><span class="s">&quot;Forbidden: Access is denied.&quot;</span> <span class="na">statusDescription=</span><span class="s">&quot;You do not have permission to view this directory or page using the credentials that you supplied.&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/rule&gt;</span>
+        <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">&quot;RewriteAssetsToPublic&quot;</span> <span class="na">stopProcessing=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;match</span> <span class="na">url=</span><span class="s">&quot;^(.*)(\.css|\.js|\.jpg|\.png|\.gif)$&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;conditions</span> <span class="na">logicalGrouping=</span><span class="s">&quot;MatchAll&quot;</span> <span class="na">trackAllCaptures=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/conditions&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">&quot;Rewrite&quot;</span> <span class="na">url=</span><span class="s">&quot;web/{R:0}&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/rule&gt;</span>
+        <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">&quot;RewriteRequestsToPublic&quot;</span> <span class="na">stopProcessing=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;match</span> <span class="na">url=</span><span class="s">&quot;^(.*)$&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;conditions</span> <span class="na">logicalGrouping=</span><span class="s">&quot;MatchAll&quot;</span> <span class="na">trackAllCaptures=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/conditions&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">&quot;Rewrite&quot;</span> <span class="na">url=</span><span class="s">&quot;web/app.php/{R:0}&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/rule&gt;</span>
+      <span class="nt">&lt;/rules&gt;</span>
+    <span class="nt">&lt;/rewrite&gt;</span>
+  <span class="nt">&lt;/system.webServer&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+</div>
+<p>As you can see, the latest rule <code class="docutils literal"><span class="pre">RewriteRequestsToPublic</span></code> is responsible for
+rewriting any urls to the <code class="docutils literal"><span class="pre">web/app.php</span></code> front controller which allows you to
+skip the <code class="docutils literal"><span class="pre">web/</span></code> folder in the URL. The first rule called <code class="docutils literal"><span class="pre">BlockAccessToPublic</span></code>
+matches all url patterns that contain the <code class="docutils literal"><span class="pre">web/</span></code> folder and serves a
+<code class="docutils literal"><span class="pre">403</span> <span class="pre">Forbidden</span></code> HTTP response instead. This example is based on Benjamin
+Eberlei&#8217;s sample you can find on GitHub in the <a class="reference external" href="javascript:if(confirm('https://github.com/beberlei/symfony-azure-edition/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/beberlei/symfony-azure-edition/'" tppabs="https://github.com/beberlei/symfony-azure-edition/">SymfonyAzureEdition</a> bundle.</p>
+<p>Deploy this file under the <code class="docutils literal"><span class="pre">site/wwwroot</span></code> directory of the Azure Website and
+browse to your application without the <code class="docutils literal"><span class="pre">web/app.php</span></code> segment in the URL.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Nice work! You&#8217;ve now deployed your Symfony application to the Microsoft
+Azure Website Cloud platform. You also saw that Symfony can be easily configured
+and executed on a Microsoft IIS web server. The process is simple and easy
+to implement. And as a bonus, Microsoft is continuing to reduce the number
+of steps needed so that deployment becomes even easier.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="heroku.html" tppabs="http://symfony.cn/docs/cookbook/deployment/heroku.html" class="btn btn-neutral float-right" title="éƒ¨ç½²åˆ°Heroku Cloud">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tools.html" tppabs="http://symfony.cn/docs/cookbook/deployment/tools.html" class="btn btn-neutral" title="å¦‚ä½•éƒ¨ç½²Symfonyåº”ç”¨"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

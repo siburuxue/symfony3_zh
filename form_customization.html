@@ -1,0 +1,1343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to Customize Form Rendering &mdash; Symfony Framework Documentation  ÊñáÊ°£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  ÊñáÊ°£" href="../../index.html"/>
+        <link rel="up" title="Form" href="index.html"/>
+        <link rel="next" title="How to Use Data Transformers" href="data_transformers.html"/>
+        <link rel="prev" title="Form" href="index.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">Âø´ÈÄüÂÖ•Èó®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">ÊÄªËßà</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">ËßÜÂõæ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">‰ª£Á†ÅÁªìÊûÑ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">SymfonyÂíåHTTPÂü∫Á°ÄÂ∑•ÂÖ∑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs Á∫ØPHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">ÂàõÂª∫È°µÈù¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">Ë∑ØÁî±ÔºàRoutingÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">ÂàõÂª∫Âíå‰ΩøÁî®Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">Êï∞ÊçÆÂ∫ìÂíåDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">Êï∞ÊçÆÂ∫ìÂíåPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">ÊµãËØï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">Ê†°È™å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">ÂÆâÂÖ®ÊÄß</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">Â§öËØ≠Ë®Ä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">ÊúçÂä°ÂÆπÂô®ÔºàService ContainerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">ÊÄßËÉΩ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">Ê†∏ÂøÉÂäüËÉΩ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">ÈùôÊÄÅÊñá‰ª∂Â§ÑÁêÜÔºàAsseticÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">ÂåÖÔºàBundleÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">ÈÖçÁΩÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">ÂëΩ‰ª§Ë°å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">ÈÉ®ÁΩ≤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">ÈÇÆ‰ª∂</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">‰∫ã‰ª∂ÂàÜÂèëÂô®ÔºàDispatcherÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">Ë°®ËææÂºèÔºàExpressionÔºâ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">ÊúÄ‰Ω≥ÂÆûË∑µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">SymfonyÊ°ÜÊû∂ÊúÄ‰Ω≥ÂÆûË∑µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">ÂàõÂª∫È°πÁõÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">ÈÖçÁΩÆÂèÇÊï∞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">‰∏öÂä°ÈÄªËæë‰ª£Á†ÅÁöÑÁªÑÁªá</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">Â§öËØ≠Ë®ÄÊîØÊåÅ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">ÂÆâÂÖ®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">ÈùôÊÄÅÊñá‰ª∂ÔºàAssetsÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">ÊµãËØï</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ÁªÑ‰ª∂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">ÂèÇËÄÉ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">Ë¥°ÁåÆ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">Ë¥°ÁåÆ‰ª£Á†Å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">Ë¥°ÁåÆÊñáÊ°£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">Á§æÂå∫</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a> &raquo;</li>
+      
+          <li><a href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a> &raquo;</li>
+      
+    <li>How to Customize Form Rendering</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="form_customization.txt.htm" tppabs="http://symfony.cn/docs/_sources/cookbook/form/form_customization.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-to-customize-form-rendering">
+<span id="index-0"></span><h1>How to Customize Form Rendering<a class="headerlink" href="#how-to-customize-form-rendering" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h1>
+<p>Symfony gives you a wide variety of ways to customize how a form is rendered.
+In this guide, you&#8217;ll learn how to customize every possible part of your
+form with as little effort as possible whether you use Twig or PHP as your
+templating engine.</p>
+<div class="section" id="form-rendering-basics">
+<h2>Form Rendering Basics<a class="headerlink" href="#form-rendering-basics" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Recall that the label, error and HTML widget of a form field can easily
+be rendered by using the <code class="docutils literal"><span class="pre">form_row</span></code> Twig function or the <code class="docutils literal"><span class="pre">row</span></code> PHP helper
+method:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_row</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">row</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>You can also render each of the three parts of the field individually:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="nt">&lt;div&gt;</span>
+    <span class="cp">{{</span> <span class="nv">form_label</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="cp">{{</span> <span class="nv">form_errors</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">errors</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>In both cases, the form label, errors and HTML widget are rendered by using
+a set of markup that ships standard with Symfony. For example, both of the
+above templates would render:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;form_age&quot;</span><span class="nt">&gt;</span>Age<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>This field is required<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">id=</span><span class="s">&quot;form_age&quot;</span> <span class="na">name=</span><span class="s">&quot;form[age]&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p>To quickly prototype and test a form, you can render the entire form with
+just one line:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="c">{# renders all fields #}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="c">{# renders all fields *and* the form start and end tags #}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">form</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;!--</span> <span class="nx">renders</span> <span class="nx">all</span> <span class="nx">fields</span> <span class="o">--&gt;</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">&lt;!-- renders all fields *and* the form start and end tags --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">form</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The remainder of this recipe will explain how every part of the form&#8217;s markup
+can be modified at several different levels. For more information about form
+rendering in general, see <a class="reference internal" href="forms.html#form-rendering-template" tppabs="http://symfony.cn/docs/book/forms.html#form-rendering-template"><span>Âú®Ê®°ÊùøÈáåÁîüÊàêË°®Âçï</span></a>.</p>
+</div>
+<div class="section" id="what-are-form-themes">
+<span id="cookbook-form-customization-form-themes"></span><h2>What are Form Themes?<a class="headerlink" href="#what-are-form-themes" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Symfony uses form fragments - a small piece of a template that renders just
+one part of a form - to render each part of a form - field labels, errors,
+<code class="docutils literal"><span class="pre">input</span></code> text fields, <code class="docutils literal"><span class="pre">select</span></code> tags, etc.</p>
+<p>The fragments are defined as blocks in Twig and as template files in PHP.</p>
+<p>A <em>theme</em> is nothing more than a set of fragments that you want to use when
+rendering a form. In other words, if you want to customize one portion of
+how a form is rendered, you&#8217;ll import a <em>theme</em> which contains a customization
+of the appropriate form fragments.</p>
+<p>Symfony comes with four <strong>built-in form themes</strong> that define each and every
+fragment needed to render every part of a form:</p>
+<ul class="simple">
+<li><a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig">form_div_layout.html.twig</a>, wraps each form field inside a <code class="docutils literal"><span class="pre">&lt;div&gt;</span></code> element.</li>
+<li><a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_table_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_table_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_table_layout.html.twig">form_table_layout.html.twig</a>, wraps the entire form inside a <code class="docutils literal"><span class="pre">&lt;table&gt;</span></code>
+element and each form field inside a <code class="docutils literal"><span class="pre">&lt;tr&gt;</span></code> element.</li>
+<li><a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig">bootstrap_3_layout.html.twig</a>, wraps each form field inside a <code class="docutils literal"><span class="pre">&lt;div&gt;</span></code> element
+with the appropriate CSS classes to apply the default <a class="reference external" href="javascript:if(confirm('http://getbootstrap.com/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://getbootstrap.com/'" tppabs="http://getbootstrap.com/">Bootstrap 3 CSS framework</a>
+styles.</li>
+<li><a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_horizontal_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_horizontal_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_horizontal_layout.html.twig">bootstrap_3_horizontal_layout.html.twig</a>, it&#8217;s similar to the previous theme,
+but the CSS classes applied are the ones used to display the forms horizontally
+(i.e. the label and the widget in the same row).</li>
+</ul>
+<p>In the next section you will learn how to customize a theme by overriding
+some or all of its fragments.</p>
+<p>For example, when the widget of an <code class="docutils literal"><span class="pre">integer</span></code> type field is rendered, an <code class="docutils literal"><span class="pre">input</span></code>
+<code class="docutils literal"><span class="pre">number</span></code> field is generated</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>renders:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">id=</span><span class="s">&quot;form_age&quot;</span> <span class="na">name=</span><span class="s">&quot;form[age]&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span> <span class="na">value=</span><span class="s">&quot;33&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Internally, Symfony uses the <code class="docutils literal"><span class="pre">integer_widget</span></code> fragment to render the field.
+This is because the field type is <code class="docutils literal"><span class="pre">integer</span></code> and you&#8217;re rendering its <code class="docutils literal"><span class="pre">widget</span></code>
+(as opposed to its <code class="docutils literal"><span class="pre">label</span></code> or <code class="docutils literal"><span class="pre">errors</span></code>).</p>
+<p>In Twig that would default to the block <code class="docutils literal"><span class="pre">integer_widget</span></code> from the <a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig">form_div_layout.html.twig</a>
+template.</p>
+<p>In PHP it would rather be the <code class="docutils literal"><span class="pre">integer_widget.html.php</span></code> file located in
+the <code class="docutils literal"><span class="pre">FrameworkBundle/Resources/views/Form</span></code> folder.</p>
+<p>The default implementation of the <code class="docutils literal"><span class="pre">integer_widget</span></code> fragment looks like this:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="c">{# form_div_layout.html.twig #}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">integer_widget</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">type</span> <span class="o">=</span> <span class="nv">type</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s1">&#39;number&#39;</span><span class="o">)</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;form_widget_simple&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">integer_widget</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- integer_widget.html.php --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">block</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="s1">&#39;form_widget_simple&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$type</span> <span class="o">:</span> <span class="s2">&quot;number&quot;</span><span class="p">))</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>As you can see, this fragment itself renders another fragment - <code class="docutils literal"><span class="pre">form_widget_simple</span></code>:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# form_div_layout.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_widget_simple</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">set</span> <span class="nv">type</span> <span class="o">=</span> <span class="nv">type</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s1">&#39;text&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">type</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;widget_attributes&#39;</span><span class="o">)</span> <span class="cp">}}</span> <span class="cp">{%</span> <span class="k">if</span> <span class="nv">value</span> <span class="k">is</span> <span class="k">not</span> <span class="nf">empty</span> <span class="cp">%}</span><span class="na">value=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="nt">/&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">form_widget_simple</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- FrameworkBundle/Resources/views/Form/form_widget_simple.html.php --&gt;</span>
+<span class="nt">&lt;input</span>
+    <span class="na">type=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;text&#39;</span> <span class="cp">?&gt;</span><span class="s">&quot;</span>
+    <span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$value</span><span class="p">))</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="na">value=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">block</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="s1">&#39;widget_attributes&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+<span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The point is, the fragments dictate the HTML output of each part of a form. To
+customize the form output, you just need to identify and override the correct
+fragment. A set of these form fragment customizations is known as a form &#8220;theme&#8221;.
+When rendering a form, you can choose which form theme(s) you want to apply.</p>
+<p>In Twig a theme is a single template file and the fragments are the blocks defined
+in this file.</p>
+<p>In PHP a theme is a folder and the fragments are individual template files in
+this folder.</p>
+<div class="sidebar" id="cookbook-form-customization-sidebar">
+<p class="first sidebar-title">Knowing which Block to Customize</p>
+<p>In this example, the customized fragment name is <code class="docutils literal"><span class="pre">integer_widget</span></code> because
+you want to override the HTML <code class="docutils literal"><span class="pre">widget</span></code> for all <code class="docutils literal"><span class="pre">integer</span></code> field types. If
+you need to customize <code class="docutils literal"><span class="pre">textarea</span></code> fields, you would customize <code class="docutils literal"><span class="pre">textarea_widget</span></code>.</p>
+<p>As you can see, the fragment name is a combination of the field type and
+which part of the field is being rendered (e.g. <code class="docutils literal"><span class="pre">widget</span></code>, <code class="docutils literal"><span class="pre">label</span></code>,
+<code class="docutils literal"><span class="pre">errors</span></code>, <code class="docutils literal"><span class="pre">row</span></code>). As such, to customize how errors are rendered for
+just input <code class="docutils literal"><span class="pre">text</span></code> fields, you should customize the <code class="docutils literal"><span class="pre">text_errors</span></code> fragment.</p>
+<p>More commonly, however, you&#8217;ll want to customize how errors are displayed
+across <em>all</em> fields. You can do this by customizing the <code class="docutils literal"><span class="pre">form_errors</span></code>
+fragment. This takes advantage of field type inheritance. Specifically,
+since the <code class="docutils literal"><span class="pre">text</span></code> type extends from the <code class="docutils literal"><span class="pre">form</span></code> type, the Form component
+will first look for the type-specific fragment (e.g. <code class="docutils literal"><span class="pre">text_errors</span></code>) before
+falling back to its parent fragment name if it doesn&#8217;t exist (e.g. <code class="docutils literal"><span class="pre">form_errors</span></code>).</p>
+<p class="last">For more information on this topic, see <a class="reference internal" href="forms.html#form-template-blocks" tppabs="http://symfony.cn/docs/book/forms.html#form-template-blocks"><span>Ë°®ÂçïÂáΩÊï∞ÂëΩÂêçËßÑÂàô</span></a>.</p>
+</div>
+</div>
+<div class="section" id="form-theming">
+<span id="cookbook-form-theming-methods"></span><h2>Form Theming<a class="headerlink" href="#form-theming" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>To see the power of form theming, suppose you want to wrap every input <code class="docutils literal"><span class="pre">number</span></code>
+field with a <code class="docutils literal"><span class="pre">div</span></code> tag. The key to doing this is to customize the
+<code class="docutils literal"><span class="pre">integer_widget</span></code> fragment.</p>
+</div>
+<div class="section" id="form-theming-in-twig">
+<h2>Form Theming in Twig<a class="headerlink" href="#form-theming-in-twig" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>When customizing the form field block in Twig, you have two options on <em>where</em>
+the customized form block can live:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="30%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">Pros</th>
+<th class="head">Cons</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Inside the same template as the form</td>
+<td>Quick and easy</td>
+<td>Can&#8217;t be reused in other templates</td>
+</tr>
+<tr class="row-odd"><td>Inside a separate template</td>
+<td>Can be reused by many templates</td>
+<td>Requires an extra template to be created</td>
+</tr>
+</tbody>
+</table>
+<p>Both methods have the same effect but are better in different situations.</p>
+<div class="section" id="method-1-inside-the-same-template-as-the-form">
+<span id="cookbook-form-twig-theming-self"></span><h3>Method 1: Inside the same Template as the Form<a class="headerlink" href="#method-1-inside-the-same-template-as-the-form" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>The easiest way to customize the <code class="docutils literal"><span class="pre">integer_widget</span></code> block is to customize it
+directly in the template that&#8217;s actually rendering the form.</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;::base.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="p">_</span><span class="nv">self</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">integer_widget</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;integer_widget&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{%</span> <span class="k">set</span> <span class="nv">type</span> <span class="o">=</span> <span class="nv">type</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s1">&#39;number&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+        <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;form_widget_simple&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+    <span class="c">{# ... render the form #}</span>
+
+    <span class="cp">{{</span> <span class="nv">form_row</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>By using the special <code class="docutils literal"><span class="pre">{%</span> <span class="pre">form_theme</span> <span class="pre">form</span> <span class="pre">_self</span> <span class="pre">%}</span></code> tag, Twig looks inside
+the same template for any overridden form blocks. Assuming the <code class="docutils literal"><span class="pre">form.age</span></code>
+field is an <code class="docutils literal"><span class="pre">integer</span></code> type field, when its widget is rendered, the customized
+<code class="docutils literal"><span class="pre">integer_widget</span></code> block will be used.</p>
+<p>The disadvantage of this method is that the customized form block can&#8217;t be
+reused when rendering other forms in other templates. In other words, this method
+is most useful when making form customizations that are specific to a single
+form in your application. If you want to reuse a form customization across
+several (or all) forms in your application, read on to the next section.</p>
+</div>
+<div class="section" id="method-2-inside-a-separate-template">
+<span id="cookbook-form-twig-separate-template"></span><h3>Method 2: Inside a separate Template<a class="headerlink" href="#method-2-inside-a-separate-template" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>You can also choose to put the customized <code class="docutils literal"><span class="pre">integer_widget</span></code> form block in a
+separate template entirely. The code and end-result are the same, but you
+can now re-use the form customization across many templates:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# src/AppBundle/Resources/views/Form/fields.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">integer_widget</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;integer_widget&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{%</span> <span class="k">set</span> <span class="nv">type</span> <span class="o">=</span> <span class="nv">type</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s1">&#39;number&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+        <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;form_widget_simple&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Now that you&#8217;ve created the customized form block, you need to tell Symfony
+to use it. Inside the template where you&#8217;re actually rendering your form,
+tell Symfony to use the template via the <code class="docutils literal"><span class="pre">form_theme</span></code> tag:</p>
+<div class="highlight-html+jinja" id="cookbook-form-twig-theme-import-template"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="s1">&#39;AppBundle:Form:fields.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p>When the <code class="docutils literal"><span class="pre">form.age</span></code> widget is rendered, Symfony will use the <code class="docutils literal"><span class="pre">integer_widget</span></code>
+block from the new template and the <code class="docutils literal"><span class="pre">input</span></code> tag will be wrapped in the
+<code class="docutils literal"><span class="pre">div</span></code> element specified in the customized block.</p>
+<div class="section" id="multiple-templates">
+<h4>Multiple Templates<a class="headerlink" href="#multiple-templates" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>A form can also be customized by applying several templates. To do this, pass the
+name of all the templates as an array using the <code class="docutils literal"><span class="pre">with</span></code> keyword:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="k">with</span> <span class="o">[</span><span class="s1">&#39;::common.html.twig&#39;</span><span class="o">,</span> <span class="s1">&#39;:Form:fields.html.twig&#39;</span><span class="o">,</span>
+                         <span class="s1">&#39;AppBundle:Form:fields.html.twig&#39;</span><span class="o">]</span> <span class="cp">%}</span>
+
+<span class="c">{# ... #}</span>
+</pre></div>
+</div>
+<p>The templates can be located at different bundles and they can even be stored
+at the global <code class="docutils literal"><span class="pre">app/Resources/views/</span></code> directory.</p>
+</div>
+<div class="section" id="child-forms">
+<h4>Child Forms<a class="headerlink" href="#child-forms" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>You can also apply a form theme to a specific child of your form:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form.child</span> <span class="s1">&#39;AppBundle:Form:fields.html.twig&#39;</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>This is useful when you want to have a custom theme for a nested form that&#8217;s
+different than the one of your main form. Just specify both your themes:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="s1">&#39;AppBundle:Form:fields.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form.child</span> <span class="s1">&#39;AppBundle:Form:fields_child.html.twig&#39;</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="form-theming-in-php">
+<span id="cookbook-form-php-theming"></span><h2>Form Theming in PHP<a class="headerlink" href="#form-theming-in-php" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>When using PHP as a templating engine, the only method to customize a fragment
+is to create a new template file - this is similar to the second method used by
+Twig.</p>
+<p>The template file must be named after the fragment. You must create a <code class="docutils literal"><span class="pre">integer_widget.html.php</span></code>
+file in order to customize the <code class="docutils literal"><span class="pre">integer_widget</span></code> fragment.</p>
+<div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- src/AppBundle/Resources/views/Form/integer_widget.html.php --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;integer_widget&quot;</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">block</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="s1">&#39;form_widget_simple&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$type</span> <span class="o">:</span> <span class="s2">&quot;number&quot;</span><span class="p">))</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p>Now that you&#8217;ve created the customized form template, you need to tell Symfony
+to use it. Inside the template where you&#8217;re actually rendering your form,
+tell Symfony to use the theme via the <code class="docutils literal"><span class="pre">setTheme</span></code> helper method:</p>
+<div class="highlight-php" id="cookbook-form-php-theme-import-template"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">setTheme</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;AppBundle:Form&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<p>When the <code class="docutils literal"><span class="pre">form.age</span></code> widget is rendered, Symfony will use the customized
+<code class="docutils literal"><span class="pre">integer_widget.html.php</span></code> template and the <code class="docutils literal"><span class="pre">input</span></code> tag will be wrapped in
+the <code class="docutils literal"><span class="pre">div</span></code> element.</p>
+<p>If you want to apply a theme to a specific child form, pass it to the <code class="docutils literal"><span class="pre">setTheme</span></code>
+method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">setTheme</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;child&#39;</span><span class="p">],</span> <span class="s1">&#39;AppBundle:Form/Child&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="referencing-base-form-blocks-twig-specific">
+<span id="cookbook-form-twig-import-base-blocks"></span><h2>Referencing base Form Blocks (Twig specific)<a class="headerlink" href="#referencing-base-form-blocks-twig-specific" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>So far, to override a particular form block, the best method is to copy
+the default block from <a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig">form_div_layout.html.twig</a>, paste it into a different template,
+and then customize it. In many cases, you can avoid doing this by referencing
+the base block when customizing it.</p>
+<p>This is easy to do, but varies slightly depending on if your form block customizations
+are in the same template as the form or a separate template.</p>
+<div class="section" id="referencing-blocks-from-inside-the-same-template-as-the-form">
+<h3>Referencing Blocks from inside the same Template as the Form<a class="headerlink" href="#referencing-blocks-from-inside-the-same-template-as-the-form" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>Import the blocks by adding a <code class="docutils literal"><span class="pre">use</span></code> tag in the template where you&#8217;re rendering
+the form:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">use</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span> <span class="k">with</span> <span class="nv">integer_widget</span> <span class="k">as</span> <span class="nv">base_integer_widget</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>Now, when the blocks from <a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig">form_div_layout.html.twig</a> are imported, the
+<code class="docutils literal"><span class="pre">integer_widget</span></code> block is called <code class="docutils literal"><span class="pre">base_integer_widget</span></code>. This means that when
+you redefine the <code class="docutils literal"><span class="pre">integer_widget</span></code> block, you can reference the default markup
+via <code class="docutils literal"><span class="pre">base_integer_widget</span></code>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">block</span> <span class="nv">integer_widget</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;integer_widget&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;base_integer_widget&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="referencing-base-blocks-from-an-external-template">
+<h3>Referencing base Blocks from an external Template<a class="headerlink" href="#referencing-base-blocks-from-an-external-template" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>If your form customizations live inside an external template, you can reference
+the base block by using the <code class="docutils literal"><span class="pre">parent()</span></code> Twig function:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# src/AppBundle/Resources/views/Form/fields.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">integer_widget</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;integer_widget&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{{</span> <span class="nv">parent</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">It is not possible to reference the base block when using PHP as the
+templating engine. You have to manually copy the content from the base block
+to your new template file.</p>
+</div>
+</div>
+</div>
+<div class="section" id="making-application-wide-customizations">
+<span id="cookbook-form-global-theming"></span><h2>Making Application-wide Customizations<a class="headerlink" href="#making-application-wide-customizations" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>If you&#8217;d like a certain form customization to be global to your application,
+you can accomplish this by making the form customizations in an external
+template and then importing it inside your application configuration.</p>
+<div class="section" id="twig">
+<h3>Twig<a class="headerlink" href="#twig" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>By using the following configuration, any customized form blocks inside the
+<code class="docutils literal"><span class="pre">AppBundle:Form:fields.html.twig</span></code> template will be used globally when a
+form is rendered.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">twig</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">form_themes</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="s">&#39;AppBundle:Form:fields.html.twig&#39;</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="nt">&lt;twig:config&gt;</span>
+    <span class="nt">&lt;twig:form-theme&gt;</span>AppBundle:Form:fields.html.twig<span class="nt">&lt;/twig:form-theme&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/twig:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;form_themes&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;AppBundle:Form:fields.html.twig&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>By default, Twig uses a <em>div</em> layout when rendering forms. Some people, however,
+may prefer to render forms in a <em>table</em> layout. Use the <code class="docutils literal"><span class="pre">form_table_layout.html.twig</span></code>
+resource to use such a layout:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">twig</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">form_themes</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="s">&#39;form_table_layout.html.twig&#39;</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="nt">&lt;twig:config&gt;</span>
+    <span class="nt">&lt;twig:form-theme&gt;</span>form_table_layout.html.twig<span class="nt">&lt;/twig:form-theme&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/twig:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;form_themes&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;form_table_layout.html.twig&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>If you only want to make the change in one template, add the following line to
+your template file rather than adding the template as a resource:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="s1">&#39;form_table_layout.html.twig&#39;</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal"><span class="pre">form</span></code> variable in the above code is the form view variable
+that you passed to your template.</p>
+</div>
+<div class="section" id="php">
+<h3>PHP<a class="headerlink" href="#php" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>By using the following configuration, any customized form fragments inside the
+<code class="docutils literal"><span class="pre">src/AppBundle/Resources/views/Form</span></code> folder will be used globally when a
+form is rendered.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">framework</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">templating</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">form</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">resources</span><span class="p-Indicator">:</span>
+                <span class="p-Indicator">-</span> <span class="s">&#39;AppBundle:Form&#39;</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="nt">&lt;framework:config&gt;</span>
+    <span class="nt">&lt;framework:templating&gt;</span>
+        <span class="nt">&lt;framework:form&gt;</span>
+            <span class="nt">&lt;resource&gt;</span>AppBundle:Form<span class="nt">&lt;/resource&gt;</span>
+        <span class="nt">&lt;/framework:form&gt;</span>
+    <span class="nt">&lt;/framework:templating&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/framework:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="c1">// PHP</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;framework&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;templating&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;form&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;resources&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;AppBundle:Form&#39;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+     <span class="p">),</span>
+
+     <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>By default, the PHP engine uses a <em>div</em> layout when rendering forms. Some people,
+however, may prefer to render forms in a <em>table</em> layout. Use the <code class="docutils literal"><span class="pre">FrameworkBundle:FormTable</span></code>
+resource to use such a layout:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">framework</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">templating</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">form</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">resources</span><span class="p-Indicator">:</span>
+                <span class="p-Indicator">-</span> <span class="s">&#39;FrameworkBundle:FormTable&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="nt">&lt;framework:config&gt;</span>
+    <span class="nt">&lt;framework:templating&gt;</span>
+        <span class="nt">&lt;framework:form&gt;</span>
+            <span class="nt">&lt;resource&gt;</span>FrameworkBundle:FormTable<span class="nt">&lt;/resource&gt;</span>
+        <span class="nt">&lt;/framework:form&gt;</span>
+    <span class="nt">&lt;/framework:templating&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/framework:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;framework&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;templating&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;form&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;resources&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;FrameworkBundle:FormTable&#39;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+
+     <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>If you only want to make the change in one template, add the following line to
+your template file rather than adding the template as a resource:</p>
+<div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">setTheme</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;FrameworkBundle:FormTable&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal"><span class="pre">$form</span></code> variable in the above code is the form view variable
+that you passed to your template.</p>
+</div>
+</div>
+<div class="section" id="how-to-customize-an-individual-field">
+<h2>How to Customize an individual Field<a class="headerlink" href="#how-to-customize-an-individual-field" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>So far, you&#8217;ve seen the different ways you can customize the widget output
+of all text field types. You can also customize individual fields. For example,
+suppose you have two <code class="docutils literal"><span class="pre">text</span></code> fields in a <code class="docutils literal"><span class="pre">product</span></code> form - <code class="docutils literal"><span class="pre">name</span></code> and
+<code class="docutils literal"><span class="pre">description</span></code> - but you only want to customize one of the fields. This can be
+accomplished by customizing a fragment whose name is a combination of the field&#8217;s
+<code class="docutils literal"><span class="pre">id</span></code> attribute and which part of the field is being customized. For example, to
+customize the <code class="docutils literal"><span class="pre">name</span></code> field only:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="p">_</span><span class="nv">self</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="p">_</span><span class="nv">product_name_widget</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text_widget&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;form_widget_simple&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.name</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- Main template --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">setTheme</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;AppBundle:Form&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+
+<span class="c">&lt;!-- src/AppBundle/Resources/views/Form/_product_name_widget.html.php --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text_widget&quot;</span><span class="nt">&gt;</span>
+      echo $view[&#39;form&#39;]-&gt;block(&#39;form_widget_simple&#39;) ?&gt;
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Here, the <code class="docutils literal"><span class="pre">_product_name_widget</span></code> fragment defines the template to use for the
+field whose <em>id</em> is <code class="docutils literal"><span class="pre">product_name</span></code> (and name is <code class="docutils literal"><span class="pre">product[name]</span></code>).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p>The <code class="docutils literal"><span class="pre">product</span></code> portion of the field is the form name, which may be set
+manually or generated automatically based on your form type name (e.g.
+<code class="docutils literal"><span class="pre">ProductType</span></code> equates to <code class="docutils literal"><span class="pre">product</span></code>). If you&#8217;re not sure what your
+form name is, just view the source of your generated form.</p>
+<p>If you want to change the <code class="docutils literal"><span class="pre">product</span></code> or <code class="docutils literal"><span class="pre">name</span></code> portion of the block
+name <code class="docutils literal"><span class="pre">_product_name_widget</span></code> you can set the <code class="docutils literal"><span class="pre">block_name</span></code> option in your
+form type:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\FormBuilderInterface</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;block_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;custom_name&#39;</span><span class="p">,</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="last">Then the block name will be <code class="docutils literal"><span class="pre">_product_custom_name_widget</span></code>.</p>
+</div>
+<p>You can also override the markup for an entire field row using the same method:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="p">_</span><span class="nv">self</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="p">_</span><span class="nv">product_name_row</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;name_row&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{{</span> <span class="nv">form_label</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+        <span class="cp">{{</span> <span class="nv">form_errors</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+        <span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{{</span> <span class="nv">form_row</span><span class="o">(</span><span class="nv">form.name</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- Main template --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">setTheme</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;AppBundle:Form&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">row</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+
+<span class="c">&lt;!-- src/AppBundle/Resources/views/Form/_product_name_row.html.php --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;name_row&quot;</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">errors</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-common-customizations">
+<h2>Other common Customizations<a class="headerlink" href="#other-common-customizations" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>So far, this recipe has shown you several different ways to customize a single
+piece of how a form is rendered. The key is to customize a specific fragment that
+corresponds to the portion of the form you want to control (see
+<a class="reference internal" href="#cookbook-form-customization-sidebar"><span>naming form blocks</span></a>).</p>
+<p>In the next sections, you&#8217;ll see how you can make several common form customizations.
+To apply these customizations, use one of the methods described in the
+<a class="reference internal" href="#cookbook-form-theming-methods"><span>Form Theming</span></a> section.</p>
+<div class="section" id="customizing-error-output">
+<h3>Customizing Error Output<a class="headerlink" href="#customizing-error-output" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The Form component only handles <em>how</em> the validation errors are rendered,
+and not the actual validation error messages. The error messages themselves
+are determined by the validation constraints you apply to your objects.
+For more information, see the chapter on <a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html"><em>validation</em></a>.</p>
+</div>
+<p>There are many different ways to customize how errors are rendered when a
+form is submitted with errors. The error messages for a field are rendered
+when you use the <code class="docutils literal"><span class="pre">form_errors</span></code> helper:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_errors</span><span class="o">(</span><span class="nv">form.age</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">errors</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>By default, the errors are rendered inside an unordered list:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This field is required<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<p>To override how errors are rendered for <em>all</em> fields, simply copy, paste
+and customize the <code class="docutils literal"><span class="pre">form_errors</span></code> fragment.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# form_errors.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_errors</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">spaceless</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">errors</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="cp">%}</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="cp">{%</span> <span class="k">for</span> <span class="nv">error</span> <span class="k">in</span> <span class="nv">errors</span> <span class="cp">%}</span>
+                <span class="nt">&lt;li&gt;</span><span class="cp">{{</span> <span class="nv">error.message</span> <span class="cp">}}</span><span class="nt">&lt;/li&gt;</span>
+            <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+        <span class="nt">&lt;/ul&gt;</span>
+        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endspaceless</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">form_errors</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- form_errors.html.php --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$errors</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$errors</span> <span class="k">as</span> <span class="nv">$error</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+            <span class="nt">&lt;li&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span> <span class="cp">?&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">See <a class="reference internal" href="#cookbook-form-theming-methods"><span>Form Theming</span></a> for how to apply this customization.</p>
+</div>
+<p>You can also customize the error output for just one specific field type.
+To customize <em>only</em> the markup used for these errors, follow the same directions
+as above but put the contents in a relative <code class="docutils literal"><span class="pre">_errors</span></code> block (or file in case
+of PHP templates). For example: <code class="docutils literal"><span class="pre">text_errors</span></code> (or <code class="docutils literal"><span class="pre">text_errors.html.php</span></code>).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">See <a class="reference internal" href="forms.html#form-template-blocks" tppabs="http://symfony.cn/docs/book/forms.html#form-template-blocks"><span>Ë°®ÂçïÂáΩÊï∞ÂëΩÂêçËßÑÂàô</span></a> to find out which specific block or file you
+have to customize.</p>
+</div>
+<p>Certain errors that are more global to your form (i.e. not specific to just one
+field) are rendered separately, usually at the top of your form:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_errors</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="nv">$form</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>To customize <em>only</em> the markup used for these errors, follow the same directions
+as above, but now check if the <code class="docutils literal"><span class="pre">compound</span></code> variable is set to <code class="docutils literal"><span class="pre">true</span></code>. If it
+is <code class="docutils literal"><span class="pre">true</span></code>, it means that what&#8217;s being currently rendered is a collection of
+fields (e.g. a whole form), and not just an individual field.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# form_errors.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_errors</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">spaceless</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">errors</span><span class="o">|</span><span class="nf">length</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="cp">%}</span>
+            <span class="cp">{%</span> <span class="k">if</span> <span class="nv">compound</span> <span class="cp">%}</span>
+                <span class="nt">&lt;ul&gt;</span>
+                    <span class="cp">{%</span> <span class="k">for</span> <span class="nv">error</span> <span class="k">in</span> <span class="nv">errors</span> <span class="cp">%}</span>
+                        <span class="nt">&lt;li&gt;</span><span class="cp">{{</span> <span class="nv">error.message</span> <span class="cp">}}</span><span class="nt">&lt;/li&gt;</span>
+                    <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+                <span class="c">{# ... display the errors for a single field #}</span>
+            <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endspaceless</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">form_errors</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- form_errors.html.php --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$errors</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$compound</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$errors</span> <span class="k">as</span> <span class="nv">$error</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+                <span class="nt">&lt;li&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span> <span class="cp">?&gt;</span><span class="nt">&lt;/li&gt;</span>
+            <span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">else</span><span class="o">:</span> <span class="cp">?&gt;</span>
+        <span class="c">&lt;!-- ... render the errors for a single field --&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="customizing-the-form-row">
+<h3>Customizing the &#8220;Form Row&#8221;<a class="headerlink" href="#customizing-the-form-row" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>When you can manage it, the easiest way to render a form field is via the
+<code class="docutils literal"><span class="pre">form_row</span></code> function, which renders the label, errors and HTML widget of
+a field. To customize the markup used for rendering <em>all</em> form field rows,
+override the <code class="docutils literal"><span class="pre">form_row</span></code> fragment. For example, suppose you want to add a
+class to the <code class="docutils literal"><span class="pre">div</span></code> element around each row:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# form_row.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_row</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form_row&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{{</span> <span class="nv">form_label</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+        <span class="cp">{{</span> <span class="nv">form_errors</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+        <span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">form_row</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- form_row.html.php --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form_row&quot;</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">errors</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">See <a class="reference internal" href="#cookbook-form-theming-methods"><span>Form Theming</span></a> for how to apply this customization.</p>
+</div>
+</div>
+<div class="section" id="adding-a-required-asterisk-to-field-labels">
+<h3>Adding a &#8220;Required&#8221; Asterisk to Field Labels<a class="headerlink" href="#adding-a-required-asterisk-to-field-labels" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>If you want to denote all of your required fields with a required asterisk (<code class="docutils literal"><span class="pre">*</span></code>),
+you can do this by customizing the <code class="docutils literal"><span class="pre">form_label</span></code> fragment.</p>
+<p>In Twig, if you&#8217;re making the form customization inside the same template as your
+form, modify the <code class="docutils literal"><span class="pre">use</span></code> tag and add the following:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">use</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span> <span class="k">with</span> <span class="nv">form_label</span> <span class="k">as</span> <span class="nv">base_form_label</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_label</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;base_form_label&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">required</span> <span class="cp">%}</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;required&quot;</span> <span class="na">title=</span><span class="s">&quot;This field is required&quot;</span><span class="nt">&gt;</span>*<span class="nt">&lt;/span&gt;</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>In Twig, if you&#8217;re making the form customization inside a separate template, use
+the following:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_label</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">parent</span><span class="o">()</span> <span class="cp">}}</span>
+
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">required</span> <span class="cp">%}</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;required&quot;</span> <span class="na">title=</span><span class="s">&quot;This field is required&quot;</span><span class="nt">&gt;</span>*<span class="nt">&lt;/span&gt;</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>When using PHP as a templating engine you have to copy the content from the
+original template:</p>
+<div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- form_label.html.php --&gt;</span>
+
+<span class="c">&lt;!-- original content --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$required</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$label_attr</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">((</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$label_attr</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$label_attr</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39; required&#39;</span><span class="p">);</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$compound</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$label_attr</span><span class="p">[</span><span class="s1">&#39;for&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$id</span><span class="p">;</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$label</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$label</span> <span class="o">=</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">humanize</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;label</span> <span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$label_attr</span> <span class="k">as</span> <span class="nv">$k</span> <span class="o">=&gt;</span> <span class="nv">$v</span><span class="p">)</span> <span class="p">{</span> <span class="nb">printf</span><span class="p">(</span><span class="s1">&#39;%s=&quot;%s&quot; &#39;</span><span class="p">,</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$k</span><span class="p">),</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$v</span><span class="p">));</span> <span class="p">}</span> <span class="cp">?&gt;</span><span class="nt">&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;translator&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">trans</span><span class="p">(</span><span class="nv">$label</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="nv">$translation_domain</span><span class="p">))</span> <span class="cp">?&gt;</span><span class="nt">&lt;/label&gt;</span>
+
+<span class="c">&lt;!-- customization --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$required</span><span class="p">)</span> <span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;required&quot;</span> <span class="na">title=</span><span class="s">&quot;This field is required&quot;</span><span class="nt">&gt;</span>*<span class="nt">&lt;/span&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">See <a class="reference internal" href="#cookbook-form-theming-methods"><span>Form Theming</span></a> for how to apply this customization.</p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Using CSS only</p>
+<p>By default, <code class="docutils literal"><span class="pre">label</span></code> tags of required fields are rendered with a
+<code class="docutils literal"><span class="pre">required</span></code> CSS class. Thus, you can also add an asterisk using CSS only:</p>
+<div class="last highlight-css"><div class="highlight"><pre><span class="nt">label</span><span class="nc">.required</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;* &quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="adding-help-messages">
+<h3>Adding &#8220;help&#8221; Messages<a class="headerlink" href="#adding-help-messages" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>You can also customize your form widgets to have an optional &#8220;help&#8221; message.</p>
+<p>In Twig, if you&#8217;re making the form customization inside the same template as your
+form, modify the <code class="docutils literal"><span class="pre">use</span></code> tag and add the following:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">use</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span> <span class="k">with</span> <span class="nv">form_widget_simple</span> <span class="k">as</span> <span class="nv">base_form_widget_simple</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_widget_simple</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nb">block</span><span class="o">(</span><span class="s1">&#39;base_form_widget_simple&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">help</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">help</span> <span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>In Twig, if you&#8217;re making the form customization inside a separate template, use
+the following:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">form_widget_simple</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">parent</span><span class="o">()</span> <span class="cp">}}</span>
+
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">help</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">help</span> <span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>When using PHP as a templating engine you have to copy the content from the
+original template:</p>
+<div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- form_widget_simple.html.php --&gt;</span>
+
+<span class="c">&lt;!-- Original content --&gt;</span>
+<span class="nt">&lt;input</span>
+    <span class="na">type=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;text&#39;</span> <span class="cp">?&gt;</span><span class="s">&quot;</span>
+    <span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$value</span><span class="p">))</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="na">value=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">block</span><span class="p">(</span><span class="nv">$form</span><span class="p">,</span> <span class="s1">&#39;widget_attributes&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+<span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Customization --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$help</span><span class="p">))</span> <span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$help</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+<p>To render a help message below a field, pass in a <code class="docutils literal"><span class="pre">help</span></code> variable:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.title</span><span class="o">,</span> <span class="o">{</span><span class="s1">&#39;help&#39;</span><span class="o">:</span> <span class="s1">&#39;foobar&#39;</span><span class="o">})</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;help&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foobar&#39;</span><span class="p">))</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">See <a class="reference internal" href="#cookbook-form-theming-methods"><span>Form Theming</span></a> for how to apply this customization.</p>
+</div>
+</div>
+</div>
+<div class="section" id="using-form-variables">
+<h2>Using Form Variables<a class="headerlink" href="#using-form-variables" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Most of the functions available for rendering different parts of a form (e.g.
+the form widget, form label, form errors, etc.) also allow you to make certain
+customizations directly. Look at the following example:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><div class="highlight"><pre><span class="c">{# render a widget, but add a &quot;foo&quot; class to it #}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.name</span><span class="o">,</span> <span class="o">{</span> <span class="s1">&#39;attr&#39;</span><span class="o">:</span> <span class="o">{</span><span class="s1">&#39;class&#39;</span><span class="o">:</span> <span class="s1">&#39;foo&#39;</span><span class="o">}</span> <span class="o">})</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;!--</span> <span class="nx">render</span> <span class="nx">a</span> <span class="nx">widget</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">add</span> <span class="nx">a</span> <span class="s2">&quot;foo&quot;</span> <span class="k">class</span> <span class="nc">to</span> <span class="nx">it</span> <span class="o">--&gt;</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;attr&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">))</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The array passed as the second argument contains form &#8220;variables&#8221;. For
+more details about this concept in Twig, see <a class="reference internal" href="twig_reference.html#twig-reference-form-variables" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#twig-reference-form-variables"><span>More about Form Variables</span></a>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data_transformers.html" tppabs="http://symfony.cn/docs/cookbook/form/data_transformers.html" class="btn btn-neutral float-right" title="How to Use Data Transformers">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html" class="btn btn-neutral" title="Form"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ÁâàÊùÉÊâÄÊúâ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebæœåŠ¡å™¨çš„é…ç½® &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="é…ç½®" href="index.html"/>
+        <link rel="next" title="å¦‚ä½•ç»„ç»‡é…ç½®æ–‡ä»¶" href="configuration_organization.html"/>
+        <link rel="prev" title="å¦‚ä½•ä½¿ç”¨Apache Router" href="apache_router.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a> &raquo;</li>
+      
+          <li><a href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a> &raquo;</li>
+      
+    <li>WebæœåŠ¡å™¨çš„é…ç½®</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="web_server_configuration.txt.htm" tppabs="http://symfony.cn/docs/_sources/cookbook/configuration/web_server_configuration.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="configuring-a-web-server">
+<span id="index-0"></span><h1>WebæœåŠ¡å™¨çš„é…ç½®<a class="headerlink" href="#configuring-a-web-server" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>The preferred way to develop your Symfony application is to use
+<a class="reference internal" href="built_in.html" tppabs="http://symfony.cn/docs/cookbook/web_server/built_in.html"><em>PHP&#8217;s internal web server</em></a>. However,
+when using an older PHP version or when running the application in the production
+environment, you&#8217;ll need to use a fully-featured web server. This article
+describes several ways to use Symfony with Apache2 or Nginx.</p>
+<p>When using Apache2, you can configure PHP as an
+<a class="reference internal" href="#web-server-apache-mod-php"><span>Apache module</span></a> or with FastCGI using
+<a class="reference internal" href="#web-server-apache-fpm"><span>PHP FPM</span></a>. FastCGI also is the preferred way
+to use PHP <a class="reference internal" href="#web-server-nginx"><span>with Nginx</span></a>.</p>
+<div class="sidebar">
+<p class="first sidebar-title">The Web Directory</p>
+<p>The web directory is the home of all of your application&#8217;s public and
+static files, including images, stylesheets and JavaScript files. It is
+also where the front controllers live. For more details, see the <a class="reference internal" href="page_creation.html#the-web-directory" tppabs="http://symfony.cn/docs/book/page_creation.html#the-web-directory"><span>Webç›®å½•</span></a>.</p>
+<p class="last">The web directory serves as the document root when configuring your
+web server. In the examples below, the <code class="docutils literal"><span class="pre">web/</span></code> directory will be the
+document root. This directory is <code class="docutils literal"><span class="pre">/var/www/project/web/</span></code>.</p>
+</div>
+<div class="section" id="apache2-with-mod-php-php-cgi">
+<span id="web-server-apache-mod-php"></span><h2>Apache2 with mod_php/PHP-CGI<a class="headerlink" href="#apache2-with-mod-php-php-cgi" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>For advanced Apache configuration options, see the official <a class="reference external" href="javascript:if(confirm('http://httpd.apache.org/docs/current/mod/core.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://httpd.apache.org/docs/current/mod/core.html#documentroot'" tppabs="http://httpd.apache.org/docs/current/mod/core.html#documentroot">Apache</a>
+documentation. The minimum basics to get your application running under Apache2
+are:</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+    <span class="nb">ServerName</span> domain.tld
+    <span class="nb">ServerAlias</span> www.domain.tld
+
+    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/project/web</span>
+    <span class="nt">&lt;Directory</span> <span class="s">/var/www/project/web</span><span class="nt">&gt;</span>
+        <span class="c"># enable the .htaccess rewrites</span>
+        <span class="nb">AllowOverride</span> <span class="k">All</span>
+        <span class="nb">Order</span> allow,deny
+        <span class="nb">Allow</span> from <span class="k">All</span>
+    <span class="nt">&lt;/Directory&gt;</span>
+
+    <span class="c"># uncomment the following lines if you install assets as symlinks</span>
+    <span class="c"># or run into problems when compiling LESS/Sass/CoffeScript assets</span>
+    <span class="c"># &lt;Directory /var/www/project&gt;</span>
+    <span class="c">#     Option FollowSymlinks</span>
+    <span class="c"># &lt;/Directory&gt;</span>
+
+    <span class="nb">ErrorLog</span> <span class="sx">/var/log/apache2/project_error.log</span>
+    <span class="nb">CustomLog</span> <span class="sx">/var/log/apache2/project_access.log</span> combined
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">If your system supports the <code class="docutils literal"><span class="pre">APACHE_LOG_DIR</span></code> variable, you may want
+to use <code class="docutils literal"><span class="pre">${APACHE_LOG_DIR}/</span></code> instead of <code class="docutils literal"><span class="pre">/var/log/apache2/</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">For performance reasons, you will probably want to set
+<code class="docutils literal"><span class="pre">AllowOverride</span> <span class="pre">None</span></code> and implement the rewrite rules in the <code class="docutils literal"><span class="pre">web/.htaccess</span></code>
+into the <code class="docutils literal"><span class="pre">VirtualHost</span></code> config.</p>
+</div>
+<p>If you are using <strong>php-cgi</strong>, Apache does not pass HTTP basic username and
+password to PHP by default. To work around this limitation, you should use the
+following configuration snippet:</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nb">RewriteRule</span> .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p>In Apache 2.4, <code class="docutils literal"><span class="pre">Order</span> <span class="pre">allow,deny</span></code> has been replaced by <code class="docutils literal"><span class="pre">Require</span> <span class="pre">all</span> <span class="pre">granted</span></code>,
+and hence you need to modify your <code class="docutils literal"><span class="pre">Directory</span></code> permission settings as follows:</p>
+<div class="last highlight-apache"><div class="highlight"><pre><span class="nt">&lt;Directory</span> <span class="s">/var/www/project/web</span><span class="nt">&gt;</span>
+    <span class="c"># enable the .htaccess rewrites</span>
+    <span class="nb">AllowOverride</span> <span class="k">All</span>
+    <span class="nb">Require</span> <span class="k">all</span> granted
+<span class="nt">&lt;/Directory&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="apache2-with-php-fpm">
+<span id="web-server-apache-fpm"></span><h2>Apache2 with PHP-FPM<a class="headerlink" href="#apache2-with-php-fpm" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>To make use of PHP5-FPM with Apache, you first have to ensure that you have
+the FastCGI process manager <code class="docutils literal"><span class="pre">php-fpm</span></code> binary and Apache&#8217;s FastCGI module
+installed (for example, on a Debian based system you have to install the
+<code class="docutils literal"><span class="pre">libapache2-mod-fastcgi</span></code> and <code class="docutils literal"><span class="pre">php5-fpm</span></code> packages).</p>
+<p>PHP-FPM uses so-called <em>pools</em> to handle incoming FastCGI requests. You can
+configure an arbitrary number of pools in the FPM configuration. In a pool
+you configure either a TCP socket (IP and port) or a unix domain socket to
+listen on. Each pool can also be run under a different UID and GID:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="c1">; a pool called www</span>
+<span class="k">[www]</span>
+<span class="na">user</span> <span class="o">=</span> <span class="s">www-data</span>
+<span class="na">group</span> <span class="o">=</span> <span class="s">www-data</span>
+
+<span class="c1">; use a unix domain socket</span>
+<span class="na">listen</span> <span class="o">=</span> <span class="s">/var/run/php5-fpm.sock</span>
+
+<span class="c1">; or listen on a TCP socket</span>
+<span class="na">listen</span> <span class="o">=</span> <span class="s">127.0.0.1:9000</span>
+</pre></div>
+</div>
+<div class="section" id="using-mod-proxy-fcgi-with-apache-2-4">
+<h3>Using mod_proxy_fcgi with Apache 2.4<a class="headerlink" href="#using-mod-proxy-fcgi-with-apache-2-4" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>If you are running Apache 2.4, you can easily use <code class="docutils literal"><span class="pre">mod_proxy_fcgi</span></code> to pass
+incoming requests to PHP-FPM. Configure PHP-FPM to listen on a TCP socket
+(<code class="docutils literal"><span class="pre">mod_proxy</span></code> currently <a class="reference external" href="javascript:if(confirm('https://issues.apache.org/bugzilla/show_bug.cgi?id=54101  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://issues.apache.org/bugzilla/show_bug.cgi?id=54101'" tppabs="https://issues.apache.org/bugzilla/show_bug.cgi?id=54101">does not support unix sockets</a>), enable <code class="docutils literal"><span class="pre">mod_proxy</span></code>
+and <code class="docutils literal"><span class="pre">mod_proxy_fcgi</span></code> in your Apache configuration and use the <code class="docutils literal"><span class="pre">SetHandler</span></code>
+directive to pass requests for PHP files to PHP FPM:</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+    <span class="nb">ServerName</span> domain.tld
+    <span class="nb">ServerAlias</span> www.domain.tld
+
+    <span class="c"># Uncomment the following line to force Apache to pass the Authorization</span>
+    <span class="c"># header to PHP: required for &quot;basic_auth&quot; under PHP-FPM and FastCGI</span>
+    <span class="c">#</span>
+    <span class="c"># SetEnvIfNoCase ^Authorization$ &quot;(.+)&quot; HTTP_AUTHORIZATION=$1</span>
+
+    <span class="c"># For Apache 2.4.9 or higher</span>
+    <span class="c"># Using SetHandler avoids issues with using ProxyPassMatch in combination</span>
+    <span class="c"># with mod_rewrite or mod_autoindex</span>
+    <span class="nt">&lt;FilesMatch</span> <span class="s">\.php$</span><span class="nt">&gt;</span>
+        <span class="nb">SetHandler</span> proxy:fcgi://127.0.0.1:9000
+    <span class="nt">&lt;/FilesMatch&gt;</span>
+    <span class="c"># If you use Apache version below 2.4.9 you must consider update or use this instead</span>
+    <span class="c"># ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/var/www/project/web/$1</span>
+    <span class="c"># If you run your Symfony application on a subpath of your document root, the</span>
+    <span class="c"># regular expression must be changed accordingly:</span>
+    <span class="c"># ProxyPassMatch ^/path-to-app/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/var/www/project/web/$1</span>
+
+    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/project/web</span>
+    <span class="nt">&lt;Directory</span> <span class="s">/var/www/project/web</span><span class="nt">&gt;</span>
+        <span class="c"># enable the .htaccess rewrites</span>
+        <span class="nb">AllowOverride</span> <span class="k">All</span>
+        <span class="nb">Require</span> <span class="k">all</span> granted
+    <span class="nt">&lt;/Directory&gt;</span>
+
+    <span class="c"># uncomment the following lines if you install assets as symlinks</span>
+    <span class="c"># or run into problems when compiling LESS/Sass/CoffeScript assets</span>
+    <span class="c"># &lt;Directory /var/www/project&gt;</span>
+    <span class="c">#     Option FollowSymlinks</span>
+    <span class="c"># &lt;/Directory&gt;</span>
+
+    <span class="nb">ErrorLog</span> <span class="sx">/var/log/apache2/project_error.log</span>
+    <span class="nb">CustomLog</span> <span class="sx">/var/log/apache2/project_access.log</span> combined
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="php-fpm-with-apache-2-2">
+<h3>PHP-FPM with Apache 2.2<a class="headerlink" href="#php-fpm-with-apache-2-2" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>On Apache 2.2 or lower, you cannot use <code class="docutils literal"><span class="pre">mod_proxy_fcgi</span></code>. You have to use
+the <a class="reference external" href="javascript:if(confirm('http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html#FastCgiExternalServer'" tppabs="http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html#FastCgiExternalServer">FastCgiExternalServer</a> directive instead. Therefore, your Apache configuration
+should look something like this:</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+    <span class="nb">ServerName</span> domain.tld
+    <span class="nb">ServerAlias</span> www.domain.tld
+
+    <span class="nb">AddHandler</span> php5-fcgi .php
+    <span class="nb">Action</span> php5-fcgi <span class="sx">/php5-fcgi</span>
+    <span class="nb">Alias</span> <span class="sx">/php5-fcgi</span> <span class="sx">/usr/lib/cgi-bin/php5-fcgi</span>
+    <span class="nb">FastCgiExternalServer</span> <span class="sx">/usr/lib/cgi-bin/php5-fcgi</span> -host <span class="m">127.0.0.1</span>:9000 -pass-header Authorization
+
+    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/project/web</span>
+    <span class="nt">&lt;Directory</span> <span class="s">/var/www/project/web</span><span class="nt">&gt;</span>
+        <span class="c"># enable the .htaccess rewrites</span>
+        <span class="nb">AllowOverride</span> <span class="k">All</span>
+        <span class="nb">Order</span> allow,deny
+        <span class="nb">Allow</span> from <span class="k">all</span>
+    <span class="nt">&lt;/Directory&gt;</span>
+
+    <span class="c"># uncomment the following lines if you install assets as symlinks</span>
+    <span class="c"># or run into problems when compiling LESS/Sass/CoffeScript assets</span>
+    <span class="c"># &lt;Directory /var/www/project&gt;</span>
+    <span class="c">#     Option FollowSymlinks</span>
+    <span class="c"># &lt;/Directory&gt;</span>
+
+    <span class="nb">ErrorLog</span> <span class="sx">/var/log/apache2/project_error.log</span>
+    <span class="nb">CustomLog</span> <span class="sx">/var/log/apache2/project_access.log</span> combined
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+</div>
+<p>If you prefer to use a unix socket, you have to use the <code class="docutils literal"><span class="pre">-socket</span></code> option
+instead:</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nb">FastCgiExternalServer</span> <span class="sx">/usr/lib/cgi-bin/php5-fcgi</span> -socket <span class="sx">/var/run/php5-fpm.sock</span> -pass-header Authorization
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="nginx">
+<span id="web-server-nginx"></span><h2>Nginx<a class="headerlink" href="#nginx" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>For advanced Nginx configuration options, see the official <a class="reference external" href="javascript:if(confirm('http://wiki.nginx.org/Symfony  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://wiki.nginx.org/Symfony'" tppabs="http://wiki.nginx.org/Symfony">Nginx</a>
+documentation. The minimum basics to get your application running under Nginx
+are:</p>
+<div class="highlight-nginx"><div class="highlight"><pre><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">server_name</span> <span class="s">domain.tld</span> <span class="s">www.domain.tld</span><span class="p">;</span>
+    <span class="kn">root</span> <span class="s">/var/www/project/web</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="c1"># try to serve file directly, fallback to app.php</span>
+        <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="s">/app.php</span><span class="nv">$is_args$args</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1"># DEV</span>
+    <span class="c1"># This rule should only be placed on your development environment</span>
+    <span class="c1"># In production, don&#39;t include this and don&#39;t deploy app_dev.php or config.php</span>
+    <span class="kn">location</span> <span class="p">~</span> <span class="sr">^/(app_dev|config)\.php(/|$)</span> <span class="p">{</span>
+        <span class="kn">fastcgi_pass</span> <span class="s">unix:/var/run/php5-fpm.sock</span><span class="p">;</span>
+        <span class="kn">fastcgi_split_path_info</span> <span class="s">^(.+\.php)(/.*)</span>$<span class="p">;</span>
+        <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
+        <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+        <span class="kn">fastcgi_param</span> <span class="s">HTTPS</span> <span class="no">off</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1"># PROD</span>
+    <span class="kn">location</span> <span class="p">~</span> <span class="sr">^/app\.php(/|$)</span> <span class="p">{</span>
+        <span class="kn">fastcgi_pass</span> <span class="s">unix:/var/run/php5-fpm.sock</span><span class="p">;</span>
+        <span class="kn">fastcgi_split_path_info</span> <span class="s">^(.+\.php)(/.*)</span>$<span class="p">;</span>
+        <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
+        <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+        <span class="kn">fastcgi_param</span> <span class="s">HTTPS</span> <span class="no">off</span><span class="p">;</span>
+        <span class="c1"># Prevents URIs that include the front controller. This will 404:</span>
+        <span class="c1"># http://domain.tld/app.php/some-path</span>
+        <span class="c1"># Remove the internal directive to allow URIs like this</span>
+        <span class="kn">internal</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kn">error_log</span> <span class="s">/var/log/nginx/project_error.log</span><span class="p">;</span>
+    <span class="kn">access_log</span> <span class="s">/var/log/nginx/project_access.log</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">Depending on your PHP-FPM config, the <code class="docutils literal"><span class="pre">fastcgi_pass</span></code> can also be
+<code class="docutils literal"><span class="pre">fastcgi_pass</span> <span class="pre">127.0.0.1:9000</span></code>.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p>This executes <strong>only</strong> <code class="docutils literal"><span class="pre">app.php</span></code>, <code class="docutils literal"><span class="pre">app_dev.php</span></code> and <code class="docutils literal"><span class="pre">config.php</span></code> in
+the web directory. All other files will be served as text. You <strong>must</strong>
+also make sure that if you <em>do</em> deploy <code class="docutils literal"><span class="pre">app_dev.php</span></code> or <code class="docutils literal"><span class="pre">config.php</span></code>
+that these files are secured and not available to any outside user (the
+IP checking code at the top of each file does this by default).</p>
+<p class="last">If you have other PHP files in your web directory that need to be executed,
+be sure to include them in the <code class="docutils literal"><span class="pre">location</span></code> block above.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="configuration_organization.html" tppabs="http://symfony.cn/docs/cookbook/configuration/configuration_organization.html" class="btn btn-neutral float-right" title="å¦‚ä½•ç»„ç»‡é…ç½®æ–‡ä»¶">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="apache_router.html" tppabs="http://symfony.cn/docs/cookbook/configuration/apache_router.html" class="btn btn-neutral" title="å¦‚ä½•ä½¿ç”¨Apache Router"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

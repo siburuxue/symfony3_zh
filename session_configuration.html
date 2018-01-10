@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuring Sessions and Save Handlers &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="HttpFoundation" href="index.html"/>
+        <link rel="next" title="Testing with Sessions" href="session_testing.html"/>
+        <link rel="prev" title="Session Management" href="sessions.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+          <li><a href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a> &raquo;</li>
+      
+    <li>Configuring Sessions and Save Handlers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="session_configuration.txt" tppabs="http://symfony.cn/docs/_sources/components/http_foundation/session_configuration.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="configuring-sessions-and-save-handlers">
+<span id="index-0"></span><h1>Configuring Sessions and Save Handlers<a class="headerlink" href="#configuring-sessions-and-save-handlers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>This section deals with how to configure session management and fine tune it
+to your specific needs. This documentation covers save handlers, which
+store and retrieve session data, and configuring session behavior.</p>
+<div class="section" id="save-handlers">
+<h2>Save Handlers<a class="headerlink" href="#save-handlers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The PHP session workflow has 6 possible operations that may occur. The normal
+session follows <code class="docutils literal"><span class="pre">open</span></code>, <code class="docutils literal"><span class="pre">read</span></code>, <code class="docutils literal"><span class="pre">write</span></code> and <code class="docutils literal"><span class="pre">close</span></code>, with the possibility
+of <code class="docutils literal"><span class="pre">destroy</span></code> and <code class="docutils literal"><span class="pre">gc</span></code> (garbage collection which will expire any old sessions:
+<code class="docutils literal"><span class="pre">gc</span></code> is called randomly according to PHP&#8217;s configuration and if called, it is
+invoked after the <code class="docutils literal"><span class="pre">open</span></code> operation). You can read more about this at
+<a class="reference external" href="javascript:if(confirm('http://php.net/session.customhandler  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/session.customhandler'" tppabs="http://php.net/session.customhandler">php.net/session.customhandler</a></p>
+<div class="section" id="native-php-save-handlers">
+<h3>Native PHP Save Handlers<a class="headerlink" href="#native-php-save-handlers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>So-called native handlers, are save handlers which are either compiled into
+PHP or provided by PHP extensions, such as PHP-Sqlite, PHP-Memcached and so on.</p>
+<p>All native save handlers are internal to PHP and as such, have no public facing API.
+They must be configured by <code class="docutils literal"><span class="pre">php.ini</span></code> directives, usually <code class="docutils literal"><span class="pre">session.save_path</span></code> and
+potentially other driver specific directives. Specific details can be found in
+the docblock of the <code class="docutils literal"><span class="pre">setOptions()</span></code> method of each class. For instance, the one
+provided by the Memcached extension can be found on <a class="reference external" href="javascript:if(confirm('http://php.net/memcached.setoption  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/memcached.setoption'" tppabs="http://php.net/memcached.setoption">php.net/memcached.setoption</a></p>
+<p>While native save handlers can be activated by directly using
+<code class="docutils literal"><span class="pre">ini_set('session.save_handler',</span> <span class="pre">$name);</span></code>, Symfony provides a convenient way to
+activate these in the same way as it does for custom handlers.</p>
+<p>Symfony provides drivers for the following native save handler as an example:</p>
+<ul class="simple">
+<li><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeFileSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeFileSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeFileSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler"><span class="pre">NativeFileSessionHandler</span></a></code></li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Session</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler</span><span class="p">;</span>
+
+<span class="nv">$storage</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NativeSessionStorage</span><span class="p">(</span><span class="k">array</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">NativeFileSessionHandler</span><span class="p">());</span>
+<span class="nv">$session</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Session</span><span class="p">(</span><span class="nv">$storage</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">With the exception of the <code class="docutils literal"><span class="pre">files</span></code> handler which is built into PHP and
+always available, the availability of the other handlers depends on those
+PHP extensions being active at runtime.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">Native save handlers provide a quick solution to session storage, however,
+in complex systems where you need more control, custom save handlers may
+provide more freedom and flexibility. Symfony provides several implementations
+which you may further customize as required.</p>
+</div>
+</div>
+<div class="section" id="custom-save-handlers">
+<h3>Custom Save Handlers<a class="headerlink" href="#custom-save-handlers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Custom handlers are those which completely replace PHP&#8217;s built-in session save
+handlers by providing six callback functions which PHP calls internally at
+various points in the session workflow.</p>
+<p>The Symfony HttpFoundation component provides some by default and these can
+easily serve as examples if you wish to write your own.</p>
+<ul class="simple">
+<li><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/PdoSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/PdoSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/PdoSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler"><span class="pre">PdoSessionHandler</span></a></code></li>
+<li><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MemcacheSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MemcacheSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MemcacheSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcacheSessionHandler"><span class="pre">MemcacheSessionHandler</span></a></code></li>
+<li><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MemcachedSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MemcachedSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MemcachedSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler"><span class="pre">MemcachedSessionHandler</span></a></code></li>
+<li><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MongoDbSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MongoDbSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/MongoDbSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\MongoDbSessionHandler"><span class="pre">MongoDbSessionHandler</span></a></code></li>
+<li><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NullSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NullSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NullSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\NullSessionHandler"><span class="pre">NullSessionHandler</span></a></code></li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Session</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler</span><span class="p">;</span>
+
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\PDO</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="nv">$storage</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NativeSessionStorage</span><span class="p">(</span><span class="k">array</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">PdoSessionHandler</span><span class="p">(</span><span class="nv">$pdo</span><span class="p">));</span>
+<span class="nv">$session</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Session</span><span class="p">(</span><span class="nv">$storage</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configuring-php-sessions">
+<h2>Configuring PHP Sessions<a class="headerlink" href="#configuring-php-sessions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html" title="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage"><span class="pre">NativeSessionStorage</span></a></code>
+can configure most of the <code class="docutils literal"><span class="pre">php.ini</span></code> configuration directives which are documented
+at <a class="reference external" href="javascript:if(confirm('http://php.net/session.configuration  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/session.configuration'" tppabs="http://php.net/session.configuration">php.net/session.configuration</a>.</p>
+<p>To configure these settings, pass the keys (omitting the initial <code class="docutils literal"><span class="pre">session.</span></code> part
+of the key) as a key-value array to the <code class="docutils literal"><span class="pre">$options</span></code> constructor argument.
+Or set them via the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html#method_setOptions'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html#method_setOptions" title="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage::setOptions()"><span class="pre">setOptions()</span></a></code>
+method.</p>
+<p>For the sake of clarity, some key options are explained in this documentation.</p>
+</div>
+<div class="section" id="session-cookie-lifetime">
+<h2>Session Cookie Lifetime<a class="headerlink" href="#session-cookie-lifetime" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>For security, session tokens are generally recommended to be sent as session cookies.
+You can configure the lifetime of session cookies by specifying the lifetime
+(in seconds) using the <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> key in the constructor&#8217;s <code class="docutils literal"><span class="pre">$options</span></code>
+argument in <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html" title="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage"><span class="pre">NativeSessionStorage</span></a></code>.</p>
+<p>Setting a <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> to <code class="docutils literal"><span class="pre">0</span></code> will cause the cookie to live only as
+long as the browser remains open. Generally, <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> would be set to
+a relatively large number of days, weeks or months. It is not uncommon to set
+cookies for a year or more depending on the application.</p>
+<p>Since session cookies are just a client-side token, they are less important in
+controlling the fine details of your security settings which ultimately can only
+be securely controlled from the server side.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">The <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> setting is the number of seconds the cookie should live
+for, it is not a Unix timestamp. The resulting session cookie will be stamped
+with an expiry time of <code class="docutils literal"><span class="pre">time()</span></code> + <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> where the time is taken
+from the server.</p>
+</div>
+</div>
+<div class="section" id="configuring-garbage-collection">
+<h2>Configuring Garbage Collection<a class="headerlink" href="#configuring-garbage-collection" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>When a session opens, PHP will call the <code class="docutils literal"><span class="pre">gc</span></code> handler randomly according to the
+probability set by <code class="docutils literal"><span class="pre">session.gc_probability</span></code> / <code class="docutils literal"><span class="pre">session.gc_divisor</span></code>. For
+example if these were set to <code class="docutils literal"><span class="pre">5/100</span></code> respectively, it would mean a probability
+of 5%. Similarly, <code class="docutils literal"><span class="pre">3/4</span></code> would mean a 3 in 4 chance of being called, i.e. 75%.</p>
+<p>If the garbage collection handler is invoked, PHP will pass the value stored in
+the <code class="docutils literal"><span class="pre">php.ini</span></code> directive <code class="docutils literal"><span class="pre">session.gc_maxlifetime</span></code>. The meaning in this context is
+that any stored session that was saved more than <code class="docutils literal"><span class="pre">gc_maxlifetime</span></code> ago should be
+deleted. This allows one to expire records based on idle time.</p>
+<p>You can configure these settings by passing <code class="docutils literal"><span class="pre">gc_probability</span></code>, <code class="docutils literal"><span class="pre">gc_divisor</span></code>
+and <code class="docutils literal"><span class="pre">gc_maxlifetime</span></code> in an array to the constructor of
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html" title="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage"><span class="pre">NativeSessionStorage</span></a></code>
+or to the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html#method_setOptions'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html#method_setOptions" title="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage::setOptions()"><span class="pre">setOptions()</span></a></code>
+method.</p>
+</div>
+<div class="section" id="session-lifetime">
+<h2>Session Lifetime<a class="headerlink" href="#session-lifetime" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>When a new session is created, meaning Symfony issues a new session cookie
+to the client, the cookie will be stamped with an expiry time. This is
+calculated by adding the PHP runtime configuration value in
+<code class="docutils literal"><span class="pre">session.cookie_lifetime</span></code> with the current server time.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p>PHP will only issue a cookie once. The client is expected to store that cookie
+for the entire lifetime. A new cookie will only be issued when the session is
+destroyed, the browser cookie is deleted, or the session ID is regenerated
+using the <code class="docutils literal"><span class="pre">migrate()</span></code> or <code class="docutils literal"><span class="pre">invalidate()</span></code> methods of the <code class="docutils literal"><span class="pre">Session</span></code> class.</p>
+<p class="last">The initial cookie lifetime can be set by configuring <code class="docutils literal"><span class="pre">NativeSessionStorage</span></code>
+using the <code class="docutils literal"><span class="pre">setOptions(array('cookie_lifetime'</span> <span class="pre">=&gt;</span> <span class="pre">1234))</span></code> method.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">A cookie lifetime of <code class="docutils literal"><span class="pre">0</span></code> means the cookie expires when the browser is closed.</p>
+</div>
+</div>
+<div class="section" id="session-idle-time-keep-alive">
+<h2>Session Idle Time/Keep Alive<a class="headerlink" href="#session-idle-time-keep-alive" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>There are often circumstances where you may want to protect, or minimize
+unauthorized use of a session when a user steps away from their terminal while
+logged in by destroying the session after a certain period of idle time. For
+example, it is common for banking applications to log the user out after just
+5 to 10 minutes of inactivity. Setting the cookie lifetime here is not
+appropriate because that can be manipulated by the client, so we must do the expiry
+on the server side. The easiest way is to implement this via garbage collection
+which runs reasonably frequently. The <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> would be set to a
+relatively high value, and the garbage collection <code class="docutils literal"><span class="pre">gc_maxlifetime</span></code> would be set
+to destroy sessions at whatever the desired idle period is.</p>
+<p>The other option is specifically check if a session has expired after the
+session is started. The session can be destroyed as required. This method of
+processing can allow the expiry of sessions to be integrated into the user
+experience, for example, by displaying a message.</p>
+<p>Symfony records some basic metadata about each session to give you complete
+freedom in this area.</p>
+</div>
+<div class="section" id="session-metadata">
+<h2>Session Metadata<a class="headerlink" href="#session-metadata" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Sessions are decorated with some basic metadata to enable fine control over the
+security settings. The session object has a getter for the metadata,
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Session.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Session.html#method_getMetadataBag'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Session.html#method_getMetadataBag" title="Symfony\Component\HttpFoundation\Session\Session::getMetadataBag()"><span class="pre">getMetadataBag()</span></a></code> which
+exposes an instance of <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/MetadataBag.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/MetadataBag.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/MetadataBag.html" title="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag"><span class="pre">MetadataBag</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getMetadataBag</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getCreated</span><span class="p">();</span>
+<span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getMetadataBag</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getLastUsed</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Both methods return a Unix timestamp (relative to the server).</p>
+<p>This metadata can be used to explicitly expire a session on access, e.g.:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$session</span><span class="o">-&gt;</span><span class="na">start</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">time</span><span class="p">()</span> <span class="o">-</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getMetadataBag</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getLastUsed</span><span class="p">()</span> <span class="o">&gt;</span> <span class="nv">$maxIdleTime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">invalidate</span><span class="p">();</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nx">SessionExpired</span><span class="p">();</span> <span class="c1">// redirect to expired session page</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It is also possible to tell what the <code class="docutils literal"><span class="pre">cookie_lifetime</span></code> was set to for a
+particular cookie by reading the <code class="docutils literal"><span class="pre">getLifetime()</span></code> method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getMetadataBag</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getLifetime</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The expiry time of the cookie can be determined by adding the created
+timestamp and the lifetime.</p>
+</div>
+<div class="section" id="php-5-4-compatibility">
+<h2>PHP 5.4 Compatibility<a class="headerlink" href="#php-5-4-compatibility" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Since PHP 5.4.0, <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandler.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandler.php'" tppabs="http://php.net/manual/en/class.sessionhandler.php" title="SessionHandler"><span class="pre">SessionHandler</span></a></code> and <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandlerinterface.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandlerinterface.php'" tppabs="http://php.net/manual/en/class.sessionhandlerinterface.php" title="SessionHandlerInterface"><span class="pre">SessionHandlerInterface</span></a></code>
+are available. Symfony provides forward compatibility for the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandlerinterface.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandlerinterface.php'" tppabs="http://php.net/manual/en/class.sessionhandlerinterface.php" title="SessionHandlerInterface"><span class="pre">SessionHandlerInterface</span></a></code>
+so it can be used under PHP 5.3. This greatly improves interoperability with other
+libraries.</p>
+<p><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandler.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandler.php'" tppabs="http://php.net/manual/en/class.sessionhandler.php" title="SessionHandler"><span class="pre">SessionHandler</span></a></code> is a special PHP internal class which exposes native save
+handlers to PHP user-space.</p>
+<p>In order to provide a solution for those using PHP 5.4, Symfony has a special
+class called <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeSessionHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeSessionHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeSessionHandler.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeSessionHandler"><span class="pre">NativeSessionHandler</span></a></code>
+which under PHP 5.4, extends from <code class="docutils literal"><span class="pre">\SessionHandler</span></code> and under PHP 5.3 is just a
+empty base class. This provides some interesting opportunities to leverage
+PHP 5.4 functionality if it is available.</p>
+</div>
+<div class="section" id="save-handler-proxy">
+<h2>Save Handler Proxy<a class="headerlink" href="#save-handler-proxy" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>A Save Handler Proxy is basically a wrapper around a Save Handler that was
+introduced to seamlessly support the migration from PHP 5.3 to PHP 5.4+. It
+further creates an extension point from where custom logic can be added that
+works independently of which handler is being wrapped inside.</p>
+<p>There are two kinds of save handler class proxies which inherit from
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/AbstractProxy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/AbstractProxy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/AbstractProxy.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\AbstractProxy"><span class="pre">AbstractProxy</span></a></code>:
+they are <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeProxy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeProxy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeProxy.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeProxy"><span class="pre">NativeProxy</span></a></code>
+and <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/SessionHandlerProxy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/SessionHandlerProxy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/SessionHandlerProxy.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\SessionHandlerProxy"><span class="pre">SessionHandlerProxy</span></a></code>.</p>
+<p><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/NativeSessionStorage.html" title="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage"><span class="pre">NativeSessionStorage</span></a></code>
+automatically injects storage handlers into a save handler proxy unless already
+wrapped by one.</p>
+<p><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeProxy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeProxy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/NativeProxy.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeProxy"><span class="pre">NativeProxy</span></a></code>
+is used automatically under PHP 5.3 when internal PHP save handlers are specified
+using the <code class="docutils literal"><span class="pre">Native*SessionHandler</span></code> classes, while
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/SessionHandlerProxy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/SessionHandlerProxy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Session/Storage/Handler/SessionHandlerProxy.html" title="Symfony\Component\HttpFoundation\Session\Storage\Handler\SessionHandlerProxy"><span class="pre">SessionHandlerProxy</span></a></code>
+will be used to wrap any custom save handlers, that implement <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandlerinterface.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandlerinterface.php'" tppabs="http://php.net/manual/en/class.sessionhandlerinterface.php" title="SessionHandlerInterface"><span class="pre">SessionHandlerInterface</span></a></code>.</p>
+<p>From PHP 5.4 and above, all session handlers implement <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandlerinterface.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandlerinterface.php'" tppabs="http://php.net/manual/en/class.sessionhandlerinterface.php" title="SessionHandlerInterface"><span class="pre">SessionHandlerInterface</span></a></code>
+including <code class="docutils literal"><span class="pre">Native*SessionHandler</span></code> classes which inherit from <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.sessionhandler.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.sessionhandler.php'" tppabs="http://php.net/manual/en/class.sessionhandler.php" title="SessionHandler"><span class="pre">SessionHandler</span></a></code>.</p>
+<p>The proxy mechanism allows you to get more deeply involved in session save handler
+classes. A proxy for example could be used to encrypt any session transaction
+without knowledge of the specific save handler.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">Before PHP 5.4, you can only proxy user-land save handlers but not
+native PHP save handlers.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="session_testing.html" tppabs="http://symfony.cn/docs/components/http_foundation/session_testing.html" class="btn btn-neutral float-right" title="Testing with Sessions">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sessions.html" tppabs="http://symfony.cn/docs/components/http_foundation/sessions.html" class="btn btn-neutral" title="Session Management"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

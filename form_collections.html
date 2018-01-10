@@ -1,0 +1,1033 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to Embed a Collection of Forms &mdash; Symfony Framework Documentation  ÊñáÊ°£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  ÊñáÊ°£" href="../../index.html"/>
+        <link rel="up" title="Form" href="index.html"/>
+        <link rel="next" title="How to Create a Custom Form Field Type" href="create_custom_field_type.html"/>
+        <link rel="prev" title="How to Dynamically Modify Forms Using Form Events" href="dynamic_form_modification.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">Âø´ÈÄüÂÖ•Èó®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">ÊÄªËßà</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">ËßÜÂõæ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">‰ª£Á†ÅÁªìÊûÑ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">SymfonyÂíåHTTPÂü∫Á°ÄÂ∑•ÂÖ∑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs Á∫ØPHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">ÂàõÂª∫È°µÈù¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">Ë∑ØÁî±ÔºàRoutingÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">ÂàõÂª∫Âíå‰ΩøÁî®Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">Êï∞ÊçÆÂ∫ìÂíåDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">Êï∞ÊçÆÂ∫ìÂíåPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">ÊµãËØï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">Ê†°È™å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">ÂÆâÂÖ®ÊÄß</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">Â§öËØ≠Ë®Ä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">ÊúçÂä°ÂÆπÂô®ÔºàService ContainerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">ÊÄßËÉΩ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">Ê†∏ÂøÉÂäüËÉΩ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">ÈùôÊÄÅÊñá‰ª∂Â§ÑÁêÜÔºàAsseticÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">ÂåÖÔºàBundleÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">ÈÖçÁΩÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">ÂëΩ‰ª§Ë°å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">ÈÉ®ÁΩ≤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">ÈÇÆ‰ª∂</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">‰∫ã‰ª∂ÂàÜÂèëÂô®ÔºàDispatcherÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">Ë°®ËææÂºèÔºàExpressionÔºâ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">ÊúÄ‰Ω≥ÂÆûË∑µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">SymfonyÊ°ÜÊû∂ÊúÄ‰Ω≥ÂÆûË∑µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">ÂàõÂª∫È°πÁõÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">ÈÖçÁΩÆÂèÇÊï∞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">‰∏öÂä°ÈÄªËæë‰ª£Á†ÅÁöÑÁªÑÁªá</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">Â§öËØ≠Ë®ÄÊîØÊåÅ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">ÂÆâÂÖ®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">ÈùôÊÄÅÊñá‰ª∂ÔºàAssetsÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">ÊµãËØï</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ÁªÑ‰ª∂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">ÂèÇËÄÉ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">Ë¥°ÁåÆ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">Ë¥°ÁåÆ‰ª£Á†Å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">Ë¥°ÁåÆÊñáÊ°£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">Á§æÂå∫</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a> &raquo;</li>
+      
+          <li><a href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a> &raquo;</li>
+      
+    <li>How to Embed a Collection of Forms</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="form_collections.txt" tppabs="http://symfony.cn/docs/_sources/cookbook/form/form_collections.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-to-embed-a-collection-of-forms">
+<span id="index-0"></span><h1>How to Embed a Collection of Forms<a class="headerlink" href="#how-to-embed-a-collection-of-forms" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h1>
+<p>In this entry, you&#8217;ll learn how to create a form that embeds a collection
+of many other forms. This could be useful, for example, if you had a <code class="docutils literal"><span class="pre">Task</span></code>
+class and you wanted to edit/create/remove many <code class="docutils literal"><span class="pre">Tag</span></code> objects related to
+that Task, right inside the same form.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p>In this entry, it&#8217;s loosely assumed that you&#8217;re using Doctrine as your
+database store. But if you&#8217;re not using Doctrine (e.g. Propel or just
+a database connection), it&#8217;s all very similar. There are only a few parts
+of this tutorial that really care about &#8220;persistence&#8221;.</p>
+<p class="last">If you <em>are</em> using Doctrine, you&#8217;ll need to add the Doctrine metadata,
+including the <code class="docutils literal"><span class="pre">ManyToMany</span></code> association mapping definition on the Task&#8217;s
+<code class="docutils literal"><span class="pre">tags</span></code> property.</p>
+</div>
+<p>First, suppose that each <code class="docutils literal"><span class="pre">Task</span></code> belongs to multiple <code class="docutils literal"><span class="pre">Tag</span></code> objects. Start
+by creating a simple <code class="docutils literal"><span class="pre">Task</span></code> class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Task.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Entity</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Doctrine\Common\Collections\ArrayCollection</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Task</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$description</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="nv">$tags</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayCollection</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getDescription</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">description</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setDescription</span><span class="p">(</span><span class="nv">$description</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">description</span> <span class="o">=</span> <span class="nv">$description</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getTags</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The <code class="docutils literal"><span class="pre">ArrayCollection</span></code> is specific to Doctrine and is basically the
+same as using an <code class="docutils literal"><span class="pre">array</span></code> (but it must be an <code class="docutils literal"><span class="pre">ArrayCollection</span></code> if
+you&#8217;re using Doctrine).</p>
+</div>
+<p>Now, create a <code class="docutils literal"><span class="pre">Tag</span></code> class. As you saw above, a <code class="docutils literal"><span class="pre">Task</span></code> can have many <code class="docutils literal"><span class="pre">Tag</span></code>
+objects:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Tag.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Entity</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Tag</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">The <code class="docutils literal"><span class="pre">name</span></code> property is public here, but it can just as easily be protected
+or private (but then it would need <code class="docutils literal"><span class="pre">getName</span></code> and <code class="docutils literal"><span class="pre">setName</span></code> methods).</p>
+</div>
+<p>Then, create a form class so that a <code class="docutils literal"><span class="pre">Tag</span></code> object can be modified by the user:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Form/Type/TagType.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Form\Type</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\AbstractType</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormBuilderInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\OptionsResolver\OptionsResolver</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">TagType</span> <span class="k">extends</span> <span class="nx">AbstractType</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">configureOptions</span><span class="p">(</span><span class="nx">OptionsResolver</span> <span class="nv">$resolver</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$resolver</span><span class="o">-&gt;</span><span class="na">setDefaults</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;data_class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Acme\TaskBundle\Entity\Tag&#39;</span><span class="p">,</span>
+        <span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;tag&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With this, you have enough to render a tag form by itself. But since the end
+goal is to allow the tags of a <code class="docutils literal"><span class="pre">Task</span></code> to be modified right inside the task
+form itself, create a form for the <code class="docutils literal"><span class="pre">Task</span></code> class.</p>
+<p>Notice that you embed a collection of <code class="docutils literal"><span class="pre">TagType</span></code> forms using the
+<a class="reference internal" href="collection-1.html" tppabs="http://symfony.cn/docs/reference/forms/types/collection.html"><em>collection</em></a> field type:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Form/Type/TaskType.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Form\Type</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\AbstractType</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormBuilderInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\OptionsResolver\OptionsResolver</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">TaskType</span> <span class="k">extends</span> <span class="nx">AbstractType</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">);</span>
+
+        <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;collection&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">TagType</span><span class="p">()));</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">configureOptions</span><span class="p">(</span><span class="nx">OptionsResolver</span> <span class="nv">$resolver</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$resolver</span><span class="o">-&gt;</span><span class="na">setDefaults</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;data_class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Acme\TaskBundle\Entity\Task&#39;</span><span class="p">,</span>
+        <span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;task&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In your controller, you&#8217;ll now initialize a new instance of <code class="docutils literal"><span class="pre">TaskType</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Controller/TaskController.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Acme\TaskBundle\Entity\Task</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\TaskBundle\Entity\Tag</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\TaskBundle\Form\Type\TaskType</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">TaskController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">newAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$task</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Task</span><span class="p">();</span>
+
+        <span class="c1">// dummy code - this is here just so that the Task has some tags</span>
+        <span class="c1">// otherwise, this isn&#39;t an interesting example</span>
+        <span class="nv">$tag1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tag</span><span class="p">();</span>
+        <span class="nv">$tag1</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;tag1&#39;</span><span class="p">;</span>
+        <span class="nv">$task</span><span class="o">-&gt;</span><span class="na">getTags</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$tag1</span><span class="p">);</span>
+        <span class="nv">$tag2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tag</span><span class="p">();</span>
+        <span class="nv">$tag2</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;tag2&#39;</span><span class="p">;</span>
+        <span class="nv">$task</span><span class="o">-&gt;</span><span class="na">getTags</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$tag2</span><span class="p">);</span>
+        <span class="c1">// end dummy code</span>
+
+        <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createForm</span><span class="p">(</span><span class="k">new</span> <span class="nx">TaskType</span><span class="p">(),</span> <span class="nv">$task</span><span class="p">);</span>
+
+        <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">isValid</span><span class="p">())</span> <span class="p">{</span>
+            <span class="c1">// ... maybe do some form processing, like saving the Task and Tag objects</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;AcmeTaskBundle:Task:new.html.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;form&#39;</span> <span class="o">=&gt;</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">createView</span><span class="p">(),</span>
+        <span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The corresponding template is now able to render both the <code class="docutils literal"><span class="pre">description</span></code>
+field for the task form as well as all the <code class="docutils literal"><span class="pre">TagType</span></code> forms for any tags
+that are already related to this <code class="docutils literal"><span class="pre">Task</span></code>. In the above controller, I added
+some dummy code so that you can see this in action (since a <code class="docutils literal"><span class="pre">Task</span></code> has
+zero tags when first created).</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# src/Acme/TaskBundle/Resources/views/Task/new.html.twig #}</span>
+
+<span class="c">{# ... #}</span>
+
+<span class="cp">{{</span> <span class="nv">form_start</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+    <span class="c">{# render the task&#39;s only field: description #}</span>
+    <span class="cp">{{</span> <span class="nv">form_row</span><span class="o">(</span><span class="nv">form.description</span><span class="o">)</span> <span class="cp">}}</span>
+
+    <span class="nt">&lt;h3&gt;</span>Tags<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tags&quot;</span><span class="nt">&gt;</span>
+        <span class="c">{# iterate over each existing tag and render its only field: name #}</span>
+        <span class="cp">{%</span> <span class="k">for</span> <span class="nv">tag</span> <span class="k">in</span> <span class="nv">form.tags</span> <span class="cp">%}</span>
+            <span class="nt">&lt;li&gt;</span><span class="cp">{{</span> <span class="nv">form_row</span><span class="o">(</span><span class="nv">tag.name</span><span class="o">)</span> <span class="cp">}}</span><span class="nt">&lt;/li&gt;</span>
+        <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="cp">{{</span> <span class="nv">form_end</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+
+<span class="c">{# ... #}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- src/Acme/TaskBundle/Resources/views/Task/new.html.php --&gt;</span>
+
+<span class="c">&lt;!-- ... --&gt;</span>
+
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">start</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+    <span class="c">&lt;!-- render the task&#39;s only field: description --&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">row</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">])</span> <span class="cp">?&gt;</span>
+
+    <span class="nt">&lt;h3&gt;</span>Tags<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tags&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="k">foreach</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$tag</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+            <span class="nt">&lt;li&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">row</span><span class="p">(</span><span class="nv">$tag</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="cp">?&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">(</span><span class="nv">$form</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+<span class="c">&lt;!-- ... --&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>When the user submits the form, the submitted data for the <code class="docutils literal"><span class="pre">tags</span></code> field are
+used to construct an <code class="docutils literal"><span class="pre">ArrayCollection</span></code> of <code class="docutils literal"><span class="pre">Tag</span></code> objects, which is then set
+on the <code class="docutils literal"><span class="pre">tag</span></code> field of the <code class="docutils literal"><span class="pre">Task</span></code> instance.</p>
+<p>The <code class="docutils literal"><span class="pre">tags</span></code> collection is accessible naturally via <code class="docutils literal"><span class="pre">$task-&gt;getTags()</span></code>
+and can be persisted to the database or used however you need.</p>
+<p>So far, this works great, but this doesn&#8217;t allow you to dynamically add new
+tags or delete existing tags. So, while editing existing tags will work
+great, your user can&#8217;t actually add any new tags yet.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Ë≠¶Âëä</p>
+<p>In this entry, you embed only one collection, but you are not limited
+to this. You can also embed nested collection as many levels down as you
+like. But if you use Xdebug in your development setup, you may receive
+a <code class="docutils literal"><span class="pre">Maximum</span> <span class="pre">function</span> <span class="pre">nesting</span> <span class="pre">level</span> <span class="pre">of</span> <span class="pre">'100'</span> <span class="pre">reached,</span> <span class="pre">aborting!</span></code> error.
+This is due to the <code class="docutils literal"><span class="pre">xdebug.max_nesting_level</span></code> PHP setting, which defaults
+to <code class="docutils literal"><span class="pre">100</span></code>.</p>
+<p class="last">This directive limits recursion to 100 calls which may not be enough for
+rendering the form in the template if you render the whole form at
+once (e.g <code class="docutils literal"><span class="pre">form_widget(form)</span></code>). To fix this you can set this directive
+to a higher value (either via a <code class="docutils literal"><span class="pre">php.ini</span></code> file or via <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/function.ini-set.php  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://php.net/manual/en/function.ini-set.php'" tppabs="http://php.net/manual/en/function.ini-set.php" title="ini_set"><span class="pre">ini_set</span></a></code>,
+for example in <code class="docutils literal"><span class="pre">app/autoload.php</span></code>) or render each form field by hand
+using <code class="docutils literal"><span class="pre">form_row</span></code>.</p>
+</div>
+<div class="section" id="allowing-new-tags-with-the-prototype">
+<span id="cookbook-form-collections-new-prototype"></span><h2>Allowing &#8220;new&#8221; Tags with the &#8220;Prototype&#8221;<a class="headerlink" href="#allowing-new-tags-with-the-prototype" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Allowing the user to dynamically add new tags means that you&#8217;ll need to
+use some JavaScript. Previously you added two tags to your form in the controller.
+Now let the user add as many tag forms as they need directly in the browser.
+This will be done through a bit of JavaScript.</p>
+<p>The first thing you need to do is to let the form collection know that it will
+receive an unknown number of tags. So far you&#8217;ve added two tags and the form
+type expects to receive exactly two, otherwise an error will be thrown:
+<code class="docutils literal"><span class="pre">This</span> <span class="pre">form</span> <span class="pre">should</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">extra</span> <span class="pre">fields</span></code>. To make this flexible,
+add the <code class="docutils literal"><span class="pre">allow_add</span></code> option to your collection field:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Form/Type/TaskType.php</span>
+
+<span class="c1">// ...</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\FormBuilderInterface</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">);</span>
+
+    <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;collection&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;type&#39;</span>         <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">TagType</span><span class="p">(),</span>
+        <span class="s1">&#39;allow_add&#39;</span>    <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In addition to telling the field to accept any number of submitted objects, the
+<code class="docutils literal"><span class="pre">allow_add</span></code> also makes a <em>&#8220;prototype&#8221;</em> variable available to you. This &#8220;prototype&#8221;
+is a little &#8220;template&#8221; that contains all the HTML to be able to render any
+new &#8220;tag&#8221; forms. To render it, make the following change to your template:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tags&quot;</span> <span class="na">data-prototype=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.tags.vars.prototype</span><span class="o">)|</span><span class="nf">e</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tags&quot;</span> <span class="na">data-prototype=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span>
+    <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">row</span><span class="p">(</span><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">vars</span><span class="p">[</span><span class="s1">&#39;prototype&#39;</span><span class="p">]))</span>
+<span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">If you render your whole &#8220;tags&#8221; sub-form at once (e.g. <code class="docutils literal"><span class="pre">form_row(form.tags)</span></code>),
+then the prototype is automatically available on the outer <code class="docutils literal"><span class="pre">div</span></code> as
+the <code class="docutils literal"><span class="pre">data-prototype</span></code> attribute, similar to what you see above.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p>The <code class="docutils literal"><span class="pre">form.tags.vars.prototype</span></code> is a form element that looks and feels just
+like the individual <code class="docutils literal"><span class="pre">form_widget(tag)</span></code> elements inside your <code class="docutils literal"><span class="pre">for</span></code> loop.
+This means that you can call <code class="docutils literal"><span class="pre">form_widget</span></code>, <code class="docutils literal"><span class="pre">form_row</span></code> or <code class="docutils literal"><span class="pre">form_label</span></code>
+on it. You could even choose to render only one of its fields (e.g. the
+<code class="docutils literal"><span class="pre">name</span></code> field):</p>
+<div class="last highlight-html+jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form.tags.vars.prototype.name</span><span class="o">)|</span><span class="nf">e</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+</div>
+<p>On the rendered page, the result will look something like this:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tags&quot;</span> <span class="na">data-prototype=</span><span class="s">&quot;&amp;lt;div&amp;gt;&amp;lt;label class=&amp;quot; required&amp;quot;&amp;gt;__name__&amp;lt;/label&amp;gt;&amp;lt;div id=&amp;quot;task_tags___name__&amp;quot;&amp;gt;&amp;lt;div&amp;gt;&amp;lt;label for=&amp;quot;task_tags___name___name&amp;quot; class=&amp;quot; required&amp;quot;&amp;gt;Name&amp;lt;/label&amp;gt;&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;task_tags___name___name&amp;quot; name=&amp;quot;task[tags][__name__][name]&amp;quot; required=&amp;quot;required&amp;quot; maxlength=&amp;quot;255&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p>The goal of this section will be to use JavaScript to read this attribute
+and dynamically add new tag forms when the user clicks a &#8220;Add a tag&#8221; link.
+To make things simple, this example uses jQuery and assumes you have it included
+somewhere on your page.</p>
+<p>Add a <code class="docutils literal"><span class="pre">script</span></code> tag somewhere on your page so you can start writing some JavaScript.</p>
+<p>First, add a link to the bottom of the &#8220;tags&#8221; list via JavaScript. Second,
+bind to the &#8220;click&#8221; event of that link so you can add a new tag form (<code class="docutils literal"><span class="pre">addTagForm</span></code>
+will be show next):</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">$collectionHolder</span><span class="p">;</span>
+
+<span class="c1">// setup an &quot;add a tag&quot; link</span>
+<span class="kd">var</span> <span class="nx">$addTagLink</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;#&quot; class=&quot;add_tag_link&quot;&gt;Add a tag&lt;/a&gt;&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">$newLinkLi</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&lt;/li&gt;&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$addTagLink</span><span class="p">);</span>
+
+<span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Get the ul that holds the collection of tags</span>
+    <span class="nx">$collectionHolder</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.tags&#39;</span><span class="p">);</span>
+
+    <span class="c1">// add the &quot;add a tag&quot; anchor and li to the tags ul</span>
+    <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$newLinkLi</span><span class="p">);</span>
+
+    <span class="c1">// count the current form inputs we have (e.g. 2), use that as the new</span>
+    <span class="c1">// index when inserting a new item (e.g. 2)</span>
+    <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;:input&#39;</span><span class="p">).</span><span class="nx">length</span><span class="p">);</span>
+
+    <span class="nx">$addTagLink</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// prevent the link from creating a &quot;#&quot; on the URL</span>
+        <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+        <span class="c1">// add a new tag form (see next code block)</span>
+        <span class="nx">addTagForm</span><span class="p">(</span><span class="nx">$collectionHolder</span><span class="p">,</span> <span class="nx">$newLinkLi</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">addTagForm</span></code> function&#8217;s job will be to use the <code class="docutils literal"><span class="pre">data-prototype</span></code> attribute
+to dynamically add a new form when this link is clicked. The <code class="docutils literal"><span class="pre">data-prototype</span></code>
+HTML contains the tag <code class="docutils literal"><span class="pre">text</span></code> input element with a name of <code class="docutils literal"><span class="pre">task[tags][__name__][name]</span></code>
+and id of <code class="docutils literal"><span class="pre">task_tags___name___name</span></code>. The <code class="docutils literal"><span class="pre">__name__</span></code> is a little &#8220;placeholder&#8221;,
+which you&#8217;ll replace with a unique, incrementing number (e.g. <code class="docutils literal"><span class="pre">task[tags][3][name]</span></code>).</p>
+<p>The actual code needed to make this all work can vary quite a bit, but here&#8217;s
+one example:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">addTagForm</span><span class="p">(</span><span class="nx">$collectionHolder</span><span class="p">,</span> <span class="nx">$newLinkLi</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Get the data-prototype explained earlier</span>
+    <span class="kd">var</span> <span class="nx">prototype</span> <span class="o">=</span> <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;prototype&#39;</span><span class="p">);</span>
+
+    <span class="c1">// get the new index</span>
+    <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">);</span>
+
+    <span class="c1">// Replace &#39;__name__&#39; in the prototype&#39;s HTML to</span>
+    <span class="c1">// instead be a number based on how many items we have</span>
+    <span class="kd">var</span> <span class="nx">newForm</span> <span class="o">=</span> <span class="nx">prototype</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/__name__/g</span><span class="p">,</span> <span class="nx">index</span><span class="p">);</span>
+
+    <span class="c1">// increase the index with one for the next item</span>
+    <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// Display the form in the page in an li, before the &quot;Add a tag&quot; link li</span>
+    <span class="kd">var</span> <span class="nx">$newFormLi</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&lt;/li&gt;&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">newForm</span><span class="p">);</span>
+    <span class="nx">$newLinkLi</span><span class="p">.</span><span class="nx">before</span><span class="p">(</span><span class="nx">$newFormLi</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">It is better to separate your JavaScript in real JavaScript files than
+to write it inside the HTML as is done here.</p>
+</div>
+<p>Now, each time a user clicks the <code class="docutils literal"><span class="pre">Add</span> <span class="pre">a</span> <span class="pre">tag</span></code> link, a new sub form will
+appear on the page. When the form is submitted, any new tag forms will be converted
+into new <code class="docutils literal"><span class="pre">Tag</span></code> objects and added to the <code class="docutils literal"><span class="pre">tags</span></code> property of the <code class="docutils literal"><span class="pre">Task</span></code> object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">ÂèÇËßÅ</p>
+<p class="last">You can find a working example in this <a class="reference external" href="javascript:if(confirm('http://jsfiddle.net/847Kf/4/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://jsfiddle.net/847Kf/4/'" tppabs="http://jsfiddle.net/847Kf/4/">JSFiddle</a>.</p>
+</div>
+<p>To make handling these new tags easier, add an &#8220;adder&#8221; and a &#8220;remover&#8221; method
+for the tags in the <code class="docutils literal"><span class="pre">Task</span></code> class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Task.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Entity</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+<span class="k">class</span> <span class="nc">Task</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">addTag</span><span class="p">(</span><span class="nx">Tag</span> <span class="nv">$tag</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$tag</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">removeTag</span><span class="p">(</span><span class="nx">Tag</span> <span class="nv">$tag</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Next, add a <code class="docutils literal"><span class="pre">by_reference</span></code> option to the <code class="docutils literal"><span class="pre">tags</span></code> field and set it to <code class="docutils literal"><span class="pre">false</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Form/Type/TaskType.php</span>
+
+<span class="c1">// ...</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;collection&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">&#39;by_reference&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With these two changes, when the form is submitted, each new <code class="docutils literal"><span class="pre">Tag</span></code> object
+is added to the <code class="docutils literal"><span class="pre">Task</span></code> class by calling the <code class="docutils literal"><span class="pre">addTag</span></code> method. Before this
+change, they were added internally by the form by calling <code class="docutils literal"><span class="pre">$task-&gt;getTags()-&gt;add($tag)</span></code>.
+That was just fine, but forcing the use of the &#8220;adder&#8221; method makes handling
+these new <code class="docutils literal"><span class="pre">Tag</span></code> objects easier (especially if you&#8217;re using Doctrine, which
+you will learn about next!).</p>
+<div class="admonition caution">
+<p class="first admonition-title">Ë≠¶Âëä</p>
+<p class="last">You have to create <strong>both</strong> <code class="docutils literal"><span class="pre">addTag</span></code> and <code class="docutils literal"><span class="pre">removeTag</span></code> methods,
+otherwise the form will still use <code class="docutils literal"><span class="pre">setTag</span></code> even if <code class="docutils literal"><span class="pre">by_reference</span></code> is <code class="docutils literal"><span class="pre">false</span></code>.
+You&#8217;ll learn more about the <code class="docutils literal"><span class="pre">removeTag</span></code> method later in this article.</p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Doctrine: Cascading Relations and saving the &#8220;Inverse&#8221; side</p>
+<p>To save the new tags with Doctrine, you need to consider a couple more
+things. First, unless you iterate over all of the new <code class="docutils literal"><span class="pre">Tag</span></code> objects and
+call <code class="docutils literal"><span class="pre">$em-&gt;persist($tag)</span></code> on each, you&#8217;ll receive an error from
+Doctrine:</p>
+<blockquote>
+<div>A new entity was found through the relationship
+<code class="docutils literal"><span class="pre">Acme\TaskBundle\Entity\Task#tags</span></code> that was not configured to
+cascade persist operations for entity...</div></blockquote>
+<p>To fix this, you may choose to &#8220;cascade&#8221; the persist operation automatically
+from the <code class="docutils literal"><span class="pre">Task</span></code> object to any related tags. To do this, add the <code class="docutils literal"><span class="pre">cascade</span></code>
+option to your <code class="docutils literal"><span class="pre">ManyToMany</span></code> metadata:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Annotations</em><div class="highlight-php-annotations"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Task.php</span>
+
+<span class="c1">// ...</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @ORM\ManyToMany(targetEntity=&quot;Tag&quot;, cascade={&quot;persist&quot;})</span>
+<span class="sd"> */</span>
+<span class="k">protected</span> <span class="nv">$tags</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># src/Acme/TaskBundle/Resources/config/doctrine/Task.orm.yml</span>
+<span class="l-Scalar-Plain">Acme\TaskBundle\Entity\Task</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity</span>
+    <span class="c1"># ...</span>
+    <span class="l-Scalar-Plain">oneToMany</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">tags</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">targetEntity</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Tag</span>
+            <span class="l-Scalar-Plain">cascade</span><span class="p-Indicator">:</span>      <span class="p-Indicator">[</span><span class="nv">persist</span><span class="p-Indicator">]</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- src/Acme/TaskBundle/Resources/config/doctrine/Task.orm.xml --&gt;</span>
+<span class="nt">&lt;doctrine-mapping</span> <span class="na">xmlns=</span><span class="s">&quot;http://doctrine-project.org/schemas/orm/doctrine-mapping&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://doctrine-project.org/schemas/orm/doctrine-mapping</span>
+<span class="s">                    http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;entity</span> <span class="na">name=</span><span class="s">&quot;Acme\TaskBundle\Entity\Task&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+        <span class="nt">&lt;one-to-many</span> <span class="na">field=</span><span class="s">&quot;tags&quot;</span> <span class="na">target-entity=</span><span class="s">&quot;Tag&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;cascade&gt;</span>
+                <span class="nt">&lt;cascade-persist</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/cascade&gt;</span>
+        <span class="nt">&lt;/one-to-many&gt;</span>
+    <span class="nt">&lt;/entity&gt;</span>
+<span class="nt">&lt;/doctrine-mapping&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>A second potential issue deals with the <a class="reference external" href="javascript:if(confirm('http://docs.doctrine-project.org/en/latest/reference/unitofwork-associations.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://docs.doctrine-project.org/en/latest/reference/unitofwork-associations.html'" tppabs="http://docs.doctrine-project.org/en/latest/reference/unitofwork-associations.html">Owning Side and Inverse Side</a>
+of Doctrine relationships. In this example, if the &#8220;owning&#8221; side of the
+relationship is &#8220;Task&#8221;, then persistence will work fine as the tags are
+properly added to the Task. However, if the owning side is on &#8220;Tag&#8221;, then
+you&#8217;ll need to do a little bit more work to ensure that the correct side
+of the relationship is modified.</p>
+<p>The trick is to make sure that the single &#8220;Task&#8221; is set on each &#8220;Tag&#8221;.
+One easy way to do this is to add some extra logic to <code class="docutils literal"><span class="pre">addTag()</span></code>,
+which is called by the form type since <code class="docutils literal"><span class="pre">by_reference</span></code> is set to
+<code class="docutils literal"><span class="pre">false</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Task.php</span>
+
+<span class="c1">// ...</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">addTag</span><span class="p">(</span><span class="nx">Tag</span> <span class="nv">$tag</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$tag</span><span class="o">-&gt;</span><span class="na">addTask</span><span class="p">(</span><span class="nv">$this</span><span class="p">);</span>
+
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$tag</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Inside <code class="docutils literal"><span class="pre">Tag</span></code>, just make sure you have an <code class="docutils literal"><span class="pre">addTask</span></code> method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Tag.php</span>
+
+<span class="c1">// ...</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">addTask</span><span class="p">(</span><span class="nx">Task</span> <span class="nv">$task</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">-&gt;</span><span class="na">contains</span><span class="p">(</span><span class="nv">$task</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$task</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="last">If you have a one-to-many relationship, then the workaround is similar,
+except that you can simply call <code class="docutils literal"><span class="pre">setTask</span></code> from inside <code class="docutils literal"><span class="pre">addTag</span></code>.</p>
+</div>
+</div>
+<div class="section" id="allowing-tags-to-be-removed">
+<span id="cookbook-form-collections-remove"></span><h2>Allowing Tags to be Removed<a class="headerlink" href="#allowing-tags-to-be-removed" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The next step is to allow the deletion of a particular item in the collection.
+The solution is similar to allowing tags to be added.</p>
+<p>Start by adding the <code class="docutils literal"><span class="pre">allow_delete</span></code> option in the form Type:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Form/Type/TaskType.php</span>
+
+<span class="c1">// ...</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">buildForm</span><span class="p">(</span><span class="nx">FormBuilderInterface</span> <span class="nv">$builder</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$options</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;collection&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">&#39;allow_delete&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now, you need to put some code into the <code class="docutils literal"><span class="pre">removeTag</span></code> method of <code class="docutils literal"><span class="pre">Task</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Entity/Task.php</span>
+
+<span class="c1">// ...</span>
+<span class="k">class</span> <span class="nc">Task</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">removeTag</span><span class="p">(</span><span class="nx">Tag</span> <span class="nv">$tag</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span><span class="o">-&gt;</span><span class="na">removeElement</span><span class="p">(</span><span class="nv">$tag</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="template-modifications">
+<h3>Template Modifications<a class="headerlink" href="#template-modifications" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>The <code class="docutils literal"><span class="pre">allow_delete</span></code> option has one consequence: if an item of a collection
+isn&#8217;t sent on submission, the related data is removed from the collection
+on the server. The solution is thus to remove the form element from the DOM.</p>
+<p>First, add a &#8220;delete this tag&#8221; link to each tag form:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Get the ul that holds the collection of tags</span>
+    <span class="nx">$collectionHolder</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.tags&#39;</span><span class="p">);</span>
+
+    <span class="c1">// add a delete link to all of the existing tag form li elements</span>
+    <span class="nx">$collectionHolder</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">addTagFormDeleteLink</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="p">});</span>
+
+    <span class="c1">// ... the rest of the block from above</span>
+<span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">addTagForm</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="c1">// add a delete link to the new form</span>
+    <span class="nx">addTagFormDeleteLink</span><span class="p">(</span><span class="nx">$newFormLi</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">addTagFormDeleteLink</span></code> function will look something like this:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">addTagFormDeleteLink</span><span class="p">(</span><span class="nx">$tagFormLi</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">$removeFormA</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;#&quot;&gt;delete this tag&lt;/a&gt;&#39;</span><span class="p">);</span>
+    <span class="nx">$tagFormLi</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$removeFormA</span><span class="p">);</span>
+
+    <span class="nx">$removeFormA</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// prevent the link from creating a &quot;#&quot; on the URL</span>
+        <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+        <span class="c1">// remove the li for the tag form</span>
+        <span class="nx">$tagFormLi</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When a tag form is removed from the DOM and submitted, the removed <code class="docutils literal"><span class="pre">Tag</span></code> object
+will not be included in the collection passed to <code class="docutils literal"><span class="pre">setTags</span></code>. Depending on
+your persistence layer, this may or may not be enough to actually remove
+the relationship between the removed <code class="docutils literal"><span class="pre">Tag</span></code> and <code class="docutils literal"><span class="pre">Task</span></code> object.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Doctrine: Ensuring the database persistence</p>
+<p>When removing objects in this way, you may need to do a little bit more
+work to ensure that the relationship between the <code class="docutils literal"><span class="pre">Task</span></code> and the removed
+<code class="docutils literal"><span class="pre">Tag</span></code> is properly removed.</p>
+<p>In Doctrine, you have two sides of the relationship: the owning side and the
+inverse side. Normally in this case you&#8217;ll have a many-to-many relationship
+and the deleted tags will disappear and persist correctly (adding new
+tags also works effortlessly).</p>
+<p>But if you have a one-to-many relationship or a many-to-many relationship with a
+<code class="docutils literal"><span class="pre">mappedBy</span></code> on the Task entity (meaning Task is the &#8220;inverse&#8221; side),
+you&#8217;ll need to do more work for the removed tags to persist correctly.</p>
+<p>In this case, you can modify the controller to remove the relationship
+on the removed tag. This assumes that you have some <code class="docutils literal"><span class="pre">editAction</span></code> which
+is handling the &#8220;update&#8221; of your Task:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Controller/TaskController.php</span>
+
+<span class="k">use</span> <span class="nx">Doctrine\Common\Collections\ArrayCollection</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">editAction</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$em</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getDoctrine</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getManager</span><span class="p">();</span>
+    <span class="nv">$task</span> <span class="o">=</span> <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">getRepository</span><span class="p">(</span><span class="s1">&#39;AcmeTaskBundle:Task&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$task</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createNotFoundException</span><span class="p">(</span><span class="s1">&#39;No task found for id &#39;</span><span class="o">.</span><span class="nv">$id</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nv">$originalTags</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayCollection</span><span class="p">();</span>
+
+    <span class="c1">// Create an ArrayCollection of the current Tag objects in the database</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$task</span><span class="o">-&gt;</span><span class="na">getTags</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$tag</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$originalTags</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$tag</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nv">$editForm</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createForm</span><span class="p">(</span><span class="k">new</span> <span class="nx">TaskType</span><span class="p">(),</span> <span class="nv">$task</span><span class="p">);</span>
+
+    <span class="nv">$editForm</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$editForm</span><span class="o">-&gt;</span><span class="na">isValid</span><span class="p">())</span> <span class="p">{</span>
+
+        <span class="c1">// remove the relationship between the tag and the Task</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$originalTags</span> <span class="k">as</span> <span class="nv">$tag</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$task</span><span class="o">-&gt;</span><span class="na">getTags</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">contains</span><span class="p">(</span><span class="nv">$tag</span><span class="p">))</span> <span class="p">{</span>
+                <span class="c1">// remove the Task from the Tag</span>
+                <span class="nv">$tag</span><span class="o">-&gt;</span><span class="na">getTasks</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">removeElement</span><span class="p">(</span><span class="nv">$task</span><span class="p">);</span>
+
+                <span class="c1">// if it was a many-to-one relationship, remove the relationship like this</span>
+                <span class="c1">// $tag-&gt;setTask(null);</span>
+
+                <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">persist</span><span class="p">(</span><span class="nv">$tag</span><span class="p">);</span>
+
+                <span class="c1">// if you wanted to delete the Tag entirely, you can also do that</span>
+                <span class="c1">// $em-&gt;remove($tag);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">persist</span><span class="p">(</span><span class="nv">$task</span><span class="p">);</span>
+        <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">flush</span><span class="p">();</span>
+
+        <span class="c1">// redirect back to some edit page</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="s1">&#39;task_edit&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="c1">// render some form template</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="last">As you can see, adding and removing the elements correctly can be tricky.
+Unless you have a many-to-many relationship where Task is the &#8220;owning&#8221; side,
+you&#8217;ll need to do extra work to make sure that the relationship is properly
+updated (whether you&#8217;re adding new tags or removing existing tags) on
+each Tag object itself.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="create_custom_field_type.html" tppabs="http://symfony.cn/docs/cookbook/form/create_custom_field_type.html" class="btn btn-neutral float-right" title="How to Create a Custom Form Field Type">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dynamic_form_modification.html" tppabs="http://symfony.cn/docs/cookbook/form/dynamic_form_modification.html" class="btn btn-neutral" title="How to Dynamically Modify Forms Using Form Events"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ÁâàÊùÉÊâÄÊúâ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

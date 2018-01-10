@@ -1,0 +1,996 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Form Component &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="Form" href="index.html"/>
+        <link rel="next" title="Creating a custom Type Guesser" href="type_guesser.html"/>
+        <link rel="prev" title="Form" href="index.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+          <li><a href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a> &raquo;</li>
+      
+    <li>The Form Component</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="introduction-4.txt.htm" tppabs="http://symfony.cn/docs/_sources/components/form/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-form-component">
+<span id="index-0"></span><h1>The Form Component<a class="headerlink" href="#the-form-component" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<blockquote>
+<div>The Form component allows you to easily create, process and reuse HTML
+forms.</div></blockquote>
+<p>The Form component is a tool to help you solve the problem of allowing end-users
+to interact with the data and modify the data in your application. And though
+traditionally this has been through HTML forms, the component focuses on
+processing data to and from your client and application, whether that data
+be from a normal form post or from an API.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You can install the component in 2 different ways:</p>
+<ul class="simple">
+<li><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html"><em>Install it via Composer</em></a> (<code class="docutils literal"><span class="pre">symfony/form</span></code> on <a class="reference external" href="javascript:if(confirm('https://packagist.org/packages/symfony/form  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://packagist.org/packages/symfony/form'" tppabs="https://packagist.org/packages/symfony/form">Packagist</a>);</li>
+<li>Use the official Git repository (<a class="reference external" href="javascript:if(confirm('https://github.com/symfony/Form  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/Form'" tppabs="https://github.com/symfony/Form">https://github.com/symfony/Form</a>).</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">If you are working with the full-stack Symfony framework, the Form component
+is already configured for you. In this case, skip to <a class="reference internal" href="#component-form-intro-create-simple-form"><span>Creating a simple Form</span></a>.</p>
+</div>
+<p>In Symfony, forms are represented by objects and these objects are built
+by using a <em>form factory</em>. Building a form factory is simple:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Forms</span><span class="p">;</span>
+
+<span class="nv">$formFactory</span> <span class="o">=</span> <span class="nx">Forms</span><span class="o">::</span><span class="na">createFormFactory</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>This factory can already be used to create basic forms, but it is lacking
+support for very important features:</p>
+<ul class="simple">
+<li><strong>Request Handling:</strong> Support for request handling and file uploads;</li>
+<li><strong>CSRF Protection:</strong> Support for protection against Cross-Site-Request-Forgery
+(CSRF) attacks;</li>
+<li><strong>Templating:</strong> Integration with a templating layer that allows you to reuse
+HTML fragments when rendering a form;</li>
+<li><strong>Translation:</strong> Support for translating error messages, field labels and
+other strings;</li>
+<li><strong>Validation:</strong> Integration with a validation library to generate error
+messages for submitted data.</li>
+</ul>
+<p>The Symfony Form component relies on other libraries to solve these problems.
+Most of the time you will use Twig and the Symfony
+<a class="reference internal" href="introduction-1.html" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html"><em>HttpFoundation</em></a>,
+Translation and Validator components, but you can replace any of these with
+a different library of your choice.</p>
+<p>The following sections explain how to plug these libraries into the form
+factory.</p>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">For a working example, see <a class="reference external" href="javascript:if(confirm('https://github.com/bschussek/standalone-forms  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/bschussek/standalone-forms'" tppabs="https://github.com/bschussek/standalone-forms">https://github.com/bschussek/standalone-forms</a></p>
+</div>
+<div class="section" id="request-handling">
+<h3>Request Handling<a class="headerlink" href="#request-handling" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.3 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><span class="pre">handleRequest()</span></code> method was introduced in Symfony 2.3.</p>
+</div>
+<p>To process form data, you&#8217;ll need to call the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest" title="Symfony\Component\Form\Form::handleRequest()"><span class="pre">handleRequest()</span></a></code>
+method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Behind the scenes, this uses a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/NativeRequestHandler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/NativeRequestHandler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/NativeRequestHandler.html" title="Symfony\Component\Form\NativeRequestHandler"><span class="pre">NativeRequestHandler</span></a></code>
+object to read data off of the correct PHP superglobals (i.e. <code class="docutils literal"><span class="pre">$_POST</span></code> or
+<code class="docutils literal"><span class="pre">$_GET</span></code>) based on the HTTP method configured on the form (POST is default).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">å‚è§</p>
+<p class="last">If you need more control over exactly when your form is submitted or which
+data is passed to it, you can use the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormInterface.html#method_submit'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormInterface.html#method_submit" title="Symfony\Component\Form\FormInterface::submit()"><span class="pre">submit()</span></a></code>
+for this. Read more about it <a class="reference internal" href="direct_submit.html#cookbook-form-call-submit-directly" tppabs="http://symfony.cn/docs/cookbook/form/direct_submit.html#cookbook-form-call-submit-directly"><span>in the cookbook</span></a>.</p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Integration with the HttpFoundation Component</p>
+<p>If you use the HttpFoundation component, then you should add the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Extension/HttpFoundation/HttpFoundationExtension.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Extension/HttpFoundation/HttpFoundationExtension.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Extension/HttpFoundation/HttpFoundationExtension.html" title="Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationExtension"><span class="pre">HttpFoundationExtension</span></a></code>
+to your form factory:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Forms</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationExtension</span><span class="p">;</span>
+
+<span class="nv">$formFactory</span> <span class="o">=</span> <span class="nx">Forms</span><span class="o">::</span><span class="na">createFormFactoryBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">addExtension</span><span class="p">(</span><span class="k">new</span> <span class="nx">HttpFoundationExtension</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">getFormFactory</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Now, when you process a form, you can pass the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Request.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Request.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Request.html" title="Symfony\Component\HttpFoundation\Request"><span class="pre">Request</span></a></code>
+object to <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest" title="Symfony\Component\Form\Form::handleRequest()"><span class="pre">handleRequest()</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="last admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">For more information about the HttpFoundation component or how to
+install it, see <a class="reference internal" href="introduction-1.html" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html"><em>The HttpFoundation Component</em></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="csrf-protection">
+<h3>CSRF Protection<a class="headerlink" href="#csrf-protection" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Protection against CSRF attacks is built into the Form component, but you need
+to explicitly enable it or replace it with a custom solution. The following
+snippet adds CSRF protection to the form factory:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Forms</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\Extension\Csrf\CsrfExtension</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Session\Session</span><span class="p">;</span>
+
+<span class="c1">// generate a CSRF secret from somewhere</span>
+<span class="nv">$csrfSecret</span> <span class="o">=</span> <span class="s1">&#39;&lt;generated token&gt;&#39;</span><span class="p">;</span>
+
+<span class="c1">// create a Session object from the HttpFoundation component</span>
+<span class="nv">$session</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Session</span><span class="p">();</span>
+
+<span class="nv">$csrfProvider</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SessionCsrfProvider</span><span class="p">(</span><span class="nv">$session</span><span class="p">,</span> <span class="nv">$csrfSecret</span><span class="p">);</span>
+
+<span class="nv">$formFactory</span> <span class="o">=</span> <span class="nx">Forms</span><span class="o">::</span><span class="na">createFormFactoryBuilder</span><span class="p">()</span>
+    <span class="c1">// ...</span>
+    <span class="o">-&gt;</span><span class="na">addExtension</span><span class="p">(</span><span class="k">new</span> <span class="nx">CsrfExtension</span><span class="p">(</span><span class="nv">$csrfProvider</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">getFormFactory</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>To secure your application against CSRF attacks, you need to define a CSRF
+secret. Generate a random string with at least 32 characters, insert it in the
+above snippet and make sure that nobody except your web server can access
+the secret.</p>
+<p>Internally, this extension will automatically add a hidden field to every
+form (called <code class="docutils literal"><span class="pre">__token</span></code> by default) whose value is automatically generated
+and validated when binding the form.</p>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p>If you&#8217;re not using the HttpFoundation component, you can use
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Extension/Csrf/CsrfProvider/DefaultCsrfProvider.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Extension/Csrf/CsrfProvider/DefaultCsrfProvider.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Extension/Csrf/CsrfProvider/DefaultCsrfProvider.html" title="Symfony\Component\Form\Extension\Csrf\CsrfProvider\DefaultCsrfProvider"><span class="pre">DefaultCsrfProvider</span></a></code>
+instead, which relies on PHP&#8217;s native session handling:</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Extension\Csrf\CsrfProvider\DefaultCsrfProvider</span><span class="p">;</span>
+
+<span class="nv">$csrfProvider</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DefaultCsrfProvider</span><span class="p">(</span><span class="nv">$csrfSecret</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="twig-templating">
+<h3>Twig Templating<a class="headerlink" href="#twig-templating" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>If you&#8217;re using the Form component to process HTML forms, you&#8217;ll need a way
+to easily render your form as HTML form fields (complete with field values,
+errors, and labels). If you use <a class="reference external" href="javascript:if(confirm('http://twig.sensiolabs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twig.sensiolabs.org/'" tppabs="http://twig.sensiolabs.org/">Twig</a> as your template engine, the Form
+component offers a rich integration.</p>
+<p>To use the integration, you&#8217;ll need the <code class="docutils literal"><span class="pre">TwigBridge</span></code>, which provides integration
+between Twig and several Symfony components. If you&#8217;re using Composer, you
+could install the latest 2.3 version by adding the following <code class="docutils literal"><span class="pre">require</span></code>
+line to your <code class="docutils literal"><span class="pre">composer.json</span></code> file:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;require&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;symfony/twig-bridge&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.*&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The TwigBridge integration provides you with several <a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html"><em>Twig Functions</em></a>
+that help you render the HTML widget, label and error for each field
+(as well as a few other things). To configure the integration, you&#8217;ll need
+to bootstrap or access Twig and add the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/FormExtension.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/FormExtension.html'" tppabs="http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/FormExtension.html" title="Symfony\Bridge\Twig\Extension\FormExtension"><span class="pre">FormExtension</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Forms</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bridge\Twig\Extension\FormExtension</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bridge\Twig\Form\TwigRenderer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bridge\Twig\Form\TwigRendererEngine</span><span class="p">;</span>
+
+<span class="c1">// the Twig file that holds all the default markup for rendering forms</span>
+<span class="c1">// this file comes with TwigBridge</span>
+<span class="nv">$defaultFormTheme</span> <span class="o">=</span> <span class="s1">&#39;form_div_layout.html.twig&#39;</span><span class="p">;</span>
+
+<span class="nv">$vendorDir</span> <span class="o">=</span> <span class="nb">realpath</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/../vendor&#39;</span><span class="p">);</span>
+<span class="c1">// the path to TwigBridge so Twig can locate the</span>
+<span class="c1">// form_div_layout.html.twig file</span>
+<span class="nv">$vendorTwigBridgeDir</span> <span class="o">=</span>
+    <span class="nv">$vendorDir</span><span class="o">.</span><span class="s1">&#39;/symfony/twig-bridge/Symfony/Bridge/Twig&#39;</span><span class="p">;</span>
+<span class="c1">// the path to your other templates</span>
+<span class="nv">$viewsDir</span> <span class="o">=</span> <span class="nb">realpath</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/../views&#39;</span><span class="p">);</span>
+
+<span class="nv">$twig</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Twig_Environment</span><span class="p">(</span><span class="k">new</span> <span class="nx">Twig_Loader_Filesystem</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="nv">$viewsDir</span><span class="p">,</span>
+    <span class="nv">$vendorTwigBridgeDir</span><span class="o">.</span><span class="s1">&#39;/Resources/views/Form&#39;</span><span class="p">,</span>
+<span class="p">)));</span>
+<span class="nv">$formEngine</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TwigRendererEngine</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="nv">$defaultFormTheme</span><span class="p">));</span>
+<span class="nv">$formEngine</span><span class="o">-&gt;</span><span class="na">setEnvironment</span><span class="p">(</span><span class="nv">$twig</span><span class="p">);</span>
+<span class="c1">// add the FormExtension to Twig</span>
+<span class="nv">$twig</span><span class="o">-&gt;</span><span class="na">addExtension</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">FormExtension</span><span class="p">(</span><span class="k">new</span> <span class="nx">TwigRenderer</span><span class="p">(</span><span class="nv">$formEngine</span><span class="p">,</span> <span class="nv">$csrfProvider</span><span class="p">))</span>
+<span class="p">);</span>
+
+<span class="c1">// create your form factory as normal</span>
+<span class="nv">$formFactory</span> <span class="o">=</span> <span class="nx">Forms</span><span class="o">::</span><span class="na">createFormFactoryBuilder</span><span class="p">()</span>
+    <span class="c1">// ...</span>
+    <span class="o">-&gt;</span><span class="na">getFormFactory</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The exact details of your <a class="reference external" href="javascript:if(confirm('http://twig.sensiolabs.org/doc/intro.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twig.sensiolabs.org/doc/intro.html'" tppabs="http://twig.sensiolabs.org/doc/intro.html">Twig Configuration</a> will vary, but the goal is
+always to add the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/FormExtension.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/FormExtension.html'" tppabs="http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/FormExtension.html" title="Symfony\Bridge\Twig\Extension\FormExtension"><span class="pre">FormExtension</span></a></code>
+to Twig, which gives you access to the Twig functions for rendering forms.
+To do this, you first need to create a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bridge/Twig/Form/TwigRendererEngine.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bridge/Twig/Form/TwigRendererEngine.html'" tppabs="http://api.symfony.com/master/Symfony/Bridge/Twig/Form/TwigRendererEngine.html" title="Symfony\Bridge\Twig\Form\TwigRendererEngine"><span class="pre">TwigRendererEngine</span></a></code>,
+where you define your <a class="reference internal" href="form_customization.html#cookbook-form-customization-form-themes" tppabs="http://symfony.cn/docs/cookbook/form/form_customization.html#cookbook-form-customization-form-themes"><span>form themes</span></a>
+(i.e. resources/files that define form HTML markup).</p>
+<p>For general details on rendering forms, see <a class="reference internal" href="form_customization.html" tppabs="http://symfony.cn/docs/cookbook/form/form_customization.html"><em>How to Customize Form Rendering</em></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">If you use the Twig integration, read &#8220;<a class="reference internal" href="#component-form-intro-install-translation"><span>Translation</span></a>&#8221;
+below for details on the needed translation filters.</p>
+</div>
+</div>
+<div class="section" id="translation">
+<span id="component-form-intro-install-translation"></span><h3>Translation<a class="headerlink" href="#translation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>If you&#8217;re using the Twig integration with one of the default form theme files
+(e.g. <code class="docutils literal"><span class="pre">form_div_layout.html.twig</span></code>), there are 2 Twig filters (<code class="docutils literal"><span class="pre">trans</span></code>
+and <code class="docutils literal"><span class="pre">transChoice</span></code>) that are used for translating form labels, errors, option
+text and other strings.</p>
+<p>To add these Twig filters, you can either use the built-in
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/TranslationExtension.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/TranslationExtension.html'" tppabs="http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/TranslationExtension.html" title="Symfony\Bridge\Twig\Extension\TranslationExtension"><span class="pre">TranslationExtension</span></a></code> that integrates
+with Symfony&#8217;s Translation component, or add the 2 Twig filters yourself,
+via your own Twig extension.</p>
+<p>To use the built-in integration, be sure that your project has Symfony&#8217;s
+Translation and <a class="reference internal" href="introduction-13.html" tppabs="http://symfony.cn/docs/components/config/introduction.html"><em>Config</em></a> components
+installed. If you&#8217;re using Composer, you could get the latest 2.3 version
+of each of these by adding the following to your <code class="docutils literal"><span class="pre">composer.json</span></code> file:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;require&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;symfony/translation&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.*&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;symfony/config&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.*&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Next, add the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/TranslationExtension.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/TranslationExtension.html'" tppabs="http://api.symfony.com/master/Symfony/Bridge/Twig/Extension/TranslationExtension.html" title="Symfony\Bridge\Twig\Extension\TranslationExtension"><span class="pre">TranslationExtension</span></a></code>
+to your <code class="docutils literal"><span class="pre">Twig_Environment</span></code> instance:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Forms</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Translation\Translator</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Translation\Loader\XliffFileLoader</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bridge\Twig\Extension\TranslationExtension</span><span class="p">;</span>
+
+<span class="c1">// create the Translator</span>
+<span class="nv">$translator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Translator</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">);</span>
+<span class="c1">// somehow load some translations into it</span>
+<span class="nv">$translator</span><span class="o">-&gt;</span><span class="na">addLoader</span><span class="p">(</span><span class="s1">&#39;xlf&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">XliffFileLoader</span><span class="p">());</span>
+<span class="nv">$translator</span><span class="o">-&gt;</span><span class="na">addResource</span><span class="p">(</span>
+    <span class="s1">&#39;xlf&#39;</span><span class="p">,</span>
+    <span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/path/to/translations/messages.en.xlf&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;en&#39;</span>
+<span class="p">);</span>
+
+<span class="c1">// add the TranslationExtension (gives us trans and transChoice filters)</span>
+<span class="nv">$twig</span><span class="o">-&gt;</span><span class="na">addExtension</span><span class="p">(</span><span class="k">new</span> <span class="nx">TranslationExtension</span><span class="p">(</span><span class="nv">$translator</span><span class="p">));</span>
+
+<span class="nv">$formFactory</span> <span class="o">=</span> <span class="nx">Forms</span><span class="o">::</span><span class="na">createFormFactoryBuilder</span><span class="p">()</span>
+    <span class="c1">// ...</span>
+    <span class="o">-&gt;</span><span class="na">getFormFactory</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Depending on how your translations are being loaded, you can now add string
+keys, such as field labels, and their translations to your translation files.</p>
+<p>For more details on translations, see <a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html"><em>å¤šè¯­è¨€</em></a>.</p>
+</div>
+<div class="section" id="validation">
+<h3>Validation<a class="headerlink" href="#validation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The Form component comes with tight (but optional) integration with Symfony&#8217;s
+Validator component. If you&#8217;re using a different solution for validation,
+no problem! Simply take the submitted/bound data of your form (which is an
+array or object) and pass it through your own validation system.</p>
+<p>To use the integration with Symfony&#8217;s Validator component, first make sure
+it&#8217;s installed in your application. If you&#8217;re using Composer and want to
+install the latest 2.3 version, add this to your <code class="docutils literal"><span class="pre">composer.json</span></code>:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;require&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;symfony/validator&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3.*&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you&#8217;re not familiar with Symfony&#8217;s Validator component, read more about
+it: <a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html"><em>æ ¡éªŒ</em></a>. The Form component comes with a
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Extension/Validator/ValidatorExtension.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Extension/Validator/ValidatorExtension.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Extension/Validator/ValidatorExtension.html" title="Symfony\Component\Form\Extension\Validator\ValidatorExtension"><span class="pre">ValidatorExtension</span></a></code>
+class, which automatically applies validation to your data on bind. These
+errors are then mapped to the correct field and rendered.</p>
+<p>Your integration with the Validation component will look something like this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Form\Forms</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Form\Extension\Validator\ValidatorExtension</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Validator\Validation</span><span class="p">;</span>
+
+<span class="nv">$vendorDir</span> <span class="o">=</span> <span class="nb">realpath</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/../vendor&#39;</span><span class="p">);</span>
+<span class="nv">$vendorFormDir</span> <span class="o">=</span> <span class="nv">$vendorDir</span><span class="o">.</span><span class="s1">&#39;/symfony/form/Symfony/Component/Form&#39;</span><span class="p">;</span>
+<span class="nv">$vendorValidatorDir</span> <span class="o">=</span>
+    <span class="nv">$vendorDir</span><span class="o">.</span><span class="s1">&#39;/symfony/validator/Symfony/Component/Validator&#39;</span><span class="p">;</span>
+
+<span class="c1">// create the validator - details will vary</span>
+<span class="nv">$validator</span> <span class="o">=</span> <span class="nx">Validation</span><span class="o">::</span><span class="na">createValidator</span><span class="p">();</span>
+
+<span class="c1">// there are built-in translations for the core error messages</span>
+<span class="nv">$translator</span><span class="o">-&gt;</span><span class="na">addResource</span><span class="p">(</span>
+    <span class="s1">&#39;xlf&#39;</span><span class="p">,</span>
+    <span class="nv">$vendorFormDir</span><span class="o">.</span><span class="s1">&#39;/Resources/translations/validators.en.xlf&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;validators&#39;</span>
+<span class="p">);</span>
+<span class="nv">$translator</span><span class="o">-&gt;</span><span class="na">addResource</span><span class="p">(</span>
+    <span class="s1">&#39;xlf&#39;</span><span class="p">,</span>
+    <span class="nv">$vendorValidatorDir</span><span class="o">.</span><span class="s1">&#39;/Resources/translations/validators.en.xlf&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;validators&#39;</span>
+<span class="p">);</span>
+
+<span class="nv">$formFactory</span> <span class="o">=</span> <span class="nx">Forms</span><span class="o">::</span><span class="na">createFormFactoryBuilder</span><span class="p">()</span>
+    <span class="c1">// ...</span>
+    <span class="o">-&gt;</span><span class="na">addExtension</span><span class="p">(</span><span class="k">new</span> <span class="nx">ValidatorExtension</span><span class="p">(</span><span class="nv">$validator</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">getFormFactory</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>To learn more, skip down to the <a class="reference internal" href="#component-form-intro-validation"><span>Form Validation</span></a> section.</p>
+</div>
+<div class="section" id="accessing-the-form-factory">
+<h3>Accessing the Form Factory<a class="headerlink" href="#accessing-the-form-factory" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Your application only needs one form factory, and that one factory object
+should be used to create any and all form objects in your application. This
+means that you should create it in some central, bootstrap part of your application
+and then access it whenever you need to build a form.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">In this document, the form factory is always a local variable called
+<code class="docutils literal"><span class="pre">$formFactory</span></code>. The point here is that you will probably need to create
+this object in some more &#8220;global&#8221; way so you can access it from anywhere.</p>
+</div>
+<p>Exactly how you gain access to your one form factory is up to you. If you&#8217;re
+using a <a class="reference internal" href="glossary.html#term-service-container" tppabs="http://symfony.cn/docs/glossary.html#term-service-container"><span class="xref std std-term">Service Container</span></a>, then you should add the form factory to
+your container and grab it out whenever you need to. If your application
+uses global or static variables (not usually a good idea), then you can store
+the object on some static class or do something similar.</p>
+<p>Regardless of how you architect your application, just remember that you
+should only have one form factory and that you&#8217;ll need to be able to access
+it throughout your application.</p>
+</div>
+</div>
+<div class="section" id="creating-a-simple-form">
+<span id="component-form-intro-create-simple-form"></span><h2>Creating a simple Form<a class="headerlink" href="#creating-a-simple-form" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">If you&#8217;re using the Symfony framework, then the form factory is available
+automatically as a service called <code class="docutils literal"><span class="pre">form.factory</span></code>. Also, the default
+base controller class has a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller.html#method_createFormBuilder'" tppabs="http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller.html#method_createFormBuilder" title="Symfony\Bundle\FrameworkBundle\Controller::createFormBuilder()"><span class="pre">createFormBuilder()</span></a></code>
+method, which is a shortcut to fetch the form factory and call <code class="docutils literal"><span class="pre">createBuilder</span></code>
+on it.</p>
+</div>
+<p>Creating a form is done via a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormBuilder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormBuilder.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormBuilder.html" title="Symfony\Component\Form\FormBuilder"><span class="pre">FormBuilder</span></a></code>
+object, where you build and configure different fields. The form builder
+is created from the form factory.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Standalone Use</em><div class="highlight-php-standalone"><div class="highlight"><pre><span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$twig</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;new.html.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;form&#39;</span> <span class="o">=&gt;</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">createView</span><span class="p">(),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+<li><em>Framework Use</em><div class="highlight-php-symfony"><div class="highlight"><pre><span class="c1">// src/Acme/TaskBundle/Controller/DefaultController.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TaskBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">newAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// createFormBuilder is a shortcut to get the &quot;form factory&quot;</span>
+        <span class="c1">// and then call &quot;createBuilder()&quot; on it</span>
+        <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createFormBuilder</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;AcmeTaskBundle:Default:new.html.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;form&#39;</span> <span class="o">=&gt;</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">createView</span><span class="p">(),</span>
+        <span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>As you can see, creating a form is like writing a recipe: you call <code class="docutils literal"><span class="pre">add</span></code>
+for each new field you want to create. The first argument to <code class="docutils literal"><span class="pre">add</span></code> is the
+name of your field, and the second is the field &#8220;type&#8221;. The Form component
+comes with a lot of <a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html"><em>built-in types</em></a>.</p>
+<p>Now that you&#8217;ve built your form, learn how to <a class="reference internal" href="#component-form-intro-rendering-form"><span>render</span></a>
+it and <a class="reference internal" href="#component-form-intro-handling-submission"><span>process the form submission</span></a>.</p>
+<div class="section" id="setting-default-values">
+<h3>Setting default Values<a class="headerlink" href="#setting-default-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>If you need your form to load with some default values (or you&#8217;re building
+an &#8220;edit&#8221; form), simply pass in the default data when creating your form
+builder:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Standalone Use</em><div class="highlight-php-standalone"><div class="highlight"><pre><span class="nv">$defaults</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;dueDate&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">\DateTime</span><span class="p">(</span><span class="s1">&#39;tomorrow&#39;</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">,</span> <span class="nv">$defaults</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+</pre></div>
+</div>
+</li>
+<li><em>Framework Use</em><div class="highlight-php-symfony"><div class="highlight"><pre><span class="nv">$defaults</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;dueDate&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">\DateTime</span><span class="p">(</span><span class="s1">&#39;tomorrow&#39;</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createFormBuilder</span><span class="p">(</span><span class="nv">$defaults</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">In this example, the default data is an array. Later, when you use the
+<a class="reference internal" href="forms.html#book-forms-data-class" tppabs="http://symfony.cn/docs/book/forms.html#book-forms-data-class"><span>data_class</span></a> option to bind data directly
+to objects, your default data will be an instance of that object.</p>
+</div>
+</div>
+<div class="section" id="rendering-the-form">
+<span id="component-form-intro-rendering-form"></span><h3>Rendering the Form<a class="headerlink" href="#rendering-the-form" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Now that the form has been created, the next step is to render it. This is
+done by passing a special form &#8220;view&#8221; object to your template (notice the
+<code class="docutils literal"><span class="pre">$form-&gt;createView()</span></code> in the controller above) and using a set of form
+helper functions:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;#&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span> <span class="cp">{{</span> <span class="nv">form_enctype</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span><span class="nt">&gt;</span>
+    <span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">form</span><span class="o">)</span> <span class="cp">}}</span>
+
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/form-simple.png" class="align-center" src="form-simple.png" tppabs="http://symfony.cn/docs/_images/form-simple.png" />
+<p>That&#8217;s it! By printing <code class="docutils literal"><span class="pre">form_widget(form)</span></code>, each field in the form is
+rendered, along with a label and error message (if there is one). As easy
+as this is, it&#8217;s not very flexible (yet). Usually, you&#8217;ll want to render each
+form field individually so you can control how the form looks. You&#8217;ll learn how
+to do that in the &#8220;<a class="reference internal" href="forms.html#form-rendering-template" tppabs="http://symfony.cn/docs/book/forms.html#form-rendering-template"><span>åœ¨æ¨¡æ¿é‡Œç”Ÿæˆè¡¨å•</span></a>&#8221; section.</p>
+</div>
+<div class="section" id="changing-a-form-s-method-and-action">
+<h3>Changing a Form&#8217;s Method and Action<a class="headerlink" href="#changing-a-form-s-method-and-action" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.3 æ–°ç‰ˆåŠŸèƒ½: </span>The ability to configure the form method and action was introduced in
+Symfony 2.3.</p>
+</div>
+<p>By default, a form is submitted to the same URI that rendered the form with
+an HTTP POST request. This behavior can be changed using the <a class="reference internal" href="form.html#form-option-action" tppabs="http://symfony.cn/docs/reference/forms/types/form.html#form-option-action"><span>action</span></a>
+and <a class="reference internal" href="form.html#form-option-method" tppabs="http://symfony.cn/docs/reference/forms/types/form.html#form-option-method"><span>method</span></a> options (the <code class="docutils literal"><span class="pre">method</span></code> option is also used
+by <code class="docutils literal"><span class="pre">handleRequest()</span></code> to determine whether a form has been submitted):</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Standalone Use</em><div class="highlight-php-standalone"><div class="highlight"><pre><span class="nv">$formBuilder</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/search&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;method&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<span class="p">));</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>Framework Use</em><div class="highlight-php-symfony"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">searchAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$formBuilder</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createFormBuilder</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/search&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;method&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+    <span class="p">));</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="handling-form-submissions">
+<span id="component-form-intro-handling-submission"></span><h3>Handling Form Submissions<a class="headerlink" href="#handling-form-submissions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>To handle form submissions, use the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/Form.html#method_handleRequest" title="Symfony\Component\Form\Form::handleRequest()"><span class="pre">handleRequest()</span></a></code>
+method:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Standalone Use</em><div class="highlight-php-standalone"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\RedirectResponse</span><span class="p">;</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+<span class="nv">$request</span> <span class="o">=</span> <span class="nx">Request</span><span class="o">::</span><span class="na">createFromGlobals</span><span class="p">();</span>
+
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">isValid</span><span class="p">())</span> <span class="p">{</span>
+    <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+
+    <span class="c1">// ... perform some action, such as saving the data to the database</span>
+
+    <span class="nv">$response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RedirectResponse</span><span class="p">(</span><span class="s1">&#39;/task/success&#39;</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>Framework Use</em><div class="highlight-php-symfony"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">newAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createFormBuilder</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+
+    <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">isValid</span><span class="p">())</span> <span class="p">{</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+
+        <span class="c1">// ... perform some action, such as saving the data to the database</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="s1">&#39;task_success&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>This defines a common form &#8220;workflow&#8221;, which contains 3 different possibilities:</p>
+<ol class="arabic simple">
+<li>On the initial GET request (i.e. when the user &#8220;surfs&#8221; to your page),
+build your form and render it;</li>
+</ol>
+<p>If the request is a POST, process the submitted data (via <code class="docutils literal"><span class="pre">handleRequest()</span></code>).
+Then:</p>
+<ol class="arabic simple" start="2">
+<li>if the form is invalid, re-render the form (which will now contain errors);</li>
+<li>if the form is valid, perform some action and redirect.</li>
+</ol>
+<p>Luckily, you don&#8217;t need to decide whether or not a form has been submitted.
+Just pass the current request to the <code class="docutils literal"><span class="pre">handleRequest()</span></code> method. Then, the Form
+component will do all the necessary work for you.</p>
+</div>
+<div class="section" id="form-validation">
+<span id="component-form-intro-validation"></span><h3>Form Validation<a class="headerlink" href="#form-validation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The easiest way to add validation to your form is via the <code class="docutils literal"><span class="pre">constraints</span></code>
+option when building each field:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Standalone Use</em><div class="highlight-php-standalone"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Validator\Constraints\NotBlank</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Validator\Constraints\Type</span><span class="p">;</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$formFactory</span><span class="o">-&gt;</span><span class="na">createBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;constraints&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">NotBlank</span><span class="p">(),</span>
+    <span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;constraints&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="k">new</span> <span class="nx">NotBlank</span><span class="p">(),</span>
+            <span class="k">new</span> <span class="nx">Type</span><span class="p">(</span><span class="s1">&#39;\DateTime&#39;</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+</pre></div>
+</div>
+</li>
+<li><em>Framework Use</em><div class="highlight-php-symfony"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Validator\Constraints\NotBlank</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Validator\Constraints\Type</span><span class="p">;</span>
+
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createFormBuilder</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;constraints&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">NotBlank</span><span class="p">(),</span>
+    <span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;dueDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;constraints&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="k">new</span> <span class="nx">NotBlank</span><span class="p">(),</span>
+            <span class="k">new</span> <span class="nx">Type</span><span class="p">(</span><span class="s1">&#39;\DateTime&#39;</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">getForm</span><span class="p">();</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>When the form is bound, these validation constraints will be applied automatically
+and the errors will display next to the fields on error.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">For a list of all of the built-in validation constraints, see
+<a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html"><em>Validation Constraints Reference</em></a>.</p>
+</div>
+</div>
+<div class="section" id="accessing-form-errors">
+<h3>Accessing Form Errors<a class="headerlink" href="#accessing-form-errors" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>You can use the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormInterface.html#method_getErrors'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormInterface.html#method_getErrors" title="Symfony\Component\Form\FormInterface::getErrors()"><span class="pre">getErrors()</span></a></code>
+method to access the list of errors. It returns a
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Form/FormErrorIterator.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Form/FormErrorIterator.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Form/FormErrorIterator.html" title="Symfony\Component\Form\FormErrorIterator"><span class="pre">FormErrorIterator</span></a></code> instance:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$form</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// a FormErrorIterator instance, but only errors attached to this</span>
+<span class="c1">// form level (e.g. &quot;global errors)</span>
+<span class="nv">$errors</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getErrors</span><span class="p">();</span>
+
+<span class="c1">// a FormErrorIterator instance, but only errors attached to the</span>
+<span class="c1">// &quot;firstName&quot; field</span>
+<span class="nv">$errors</span> <span class="o">=</span> <span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;firstName&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">getErrors</span><span class="p">();</span>
+
+<span class="c1">// a FormErrorIterator instance in a flattened structure</span>
+<span class="c1">// use getOrigin() to determine the form causing the error</span>
+<span class="nv">$errors</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getErrors</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+
+<span class="c1">// a FormErrorIterator instance representing the form tree structure</span>
+<span class="nv">$errors</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getErrors</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p>In older Symfony versions, <code class="docutils literal"><span class="pre">getErrors()</span></code> returned an array. To use the
+errors the same way in Symfony 2.5 or newer, you have to pass them to
+PHP&#8217;s <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/function.iterator-to-array.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/function.iterator-to-array.php'" tppabs="http://php.net/manual/en/function.iterator-to-array.php" title="iterator_to_array"><span class="pre">iterator_to_array</span></a></code> function:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$errorsAsArray</span> <span class="o">=</span> <span class="nb">iterator_to_array</span><span class="p">(</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getErrors</span><span class="p">());</span>
+</pre></div>
+</div>
+<p class="last">This is useful, for example, if you want to use PHP&#8217;s <code class="docutils literal"><span class="pre">array_</span></code> function
+on the form errors.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="type_guesser.html" tppabs="http://symfony.cn/docs/components/form/type_guesser.html" class="btn btn-neutral float-right" title="Creating a custom Type Guesser">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html" class="btn btn-neutral" title="Form"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

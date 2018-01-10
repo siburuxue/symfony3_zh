@@ -1,0 +1,1632 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ÂÆâÂÖ®ÊÄß &mdash; Symfony Framework Documentation  ÊñáÊ°£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  ÊñáÊ°£" href="../index.html"/>
+        <link rel="up" title="ÊïôÁ®ã" href="index.html"/>
+        <link rel="next" title="HTTPÁºìÂ≠ò" href="http_cache.html"/>
+        <link rel="prev" title="Ë°®Âçï" href="forms.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">Âø´ÈÄüÂÖ•Èó®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">ÊÄªËßà</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">ËßÜÂõæ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">‰ª£Á†ÅÁªìÊûÑ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">SymfonyÂíåHTTPÂü∫Á°ÄÂ∑•ÂÖ∑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs Á∫ØPHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">ÂàõÂª∫È°µÈù¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">Ë∑ØÁî±ÔºàRoutingÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">ÂàõÂª∫Âíå‰ΩøÁî®Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">Êï∞ÊçÆÂ∫ìÂíåDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">Êï∞ÊçÆÂ∫ìÂíåPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">ÊµãËØï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">Ê†°È™å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">ÂÆâÂÖ®ÊÄß</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">Â§öËØ≠Ë®Ä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">ÊúçÂä°ÂÆπÂô®ÔºàService ContainerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">ÊÄßËÉΩ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">Ê†∏ÂøÉÂäüËÉΩ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">ÈùôÊÄÅÊñá‰ª∂Â§ÑÁêÜÔºàAsseticÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">ÂåÖÔºàBundleÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">ÈÖçÁΩÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">ÂëΩ‰ª§Ë°å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">ÈÉ®ÁΩ≤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">ÈÇÆ‰ª∂</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">‰∫ã‰ª∂ÂàÜÂèëÂô®ÔºàDispatcherÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">Ë°®ËææÂºèÔºàExpressionÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">ÊúÄ‰Ω≥ÂÆûË∑µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">SymfonyÊ°ÜÊû∂ÊúÄ‰Ω≥ÂÆûË∑µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">ÂàõÂª∫È°πÁõÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">ÈÖçÁΩÆÂèÇÊï∞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">‰∏öÂä°ÈÄªËæë‰ª£Á†ÅÁöÑÁªÑÁªá</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">Â§öËØ≠Ë®ÄÊîØÊåÅ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">ÂÆâÂÖ®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">ÈùôÊÄÅÊñá‰ª∂ÔºàAssetsÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">ÊµãËØï</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ÁªÑ‰ª∂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">ÂèÇËÄÉ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">Ë¥°ÁåÆ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">Ë¥°ÁåÆ‰ª£Á†Å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">Ë¥°ÁåÆÊñáÊ°£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">Á§æÂå∫</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a> &raquo;</li>
+      
+    <li>ÂÆâÂÖ®ÊÄß</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="security.txt.htm" tppabs="http://symfony.cn/docs/_sources/book/security.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="security">
+<span id="index-0"></span><h1>ÂÆâÂÖ®ÊÄß<a class="headerlink" href="#security" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h1>
+<p>Symfony&#8217;s security system is incredibly powerful, but it can also be confusing
+to set up. In this chapter, you&#8217;ll learn how to set up your application&#8217;s security
+step-by-step, from configuring your firewall and how you load users to denying
+access and fetching the User object. Depending on what you need, sometimes
+the initial setup can be tough. But once it&#8217;s done, Symfony&#8217;s security system
+is both flexible and (hopefully) fun to work with.</p>
+<p>Since there&#8217;s a lot to talk about, this chapter is organized into a few big
+sections:</p>
+<ol class="arabic simple">
+<li><p class="first">ËÆæÁΩÆ <code class="docutils literal"><span class="pre">security.yml</span></code> Êñá‰ª∂Ôºà<em>Ë∫´‰ªΩÈâ¥ÂÆö</em>Ôºâ</p>
+</li>
+<li><p class="first">ËÆæÁΩÆËÆøÈóÆÊùÉÈôêÔºà<em>ÊùÉÈôêÊéßÂà∂</em>Ôºâ</p>
+</li>
+<li><p class="first">Ëé∑ÂèñÂΩìÂâçÁî®Êà∑ÂØπË±°</p>
+</li>
+</ol>
+<p>These are followed by a number of small (but still captivating) sections,
+like <a class="reference internal" href="#book-security-logging-out"><span>logging out</span></a> and <a class="reference internal" href="#security-encoding-password"><span>encoding user passwords</span></a>.</p>
+<div class="section" id="initial-security-yml-setup-authentication">
+<span id="book-security-firewalls"></span><h2>1) Initial security.yml Setup (Authentication)<a class="headerlink" href="#initial-security-yml-setup-authentication" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The security system is configured in <code class="docutils literal"><span class="pre">app/config/security.yml</span></code>. The default
+configuration looks like this:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">providers</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">in_memory</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">memory</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">~</span>
+
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">dev</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">pattern</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">^/(_(profiler|wdt)|css|images|js)/</span>
+            <span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+
+        <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">anonymous</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">~</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="nt">&lt;provider</span> <span class="na">name=</span><span class="s">&quot;in_memory&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;memory</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/provider&gt;</span>
+
+        <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;dev&quot;</span>
+            <span class="na">pattern=</span><span class="s">&quot;^/(_(profiler|wdt)|css|images|js)/&quot;</span>
+            <span class="na">security=</span><span class="s">false</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;anonymous</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/firewall&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;providers&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;in_memory&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;memory&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;dev&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;pattern&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;^/(_(profiler|wdt)|css|images|js)/&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;security&#39;</span>   <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="s1">&#39;default&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;anonymous&#39;</span>  <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The <code class="docutils literal"><span class="pre">firewalls</span></code> key is the <em>heart</em> of your security configuration. The
+<code class="docutils literal"><span class="pre">dev</span></code> firewall isn&#8217;t important, it just makes sure that Symfony&#8217;s development
+tools - which live under URLs like <code class="docutils literal"><span class="pre">/_profiler</span></code> and <code class="docutils literal"><span class="pre">/_wdt</span></code> aren&#8217;t blocked
+by your security.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">You can also match a request against other details of the request (e.g. host). For more
+information and examples read <a class="reference internal" href="firewall_restriction.html" tppabs="http://symfony.cn/docs/cookbook/security/firewall_restriction.html"><em>How to Restrict Firewalls to a Specific Request</em></a>.</p>
+</div>
+<p>All other URLs will be handled by the <code class="docutils literal"><span class="pre">default</span></code> firewall (no <code class="docutils literal"><span class="pre">pattern</span></code>
+key means it matches <em>all</em> URLs). You can think of the firewall like your
+security system, and so it usually makes sense to have just one main firewall.
+But this does <em>not</em> mean that every URL requires authentication - the <code class="docutils literal"><span class="pre">anonymous</span></code>
+key takes care of this. In fact, if you go to the homepage right now, you&#8217;ll
+have access and you&#8217;ll see that you&#8217;re &#8220;authenticated&#8221; as <code class="docutils literal"><span class="pre">anon.</span></code>. Don&#8217;t
+be fooled by the &#8220;Yes&#8221; next to Authenticated, you&#8217;re just an anonymous user:</p>
+<img alt="../_images/security_anonymous_wdt.png" class="align-center" src="security_anonymous_wdt.png" tppabs="http://symfony.cn/docs/_images/security_anonymous_wdt.png" />
+<p>You&#8217;ll learn later how to deny access to certain URLs or controllers.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">Security is <em>highly</em> configurable and there&#8217;s a
+<a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html"><em>Security Configuration Reference</em></a>
+that shows all of the options with some extra explanation.</p>
+</div>
+<div class="section" id="a-configuring-how-your-users-will-authenticate">
+<h3>A) Configuring how your Users will Authenticate<a class="headerlink" href="#a-configuring-how-your-users-will-authenticate" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>The main job of a firewall is to configure <em>how</em> your users will authenticate.
+Will they use a login form? Http Basic? An API token? All of the above?</p>
+<p>Let&#8217;s start with Http Basic (the old-school pop-up) and work up from there.
+To activate this, add the <code class="docutils literal"><span class="pre">http_basic</span></code> key under your firewall:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="c1"># ...</span>
+        <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">anonymous</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">http_basic</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">~</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+
+        <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;anonymous</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;http-basic</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/firewall&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">&#39;default&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;anonymous&#39;</span>  <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s1">&#39;http_basic&#39;</span> <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Simple! To try this, you need to require the user to be logged in to see
+a page. To make things interesting, create a new page at <code class="docutils literal"><span class="pre">/admin</span></code>. For
+example, if you use annotations, create something like this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="c1">// ...</span>
+
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/admin&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">adminAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Admin page!&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Next, add an <code class="docutils literal"><span class="pre">access_control</span></code> entry to <code class="docutils literal"><span class="pre">security.yml</span></code> that requires the
+user to be logged in to access this URL:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">access_control</span><span class="p-Indicator">:</span>
+        <span class="c1"># require ROLE_ADMIN for /admin*</span>
+        <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">^/admin</span><span class="p-Indicator">,</span> <span class="nv">roles</span><span class="p-Indicator">:</span> <span class="nv">ROLE_ADMIN</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+
+        <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- ... --&gt;</span>
+        <span class="nt">&lt;/firewall&gt;</span>
+
+        <span class="nt">&lt;access-control&gt;</span>
+            <span class="c">&lt;!-- require ROLE_ADMIN for /admin* --&gt;</span>
+            <span class="nt">&lt;rule</span> <span class="na">path=</span><span class="s">&quot;^/admin&quot;</span> <span class="na">role=</span><span class="s">&quot;ROLE_ADMIN&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/access-control&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">&#39;default&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="c1">// ...</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+   <span class="s1">&#39;access_control&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+       <span class="c1">// require ROLE_ADMIN for /admin*</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;^/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">You&#8217;ll learn more about this <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code> thing and denying access
+later in the <a class="reference internal" href="#security-authorization"><span>2) Denying Access, Roles and other Authorization</span></a> section.</p>
+</div>
+<p>Great! Now, if you go to <code class="docutils literal"><span class="pre">/admin</span></code>, you&#8217;ll see the HTTP Basic popup:</p>
+<img alt="../_images/security_http_basic_popup.png" class="align-center" src="security_http_basic_popup.png" tppabs="http://symfony.cn/docs/_images/security_http_basic_popup.png" />
+<p>But who can you login as? Where do users come from?</p>
+<div class="admonition tip" id="book-security-form-login">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">Want to use a traditional login form? Great! See <a class="reference internal" href="form_login_setup.html" tppabs="http://symfony.cn/docs/cookbook/security/form_login_setup.html"><em>How to Build a Traditional Login Form</em></a>.
+What other methods are supported? See the <a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html"><em>Configuration Reference</em></a>
+or <a class="reference internal" href="custom_authentication_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html"><em>build your own</em></a>.</p>
+</div>
+</div>
+<div class="section" id="b-configuring-how-users-are-loaded">
+<span id="where-do-users-come-from-user-providers"></span><span id="security-user-providers"></span><h3>B) Configuring how Users are Loaded<a class="headerlink" href="#b-configuring-how-users-are-loaded" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>When you type in your username, Symfony needs to load that user&#8217;s information
+from somewhere. This is called a &#8220;user provider&#8221;, and you&#8217;re in charge of
+configuring it. Symfony has a built-in way to
+<a class="reference internal" href="entity_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html"><em>load users from the database</em></a>,
+or you can <a class="reference internal" href="custom_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html"><em>create your own user provider</em></a>.</p>
+<p>The easiest (but most limited) way, is to configure Symfony to load hardcoded
+users directly from the <code class="docutils literal"><span class="pre">security.yml</span></code> file itself. This is called an &#8220;in memory&#8221;
+provider, but it&#8217;s better to think of it as an &#8220;in configuration&#8221; provider:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">providers</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">in_memory</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">memory</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">users</span><span class="p-Indicator">:</span>
+                    <span class="l-Scalar-Plain">ryan</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ryanpass</span>
+                        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span> <span class="s">&#39;ROLE_USER&#39;</span>
+                    <span class="l-Scalar-Plain">admin</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">kitten</span>
+                        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span> <span class="s">&#39;ROLE_ADMIN&#39;</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="nt">&lt;provider</span> <span class="na">name=</span><span class="s">&quot;in_memory&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;memory&gt;</span>
+                <span class="nt">&lt;user</span> <span class="na">name=</span><span class="s">&quot;ryan&quot;</span> <span class="na">password=</span><span class="s">&quot;ryanpass&quot;</span> <span class="na">roles=</span><span class="s">&quot;ROLE_USER&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;user</span> <span class="na">name=</span><span class="s">&quot;admin&quot;</span> <span class="na">password=</span><span class="s">&quot;kitten&quot;</span> <span class="na">roles=</span><span class="s">&quot;ROLE_ADMIN&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/memory&gt;</span>
+        <span class="nt">&lt;/provider&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;providers&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;in_memory&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;memory&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;users&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                    <span class="s1">&#39;ryan&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                        <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ryanpass&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;roles&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_USER&#39;</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="s1">&#39;admin&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                        <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;kitten&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;roles&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">,</span>
+                    <span class="p">),</span>
+                <span class="p">),</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Like with <code class="docutils literal"><span class="pre">firewalls</span></code>, you can have multiple <code class="docutils literal"><span class="pre">providers</span></code>, but you&#8217;ll
+probably only need one. If you <em>do</em> have multiple, you can configure which
+<em>one</em> provider to use for your firewall under its <code class="docutils literal"><span class="pre">provider</span></code> key (e.g.
+<code class="docutils literal"><span class="pre">provider:</span> <span class="pre">in_memory</span></code>).</p>
+<p>Try to login using username <code class="docutils literal"><span class="pre">admin</span></code> and password <code class="docutils literal"><span class="pre">kitten</span></code>. You should
+see an error!</p>
+<blockquote>
+<div>No encoder has been configured for account &#8220;SymfonyComponentSecurityCoreUserUser&#8221;</div></blockquote>
+<p>To fix this, add an <code class="docutils literal"><span class="pre">encoders</span></code> key:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">encoders</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">Symfony\Component\Security\Core\User\User</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">plaintext</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+
+        <span class="nt">&lt;encoder</span> <span class="na">class=</span><span class="s">&quot;Symfony\Component\Security\Core\User\User&quot;</span>
+            <span class="na">algorithm=</span><span class="s">&quot;plaintext&quot;</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+
+    <span class="s1">&#39;encoders&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Symfony\Component\Security\Core\User\User&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;plaintext&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>User providers load user information and put it into a <code class="docutils literal"><span class="pre">User</span></code> object. If
+you <a class="reference internal" href="entity_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html"><em>load users from the database</em></a>
+or <a class="reference internal" href="custom_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html"><em>some other source</em></a>, you&#8217;ll
+use your own custom User class. But when you use the &#8220;in memory&#8221; provider,
+it gives you a <code class="docutils literal"><span class="pre">Symfony\Component\Security\Core\User\User</span></code> object.</p>
+<p>Whatever your User class is, you need to tell Symfony what algorithm was
+used to encode the passwords. In this case, the passwords are just plaintext,
+but in a second, you&#8217;ll change this to use <code class="docutils literal"><span class="pre">bcrypt</span></code>.</p>
+<p>If you refresh now, you&#8217;ll be logged in! The web debug toolbar even tells
+you who you are and what roles you have:</p>
+<img alt="../_images/symfony_loggedin_wdt.png" class="align-center" src="symfony_loggedin_wdt.png" tppabs="http://symfony.cn/docs/_images/symfony_loggedin_wdt.png" />
+<p>Because this URL requires <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>, if you had logged in as <code class="docutils literal"><span class="pre">ryan</span></code>,
+this would deny you access. More on that later (<a class="reference internal" href="#security-authorization-access-control"><span>ÈÄöËøáURLËøõË°åÊùÉÈôêÊéßÂà∂Ôºàaccess_controlÔºâ</span></a>).</p>
+<div class="section" id="loading-users-from-the-database">
+<span id="book-security-user-entity"></span><h4>‰ªéÊï∞ÊçÆÂ∫ìÈáåËΩΩÂÖ•Áî®Êà∑<a class="headerlink" href="#loading-users-from-the-database" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>If you&#8217;d like to load your users via the Doctrine ORM, that&#8217;s easy! See
+<a class="reference internal" href="entity_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html"><em>How to Load Security Users from the Database (the Entity Provider)</em></a> for all the details.</p>
+</div>
+</div>
+<div class="section" id="c-encoding-the-user-s-password">
+<span id="encoding-the-user-s-password"></span><span id="c-encoding-the-users-password"></span><span id="book-security-encoding-user-password"></span><h3>C) Encoding the User&#8217;s Password<a class="headerlink" href="#c-encoding-the-user-s-password" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>Whether your users are stored in <code class="docutils literal"><span class="pre">security.yml</span></code>, in a database or somewhere
+else, you&#8217;ll want to encode their passwords. The best algorithm to use is
+<code class="docutils literal"><span class="pre">bcrypt</span></code>:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">encoders</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">Symfony\Component\Security\Core\User\User</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">algorithm</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">bcrypt</span>
+            <span class="l-Scalar-Plain">cost</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">12</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+
+        <span class="nt">&lt;encoder</span> <span class="na">class=</span><span class="s">&quot;Symfony\Component\Security\Core\User\User&quot;</span>
+            <span class="na">algorithm=</span><span class="s">&quot;bcrypt&quot;</span>
+            <span class="na">cost=</span><span class="s">&quot;12&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+
+    <span class="s1">&#39;encoders&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Symfony\Component\Security\Core\User\User&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;algorithm&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;bcrypt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cost&#39;</span> <span class="o">=&gt;</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Ë≠¶Âëä</p>
+<p>If you&#8217;re using PHP 5.4 or lower, you&#8217;ll need to install the <code class="docutils literal"><span class="pre">ircmaxell/password-compat</span></code>
+library via Composer in order to be able to use the <code class="docutils literal"><span class="pre">bcrypt</span></code> encoder:</p>
+<div class="last highlight-json"><div class="highlight"><pre>{
+    &quot;require&quot;: {
+        ...
+        &quot;ircmaxell/password-compat&quot;: &quot;~1.0.3&quot;
+    }
+}
+</pre></div>
+</div>
+</div>
+<p>Of course, your user&#8217;s passwords now need to be encoded with this exact algorithm.
+For hardcoded users, you can use an <a class="reference external" href="javascript:if(confirm('https://www.dailycred.com/blog/12/bcrypt-calculator  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.dailycred.com/blog/12/bcrypt-calculator'" tppabs="https://www.dailycred.com/blog/12/bcrypt-calculator">online tool</a>, which will give you something
+like this:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">providers</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">in_memory</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">memory</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">users</span><span class="p-Indicator">:</span>
+                    <span class="l-Scalar-Plain">ryan</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$2a$12$LCY0MefVIEc3TYPHV9SNnuzOfyr2p/AXIGoQJEDs4am4JwhNz/jli</span>
+                        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span> <span class="s">&#39;ROLE_USER&#39;</span>
+                    <span class="l-Scalar-Plain">admin</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$2a$12$cyTWeE9kpq1PjqKFiWUZFuCRPwVyAZwm4XzMZ1qPUFl7/flCM3V0G</span>
+                        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span> <span class="s">&#39;ROLE_ADMIN&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="nt">&lt;provider</span> <span class="na">name=</span><span class="s">&quot;in_memory&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;memory&gt;</span>
+                <span class="nt">&lt;user</span> <span class="na">name=</span><span class="s">&quot;ryan&quot;</span> <span class="na">password=</span><span class="s">&quot;$2a$12$LCY0MefVIEc3TYPHV9SNnuzOfyr2p/AXIGoQJEDs4am4JwhNz/jli&quot;</span> <span class="na">roles=</span><span class="s">&quot;ROLE_USER&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;user</span> <span class="na">name=</span><span class="s">&quot;admin&quot;</span> <span class="na">password=</span><span class="s">&quot;$2a$12$cyTWeE9kpq1PjqKFiWUZFuCRPwVyAZwm4XzMZ1qPUFl7/flCM3V0G&quot;</span> <span class="na">roles=</span><span class="s">&quot;ROLE_ADMIN&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/memory&gt;</span>
+        <span class="nt">&lt;/provider&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;providers&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;in_memory&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;memory&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;users&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                    <span class="s1">&#39;ryan&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                        <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;$2a$12$LCY0MefVIEc3TYPHV9SNnuzOfyr2p/AXIGoQJEDs4am4JwhNz/jli&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;roles&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_USER&#39;</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="s1">&#39;admin&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                        <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;$2a$12$cyTWeE9kpq1PjqKFiWUZFuCRPwVyAZwm4XzMZ1qPUFl7/flCM3V0G&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;roles&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">,</span>
+                    <span class="p">),</span>
+                <span class="p">),</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Everything will now work exactly like before. But if you have dynamic users
+(e.g. from a database), how can you programmatically encode the password
+before inserting them into the database? Don&#8217;t worry, see
+<a class="reference internal" href="#security-encoding-password"><span>Âä®ÊÄÅÂä†ÂØÜÂØÜÁ†Å</span></a> for details.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p>Supported algorithms for this method depend on your PHP version, but
+include the algorithms returned by the PHP function <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/function.hash-algos.php  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://php.net/manual/en/function.hash-algos.php'" tppabs="http://php.net/manual/en/function.hash-algos.php" title="hash_algos"><span class="pre">hash_algos</span></a></code>
+as well as a few others (e.g. bcrypt). See the <code class="docutils literal"><span class="pre">encoders</span></code> key in the
+<a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html"><em>Security Reference Section</em></a>
+for examples.</p>
+<p class="last">It&#8217;s also possible to use different hashing algorithms on a user-by-user
+basis. See <a class="reference internal" href="named_encoders.html" tppabs="http://symfony.cn/docs/cookbook/security/named_encoders.html"><em>How to Choose the Password Encoder Algorithm Dynamically</em></a> for more details.</p>
+</div>
+</div>
+<div class="section" id="d-configuration-done">
+<h3>D) Configuration Done!<a class="headerlink" href="#d-configuration-done" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>Congratulations! You now have a working authentication system that uses Http
+Basic and loads users right from the <code class="docutils literal"><span class="pre">security.yml</span></code> file.</p>
+<p>Your next steps depend on your setup:</p>
+<ul class="simple">
+<li>Configure a different way for your users to login, like a <a class="reference internal" href="#book-security-form-login"><span>login form</span></a>
+or <a class="reference internal" href="custom_authentication_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html"><em>something completely custom</em></a>;</li>
+<li>Load users from a different source, like the <a class="reference internal" href="entity_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html"><em>database</em></a>
+or <a class="reference internal" href="custom_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html"><em>some other source</em></a>;</li>
+<li>Learn how to deny access, load the User object and deal with roles in the
+<a class="reference internal" href="#security-authorization"><span>Authorization</span></a> section.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="denying-access-roles-and-other-authorization">
+<span id="security-authorization"></span><h2>2) Denying Access, Roles and other Authorization<a class="headerlink" href="#denying-access-roles-and-other-authorization" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Users can now login to your app using <code class="docutils literal"><span class="pre">http_basic</span></code> or some other method.
+Great! Now, you need to learn how to deny access and work with the User object.
+This is called <strong>authorization</strong>, and its job is to decide if a user can
+access some resource (a URL, a model object, a method call, ...).</p>
+<p>The process of authorization has two different sides:</p>
+<ol class="arabic simple">
+<li>The user receives a specific set of roles when logging in (e.g. <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>).</li>
+<li>You add code so that a resource (e.g. URL, controller) requires a specific
+&#8220;attribute&#8221; (most commonly a role like <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>) in order to be
+accessed.</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">In addition to roles (e.g. <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>), you can protect a resource
+using other attributes/strings (e.g. <code class="docutils literal"><span class="pre">EDIT</span></code>) and use voters or Symfony&#8217;s
+ACL system to give these meaning. This might come in handy if you need
+to check if user A can &#8220;EDIT&#8221; some object B (e.g. a Product with id 5).
+See <a class="reference internal" href="#security-secure-objects"><span>ÊùÉÈôêÊéßÂà∂ÂàóË°®ÔºàACLsÔºâ: ‰øùÊä§Âçï‰∏™Êï∞ÊçÆ</span></a>.</p>
+</div>
+<div class="section" id="roles">
+<span id="book-security-roles"></span><h3>ËßíËâ≤<a class="headerlink" href="#roles" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>When a user logs in, they receive a set of roles (e.g. <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>). In
+the example above, these are hardcoded into <code class="docutils literal"><span class="pre">security.yml</span></code>. If you&#8217;re
+loading users from the database, these are probably stored on a column
+in your table.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Ë≠¶Âëä</p>
+<p class="last">All roles you assign to a user <strong>must</strong> begin with the <code class="docutils literal"><span class="pre">ROLE_</span></code> prefix.
+Otherwise, they won&#8217;t be handled by Symfony&#8217;s security system in the
+normal way (i.e. unless you&#8217;re doing something advanced, assigning a
+role like <code class="docutils literal"><span class="pre">FOO</span></code> to a user and then checking for <code class="docutils literal"><span class="pre">FOO</span></code> as described
+<a class="reference internal" href="#security-role-authorization"><span>below</span></a> will not work).</p>
+</div>
+<p>Roles are simple, and are basically strings that you invent and use as needed.
+For example, if you need to start limiting access to the blog admin section
+of your website, you could protect that section using a <code class="docutils literal"><span class="pre">ROLE_BLOG_ADMIN</span></code>
+role. This role doesn&#8217;t need to be defined anywhere - you can just start using
+it.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">Make sure every user has at least <em>one</em> role, or your user will look
+like they&#8217;re not authenticated. A common convention is to give <em>every</em>
+user <code class="docutils literal"><span class="pre">ROLE_USER</span></code>.</p>
+</div>
+<p>You can also specify a <a class="reference internal" href="#security-role-hierarchy"><span>role hierarchy</span></a> where
+some roles automatically mean that you also have other roles.</p>
+</div>
+<div class="section" id="add-code-to-deny-access">
+<span id="security-role-authorization"></span><h3>Ê∑ªÂä†ÈôêÂà∂ËÆøÈóÆÁöÑ‰ª£Á†Å<a class="headerlink" href="#add-code-to-deny-access" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>There are <strong>two</strong> ways to deny access to something:</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#security-authorization-access-control"><span>access_control in security.yml</span></a>
+allows you to protect URL patterns (e.g. <code class="docutils literal"><span class="pre">/admin/*</span></code>). This is easy,
+but less flexible;</li>
+<li><a class="reference internal" href="#book-security-securing-controller"><span>in your code via the security.authorization_checker service</span></a>.</li>
+</ol>
+<div class="section" id="securing-url-patterns-access-control">
+<span id="security-authorization-access-control"></span><h4>ÈÄöËøáURLËøõË°åÊùÉÈôêÊéßÂà∂Ôºàaccess_controlÔºâ<a class="headerlink" href="#securing-url-patterns-access-control" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>The most basic way to secure part of your application is to secure an entire
+URL pattern. You saw this earlier, where anything matching the regular expression
+<code class="docutils literal"><span class="pre">^/admin</span></code> requires the <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code> role:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">access_control</span><span class="p-Indicator">:</span>
+        <span class="c1"># require ROLE_ADMIN for /admin*</span>
+        <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">^/admin</span><span class="p-Indicator">,</span> <span class="nv">roles</span><span class="p-Indicator">:</span> <span class="nv">ROLE_ADMIN</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+
+        <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- ... --&gt;</span>
+        <span class="nt">&lt;/firewall&gt;</span>
+
+        <span class="nt">&lt;access-control&gt;</span>
+            <span class="c">&lt;!-- require ROLE_ADMIN for /admin* --&gt;</span>
+            <span class="nt">&lt;rule</span> <span class="na">path=</span><span class="s">&quot;^/admin&quot;</span> <span class="na">role=</span><span class="s">&quot;ROLE_ADMIN&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/access-control&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">&#39;default&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="c1">// ...</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+   <span class="s1">&#39;access_control&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+       <span class="c1">// require ROLE_ADMIN for /admin*</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;^/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>This is great for securing entire sections, but you&#8217;ll also probably want
+to <a class="reference internal" href="#book-security-securing-controller"><span>secure your individual controllers</span></a>
+as well.</p>
+<p>You can define as many URL patterns as you need - each is a regular expression.
+<strong>BUT</strong>, only <strong>one</strong> will be matched. Symfony will look at each starting
+at the top, and stop as soon as it finds one <code class="docutils literal"><span class="pre">access_control</span></code> entry that
+matches the URL.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+    <span class="l-Scalar-Plain">access_control</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">^/admin/users</span><span class="p-Indicator">,</span> <span class="nv">roles</span><span class="p-Indicator">:</span> <span class="nv">ROLE_SUPER_ADMIN</span> <span class="p-Indicator">}</span>
+        <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">^/admin</span><span class="p-Indicator">,</span> <span class="nv">roles</span><span class="p-Indicator">:</span> <span class="nv">ROLE_ADMIN</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+        <span class="nt">&lt;access-control&gt;</span>
+            <span class="nt">&lt;rule</span> <span class="na">path=</span><span class="s">&quot;^/admin/users&quot;</span> <span class="na">role=</span><span class="s">&quot;ROLE_SUPER_ADMIN&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;rule</span> <span class="na">path=</span><span class="s">&quot;^/admin&quot;</span> <span class="na">role=</span><span class="s">&quot;ROLE_ADMIN&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/access-control&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+    <span class="s1">&#39;access_control&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;^/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_SUPER_ADMIN&#39;</span><span class="p">),</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;^/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Prepending the path with <code class="docutils literal"><span class="pre">^</span></code> means that only URLs <em>beginning</em> with the
+pattern are matched. For example, a path of simply <code class="docutils literal"><span class="pre">/admin</span></code> (without
+the <code class="docutils literal"><span class="pre">^</span></code>) would match <code class="docutils literal"><span class="pre">/admin/foo</span></code> but would also match URLs like <code class="docutils literal"><span class="pre">/foo/admin</span></code>.</p>
+<div class="sidebar" id="security-book-access-control-explanation">
+<p class="first sidebar-title">‰∫ÜËß£ <code class="docutils literal"><span class="pre">access_control</span></code> ÊòØÂ¶Ç‰ΩïÂ∑•‰ΩúÁöÑ</p>
+<p>The <code class="docutils literal"><span class="pre">access_control</span></code> section is very powerful, but it can also be dangerous
+(because it involves security) if you don&#8217;t understand <em>how</em> it works.
+In addition to the URL, the <code class="docutils literal"><span class="pre">access_control</span></code> can match on IP address,
+host name and HTTP methods. It can also be used to redirect a user to
+the <code class="docutils literal"><span class="pre">https</span></code> version of a URL pattern.</p>
+<p class="last">To learn about all of this, see <a class="reference internal" href="access_control.html" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html"><em>How Does the Security access_control Work?</em></a>.</p>
+</div>
+</div>
+<div class="section" id="securing-controllers-and-other-code">
+<span id="book-security-securing-controller"></span><h4>ËÆæÁΩÆControllerÂíåÂÖ∂‰ªñ‰ª£Á†ÅÁöÑËÆøÈóÆÈôêÂà∂<a class="headerlink" href="#securing-controllers-and-other-code" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>You can easily deny access from inside a controller:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// The second parameter is used to specify on what object the role is tested.</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">denyAccessUnlessGranted</span><span class="p">(</span><span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="s1">&#39;Unable to access this page!&#39;</span><span class="p">);</span>
+
+    <span class="c1">// Old way :</span>
+    <span class="c1">// if (false === $this-&gt;get(&#39;security.authorization_checker&#39;)-&gt;isGranted(&#39;ROLE_ADMIN&#39;)) {</span>
+    <span class="c1">//     throw $this-&gt;createAccessDeniedException(&#39;Unable to access this page!&#39;);</span>
+    <span class="c1">// }</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 Êñ∞ÁâàÂäüËÉΩ: </span>The <code class="docutils literal"><span class="pre">denyAccessUnlessGranted()</span></code> method was introduced in Symfony 2.6. Previously (and
+still now), you could check access directly and throw the <code class="docutils literal"><span class="pre">AccessDeniedException</span></code> as shown
+in the example above).</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 Êñ∞ÁâàÂäüËÉΩ: </span>The <code class="docutils literal"><span class="pre">security.authorization_checker</span></code> service was introduced in Symfony 2.6. Prior
+to Symfony 2.6, you had to use the <code class="docutils literal"><span class="pre">isGranted()</span></code> method of the <code class="docutils literal"><span class="pre">security.context</span></code> service.</p>
+</div>
+<p>In both cases, a special
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Core/Exception/AccessDeniedException.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Core/Exception/AccessDeniedException.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Core/Exception/AccessDeniedException.html" title="Symfony\Component\Security\Core\Exception\AccessDeniedException"><span class="pre">AccessDeniedException</span></a></code>
+is thrown, which ultimately triggers a 403 HTTP response inside Symfony.</p>
+<p>That&#8217;s it! If the user isn&#8217;t logged in yet, they will be asked to login (e.g.
+redirected to the login page). If they <em>are</em> logged in, they&#8217;ll be shown
+the 403 access denied page (which you can <a class="reference internal" href="error_pages.html#cookbook-error-pages-by-status-code" tppabs="http://symfony.cn/docs/cookbook/controller/error_pages.html#cookbook-error-pages-by-status-code"><span>customize</span></a>).</p>
+<p id="book-security-securing-controller-annotations">Thanks to the SensioFrameworkExtraBundle, you can also secure your controller
+using annotations:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Security</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Security(&quot;has_role(&#39;ROLE_ADMIN&#39;)&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For more information, see the <a class="reference external" href="javascript:if(confirm('http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html'" tppabs="http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html">FrameworkExtraBundle documentation</a>.</p>
+</div>
+<div class="section" id="access-control-in-templates">
+<span id="book-security-template"></span><h4>Âú®Ê®°Êùø‰∏≠ËøõË°åÊùÉÈôêÊéßÂà∂<a class="headerlink" href="#access-control-in-templates" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>If you want to check if the current user has a role inside a template, use
+the built-in helper function:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_granted</span><span class="o">(</span><span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;security&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">isGranted</span><span class="p">(</span><span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">))</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>If you use this function and are <em>not</em> behind a firewall, an exception
+will be thrown. Again, it&#8217;s almost always a good
+idea to have a main firewall that covers all URLs (as has been shown
+in this chapter).</p>
+<div class="admonition caution">
+<p class="first admonition-title">Ë≠¶Âëä</p>
+<p>Be careful with this in your layout or on your error pages! Because of
+some internal Symfony details, to avoid broken error pages in the <code class="docutils literal"><span class="pre">prod</span></code>
+environment, wrap calls in these templates with a check for <code class="docutils literal"><span class="pre">app.user</span></code>:</p>
+<div class="last highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">app.user</span> <span class="k">and</span> <span class="nv">is_granted</span><span class="o">(</span><span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="securing-other-services">
+<h4>‰øùÊä§ÂÖ∂‰ªñService<a class="headerlink" href="#securing-other-services" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h4>
+<p>In fact, anything in Symfony can be protected by doing something similar
+to this. For example, suppose you have a service (i.e. a PHP class) whose
+job is to send emails. You can restrict use of this class - no matter where
+it&#8217;s being used from - to only certain users.</p>
+<p>For more information see <a class="reference internal" href="securing_services.html" tppabs="http://symfony.cn/docs/cookbook/security/securing_services.html"><em>How to Secure any Service or Method in your Application</em></a>.</p>
+</div>
+</div>
+<div class="section" id="checking-to-see-if-a-user-is-logged-in-is-authenticated-fully">
+<h3>Checking to see if a User is Logged In (IS_AUTHENTICATED_FULLY)<a class="headerlink" href="#checking-to-see-if-a-user-is-logged-in-is-authenticated-fully" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>So far, you&#8217;ve checked access based on roles - those strings that start with
+<code class="docutils literal"><span class="pre">ROLE_</span></code> and are assigned to users. But if you <em>only</em> want to check if a
+user is logged in (you don&#8217;t care about roles), then you can see <code class="docutils literal"><span class="pre">IS_AUTHENTICATED_FULLY</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;security.authorization_checker&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isGranted</span><span class="p">(</span><span class="s1">&#39;IS_AUTHENTICATED_FULLY&#39;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createAccessDeniedException</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">You can of course also use this in <code class="docutils literal"><span class="pre">access_control</span></code>.</p>
+</div>
+<p><code class="docutils literal"><span class="pre">IS_AUTHENTICATED_FULLY</span></code> isn&#8217;t a role, but it kind of acts like one, and every
+user that has successfully logged in will have this. In fact, there are three
+special attributes like this:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">IS_AUTHENTICATED_REMEMBERED</span></code>: <em>All</em> logged in users have this, even
+if they are logged in because of a &#8220;remember me cookie&#8221;. Even if you don&#8217;t
+use the <a class="reference internal" href="remember_me.html" tppabs="http://symfony.cn/docs/cookbook/security/remember_me.html"><em>remember me functionality</em></a>,
+you can use this to check if the user is logged in.</li>
+<li><code class="docutils literal"><span class="pre">IS_AUTHENTICATED_FULLY</span></code>: This is similar to <code class="docutils literal"><span class="pre">IS_AUTHENTICATED_REMEMBERED</span></code>,
+but stronger. Users who are logged in only because of a &#8220;remember me cookie&#8221;
+will have <code class="docutils literal"><span class="pre">IS_AUTHENTICATED_REMEMBERED</span></code> but will not have <code class="docutils literal"><span class="pre">IS_AUTHENTICATED_FULLY</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">IS_AUTHENTICATED_ANONYMOUSLY</span></code>: <em>All</em> users (even anonymous ones) have
+this - this is useful when <em>whitelisting</em> URLs to guarantee access - some
+details are in <a class="reference internal" href="access_control.html" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html"><em>How Does the Security access_control Work?</em></a>.</li>
+</ul>
+<p id="book-security-template-expression">You can also use expressions inside your templates:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_granted</span><span class="o">(</span><span class="nv">expression</span><span class="o">(</span>
+    <span class="s1">&#39;&quot;ROLE_ADMIN&quot; in roles or (user and user.isSuperAdmin())&#39;</span>
+<span class="o">))</span> <span class="cp">%}</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;security&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">isGranted</span><span class="p">(</span><span class="k">new</span> <span class="nx">Expression</span><span class="p">(</span>
+    <span class="s1">&#39;&quot;ROLE_ADMIN&quot; in roles or (user and user.isSuperAdmin())&#39;</span>
+<span class="p">)))</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span><span class="p">;</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>For more details on expressions and security, see <a class="reference internal" href="expressions.html#book-security-expressions" tppabs="http://symfony.cn/docs/cookbook/expression/expressions.html#book-security-expressions"><span>Security: Complex Access Controls with Expressions</span></a>.</p>
+</div>
+<div class="section" id="access-control-lists-acls-securing-individual-database-objects">
+<span id="security-secure-objects"></span><h3>ÊùÉÈôêÊéßÂà∂ÂàóË°®ÔºàACLsÔºâ: ‰øùÊä§Âçï‰∏™Êï∞ÊçÆ<a class="headerlink" href="#access-control-lists-acls-securing-individual-database-objects" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>Imagine you are designing a blog where users can comment on your posts. You
+also want a user to be able to edit their own comments, but not those of
+other users. Also, as the admin user, you yourself want to be able to edit
+<em>all</em> comments.</p>
+<p>To accomplish this you have 2 options:</p>
+<ul class="simple">
+<li><a class="reference internal" href="voters_data_permission.html" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html"><em>Voters</em></a> allow you to
+use business logic (e.g. the user can edit this post because they were
+the creator) to determine access. You&#8217;ll probably want this option - it&#8217;s
+flexible enough to solve the above situation.</li>
+<li><a class="reference internal" href="acl.html" tppabs="http://symfony.cn/docs/cookbook/security/acl.html"><em>ACLs</em></a> allow you to create a database structure
+where you can assign <em>any</em> arbitrary user <em>any</em> access (e.g. EDIT, VIEW)
+to <em>any</em> object in your system. Use this if you need an admin user to be
+able to grant customized access across your system via some admin interface.</li>
+</ul>
+<p>In both cases, you&#8217;ll still deny access using methods similar to what was
+shown above.</p>
+</div>
+</div>
+<div class="section" id="retrieving-the-user-object">
+<h2>Ëé∑ÂèñÁî®Êà∑ÂØπË±°<a class="headerlink" href="#retrieving-the-user-object" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 Êñ∞ÁâàÂäüËÉΩ: </span>The <code class="docutils literal"><span class="pre">security.token_storage</span></code> service was introduced in Symfony 2.6. Prior
+to Symfony 2.6, you had to use the <code class="docutils literal"><span class="pre">getToken()</span></code> method of the <code class="docutils literal"><span class="pre">security.context</span></code> service.</p>
+</div>
+<p>After authentication, the <code class="docutils literal"><span class="pre">User</span></code> object of the current user can be accessed
+via the <code class="docutils literal"><span class="pre">security.token_storage</span></code> service. From inside a controller, this will
+look like:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;security.authorization_checker&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isGranted</span><span class="p">(</span><span class="s1">&#39;IS_AUTHENTICATED_FULLY&#39;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createAccessDeniedException</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getUser</span><span class="p">();</span>
+
+    <span class="c1">// the above is a shortcut for this</span>
+    <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;security.token_storage&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getToken</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getUser</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">The user will be an object and the class of that object will depend on
+your <a class="reference internal" href="#security-user-providers"><span>user provider</span></a>.</p>
+</div>
+<p>Now you can call whatever methods are on <em>your</em> User object. For example,
+if your User object has a <code class="docutils literal"><span class="pre">getFirstName()</span></code> method, you could use that:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Well hi there &#39;</span><span class="o">.</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getFirstName</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="always-check-if-the-user-is-logged-in">
+<h3>ÊÄªÊòØÊ£ÄÊü•Áî®Êà∑ÁôªÂΩïÁä∂ÊÄÅ<a class="headerlink" href="#always-check-if-the-user-is-logged-in" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>It&#8217;s important to check if the user is authenticated first. If they&#8217;re not,
+<code class="docutils literal"><span class="pre">$user</span></code> will either be <code class="docutils literal"><span class="pre">null</span></code> or the string <code class="docutils literal"><span class="pre">anon.</span></code>. Wait, what? Yes,
+this is a quirk. If you&#8217;re not logged in, the user is technically the string
+<code class="docutils literal"><span class="pre">anon.</span></code>, though the <code class="docutils literal"><span class="pre">getUser()</span></code> controller shortcut converts this to
+<code class="docutils literal"><span class="pre">null</span></code> for convenience.</p>
+<p>The point is this: always check to see if the user is logged in before using
+the User object, and use the <code class="docutils literal"><span class="pre">isGranted</span></code> method (or
+<a class="reference internal" href="#security-authorization-access-control"><span>access_control</span></a>) to do this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// yay! Use this to see if the user is logged in</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;security.authorization_checker&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isGranted</span><span class="p">(</span><span class="s1">&#39;IS_AUTHENTICATED_FULLY&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createAccessDeniedException</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// boo :(. Never check for the User object to see if they&#39;re logged in</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getUser</span><span class="p">())</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="retrieving-the-user-in-a-template">
+<h3>‰ªéÊ®°ÊùøÈáåËé∑ÂèñÁî®Êà∑ÂØπË±°<a class="headerlink" href="#retrieving-the-user-in-a-template" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>In a Twig Template this object can be accessed via the <a class="reference external" href="javascript:if(confirm('http://symfony.cn/docs/book/reference-twig-global-app  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ ∑˛ŒÒ∆˜±®∏Ê∏√Œƒº˛Œ¥’“µΩ°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://symfony.cn/docs/book/reference-twig-global-app'" tppabs="http://symfony.cn/docs/book/reference-twig-global-app">app.user</a>
+key:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_granted</span><span class="o">(</span><span class="s1">&#39;IS_AUTHENTICATED_FULLY&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="nt">&lt;p&gt;</span>Username: <span class="cp">{{</span> <span class="nv">app.user.username</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;security&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">isGranted</span><span class="p">(</span><span class="s1">&#39;IS_AUTHENTICATED_FULLY&#39;</span><span class="p">))</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Username: <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$app</span><span class="o">-&gt;</span><span class="na">getUser</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getUsername</span><span class="p">()</span> <span class="cp">?&gt;</span><span class="nt">&lt;/p&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endif</span><span class="p">;</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="logging-out">
+<span id="book-security-logging-out"></span><h2>ÈÄÄÂá∫ÁôªÂΩï<a class="headerlink" href="#logging-out" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Usually, you&#8217;ll also want your users to be able to log out. Fortunately,
+the firewall can handle this automatically for you when you activate the
+<code class="docutils literal"><span class="pre">logout</span></code> config parameter:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">secured_area</span><span class="p-Indicator">:</span>
+            <span class="c1"># ...</span>
+            <span class="l-Scalar-Plain">logout</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/logout</span>
+                <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;secured_area&quot;</span> <span class="na">pattern=</span><span class="s">&quot;^/&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- ... --&gt;</span>
+            <span class="nt">&lt;logout</span> <span class="na">path=</span><span class="s">&quot;/logout&quot;</span> <span class="na">target=</span><span class="s">&quot;/&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/firewall&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;secured_area&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="c1">// ...</span>
+            <span class="s1">&#39;logout&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;logout&#39;</span><span class="p">,</span> <span class="s1">&#39;target&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/&#39;</span><span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Next, you&#8217;ll need to create a route for this URL (but not a controller):</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/routing.yml</span>
+<span class="l-Scalar-Plain">logout</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/logout</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/routing.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;routes</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/routing&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/routing</span>
+<span class="s">        http://symfony.com/schema/routing/routing-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;route</span> <span class="na">id=</span><span class="s">&quot;logout&quot;</span> <span class="na">path=</span><span class="s">&quot;/logout&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/routes&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/routing.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\RouteCollection</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\Route</span><span class="p">;</span>
+
+<span class="nv">$collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RouteCollection</span><span class="p">();</span>
+<span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;logout&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Route</span><span class="p">(</span><span class="s1">&#39;/logout&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">()));</span>
+
+<span class="k">return</span> <span class="nv">$collection</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>And that&#8217;s it! By sending a user to <code class="docutils literal"><span class="pre">/logout</span></code> (or whatever you configure
+the <code class="docutils literal"><span class="pre">path</span></code> to be), Symfony will un-authenticate the current user.</p>
+<p>Once the user has been logged out, they will be redirected to whatever path
+is defined by the <code class="docutils literal"><span class="pre">target</span></code> parameter above (e.g. the <code class="docutils literal"><span class="pre">homepage</span></code>).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">If you need to do something more interesting after logging out, you can
+specify a logout success handler by adding a <code class="docutils literal"><span class="pre">success_handler</span></code> key
+and pointing it to a service id of a class that implements
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.html" title="Symfony\Component\Security\Http\Logout\LogoutSuccessHandlerInterface"><span class="pre">LogoutSuccessHandlerInterface</span></a></code>.
+See <a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html"><em>Security Configuration Reference</em></a>.</p>
+</div>
+</div>
+<div class="section" id="dynamically-encoding-a-password">
+<span id="security-encoding-password"></span><h2>Âä®ÊÄÅÂä†ÂØÜÂØÜÁ†Å<a class="headerlink" href="#dynamically-encoding-a-password" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>If, for example, you&#8217;re storing users in the database, you&#8217;ll need to encode
+the users&#8217; passwords before inserting them. No matter what algorithm you
+configure for your user object, the hashed password can always be determined
+in the following way from a controller:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// whatever *your* User object is</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppBundle\Entity\User</span><span class="p">();</span>
+<span class="nv">$plainPassword</span> <span class="o">=</span> <span class="s1">&#39;ryanpass&#39;</span><span class="p">;</span>
+<span class="nv">$encoder</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">container</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;security.password_encoder&#39;</span><span class="p">);</span>
+<span class="nv">$encoded</span> <span class="o">=</span> <span class="nv">$encoder</span><span class="o">-&gt;</span><span class="na">encodePassword</span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="nv">$plainPassword</span><span class="p">);</span>
+
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">setPassword</span><span class="p">(</span><span class="nv">$encoded</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 Êñ∞ÁâàÂäüËÉΩ: </span>The <code class="docutils literal"><span class="pre">security.password_encoder</span></code> service was introduced in Symfony 2.6.</p>
+</div>
+<p>In order for this to work, just make sure that you have the encoder for your
+user class (e.g. <code class="docutils literal"><span class="pre">AppBundle\Entity\User</span></code>) configured under the <code class="docutils literal"><span class="pre">encoders</span></code>
+key in <code class="docutils literal"><span class="pre">app/config/security.yml</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">$encoder</span></code> object also has an <code class="docutils literal"><span class="pre">isPasswordValid</span></code> method, which takes
+the <code class="docutils literal"><span class="pre">User</span></code> object as the first argument and the plain password to check
+as the second argument.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Ë≠¶Âëä</p>
+<p class="last">When you allow a user to submit a plaintext password (e.g. registration
+form, change password form), you <em>must</em> have validation that guarantees
+that the password is 4096 characters or fewer. Read more details in
+<a class="reference internal" href="registration_form.html#cookbook-registration-password-max" tppabs="http://symfony.cn/docs/cookbook/doctrine/registration_form.html#cookbook-registration-password-max"><span>How to implement a simple Registration Form</span></a>.</p>
+</div>
+</div>
+<div class="section" id="hierarchical-roles">
+<span id="security-role-hierarchy"></span><h2>ËßíËâ≤ÁöÑÁªßÊâø<a class="headerlink" href="#hierarchical-roles" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Instead of associating many roles to users, you can define role inheritance
+rules by creating a role hierarchy:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">role_hierarchy</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">ROLE_ADMIN</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">ROLE_USER</span>
+        <span class="l-Scalar-Plain">ROLE_SUPER_ADMIN</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">ROLE_ADMIN</span><span class="p-Indicator">,</span> <span class="nv">ROLE_ALLOWED_TO_SWITCH</span><span class="p-Indicator">]</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="nt">&lt;role</span> <span class="na">id=</span><span class="s">&quot;ROLE_ADMIN&quot;</span><span class="nt">&gt;</span>ROLE_USER<span class="nt">&lt;/role&gt;</span>
+        <span class="nt">&lt;role</span> <span class="na">id=</span><span class="s">&quot;ROLE_SUPER_ADMIN&quot;</span><span class="nt">&gt;</span>ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH<span class="nt">&lt;/role&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;role_hierarchy&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;ROLE_ADMIN&#39;</span>       <span class="o">=&gt;</span> <span class="s1">&#39;ROLE_USER&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ROLE_SUPER_ADMIN&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;ROLE_ADMIN&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ROLE_ALLOWED_TO_SWITCH&#39;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>In the above configuration, users with <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code> role will also have the
+<code class="docutils literal"><span class="pre">ROLE_USER</span></code> role. The <code class="docutils literal"><span class="pre">ROLE_SUPER_ADMIN</span></code> role has <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>, <code class="docutils literal"><span class="pre">ROLE_ALLOWED_TO_SWITCH</span></code>
+and <code class="docutils literal"><span class="pre">ROLE_USER</span></code> (inherited from <code class="docutils literal"><span class="pre">ROLE_ADMIN</span></code>).</p>
+</div>
+<div class="section" id="stateless-authentication">
+<h2>Êó†Áä∂ÊÄÅÈ£éÊ†ºÔºàStatelessÔºâË∫´‰ªΩÈ™åËØÅ<a class="headerlink" href="#stateless-authentication" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>By default, Symfony relies on a cookie (the Session) to persist the security
+context of the user. But if you use certificates or HTTP authentication for
+instance, persistence is not needed as credentials are available for each
+request. In that case, and if you don&#8217;t need to store anything else between
+requests, you can activate the stateless authentication (which means that no
+cookie will be ever created by Symfony):</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">http_basic</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">stateless</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;srv:container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/security&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:srv=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;config&gt;</span>
+        <span class="nt">&lt;firewall</span> <span class="na">stateless=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;http-basic</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/firewall&gt;</span>
+    <span class="nt">&lt;/config&gt;</span>
+<span class="nt">&lt;/srv:container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;main&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;http_basic&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(),</span> <span class="s1">&#39;stateless&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">If you use a form login, Symfony will create a cookie even if you set
+<code class="docutils literal"><span class="pre">stateless</span></code> to <code class="docutils literal"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="checking-for-known-security-vulnerabilities-in-dependencies">
+<span id="book-security-checking-vulnerabilities"></span><h3>Ê£ÄÊü•‰æùËµñ‰∏≠ÊòØÂê¶ÂåÖÂê´Â∑≤Áü•ÂÆâÂÖ®ÊºèÊ¥û<a class="headerlink" href="#checking-for-known-security-vulnerabilities-in-dependencies" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>When using lots of dependencies in your Symfony projects, some of them may
+contain security vulnerabilities. That&#8217;s why Symfony includes a command called
+<code class="docutils literal"><span class="pre">security:check</span></code> that checks your <code class="docutils literal"><span class="pre">composer.lock</span></code> file to find any known
+security vulnerability in your installed dependencies:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console security:check
+</pre></div>
+</div>
+<p>A good security practice is to execute this command regularly to be able to
+update or replace compromised dependencies as soon as possible. Internally,
+this command uses the public <a class="reference external" href="javascript:if(confirm('https://github.com/FriendsOfPHP/security-advisories  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/FriendsOfPHP/security-advisories'" tppabs="https://github.com/FriendsOfPHP/security-advisories">security advisories database</a> published by the
+FriendsOfPHP organization.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">The <code class="docutils literal"><span class="pre">security:check</span></code> command terminates with a non-zero exit code if
+any of your dependencies is affected by a known security vulnerability.
+Therefore, you can easily integrate it in your build process.</p>
+</div>
+</div>
+</div>
+<div class="section" id="final-words">
+<h2>ÊÄªÁªì<a class="headerlink" href="#final-words" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Woh! Nice work! You now know more than the basics of security. The hardest
+parts are when you have custom requirements: like a custom authentication
+strategy (e.g. API tokens), complex authorization logic and many other things
+(because security is complex!).</p>
+<p>Fortunately, there are a lot of <a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html"><em>Security Cookbook Articles</em></a>
+aimed at describing many of these situations. Also, see the
+<a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html"><em>Security Reference Section</em></a>. Many
+of the options don&#8217;t have specific details, but seeing the full possible
+configuration tree may be useful.</p>
+<p>Á•ùÂ•ΩËøêÔºÅ</p>
+</div>
+<div class="section" id="learn-more-from-the-cookbook">
+<h2>‰∫ÜËß£Êõ¥Â§ö<a class="headerlink" href="#learn-more-from-the-cookbook" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="force_https.html" tppabs="http://symfony.cn/docs/cookbook/security/force_https.html"><em>Forcing HTTP/HTTPS</em></a></li>
+<li><a class="reference internal" href="impersonating_user.html" tppabs="http://symfony.cn/docs/cookbook/security/impersonating_user.html"><em>Impersonating a User</em></a></li>
+<li><a class="reference internal" href="voters_data_permission.html" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html"><em>How to Use Voters to Check User Permissions</em></a></li>
+<li><a class="reference internal" href="acl.html" tppabs="http://symfony.cn/docs/cookbook/security/acl.html"><em>Access Control Lists (ACLs)</em></a></li>
+<li><a class="reference internal" href="remember_me.html" tppabs="http://symfony.cn/docs/cookbook/security/remember_me.html"><em>How to Add &#8220;Remember Me&#8221; Login Functionality</em></a></li>
+<li><a class="reference internal" href="multiple_user_providers.html" tppabs="http://symfony.cn/docs/cookbook/security/multiple_user_providers.html"><em>How to Use multiple User Providers</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html" class="btn btn-neutral float-right" title="HTTPÁºìÂ≠ò">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html" class="btn btn-neutral" title="Ë°®Âçï"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ÁâàÊùÉÊâÄÊúâ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

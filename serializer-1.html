@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Serializer Component &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../index.html"/>
+        <link rel="up" title="ç»„ä»¶" href="index.html"/>
+        <link rel="next" title="The Stopwatch Component" href="stopwatch.html"/>
+        <link rel="prev" title="Securely Comparing Strings and Generating Random Numbers" href="security/secure_tools.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+    <li>The Serializer Component</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="serializer-1.txt" tppabs="http://symfony.cn/docs/_sources/components/serializer.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-serializer-component">
+<span id="index-0"></span><h1>The Serializer Component<a class="headerlink" href="#the-serializer-component" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<blockquote>
+<div>The Serializer component is meant to be used to turn objects into a
+specific format (XML, JSON, YAML, ...) and the other way around.</div></blockquote>
+<p>In order to do so, the Serializer component follows the following
+simple schema.</p>
+<span id="component-serializer-encoders"></span><img alt="../_images/serializer_workflow.png" id="component-serializer-normalizers" src="serializer_workflow.png" tppabs="http://symfony.cn/docs/_images/serializer_workflow.png" />
+<p>As you can see in the picture above, an array is used as a man in
+the middle. This way, Encoders will only deal with turning specific
+<strong>formats</strong> into <strong>arrays</strong> and vice versa. The same way, Normalizers
+will deal with turning specific <strong>objects</strong> into <strong>arrays</strong> and vice versa.</p>
+<p>Serialization is a complicated topic, and while this component may not work
+in all cases, it can be a useful tool while developing tools to serialize
+and deserialize your objects.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You can install the component in 2 different ways:</p>
+<ul class="simple">
+<li><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html"><em>Install it via Composer</em></a> (<code class="docutils literal"><span class="pre">symfony/serializer</span></code> on <a class="reference external" href="javascript:if(confirm('https://packagist.org/packages/symfony/serializer  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://packagist.org/packages/symfony/serializer'" tppabs="https://packagist.org/packages/symfony/serializer">Packagist</a>);</li>
+<li>Use the official Git repository (<a class="reference external" href="javascript:if(confirm('https://github.com/symfony/Serializer  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/Serializer'" tppabs="https://github.com/symfony/Serializer">https://github.com/symfony/Serializer</a>).</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Using the Serializer component is really simple. You just need to set up
+the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html" title="Symfony\Component\Serializer\Serializer"><span class="pre">Serializer</span></a></code> specifying
+which Encoders and Normalizer are going to be available:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Serializer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Encoder\XmlEncoder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Encoder\JsonEncoder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer</span><span class="p">;</span>
+
+<span class="nv">$encoders</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="k">new</span> <span class="nx">XmlEncoder</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">JsonEncoder</span><span class="p">());</span>
+<span class="nv">$normalizers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="k">new</span> <span class="nx">GetSetMethodNormalizer</span><span class="p">());</span>
+
+<span class="nv">$serializer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Serializer</span><span class="p">(</span><span class="nv">$normalizers</span><span class="p">,</span> <span class="nv">$encoders</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>There are several normalizers available, e.g. the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html" title="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer"><span class="pre">GetSetMethodNormalizer</span></a></code> or
+the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html" title="Symfony\Component\Serializer\Normalizer\PropertyNormalizer"><span class="pre">PropertyNormalizer</span></a></code>.
+To read more about them, refer to the <a class="reference internal" href="#normalizers">Normalizers</a> section of this page. All
+the examples shown below use the <code class="docutils literal"><span class="pre">GetSetMethodNormalizer</span></code>.</p>
+</div>
+<div class="section" id="serializing-an-object">
+<h2>Serializing an Object<a class="headerlink" href="#serializing-an-object" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>For the sake of this example, assume the following class already
+exists in your project:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Acme</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$age</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$sportsman</span><span class="p">;</span>
+
+    <span class="c1">// Getters</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAge</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Issers</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">isSportsman</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sportsman</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Setters</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setAge</span><span class="p">(</span><span class="nv">$age</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span> <span class="o">=</span> <span class="nv">$age</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setSportsman</span><span class="p">(</span><span class="nv">$sportsman</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sportsman</span> <span class="o">=</span> <span class="nv">$sportsman</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now, if you want to serialize this object into JSON, you only need to
+use the Serializer service created before:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Acme\Person</span><span class="p">();</span>
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="mi">99</span><span class="p">);</span>
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setSportsman</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+
+<span class="nv">$jsonContent</span> <span class="o">=</span> <span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">serialize</span><span class="p">(</span><span class="nv">$person</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">);</span>
+
+<span class="c1">// $jsonContent contains {&quot;name&quot;:&quot;foo&quot;,&quot;age&quot;:99,&quot;sportsman&quot;:false}</span>
+
+<span class="k">echo</span> <span class="nv">$jsonContent</span><span class="p">;</span> <span class="c1">// or return it in a Response</span>
+</pre></div>
+</div>
+<p>The first parameter of the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html#method_serialize'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html#method_serialize" title="Symfony\Component\Serializer\Serializer::serialize()"><span class="pre">serialize()</span></a></code>
+is the object to be serialized and the second is used to choose the proper encoder,
+in this case <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Encoder/JsonEncoder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Encoder/JsonEncoder.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Encoder/JsonEncoder.html" title="Symfony\Component\Serializer\Encoder\JsonEncoder"><span class="pre">JsonEncoder</span></a></code>.</p>
+<div class="section" id="ignoring-attributes-when-serializing">
+<h3>Ignoring Attributes when Serializing<a class="headerlink" href="#ignoring-attributes-when-serializing" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.3 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html#method_setIgnoredAttributes'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html#method_setIgnoredAttributes" title="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer::setIgnoredAttributes()"><span class="pre">GetSetMethodNormalizer::setIgnoredAttributes</span></a></code>
+method was introduced in Symfony 2.3.</p>
+</div>
+<p>As an option, there&#8217;s a way to ignore attributes from the origin object when
+serializing. To remove those attributes use the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html#method_setIgnoredAttributes'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html#method_setIgnoredAttributes" title="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer::setIgnoredAttributes()"><span class="pre">setIgnoredAttributes()</span></a></code>
+method on the normalizer definition:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Serializer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Encoder\JsonEncoder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer</span><span class="p">;</span>
+
+<span class="nv">$normalizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GetSetMethodNormalizer</span><span class="p">();</span>
+<span class="nv">$normalizer</span><span class="o">-&gt;</span><span class="na">setIgnoredAttributes</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">));</span>
+<span class="nv">$encoder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JsonEncoder</span><span class="p">();</span>
+
+<span class="nv">$serializer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Serializer</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="nv">$normalizer</span><span class="p">),</span> <span class="k">array</span><span class="p">(</span><span class="nv">$encoder</span><span class="p">));</span>
+<span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">serialize</span><span class="p">(</span><span class="nv">$person</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">);</span> <span class="c1">// Output: {&quot;name&quot;:&quot;foo&quot;,&quot;sportsman&quot;:false}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="deserializing-an-object">
+<h2>Deserializing an Object<a class="headerlink" href="#deserializing-an-object" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You&#8217;ll now learn how to do the exact opposite. This time, the information
+of the <code class="docutils literal"><span class="pre">Person</span></code> class would be encoded in XML format:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$data</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;EOF</span>
+<span class="s">&lt;person&gt;</span>
+<span class="s">    &lt;name&gt;foo&lt;/name&gt;</span>
+<span class="s">    &lt;age&gt;99&lt;/age&gt;</span>
+<span class="s">    &lt;sportsman&gt;false&lt;/sportsman&gt;</span>
+<span class="s">&lt;/person&gt;</span>
+<span class="s">EOF;</span>
+
+<span class="nv">$person</span> <span class="o">=</span> <span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">deserialize</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="s1">&#39;Acme\Person&#39;</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In this case, <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html#method_deserialize'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Serializer.html#method_deserialize" title="Symfony\Component\Serializer\Serializer::deserialize()"><span class="pre">deserialize()</span></a></code>
+needs three parameters:</p>
+<ol class="arabic simple">
+<li>The information to be decoded</li>
+<li>The name of the class this information will be decoded to</li>
+<li>The encoder used to convert that information into an array</li>
+</ol>
+</div>
+<div class="section" id="converting-property-names-when-serializing-and-deserializing">
+<h2>Converting Property Names when Serializing and Deserializing<a class="headerlink" href="#converting-property-names-when-serializing-and-deserializing" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">2.7 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/NameConverter/NameConverterInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/NameConverter/NameConverterInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/NameConverter/NameConverterInterface.html" title="Symfony\Component\Serializer\NameConverter\NameConverterInterface"><span class="pre">NameConverterInterface</span></a></code>
+interface was introduced in Symfony 2.7.</p>
+</div>
+<p>Sometimes serialized attributes must be named differently than properties
+or getter/setter methods of PHP classes.</p>
+<p>The Serializer Component provides a handy way to translate or map PHP field
+names to serialized names: The Name Converter System.</p>
+<p>Given you have the following object:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Company</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">address</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And in the serialized form, all attributes must be prefixed by <code class="docutils literal"><span class="pre">org_</span></code> like
+the following:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="p">{</span><span class="s2">&quot;org_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Acme Inc.&quot;</span><span class="p">,</span> <span class="s2">&quot;org_address&quot;</span><span class="o">:</span> <span class="s2">&quot;123 Main Street, Big City&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>A custom name converter can handle such cases:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Serializer\NameConverter\NameConverterInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">OrgPrefixNameConverter</span> <span class="k">implements</span> <span class="nx">NameConverterInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">normalize</span><span class="p">(</span><span class="nv">$propertyName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;org_&#39;</span><span class="o">.</span><span class="nv">$propertyName</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">denormalize</span><span class="p">(</span><span class="nv">$propertyName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// remove org_ prefix</span>
+        <span class="k">return</span> <span class="s1">&#39;org_&#39;</span> <span class="o">===</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$propertyName</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">?</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$propertyName</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">:</span> <span class="nv">$propertyName</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The custom normalizer can be used by passing it as second parameter of any
+class extending <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/AbstractNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/AbstractNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/AbstractNormalizer.html" title="Symfony\Component\Serializer\Normalizer\AbstractNormalizer"><span class="pre">AbstractNormalizer</span></a></code>,
+including <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html" title="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer"><span class="pre">GetSetMethodNormalizer</span></a></code>
+and <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html" title="Symfony\Component\Serializer\Normalizer\PropertyNormalizer"><span class="pre">PropertyNormalizer</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Encoder\JsonEncoder</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Normalizer\PropertyNormalizer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Serializer</span><span class="p">;</span>
+
+<span class="nv">$nameConverter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OrgPrefixNameConverter</span><span class="p">();</span>
+<span class="nv">$normalizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PropertyNormalizer</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="nv">$nameConverter</span><span class="p">);</span>
+
+<span class="nv">$serializer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Serializer</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="k">new</span> <span class="nx">JsonEncoder</span><span class="p">()),</span> <span class="k">array</span><span class="p">(</span><span class="nv">$normalizer</span><span class="p">));</span>
+
+<span class="nv">$obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Company</span><span class="p">();</span>
+<span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;Acme Inc.&#39;</span><span class="p">;</span>
+<span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">address</span> <span class="o">=</span> <span class="s1">&#39;123 Main Street, Big City&#39;</span><span class="p">;</span>
+
+<span class="nv">$json</span> <span class="o">=</span> <span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">serialize</span><span class="p">(</span><span class="nv">$obj</span><span class="p">);</span>
+<span class="c1">// {&quot;org_name&quot;: &quot;Acme Inc.&quot;, &quot;org_address&quot;: &quot;123 Main Street, Big City&quot;}</span>
+<span class="nv">$objCopy</span> <span class="o">=</span> <span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">deserialize</span><span class="p">(</span><span class="nv">$json</span><span class="p">);</span>
+<span class="c1">// Same data as $obj</span>
+</pre></div>
+</div>
+<div class="section" id="camelcase-to-snake-case">
+<span id="using-camelized-method-names-for-underscored-attributes"></span><h3>CamelCase to snake_case<a class="headerlink" href="#camelcase-to-snake-case" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.7 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/NameConverter/CamelCaseToUnderscoreNameConverter.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/NameConverter/CamelCaseToUnderscoreNameConverter.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/NameConverter/CamelCaseToUnderscoreNameConverter.html" title="Symfony\Component\Serializer\NameConverter\CamelCaseToUnderscoreNameConverter"><span class="pre">CamelCaseToUnderscoreNameConverter</span></a></code>
+interface was introduced in Symfony 2.7.</p>
+</div>
+<p>In many formats, it&#8217;s common to use underscores to separate words (also known
+as snake_case). However, PSR-1 specifies that the preferred style for PHP
+properties and methods is CamelCase.</p>
+<p>Symfony provides a built-in name converter designed to transform between
+snake_case and CamelCased styles during serialization and deserialization
+processes:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer</span><span class="p">;</span>
+
+<span class="nv">$normalizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GetSetMethodNormalizer</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="k">new</span> <span class="nx">CamelCaseToSnakeCaseNameConverter</span><span class="p">());</span>
+
+<span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$firstName</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">firstName</span> <span class="o">=</span> <span class="nv">$firstName</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getFirstName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">firstName</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$kevin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;KÃ©vin&#39;</span><span class="p">);</span>
+<span class="nv">$normalizer</span><span class="o">-&gt;</span><span class="na">normalize</span><span class="p">(</span><span class="nv">$kevin</span><span class="p">);</span>
+<span class="c1">// [&#39;first_name&#39; =&gt; &#39;KÃ©vin&#39;];</span>
+
+<span class="nv">$anne</span> <span class="o">=</span> <span class="nv">$normalizer</span><span class="o">-&gt;</span><span class="na">denormalize</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;first_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Anne&#39;</span><span class="p">),</span> <span class="s1">&#39;Person&#39;</span><span class="p">);</span>
+<span class="c1">// Person object with firstName: &#39;Anne&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="serializing-boolean-attributes">
+<h2>Serializing Boolean Attributes<a class="headerlink" href="#serializing-boolean-attributes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>If you are using isser methods (methods prefixed by <code class="docutils literal"><span class="pre">is</span></code>, like
+<code class="docutils literal"><span class="pre">Acme\Person::isSportsman()</span></code>), the Serializer component will automatically
+detect and use it to serialize related attributes.</p>
+</div>
+<div class="section" id="using-callbacks-to-serialize-properties-with-object-instances">
+<h2>Using Callbacks to Serialize Properties with Object Instances<a class="headerlink" href="#using-callbacks-to-serialize-properties-with-object-instances" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>When serializing, you can set a callback to format a specific object property:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Acme\Person</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Encoder\JsonEncoder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Serializer\Serializer</span><span class="p">;</span>
+
+<span class="nv">$encoder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JsonEncoder</span><span class="p">();</span>
+<span class="nv">$normalizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GetSetMethodNormalizer</span><span class="p">();</span>
+
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$dateTime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$dateTime</span> <span class="nx">instanceof</span> <span class="nx">\DateTime</span>
+        <span class="o">?</span> <span class="nv">$dateTime</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="nx">\DateTime</span><span class="o">::</span><span class="na">ISO8601</span><span class="p">)</span>
+        <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nv">$normalizer</span><span class="o">-&gt;</span><span class="na">setCallbacks</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;createdAt&#39;</span> <span class="o">=&gt;</span> <span class="nv">$callback</span><span class="p">));</span>
+
+<span class="nv">$serializer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Serializer</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="nv">$normalizer</span><span class="p">),</span> <span class="k">array</span><span class="p">(</span><span class="nv">$encoder</span><span class="p">));</span>
+
+<span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;cordoval&#39;</span><span class="p">);</span>
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="mi">34</span><span class="p">);</span>
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setCreatedAt</span><span class="p">(</span><span class="k">new</span> <span class="nx">\DateTime</span><span class="p">(</span><span class="s1">&#39;now&#39;</span><span class="p">));</span>
+
+<span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">serialize</span><span class="p">(</span><span class="nv">$person</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">);</span>
+<span class="c1">// Output: {&quot;name&quot;:&quot;cordoval&quot;, &quot;age&quot;: 34, &quot;createdAt&quot;: &quot;2014-03-22T09:43:12-0500&quot;}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="normalizers">
+<h2>Normalizers<a class="headerlink" href="#normalizers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>There are several types of normalizers available:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html" title="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer"><span class="pre">GetSetMethodNormalizer</span></a></code></dt>
+<dd><p class="first">This normalizer reads the content of the class by calling the &#8220;getters&#8221;
+(public methods starting with &#8220;get&#8221;). It will denormalize data by calling
+the constructor and the &#8220;setters&#8221; (public methods starting with &#8220;set&#8221;).</p>
+<p class="last">Objects are serialized to a map of property names (method name stripped of
+the &#8220;get&#8221; prefix and converted to lower case) to property values.</p>
+</dd>
+<dt><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html" title="Symfony\Component\Serializer\Normalizer\PropertyNormalizer"><span class="pre">PropertyNormalizer</span></a></code></dt>
+<dd>This normalizer directly reads and writes public properties as well as
+<strong>private and protected</strong> properties. Objects are normalized to a map of
+property names to property values.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>The
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/PropertyNormalizer.html" title="Symfony\Component\Serializer\Normalizer\PropertyNormalizer"><span class="pre">PropertyNormalizer</span></a></code>
+class was introduced in Symfony 2.6.</p>
+</div>
+</div>
+<div class="section" id="handling-circular-references">
+<h2>Handling Circular References<a class="headerlink" href="#handling-circular-references" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>Handling of circular references was introduced in Symfony 2.6. In previous
+versions of Symfony, circular references led to infinite loops.</p>
+</div>
+<p>Circular references are common when dealing with entity relations:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Organization</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$members</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setMembers</span><span class="p">(</span><span class="k">array</span> <span class="nv">$members</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">members</span> <span class="o">=</span> <span class="nv">$members</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getMembers</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">members</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Member</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$organization</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setOrganization</span><span class="p">(</span><span class="nx">Organization</span> <span class="nv">$organization</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">organization</span> <span class="o">=</span> <span class="nv">$organization</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOrganization</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">organization</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To avoid infinite loops, <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.html" title="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer"><span class="pre">GetSetMethodNormalizer</span></a></code>
+throws a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Serializer/Exception/CircularReferenceException.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Serializer/Exception/CircularReferenceException.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Serializer/Exception/CircularReferenceException.html" title="Symfony\Component\Serializer\Exception\CircularReferenceException"><span class="pre">CircularReferenceException</span></a></code>
+when such a case is encountered:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$member</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+<span class="nv">$member</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;KÃ©vin&#39;</span><span class="p">);</span>
+
+<span class="nv">$org</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Organization</span><span class="p">();</span>
+<span class="nv">$org</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;Les-Tilleuls.coop&#39;</span><span class="p">);</span>
+<span class="nv">$org</span><span class="o">-&gt;</span><span class="na">setMembers</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="nv">$member</span><span class="p">));</span>
+
+<span class="nv">$member</span><span class="o">-&gt;</span><span class="na">setOrganization</span><span class="p">(</span><span class="nv">$org</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">serialize</span><span class="p">(</span><span class="nv">$org</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">);</span> <span class="c1">// Throws a CircularReferenceException</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">setCircularReferenceLimit()</span></code> method of this normalizer sets the number
+of times it will serialize the same object before considering it a circular
+reference. Its default value is <code class="docutils literal"><span class="pre">1</span></code>.</p>
+<p>Instead of throwing an exception, circular references can also be handled
+by custom callables. This is especially useful when serializing entities
+having unique identifiers:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$encoder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JsonEncoder</span><span class="p">();</span>
+<span class="nv">$normalizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GetSetMethodNormalizer</span><span class="p">();</span>
+
+<span class="nv">$normalizer</span><span class="o">-&gt;</span><span class="na">setCircularReferenceHandler</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$object</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nv">$serializer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Serializer</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="nv">$normalizer</span><span class="p">),</span> <span class="k">array</span><span class="p">(</span><span class="nv">$encoder</span><span class="p">));</span>
+<span class="k">echo</span> <span class="nv">$serializer</span><span class="o">-&gt;</span><span class="na">serialize</span><span class="p">(</span><span class="nv">$org</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">);</span>
+<span class="c1">// {&quot;name&quot;:&quot;Les-Tilleuls.coop&quot;,&quot;members&quot;:[{&quot;name&quot;:&quot;K\u00e9vin&quot;, organization: &quot;Les-Tilleuls.coop&quot;}]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jmsserializer">
+<h2>JMSSerializer<a class="headerlink" href="#jmsserializer" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>A popular third-party library, <a class="reference external" href="javascript:if(confirm('https://github.com/schmittjoh/serializer  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/schmittjoh/serializer'" tppabs="https://github.com/schmittjoh/serializer">JMS serializer</a>, provides a more
+sophisticated albeit more complex solution. This library includes the
+ability to configure how your objects should be serialized/deserialized via
+annotations (as well as YAML, XML and PHP), integration with the Doctrine ORM,
+and handling of other complex cases.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html" class="btn btn-neutral float-right" title="The Stopwatch Component">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="secure_tools.html" tppabs="http://symfony.cn/docs/components/security/secure_tools.html" class="btn btn-neutral" title="Securely Comparing Strings and Generating Random Numbers"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

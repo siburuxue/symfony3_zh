@@ -1,0 +1,919 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The EventDispatcher Component &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="EventDispatcher" href="index.html"/>
+        <link rel="next" title="The Container Aware Event Dispatcher" href="container_aware_dispatcher.html"/>
+        <link rel="prev" title="EventDispatcher" href="index.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+          <li><a href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a> &raquo;</li>
+      
+    <li>The EventDispatcher Component</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="introduction-9.txt" tppabs="http://symfony.cn/docs/_sources/components/event_dispatcher/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-eventdispatcher-component">
+<span id="index-0"></span><h1>The EventDispatcher Component<a class="headerlink" href="#the-eventdispatcher-component" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<blockquote>
+<div>The EventDispatcher component provides tools that allow your application
+components to communicate with each other by dispatching events and listening
+to them.</div></blockquote>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Object Oriented code has gone a long way to ensuring code extensibility. By
+creating classes that have well defined responsibilities, your code becomes
+more flexible and a developer can extend them with subclasses to modify their
+behaviors. But if they want to share the changes with other developers who have
+also made their own subclasses, code inheritance is no longer the answer.</p>
+<p>Consider the real-world example where you want to provide a plugin system for
+your project. A plugin should be able to add methods, or do something before
+or after a method is executed, without interfering with other plugins. This is
+not an easy problem to solve with single inheritance, and multiple inheritance
+(were it possible with PHP) has its own drawbacks.</p>
+<p>The Symfony EventDispatcher component implements the <a class="reference external" href="javascript:if(confirm('http://en.wikipedia.org/wiki/Mediator_pattern  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://en.wikipedia.org/wiki/Mediator_pattern'" tppabs="http://en.wikipedia.org/wiki/Mediator_pattern">Mediator</a> pattern in
+a simple and effective way to make all these things possible and to make your
+projects truly extensible.</p>
+<p>Take a simple example from <a class="reference internal" href="introduction-9.html" tppabs="http://symfony.cn/docs/components/http_kernel/introduction.html"><em>The HttpKernel Component</em></a>. Once a
+<code class="docutils literal"><span class="pre">Response</span></code> object has been created, it may be useful to allow other elements
+in the system to modify it (e.g. add some cache headers) before it&#8217;s actually
+used. To make this possible, the Symfony kernel throws an event -
+<code class="docutils literal"><span class="pre">kernel.response</span></code>. Here&#8217;s how it works:</p>
+<ul class="simple">
+<li>A <em>listener</em> (PHP object) tells a central <em>dispatcher</em> object that it wants
+to listen to the <code class="docutils literal"><span class="pre">kernel.response</span></code> event;</li>
+<li>At some point, the Symfony kernel tells the <em>dispatcher</em> object to dispatch
+the <code class="docutils literal"><span class="pre">kernel.response</span></code> event, passing with it an <code class="docutils literal"><span class="pre">Event</span></code> object that has
+access to the <code class="docutils literal"><span class="pre">Response</span></code> object;</li>
+<li>The dispatcher notifies (i.e. calls a method on) all listeners of the
+<code class="docutils literal"><span class="pre">kernel.response</span></code> event, allowing each of them to make modifications to
+the <code class="docutils literal"><span class="pre">Response</span></code> object.</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<span id="index-1"></span><h2>Installation<a class="headerlink" href="#installation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You can install the component in 2 different ways:</p>
+<ul class="simple">
+<li><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html"><em>Install it via Composer</em></a> (<code class="docutils literal"><span class="pre">symfony/event-dispatcher</span></code> on <a class="reference external" href="javascript:if(confirm('https://packagist.org/packages/symfony/event-dispatcher  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://packagist.org/packages/symfony/event-dispatcher'" tppabs="https://packagist.org/packages/symfony/event-dispatcher">Packagist</a>);</li>
+<li>Use the official Git repository (<a class="reference external" href="javascript:if(confirm('https://github.com/symfony/EventDispatcher  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/EventDispatcher'" tppabs="https://github.com/symfony/EventDispatcher">https://github.com/symfony/EventDispatcher</a>).</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="events">
+<h3>Events<a class="headerlink" href="#events" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>When an event is dispatched, it&#8217;s identified by a unique name (e.g.
+<code class="docutils literal"><span class="pre">kernel.response</span></code>), which any number of listeners might be listening to. An
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html" title="Symfony\Component\EventDispatcher\Event"><span class="pre">Event</span></a></code> instance is also created
+and passed to all of the listeners. As you&#8217;ll see later, the <code class="docutils literal"><span class="pre">Event</span></code> object
+itself often contains data about the event being dispatched.</p>
+<div class="section" id="naming-conventions">
+<span id="index-2"></span><h4>Naming Conventions<a class="headerlink" href="#naming-conventions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The unique event name can be any string, but optionally follows a few simple
+naming conventions:</p>
+<ul class="simple">
+<li>use only lowercase letters, numbers, dots (<code class="docutils literal"><span class="pre">.</span></code>), and underscores (<code class="docutils literal"><span class="pre">_</span></code>);</li>
+<li>prefix names with a namespace followed by a dot (e.g. <code class="docutils literal"><span class="pre">kernel.</span></code>);</li>
+<li>end names with a verb that indicates what action is being taken (e.g.
+<code class="docutils literal"><span class="pre">request</span></code>).</li>
+</ul>
+<p>Here are some examples of good event names:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">kernel.response</span></code></li>
+<li><code class="docutils literal"><span class="pre">form.pre_set_data</span></code></li>
+</ul>
+</div>
+<div class="section" id="event-names-and-event-objects">
+<span id="index-3"></span><h4>Event Names and Event Objects<a class="headerlink" href="#event-names-and-event-objects" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>When the dispatcher notifies listeners, it passes an actual <code class="docutils literal"><span class="pre">Event</span></code> object
+to those listeners. The base <code class="docutils literal"><span class="pre">Event</span></code> class is very simple: it contains a
+method for stopping <a class="reference internal" href="#event-dispatcher-event-propagation"><span>event
+propagation</span></a>, but not much else.</p>
+<p>Often times, data about a specific event needs to be passed along with the
+<code class="docutils literal"><span class="pre">Event</span></code> object so that the listeners have needed information. In the case of
+the <code class="docutils literal"><span class="pre">kernel.response</span></code> event, the <code class="docutils literal"><span class="pre">Event</span></code> object that&#8217;s created and passed to
+each listener is actually of type
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpKernel/Event/FilterResponseEvent.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpKernel/Event/FilterResponseEvent.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpKernel/Event/FilterResponseEvent.html" title="Symfony\Component\HttpKernel\Event\FilterResponseEvent"><span class="pre">FilterResponseEvent</span></a></code>, a
+subclass of the base <code class="docutils literal"><span class="pre">Event</span></code> object. This class contains methods such as
+<code class="docutils literal"><span class="pre">getResponse</span></code> and <code class="docutils literal"><span class="pre">setResponse</span></code>, allowing listeners to get or even replace
+the <code class="docutils literal"><span class="pre">Response</span></code> object.</p>
+<p>The moral of the story is this: When creating a listener to an event, the
+<code class="docutils literal"><span class="pre">Event</span></code> object that&#8217;s passed to the listener may be a special subclass that
+has additional methods for retrieving information from and responding to the
+event.</p>
+</div>
+</div>
+<div class="section" id="the-dispatcher">
+<h3>The Dispatcher<a class="headerlink" href="#the-dispatcher" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The dispatcher is the central object of the event dispatcher system. In
+general, a single dispatcher is created, which maintains a registry of
+listeners. When an event is dispatched via the dispatcher, it notifies all
+listeners registered with that event:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventDispatcher</span><span class="p">;</span>
+
+<span class="nv">$dispatcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventDispatcher</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connecting-listeners">
+<span id="index-4"></span><h3>Connecting Listeners<a class="headerlink" href="#connecting-listeners" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>To take advantage of an existing event, you need to connect a listener to the
+dispatcher so that it can be notified when the event is dispatched. A call to
+the dispatcher&#8217;s <code class="docutils literal"><span class="pre">addListener()</span></code> method associates any valid PHP callable to
+an event:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$listener</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AcmeListener</span><span class="p">();</span>
+<span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">addListener</span><span class="p">(</span><span class="s1">&#39;foo.action&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$listener</span><span class="p">,</span> <span class="s1">&#39;onFooAction&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">addListener()</span></code> method takes up to three arguments:</p>
+<ul class="simple">
+<li>The event name (string) that this listener wants to listen to;</li>
+<li>A PHP callable that will be notified when an event is thrown that it listens
+to;</li>
+<li>An optional priority integer (higher equals more important, and therefore
+that the listener will be triggered earlier) that determines when a listener
+is triggered versus other listeners (defaults to <code class="docutils literal"><span class="pre">0</span></code>). If two listeners
+have the same priority, they are executed in the order that they were added
+to the dispatcher.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p>A <a class="reference external" href="javascript:if(confirm('http://www.php.net/manual/en/language.pseudo-types.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.php.net/manual/en/language.pseudo-types.php#language.types.callback'" tppabs="http://www.php.net/manual/en/language.pseudo-types.php#language.types.callback">PHP callable</a> is a PHP variable that can be used by the
+<code class="docutils literal"><span class="pre">call_user_func()</span></code> function and returns <code class="docutils literal"><span class="pre">true</span></code> when passed to the
+<code class="docutils literal"><span class="pre">is_callable()</span></code> function. It can be a <code class="docutils literal"><span class="pre">\Closure</span></code> instance, an object
+implementing an <code class="docutils literal"><span class="pre">__invoke</span></code> method (which is what closures are in fact),
+a string representing a function, or an array representing an object
+method or a class method.</p>
+<p>So far, you&#8217;ve seen how PHP objects can be registered as listeners. You
+can also register PHP <a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/functions.anonymous.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/functions.anonymous.php'" tppabs="http://php.net/manual/en/functions.anonymous.php">Closures</a> as event listeners:</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\Event</span><span class="p">;</span>
+
+<span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">addListener</span><span class="p">(</span><span class="s1">&#39;foo.action&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Event</span> <span class="nv">$event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// will be executed when the foo.action event is dispatched</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<p>Once a listener is registered with the dispatcher, it waits until the event is
+notified. In the above example, when the <code class="docutils literal"><span class="pre">foo.action</span></code> event is dispatched,
+the dispatcher calls the <code class="docutils literal"><span class="pre">AcmeListener::onFooAction</span></code> method and passes the
+<code class="docutils literal"><span class="pre">Event</span></code> object as the single argument:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\Event</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AcmeListener</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onFooAction</span><span class="p">(</span><span class="nx">Event</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ... do something</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In many cases, a special <code class="docutils literal"><span class="pre">Event</span></code> subclass that&#8217;s specific to the given event
+is passed to the listener. This gives the listener access to special
+information about the event. Check the documentation or implementation of each
+event to determine the exact <code class="docutils literal"><span class="pre">Symfony\Component\EventDispatcher\Event</span></code>
+instance that&#8217;s being passed. For example, the <code class="docutils literal"><span class="pre">kernel.response</span></code> event passes an
+instance of <code class="docutils literal"><span class="pre">Symfony\Component\HttpKernel\Event\FilterResponseEvent</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Event\FilterResponseEvent</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">onKernelResponse</span><span class="p">(</span><span class="nx">FilterResponseEvent</span> <span class="nv">$event</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">();</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Registering Event Listeners in the Service Container</p>
+<p>When you are using the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/ContainerAwareEventDispatcher.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/ContainerAwareEventDispatcher.html'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/ContainerAwareEventDispatcher.html" title="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher"><span class="pre">ContainerAwareEventDispatcher</span></a></code>
+and the
+<a class="reference internal" href="introduction-8.html" tppabs="http://symfony.cn/docs/components/dependency_injection/introduction.html"><em>DependencyInjection component</em></a>,
+you can use the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/DependencyInjection/RegisterListenersPass.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/DependencyInjection/RegisterListenersPass.html'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/DependencyInjection/RegisterListenersPass.html" title="Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass"><span class="pre">RegisterListenersPass</span></a></code>
+to tag services as event listeners:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\ContainerBuilder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\Definition</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\ParameterBag\ParameterBag</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\Reference</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass</span><span class="p">;</span>
+
+<span class="nv">$containerBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContainerBuilder</span><span class="p">(</span><span class="k">new</span> <span class="nx">ParameterBag</span><span class="p">());</span>
+<span class="nv">$containerBuilder</span><span class="o">-&gt;</span><span class="na">addCompilerPass</span><span class="p">(</span><span class="k">new</span> <span class="nx">RegisterListenersPass</span><span class="p">());</span>
+
+<span class="c1">// register the event dispatcher service</span>
+<span class="nv">$containerBuilder</span><span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="s1">&#39;event_dispatcher&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Definition</span><span class="p">(</span>
+    <span class="s1">&#39;Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher&#39;</span><span class="p">,</span>
+    <span class="k">array</span><span class="p">(</span><span class="k">new</span> <span class="nx">Reference</span><span class="p">(</span><span class="s1">&#39;service_container&#39;</span><span class="p">))</span>
+<span class="p">));</span>
+
+<span class="c1">// register your event listener service</span>
+<span class="nv">$listener</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Definition</span><span class="p">(</span><span class="s1">&#39;AcmeListener&#39;</span><span class="p">);</span>
+<span class="nv">$listener</span><span class="o">-&gt;</span><span class="na">addTag</span><span class="p">(</span><span class="s1">&#39;kernel.event_listener&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;event&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo.action&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;method&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;onFooAction&#39;</span><span class="p">,</span>
+<span class="p">));</span>
+<span class="nv">$containerBuilder</span><span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="s1">&#39;listener_service_id&#39;</span><span class="p">,</span> <span class="nv">$listener</span><span class="p">);</span>
+
+<span class="c1">// register an event subscriber</span>
+<span class="nv">$subscriber</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Definition</span><span class="p">(</span><span class="s1">&#39;AcmeSubscriber&#39;</span><span class="p">);</span>
+<span class="nv">$subscriber</span><span class="o">-&gt;</span><span class="na">addTag</span><span class="p">(</span><span class="s1">&#39;kernel.event_subscriber&#39;</span><span class="p">);</span>
+<span class="nv">$containerBuilder</span><span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="s1">&#39;subscriber_service_id&#39;</span><span class="p">,</span> <span class="nv">$subscriber</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="last">By default, the listeners pass assumes that the event dispatcher&#8217;s service
+id is <code class="docutils literal"><span class="pre">event_dispatcher</span></code>, that event listeners are tagged with the
+<code class="docutils literal"><span class="pre">kernel.event_listener</span></code> tag and that event subscribers are tagged with
+the <code class="docutils literal"><span class="pre">kernel.event_subscriber</span></code> tag. You can change these default values
+by passing custom values to the constructor of <code class="docutils literal"><span class="pre">RegisterListenersPass</span></code>.</p>
+</div>
+<span class="target" id="event-dispatcher-closures-as-listeners"></span></div>
+<div class="section" id="creating-and-dispatching-an-event">
+<span id="index-5"></span><h3>Creating and Dispatching an Event<a class="headerlink" href="#creating-and-dispatching-an-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>In addition to registering listeners with existing events, you can create and
+dispatch your own events. This is useful when creating third-party libraries
+and also when you want to keep different components of your own system
+flexible and decoupled.</p>
+<div class="section" id="the-static-events-class">
+<h4>The Static <code class="docutils literal"><span class="pre">Events</span></code> Class<a class="headerlink" href="#the-static-events-class" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>Suppose you want to create a new Event - <code class="docutils literal"><span class="pre">store.order</span></code> - that is dispatched
+each time an order is created inside your application. To keep things
+organized, start by creating a <code class="docutils literal"><span class="pre">StoreEvents</span></code> class inside your application
+that serves to define and document your event:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Acme\StoreBundle</span><span class="p">;</span>
+
+<span class="k">final</span> <span class="k">class</span> <span class="nc">StoreEvents</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * The store.order event is thrown each time an order is created</span>
+<span class="sd">     * in the system.</span>
+<span class="sd">     *</span>
+<span class="sd">     * The event listener receives an</span>
+<span class="sd">     * Acme\StoreBundle\Event\FilterOrderEvent instance.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @var string</span>
+<span class="sd">     */</span>
+    <span class="k">const</span> <span class="no">STORE_ORDER</span> <span class="o">=</span> <span class="s1">&#39;store.order&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Notice that this class doesn&#8217;t actually <em>do</em> anything. The purpose of the
+<code class="docutils literal"><span class="pre">StoreEvents</span></code> class is just to be a location where information about common
+events can be centralized. Notice also that a special <code class="docutils literal"><span class="pre">FilterOrderEvent</span></code>
+class will be passed to each listener of this event.</p>
+</div>
+<div class="section" id="creating-an-event-object">
+<h4>Creating an Event Object<a class="headerlink" href="#creating-an-event-object" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>Later, when you dispatch this new event, you&#8217;ll create an <code class="docutils literal"><span class="pre">Event</span></code> instance
+and pass it to the dispatcher. The dispatcher then passes this same instance
+to each of the listeners of the event. If you don&#8217;t need to pass any
+information to your listeners, you can use the default
+<code class="docutils literal"><span class="pre">Symfony\Component\EventDispatcher\Event</span></code> class. Most of the time, however,
+you <em>will</em> need to pass information about the event to each listener. To
+accomplish this, you&#8217;ll create a new class that extends
+<code class="docutils literal"><span class="pre">Symfony\Component\EventDispatcher\Event</span></code>.</p>
+<p>In this example, each listener will need access to some pretend <code class="docutils literal"><span class="pre">Order</span></code>
+object. Create an <code class="docutils literal"><span class="pre">Event</span></code> class that makes this possible:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Acme\StoreBundle\Event</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\Event</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\StoreBundle\Order</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">FilterOrderEvent</span> <span class="k">extends</span> <span class="nx">Event</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$order</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">Order</span> <span class="nv">$order</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">order</span> <span class="o">=</span> <span class="nv">$order</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOrder</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">order</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Each listener now has access to the <code class="docutils literal"><span class="pre">Order</span></code> object via the <code class="docutils literal"><span class="pre">getOrder</span></code>
+method.</p>
+</div>
+<div class="section" id="dispatch-the-event">
+<h4>Dispatch the Event<a class="headerlink" href="#dispatch-the-event" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html#method_dispatch'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html#method_dispatch" title="Symfony\Component\EventDispatcher\EventDispatcher::dispatch()"><span class="pre">dispatch()</span></a></code>
+method notifies all listeners of the given event. It takes two arguments: the
+name of the event to dispatch and the <code class="docutils literal"><span class="pre">Event</span></code> instance to pass to each
+listener of that event:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Acme\StoreBundle\StoreEvents</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\StoreBundle\Order</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\StoreBundle\Event\FilterOrderEvent</span><span class="p">;</span>
+
+<span class="c1">// the order is somehow created or retrieved</span>
+<span class="nv">$order</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Order</span><span class="p">();</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// create the FilterOrderEvent and dispatch it</span>
+<span class="nv">$event</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FilterOrderEvent</span><span class="p">(</span><span class="nv">$order</span><span class="p">);</span>
+<span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="nx">StoreEvents</span><span class="o">::</span><span class="na">STORE_ORDER</span><span class="p">,</span> <span class="nv">$event</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Notice that the special <code class="docutils literal"><span class="pre">FilterOrderEvent</span></code> object is created and passed to
+the <code class="docutils literal"><span class="pre">dispatch</span></code> method. Now, any listener to the <code class="docutils literal"><span class="pre">store.order</span></code> event will
+receive the <code class="docutils literal"><span class="pre">FilterOrderEvent</span></code> and have access to the <code class="docutils literal"><span class="pre">Order</span></code> object via
+the <code class="docutils literal"><span class="pre">getOrder</span></code> method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// some listener class that&#39;s been registered for &quot;store.order&quot; event</span>
+<span class="k">use</span> <span class="nx">Acme\StoreBundle\Event\FilterOrderEvent</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">onStoreOrder</span><span class="p">(</span><span class="nx">FilterOrderEvent</span> <span class="nv">$event</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$order</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getOrder</span><span class="p">();</span>
+    <span class="c1">// do something to or with the order</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-event-subscribers">
+<span id="event-dispatcher-using-event-subscribers"></span><span id="index-6"></span><h3>Using Event Subscribers<a class="headerlink" href="#using-event-subscribers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The most common way to listen to an event is to register an <em>event listener</em>
+with the dispatcher. This listener can listen to one or more events and is
+notified each time those events are dispatched.</p>
+<p>Another way to listen to events is via an <em>event subscriber</em>. An event
+subscriber is a PHP class that&#8217;s able to tell the dispatcher exactly which
+events it should subscribe to. It implements the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventSubscriberInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventSubscriberInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventSubscriberInterface.html" title="Symfony\Component\EventDispatcher\EventSubscriberInterface"><span class="pre">EventSubscriberInterface</span></a></code>
+interface, which requires a single static method called
+<code class="docutils literal"><span class="pre">getSubscribedEvents</span></code>. Take the following example of a subscriber that
+subscribes to the <code class="docutils literal"><span class="pre">kernel.response</span></code> and <code class="docutils literal"><span class="pre">store.order</span></code> events:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Acme\StoreBundle\Event</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventSubscriberInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Event\FilterResponseEvent</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">StoreSubscriber</span> <span class="k">implements</span> <span class="nx">EventSubscriberInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getSubscribedEvents</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;kernel.response&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="k">array</span><span class="p">(</span><span class="s1">&#39;onKernelResponsePre&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+                <span class="k">array</span><span class="p">(</span><span class="s1">&#39;onKernelResponseMid&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                <span class="k">array</span><span class="p">(</span><span class="s1">&#39;onKernelResponsePost&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="p">),</span>
+            <span class="s1">&#39;store.order&#39;</span>     <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;onStoreOrder&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onKernelResponsePre</span><span class="p">(</span><span class="nx">FilterResponseEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onKernelResponseMid</span><span class="p">(</span><span class="nx">FilterResponseEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onKernelResponsePost</span><span class="p">(</span><span class="nx">FilterResponseEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onStoreOrder</span><span class="p">(</span><span class="nx">FilterOrderEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is very similar to a listener class, except that the class itself can
+tell the dispatcher which events it should listen to. To register a subscriber
+with the dispatcher, use the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html#method_addSubscriber'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html#method_addSubscriber" title="Symfony\Component\EventDispatcher\EventDispatcher::addSubscriber()"><span class="pre">addSubscriber()</span></a></code>
+method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Acme\StoreBundle\Event\StoreSubscriber</span><span class="p">;</span>
+
+<span class="nv">$subscriber</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StoreSubscriber</span><span class="p">();</span>
+<span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">addSubscriber</span><span class="p">(</span><span class="nv">$subscriber</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The dispatcher will automatically register the subscriber for each event
+returned by the <code class="docutils literal"><span class="pre">getSubscribedEvents</span></code> method. This method returns an array
+indexed by event names and whose values are either the method name to call or
+an array composed of the method name to call and a priority. The example
+above shows how to register several listener methods for the same event in
+subscriber and also shows how to pass the priority of each listener method.
+The higher the priority, the earlier the method is called. In the above
+example, when the <code class="docutils literal"><span class="pre">kernel.response</span></code> event is triggered, the methods
+<code class="docutils literal"><span class="pre">onKernelResponsePre</span></code>, <code class="docutils literal"><span class="pre">onKernelResponseMid</span></code>, and <code class="docutils literal"><span class="pre">onKernelResponsePost</span></code>
+are called in that order.</p>
+</div>
+<div class="section" id="stopping-event-flow-propagation">
+<span id="event-dispatcher-event-propagation"></span><span id="index-7"></span><h3>Stopping Event Flow/Propagation<a class="headerlink" href="#stopping-event-flow-propagation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>In some cases, it may make sense for a listener to prevent any other listeners
+from being called. In other words, the listener needs to be able to tell the
+dispatcher to stop all propagation of the event to future listeners (i.e. to
+not notify any more listeners). This can be accomplished from inside a
+listener via the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html#method_stopPropagation'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html#method_stopPropagation" title="Symfony\Component\EventDispatcher\Event::stopPropagation()"><span class="pre">stopPropagation()</span></a></code> method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Acme\StoreBundle\Event\FilterOrderEvent</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">onStoreOrder</span><span class="p">(</span><span class="nx">FilterOrderEvent</span> <span class="nv">$event</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">stopPropagation</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now, any listeners to <code class="docutils literal"><span class="pre">store.order</span></code> that have not yet been called will <em>not</em>
+be called.</p>
+<p>It is possible to detect if an event was stopped by using the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html#method_isPropagationStopped'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html#method_isPropagationStopped" title="Symfony\Component\EventDispatcher\Event::isPropagationStopped()"><span class="pre">isPropagationStopped()</span></a></code> method
+which returns a boolean value:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;foo.event&#39;</span><span class="p">,</span> <span class="nv">$event</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$event</span><span class="o">-&gt;</span><span class="na">isPropagationStopped</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="eventdispatcher-aware-events-and-listeners">
+<span id="event-dispatcher-dispatcher-aware-events"></span><span id="index-8"></span><h3>EventDispatcher aware Events and Listeners<a class="headerlink" href="#eventdispatcher-aware-events-and-listeners" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">EventDispatcher</span></code> always passes the dispatched event, the event&#8217;s name
+and a reference to itself to the listeners. This can be used in some advanced
+usages of the <code class="docutils literal"><span class="pre">EventDispatcher</span></code> like dispatching other events in listeners,
+event chaining or even lazy loading of more listeners into the dispatcher
+object as shown in the following examples.</p>
+<p>Lazy loading listeners:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\Event</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventDispatcherInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\StoreBundle\Event\StoreSubscriber</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$started</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">myLazyListener</span><span class="p">(</span>
+        <span class="nx">Event</span> <span class="nv">$event</span><span class="p">,</span>
+        <span class="nv">$eventName</span><span class="p">,</span>
+        <span class="nx">EventDispatcherInterface</span> <span class="nv">$dispatcher</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">started</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$subscriber</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StoreSubscriber</span><span class="p">();</span>
+            <span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">addSubscriber</span><span class="p">(</span><span class="nv">$subscriber</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">started</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+
+        <span class="c1">// ... more code</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Dispatching another event from within a listener:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\Event</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventDispatcherInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">myFooListener</span><span class="p">(</span>
+        <span class="nx">Event</span> <span class="nv">$event</span><span class="p">,</span>
+        <span class="nv">$eventName</span><span class="p">,</span>
+        <span class="nx">EventDispatcherInterface</span> <span class="nv">$dispatcher</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="nv">$event</span><span class="p">);</span>
+
+        <span class="c1">// ... more code</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>While this above is sufficient for most uses, if your application uses multiple
+<code class="docutils literal"><span class="pre">EventDispatcher</span></code> instances, you might need to specifically inject a known
+instance of the <code class="docutils literal"><span class="pre">EventDispatcher</span></code> into your listeners. This could be done
+using constructor or setter injection as follows:</p>
+<p>Constructor injection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventDispatcherInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$dispatcher</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">EventDispatcherInterface</span> <span class="nv">$dispatcher</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dispatcher</span> <span class="o">=</span> <span class="nv">$dispatcher</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Or setter injection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventDispatcherInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$dispatcher</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setEventDispatcher</span><span class="p">(</span><span class="nx">EventDispatcherInterface</span> <span class="nv">$dispatcher</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dispatcher</span> <span class="o">=</span> <span class="nv">$dispatcher</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Choosing between the two is really a matter of taste. Many tend to prefer the
+constructor injection as the objects are fully initialized at construction
+time. But when you have a long list of dependencies, using setter injection
+can be the way to go, especially for optional dependencies.</p>
+</div>
+<div class="section" id="dispatcher-shortcuts">
+<span id="event-dispatcher-shortcuts"></span><span id="index-9"></span><h3>Dispatcher Shortcuts<a class="headerlink" href="#dispatcher-shortcuts" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html#method_dispatch'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/EventDispatcher.html#method_dispatch" title="Symfony\Component\EventDispatcher\EventDispatcher::dispatch()"><span class="pre">EventDispatcher::dispatch</span></a></code>
+method always returns an <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html" title="Symfony\Component\EventDispatcher\Event"><span class="pre">Event</span></a></code>
+object. This allows for various shortcuts. For example, if one does not need
+a custom event object, one can simply rely on a plain
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html'" tppabs="http://api.symfony.com/master/Symfony/Component/EventDispatcher/Event.html" title="Symfony\Component\EventDispatcher\Event"><span class="pre">Event</span></a></code> object. You do not even need
+to pass this to the dispatcher as it will create one by default unless you
+specifically pass one:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;foo.event&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Moreover, the EventDispatcher always returns whichever event object that was
+dispatched, i.e. either the event that was passed or the event that was
+created internally by the dispatcher. This allows for nice shortcuts:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;foo.event&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isPropagationStopped</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$barEvent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarEvent</span><span class="p">();</span>
+<span class="nv">$bar</span> <span class="o">=</span> <span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;bar.event&#39;</span><span class="p">,</span> <span class="nv">$barEvent</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getBar</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$bar</span> <span class="o">=</span> <span class="nv">$dispatcher</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;bar.event&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">BarEvent</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">getBar</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>and so on...</p>
+</div>
+<div class="section" id="event-name-introspection">
+<span id="event-dispatcher-event-name-introspection"></span><span id="index-10"></span><h3>Event Name Introspection<a class="headerlink" href="#event-name-introspection" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.4 æ–°ç‰ˆåŠŸèƒ½: </span>Before Symfony 2.4, the event name and the event dispatcher had to be
+requested from the <code class="docutils literal"><span class="pre">Event</span></code> instance. These methods are now deprecated.</p>
+</div>
+<p>The <code class="docutils literal"><span class="pre">EventDispatcher</span></code> instance, as well as the name of the event that is
+dispatched, are passed as arguments to the listener:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\Event</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\EventDispatcher\EventDispatcherInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">myEventListener</span><span class="p">(</span><span class="nx">Event</span> <span class="nv">$event</span><span class="p">,</span> <span class="nv">$eventName</span><span class="p">,</span> <span class="nx">EventDispatcherInterface</span> <span class="nv">$dispatcher</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="nv">$eventName</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="other-dispatchers">
+<h2>Other Dispatchers<a class="headerlink" href="#other-dispatchers" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Besides the commonly used <code class="docutils literal"><span class="pre">EventDispatcher</span></code>, the component comes with 2
+other dispatchers:</p>
+<ul class="simple">
+<li><a class="reference internal" href="container_aware_dispatcher.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/container_aware_dispatcher.html"><em>The Container Aware Event Dispatcher</em></a></li>
+<li><a class="reference internal" href="immutable_dispatcher.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/immutable_dispatcher.html"><em>The Immutable Event Dispatcher</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="container_aware_dispatcher.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/container_aware_dispatcher.html" class="btn btn-neutral float-right" title="The Container Aware Event Dispatcher">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html" class="btn btn-neutral" title="EventDispatcher"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

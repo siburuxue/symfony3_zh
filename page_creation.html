@@ -1,0 +1,1343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ÂàõÂª∫È°µÈù¢ &mdash; Symfony Framework Documentation  ÊñáÊ°£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  ÊñáÊ°£" href="../index.html"/>
+        <link rel="up" title="ÊïôÁ®ã" href="index.html"/>
+        <link rel="next" title="ÊéßÂà∂Âô®ÔºàControllerÔºâ" href="controller.html"/>
+        <link rel="prev" title="ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony" href="installation.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">Âø´ÈÄüÂÖ•Èó®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">ÊÄªËßà</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">ËßÜÂõæ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">‰ª£Á†ÅÁªìÊûÑ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">SymfonyÂíåHTTPÂü∫Á°ÄÂ∑•ÂÖ∑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs Á∫ØPHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">ÂàõÂª∫È°µÈù¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">Ë∑ØÁî±ÔºàRoutingÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">ÂàõÂª∫Âíå‰ΩøÁî®Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">Êï∞ÊçÆÂ∫ìÂíåDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">Êï∞ÊçÆÂ∫ìÂíåPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">ÊµãËØï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">Ê†°È™å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">ÂÆâÂÖ®ÊÄß</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">Â§öËØ≠Ë®Ä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">ÊúçÂä°ÂÆπÂô®ÔºàService ContainerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">ÊÄßËÉΩ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">Ê†∏ÂøÉÂäüËÉΩ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">ÈùôÊÄÅÊñá‰ª∂Â§ÑÁêÜÔºàAsseticÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">ÂåÖÔºàBundleÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">ÈÖçÁΩÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">ÂëΩ‰ª§Ë°å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">ÈÉ®ÁΩ≤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">ÈÇÆ‰ª∂</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">‰∫ã‰ª∂ÂàÜÂèëÂô®ÔºàDispatcherÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">Ë°®ËææÂºèÔºàExpressionÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">ÊúÄ‰Ω≥ÂÆûË∑µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">SymfonyÊ°ÜÊû∂ÊúÄ‰Ω≥ÂÆûË∑µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">ÂàõÂª∫È°πÁõÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">ÈÖçÁΩÆÂèÇÊï∞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">‰∏öÂä°ÈÄªËæë‰ª£Á†ÅÁöÑÁªÑÁªá</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">Â§öËØ≠Ë®ÄÊîØÊåÅ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">ÂÆâÂÖ®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">ÈùôÊÄÅÊñá‰ª∂ÔºàAssetsÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">ÊµãËØï</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ÁªÑ‰ª∂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">ÂèÇËÄÉ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">Ë¥°ÁåÆ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">Ë¥°ÁåÆ‰ª£Á†Å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">Ë¥°ÁåÆÊñáÊ°£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">Á§æÂå∫</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a> &raquo;</li>
+      
+    <li>ÂàõÂª∫È°µÈù¢</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="page_creation.txt" tppabs="http://symfony.cn/docs/_sources/book/page_creation.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="creating-pages-in-symfony">
+<span id="creating-pages-in-symfony2"></span><span id="index-0"></span><h1>ÂàõÂª∫È°µÈù¢<a class="headerlink" href="#creating-pages-in-symfony" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h1>
+<p>Creating a new page in Symfony is a simple two-step process:</p>
+<ul class="simple">
+<li><em>Create a route</em>: A route defines the URL (e.g. <code class="docutils literal"><span class="pre">/about</span></code>) to your page
+and specifies a controller (which is a PHP function) that Symfony should
+execute when the URL of an incoming request matches the route path;</li>
+<li><em>Create a controller</em>: A controller is a PHP function that takes the incoming
+request and transforms it into the Symfony <code class="docutils literal"><span class="pre">Response</span></code> object that&#8217;s
+returned to the user.</li>
+</ul>
+<p>This simple approach is beautiful because it matches the way that the Web works.
+Every interaction on the Web is initiated by an HTTP request. The job of
+your application is simply to interpret the request and return the appropriate
+HTTP response.</p>
+<p>Symfony follows this philosophy and provides you with tools and conventions
+to keep your application organized as it grows in users and complexity.</p>
+<div class="section" id="environments-front-controllers">
+<span id="page-creation-environments"></span><span id="index-1"></span><h2>ËøêË°åÁéØÂ¢É &amp; Front Controllers<a class="headerlink" href="#environments-front-controllers" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Every Symfony application runs within an <a class="reference internal" href="glossary.html#term-environment" tppabs="http://symfony.cn/docs/glossary.html#term-environment"><span class="xref std std-term">environment</span></a>. An environment
+is a specific set of configuration and loaded bundles, represented by a string.
+The same application can be run with different configurations by running the
+application in different environments. Symfony comes with three environments
+defined ‚Äî <code class="docutils literal"><span class="pre">dev</span></code>, <code class="docutils literal"><span class="pre">test</span></code> and <code class="docutils literal"><span class="pre">prod</span></code> ‚Äî but you can create your own as well.</p>
+<p>Environments are useful by allowing a single application to have a dev environment
+built for debugging and a production environment optimized for speed. You might
+also load specific bundles based on the selected environment. For example,
+Symfony comes with the WebProfilerBundle (described below), enabled only
+in the <code class="docutils literal"><span class="pre">dev</span></code> and <code class="docutils literal"><span class="pre">test</span></code> environments.</p>
+<p>Symfony comes with two web-accessible front controllers: <code class="docutils literal"><span class="pre">app_dev.php</span></code>
+provides the <code class="docutils literal"><span class="pre">dev</span></code> environment, and <code class="docutils literal"><span class="pre">app.php</span></code> provides the <code class="docutils literal"><span class="pre">prod</span></code> environment.
+All web accesses to Symfony normally go through one of these front controllers.
+(The <code class="docutils literal"><span class="pre">test</span></code> environment is normally only used when running unit tests, and so
+doesn&#8217;t have a dedicated front controller. The console tool also provides a
+front controller that can be used with any environment.)</p>
+<p>When the front controller initializes the kernel, it provides two parameters:
+the environment, and also whether the kernel should run in debug mode.
+To make your application respond faster, Symfony maintains a cache under the
+<code class="docutils literal"><span class="pre">app/cache/</span></code> directory. When debug mode is enabled (such as <code class="docutils literal"><span class="pre">app_dev.php</span></code>
+does by default), this cache is flushed automatically whenever you make changes
+to any code or configuration. When running in debug mode, Symfony runs
+slower, but your changes are reflected without having to manually clear the
+cache.</p>
+<div class="section" id="the-random-number-page">
+<span id="index-2"></span><h3>‚ÄúÈöèÊú∫Êï∞‚ÄùÈ°µÈù¢Á§∫‰æã<a class="headerlink" href="#the-random-number-page" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>In this chapter, you&#8217;ll develop an application that can generate random numbers.
+When you&#8217;re finished, the user will be able to get a random number between <code class="docutils literal"><span class="pre">1</span></code>
+and the upper limit set by the URL:</p>
+<div class="highlight-text"><div class="highlight"><pre>http://localhost/app_dev.php/random/100
+</pre></div>
+</div>
+<p>Actually, you&#8217;ll be able to replace <code class="docutils literal"><span class="pre">100</span></code> with any other number to generate
+numbers up to that upper limit. To create the page, follow the simple two-step
+process.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p>The tutorial assumes that you&#8217;ve already downloaded Symfony and configured
+your webserver. The above URL assumes that <code class="docutils literal"><span class="pre">localhost</span></code> points to the
+<code class="docutils literal"><span class="pre">web</span></code> directory of your new Symfony project. For detailed information
+on this process, see the documentation on the web server you are using.
+Here are some relevant documentation pages for the web server you might be using:</p>
+<ul class="last simple">
+<li>For Apache HTTP Server, refer to <a class="reference external" href="javascript:if(confirm('http://httpd.apache.org/docs/current/mod/mod_dir.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://httpd.apache.org/docs/current/mod/mod_dir.html'" tppabs="http://httpd.apache.org/docs/current/mod/mod_dir.html">Apache&#8217;s DirectoryIndex documentation</a></li>
+<li>For Nginx, refer to <a class="reference external" href="javascript:if(confirm('http://wiki.nginx.org/HttpCoreModule  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://wiki.nginx.org/HttpCoreModule#location'" tppabs="http://wiki.nginx.org/HttpCoreModule#location">Nginx HttpCoreModule location documentation</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="before-you-begin-create-the-bundle">
+<h2>Âú®ÊÇ®ÂºÄÂßã‰πãÂâçËØ∑ÂÖàÂàõÂª∫Bundle<a class="headerlink" href="#before-you-begin-create-the-bundle" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Before you begin, you&#8217;ll need to create a <em>bundle</em>. In Symfony, a <a class="reference internal" href="glossary.html#term-bundle" tppabs="http://symfony.cn/docs/glossary.html#term-bundle"><span class="xref std std-term">bundle</span></a>
+is like a plugin, except that all the code in your application will live
+inside a bundle.</p>
+<p>A bundle is nothing more than a directory that houses everything related
+to a specific feature, including PHP classes, configuration, and even stylesheets
+and JavaScript files (see <a class="reference internal" href="#page-creation-bundles"><span>BundleÁ≥ªÁªü</span></a>).</p>
+<p>Depending on the way you installed Symfony, you may already have a bundle called
+AcmeDemoBundle. Browse the <code class="docutils literal"><span class="pre">src/</span></code> directory of your project and check
+if there is a <code class="docutils literal"><span class="pre">DemoBundle/</span></code> directory inside an <code class="docutils literal"><span class="pre">Acme/</span></code> directory. If those
+directories already exist, skip the rest of this section and go directly to
+create the route.</p>
+<p>To create a bundle called AcmeDemoBundle (a play bundle that you&#8217;ll
+build in this chapter), run the following command and follow the on-screen
+instructions (use all the default options):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console generate:bundle --namespace<span class="o">=</span>Acme/DemoBundle --format<span class="o">=</span>yml
+</pre></div>
+</div>
+<p>Behind the scenes, a directory is created for the bundle at <code class="docutils literal"><span class="pre">src/Acme/DemoBundle</span></code>.
+A line is also automatically added to the <code class="docutils literal"><span class="pre">app/AppKernel.php</span></code> file so that
+the bundle is registered with the kernel:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">registerBundles</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$bundles</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="k">new</span> <span class="nx">Acme\DemoBundle\AcmeDemoBundle</span><span class="p">(),</span>
+    <span class="p">);</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">return</span> <span class="nv">$bundles</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now that you have a bundle setup, you can begin building your application
+inside the bundle.</p>
+</div>
+<div class="section" id="step-1-create-the-route">
+<h2>Á¨¨‰∏ÄÊ≠•ÔºöÂàõÂª∫Route<a class="headerlink" href="#step-1-create-the-route" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>By default, the routing configuration file in a Symfony application is
+located at <code class="docutils literal"><span class="pre">app/config/routing.yml</span></code>. Like all configuration in Symfony,
+you can also choose to use XML or PHP out of the box to configure routes.</p>
+<p>If you look at the main routing file, you&#8217;ll see that Symfony already added an
+entry when you generated the AcmeDemoBundle:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/routing.yml</span>
+<span class="l-Scalar-Plain">acme_website</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">resource</span><span class="p-Indicator">:</span> <span class="s">&quot;@AcmeDemoBundle/Resources/config/routing.yml&quot;</span>
+    <span class="l-Scalar-Plain">prefix</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/routing.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;routes</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/routing&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/routing</span>
+<span class="s">        http://symfony.com/schema/routing/routing-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;import</span>
+        <span class="na">resource=</span><span class="s">&quot;@AcmeDemoBundle/Resources/config/routing.xml&quot;</span>
+        <span class="na">prefix=</span><span class="s">&quot;/&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/routes&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/routing.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\RouteCollection</span><span class="p">;</span>
+
+<span class="nv">$acmeDemo</span> <span class="o">=</span> <span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;@AcmeDemoBundle/Resources/config/routing.php&#39;</span><span class="p">);</span>
+<span class="nv">$acmeDemo</span><span class="o">-&gt;</span><span class="na">addPrefix</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+
+<span class="nv">$collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RouteCollection</span><span class="p">();</span>
+<span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">addCollection</span><span class="p">(</span><span class="nv">$acmeDemo</span><span class="p">);</span>
+
+<span class="k">return</span> <span class="nv">$collection</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>This entry is pretty basic: it tells Symfony to load routing configuration
+from the <code class="docutils literal"><span class="pre">Resources/config/routing.yml</span></code> (<code class="docutils literal"><span class="pre">routing.xml</span></code> or <code class="docutils literal"><span class="pre">routing.php</span></code>
+in the XML and PHP code example respectively) file that lives inside the
+AcmeDemoBundle. This means that you place routing configuration directly in
+<code class="docutils literal"><span class="pre">app/config/routing.yml</span></code> or organize your routes throughout your application,
+and import them from here.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">You are not limited to load routing configurations that are of the same
+format. For example, you could also load a YAML file in an XML configuration
+and vice versa.</p>
+</div>
+<p>Now that the <code class="docutils literal"><span class="pre">routing.yml</span></code> file from the bundle is being imported, add
+the new route that defines the URL of the page that you&#8217;re about to create:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># src/Acme/DemoBundle/Resources/config/routing.yml</span>
+<span class="l-Scalar-Plain">random</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">/random/{limit}</span>
+    <span class="l-Scalar-Plain">defaults</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span> <span class="nv">_controller</span><span class="p-Indicator">:</span> <span class="nv">AcmeDemoBundle</span><span class="p-Indicator">:</span><span class="nv">Random</span><span class="p-Indicator">:</span><span class="nv">index</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- src/Acme/DemoBundle/Resources/config/routing.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;routes</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/routing&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/routing</span>
+<span class="s">        http://symfony.com/schema/routing/routing-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;route</span> <span class="na">id=</span><span class="s">&quot;random&quot;</span> <span class="na">path=</span><span class="s">&quot;/random/{limit}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;default</span> <span class="na">key=</span><span class="s">&quot;_controller&quot;</span><span class="nt">&gt;</span>AcmeDemoBundle:Random:index<span class="nt">&lt;/default&gt;</span>
+    <span class="nt">&lt;/route&gt;</span>
+<span class="nt">&lt;/routes&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/DemoBundle/Resources/config/routing.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\RouteCollection</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\Route</span><span class="p">;</span>
+
+<span class="nv">$collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RouteCollection</span><span class="p">();</span>
+<span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;random&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Route</span><span class="p">(</span><span class="s1">&#39;/random/{limit}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;_controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AcmeDemoBundle:Random:index&#39;</span><span class="p">,</span>
+<span class="p">)));</span>
+
+<span class="k">return</span> <span class="nv">$collection</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The routing consists of two basic pieces: the <code class="docutils literal"><span class="pre">path</span></code>, which is the URL
+that this route will match, and a <code class="docutils literal"><span class="pre">defaults</span></code> array, which specifies the
+controller that should be executed. The placeholder syntax in the path
+(<code class="docutils literal"><span class="pre">{limit}</span></code>) is a wildcard. It means that <code class="docutils literal"><span class="pre">/random/10</span></code>, <code class="docutils literal"><span class="pre">/random/327</span></code>
+or any other similar URL will match this route. The <code class="docutils literal"><span class="pre">{limit}</span></code> placeholder
+parameter will also be passed to the controller so that you can use its value
+to generate the proper random number.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The routing system has many more great features for creating flexible
+and powerful URL structures in your application. For more details, see
+the chapter all about <a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html"><em>Routing</em></a>.</p>
+</div>
+</div>
+<div class="section" id="step-2-create-the-controller">
+<h2>Á¨¨‰∫åÈÉ®ÔºöÂàõÂª∫Controller<a class="headerlink" href="#step-2-create-the-controller" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>When a URL such as <code class="docutils literal"><span class="pre">/random/10</span></code> is handled by the application, the <code class="docutils literal"><span class="pre">random</span></code>
+route is matched and the <code class="docutils literal"><span class="pre">AcmeDemoBundle:Random:index</span></code> controller is executed
+by the framework. The second step of the page-creation process is to create
+that controller.</p>
+<p>The controller - <code class="docutils literal"><span class="pre">AcmeDemoBundle:Random:index</span></code> is the <em>logical</em> name of
+the controller, and it maps to the <code class="docutils literal"><span class="pre">indexAction</span></code> method of a PHP class
+called <code class="docutils literal"><span class="pre">Acme\DemoBundle\Controller\RandomController</span></code>. Start by creating this
+file inside your AcmeDemoBundle:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/DemoBundle/Controller/RandomController.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\DemoBundle\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">RandomController</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In reality, the controller is nothing more than a PHP method that you create
+and Symfony executes. This is where your code uses information from the request
+to build and prepare the resource being requested. Except in some advanced
+cases, the end product of a controller is always the same: a Symfony <code class="docutils literal"><span class="pre">Response</span></code>
+object.</p>
+<p>Create the <code class="docutils literal"><span class="pre">indexAction</span></code> method that Symfony will execute when the <code class="docutils literal"><span class="pre">random</span></code>
+route is matched:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/DemoBundle/Controller/RandomController.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\DemoBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">RandomController</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$limit</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span>
+            <span class="s1">&#39;&lt;html&gt;&lt;body&gt;Number: &#39;</span><span class="o">.</span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">$limit</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;&lt;/body&gt;&lt;/html&gt;&#39;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The controller is simple: it creates a new <code class="docutils literal"><span class="pre">Response</span></code> object, whose first
+argument is the content that should be used in the response (a small HTML
+page in this example).</p>
+<p>Congratulations! After creating only a route and a controller, you already
+have a fully-functional page! If you&#8217;ve setup everything correctly, your
+application should generate a random number for you:</p>
+<div class="highlight-text"><div class="highlight"><pre>http://localhost/app_dev.php/random/10
+</pre></div>
+</div>
+<div class="admonition tip" id="book-page-creation-prod-cache-clear">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p>You can also view your app in the &#8220;prod&#8221; <a class="reference internal" href="#environments-summary"><span>environment</span></a>
+by visiting:</p>
+<div class="highlight-text"><div class="highlight"><pre>http://localhost/app.php/random/10
+</pre></div>
+</div>
+<p>If you get an error, it&#8217;s likely because you need to clear your cache
+by running:</p>
+<div class="last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console cache:clear --env<span class="o">=</span>prod --no-debug
+</pre></div>
+</div>
+</div>
+<p>An optional, but common, third step in the process is to create a template.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">Controllers are the main entry point for your code and a key ingredient
+when creating pages. Much more information can be found in the
+<a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html"><em>Controller Chapter</em></a>.</p>
+</div>
+</div>
+<div class="section" id="optional-step-3-create-the-template">
+<h2>Á¨¨‰∏âÈÉ®ÔºàÂèØÈÄâÔºâÔºöÂàõÂª∫Ê®°Êùø<a class="headerlink" href="#optional-step-3-create-the-template" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Templates allow you to move all the presentation code (e.g. HTML) into
+a separate file and reuse different portions of the page layout. Instead
+of writing the HTML inside the controller, render a template instead:</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// src/Acme/DemoBundle/Controller/RandomController.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\DemoBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">RandomController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$limit</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$number</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">$limit</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span>
+            <span class="s1">&#39;AcmeDemoBundle:Random:index.html.twig&#39;</span><span class="p">,</span>
+            <span class="k">array</span><span class="p">(</span><span class="s1">&#39;number&#39;</span> <span class="o">=&gt;</span> <span class="nv">$number</span><span class="p">)</span>
+        <span class="p">);</span>
+
+        <span class="c1">// render a PHP template instead</span>
+        <span class="c1">// return $this-&gt;render(</span>
+        <span class="c1">//     &#39;AcmeDemoBundle:Random:index.html.php&#39;,</span>
+        <span class="c1">//     array(&#39;number&#39; =&gt; $number)</span>
+        <span class="c1">// );</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">In order to use the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html#method_render'" tppabs="http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html#method_render" title="Symfony\Bundle\FrameworkBundle\Controller\Controller::render()"><span class="pre">render()</span></a></code>
+method, your controller must extend the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html'" tppabs="http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html" title="Symfony\Bundle\FrameworkBundle\Controller\Controller"><span class="pre">Controller</span></a></code> class,
+which adds shortcuts for tasks that are common inside controllers. This
+is done in the above example by adding the <code class="docutils literal"><span class="pre">use</span></code> statement on line 4
+and then extending <code class="docutils literal"><span class="pre">Controller</span></code> on line 6.</p>
+</div>
+<p>The <code class="docutils literal"><span class="pre">render()</span></code> method creates a <code class="docutils literal"><span class="pre">Response</span></code> object filled with the content
+of the given, rendered template. Like any other controller, you will ultimately
+return that <code class="docutils literal"><span class="pre">Response</span></code> object.</p>
+<p>Notice that there are two different examples for rendering the template.
+By default, Symfony supports two different templating languages: classic
+PHP templates and the succinct but powerful <a class="reference external" href="javascript:if(confirm('http://twig.sensiolabs.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://twig.sensiolabs.org/'" tppabs="http://twig.sensiolabs.org/">Twig</a> templates. Don&#8217;t be
+alarmed - you&#8217;re free to choose either or even both in the same project.</p>
+<p>The controller renders the <code class="docutils literal"><span class="pre">AcmeDemoBundle:Random:index.html.twig</span></code> template,
+which uses the following naming convention:</p>
+<blockquote>
+<div><strong>BundleName</strong>:<strong>ControllerName</strong>:<strong>TemplateName</strong></div></blockquote>
+<p>This is the <em>logical</em> name of the template, which is mapped to a physical
+location using the following convention.</p>
+<blockquote>
+<div><strong>/path/to/BundleName</strong>/Resources/views/<strong>ControllerName</strong>/<strong>TemplateName</strong></div></blockquote>
+<p>In this case, AcmeDemoBundle is the bundle name, <code class="docutils literal"><span class="pre">Random</span></code> is the
+controller, and <code class="docutils literal"><span class="pre">index.html.twig</span></code> the template:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-jinja"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="x"> </span><span class="c">{# src/Acme/DemoBundle/Resources/views/Random/index.html.twig #}</span><span class="x"></span>
+<span class="x"> </span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;::base.html.twig&#39;</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x"> </span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">     Number: </span><span class="cp">{{</span> <span class="nv">number</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x"> </span><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- src/Acme/DemoBundle/Resources/views/Random/index.html.php --&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">extend</span><span class="p">(</span><span class="s1">&#39;::base.html.php&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+Number: <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$number</span><span class="p">)</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Step through the Twig template line-by-line:</p>
+<ul class="simple">
+<li><em>line 2</em>: The <code class="docutils literal"><span class="pre">extends</span></code> token defines a parent template. The template
+explicitly defines a layout file inside of which it will be placed.</li>
+<li><em>line 4</em>: The <code class="docutils literal"><span class="pre">block</span></code> token says that everything inside should be placed
+inside a block called <code class="docutils literal"><span class="pre">body</span></code>. As you&#8217;ll see, it&#8217;s the responsibility
+of the parent template (<code class="docutils literal"><span class="pre">base.html.twig</span></code>) to ultimately render the
+block called <code class="docutils literal"><span class="pre">body</span></code>.</li>
+</ul>
+<p>The parent template, <code class="docutils literal"><span class="pre">::base.html.twig</span></code>, is missing both the <strong>BundleName</strong>
+and <strong>ControllerName</strong> portions of its name (hence the double colon (<code class="docutils literal"><span class="pre">::</span></code>)
+at the beginning). This means that the template lives outside of the bundle
+and in the <code class="docutils literal"><span class="pre">app</span></code> directory:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="c">{# app/Resources/views/base.html.twig #}</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}</span>Welcome!<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="nt">&lt;/title&gt;</span>
+        <span class="cp">{%</span> <span class="k">block</span> <span class="nv">stylesheets</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">&#39;favicon.ico&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">block</span> <span class="nv">javascripts</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="c">&lt;!-- app/Resources/views/base.html.php --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span><span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;slots&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">output</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;Welcome!&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="nt">&lt;/title&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;slots&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">output</span><span class="p">(</span><span class="s1">&#39;stylesheets&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;shortcut icon&quot;</span>
+            <span class="na">href=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assets&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;favicon.ico&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;slots&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">output</span><span class="p">(</span><span class="s1">&#39;_content&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;slots&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">output</span><span class="p">(</span><span class="s1">&#39;javascripts&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The base template file defines the HTML layout and renders the <code class="docutils literal"><span class="pre">body</span></code> block
+that you defined in the <code class="docutils literal"><span class="pre">index.html.twig</span></code> template. It also renders a <code class="docutils literal"><span class="pre">title</span></code>
+block, which you could choose to define in the <code class="docutils literal"><span class="pre">index.html.twig</span></code> template.
+Since you did not define the <code class="docutils literal"><span class="pre">title</span></code> block in the child template, it defaults
+to &#8220;Welcome!&#8221;.</p>
+<p>Templates are a powerful way to render and organize the content for your
+page. A template can render anything, from HTML markup, to CSS code, or anything
+else that the controller may need to return.</p>
+<p>In the lifecycle of handling a request, the templating engine is simply
+an optional tool. Recall that the goal of each controller is to return a
+<code class="docutils literal"><span class="pre">Response</span></code> object. Templates are a powerful, but optional, tool for creating
+the content for that <code class="docutils literal"><span class="pre">Response</span></code> object.</p>
+<div class="section" id="the-directory-structure">
+<span id="index-3"></span><h3>ÁõÆÂΩïÁªìÊûÑ<a class="headerlink" href="#the-directory-structure" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>After just a few short sections, you already understand the philosophy behind
+creating and rendering pages in Symfony. You&#8217;ve also already begun to see
+how Symfony projects are structured and organized. By the end of this section,
+you&#8217;ll know where to find and put different types of files and why.</p>
+<p>Though entirely flexible, by default, each Symfony <a class="reference internal" href="glossary.html#term-application" tppabs="http://symfony.cn/docs/glossary.html#term-application"><span class="xref std std-term">application</span></a> has
+the same basic and recommended directory structure:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">app/</span></code></dt>
+<dd>This directory contains the application configuration.</dd>
+<dt><code class="docutils literal"><span class="pre">src/</span></code></dt>
+<dd>All the project PHP code is stored under this directory.</dd>
+<dt><code class="docutils literal"><span class="pre">vendor/</span></code></dt>
+<dd>Any vendor libraries are placed here by convention.</dd>
+<dt><code class="docutils literal"><span class="pre">web/</span></code></dt>
+<dd>This is the web root directory and contains any publicly accessible files.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">ÂèÇËßÅ</p>
+<p class="last">You can easily override the default directory structure. See
+<a class="reference internal" href="override_dir_structure.html" tppabs="http://symfony.cn/docs/cookbook/configuration/override_dir_structure.html"><em>Â¶Ç‰ΩïÈáçËΩΩSymfonyÈªòËÆ§ÁöÑÁõÆÂΩïÁªìÊûÑ</em></a> for more
+information.</p>
+</div>
+</div>
+</div>
+<div class="section" id="the-web-directory">
+<span id="id1"></span><h2>WebÁõÆÂΩï<a class="headerlink" href="#the-web-directory" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The web root directory is the home of all public and static files including
+images, stylesheets, and JavaScript files. It is also where each
+<a class="reference internal" href="glossary.html#term-front-controller" tppabs="http://symfony.cn/docs/glossary.html#term-front-controller"><span class="xref std std-term">front controller</span></a> lives:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// web/app.php</span>
+<span class="k">require_once</span> <span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/../app/bootstrap.php.cache&#39;</span><span class="p">;</span>
+<span class="k">require_once</span> <span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/../app/AppKernel.php&#39;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="nv">$kernel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppKernel</span><span class="p">(</span><span class="s1">&#39;prod&#39;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+<span class="nv">$kernel</span><span class="o">-&gt;</span><span class="na">loadClassCache</span><span class="p">();</span>
+<span class="nv">$kernel</span><span class="o">-&gt;</span><span class="na">handle</span><span class="p">(</span><span class="nx">Request</span><span class="o">::</span><span class="na">createFromGlobals</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The front controller file (<code class="docutils literal"><span class="pre">app.php</span></code> in this example) is the actual PHP
+file that&#8217;s executed when using a Symfony application and its job is to
+use a Kernel class, <code class="docutils literal"><span class="pre">AppKernel</span></code>, to bootstrap the application.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p>Having a front controller means different and more flexible URLs than
+are used in a typical flat PHP application. When using a front controller,
+URLs are formatted in the following way:</p>
+<div class="highlight-text"><div class="highlight"><pre>http://localhost/app.php/random/10
+</pre></div>
+</div>
+<p>The front controller, <code class="docutils literal"><span class="pre">app.php</span></code>, is executed and the &#8220;internal:&#8221; URL
+<code class="docutils literal"><span class="pre">/random/10</span></code> is routed internally using the routing configuration.
+By using Apache <code class="docutils literal"><span class="pre">mod_rewrite</span></code> rules, you can force the <code class="docutils literal"><span class="pre">app.php</span></code> file
+to be executed without needing to specify it in the URL:</p>
+<div class="last highlight-text"><div class="highlight"><pre>http://localhost/random/10
+</pre></div>
+</div>
+</div>
+<p>Though front controllers are essential in handling every request, you&#8217;ll
+rarely need to modify or even think about them. They&#8217;ll be mentioned again
+briefly in the <a href="#id2"><span class="problematic" id="id3">`Environments`_</span></a> section.</p>
+</div>
+<div class="section" id="the-application-app-directory">
+<h2>Â∫îÁî®Ôºà <code class="docutils literal"><span class="pre">app</span></code> ÔºâÁõÆÂΩï<a class="headerlink" href="#the-application-app-directory" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>As you saw in the front controller, the <code class="docutils literal"><span class="pre">AppKernel</span></code> class is the main entry
+point of the application and is responsible for all configuration. As such,
+it is stored in the <code class="docutils literal"><span class="pre">app/</span></code> directory.</p>
+<p>This class must implement two methods that define everything that Symfony
+needs to know about your application. You don&#8217;t even need to worry about
+these methods when starting - Symfony fills them in for you with sensible
+defaults.</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">registerBundles()</span></code></dt>
+<dd>Returns an array of all bundles needed to run the application (see
+<a class="reference internal" href="#page-creation-bundles"><span>BundleÁ≥ªÁªü</span></a>).</dd>
+<dt><code class="docutils literal"><span class="pre">registerContainerConfiguration()</span></code></dt>
+<dd>Loads the main application configuration resource file (see the
+<a href="#id4"><span class="problematic" id="id5">`Application Configuration`_</span></a> section).</dd>
+</dl>
+<p>In day-to-day development, you&#8217;ll mostly use the <code class="docutils literal"><span class="pre">app/</span></code> directory to modify
+configuration and routing files in the <code class="docutils literal"><span class="pre">app/config/</span></code> directory (see
+<a href="#id6"><span class="problematic" id="id7">`Application Configuration`_</span></a>). It also contains the application cache
+directory (<code class="docutils literal"><span class="pre">app/cache</span></code>), a log directory (<code class="docutils literal"><span class="pre">app/logs</span></code>) and a directory
+for application-level resource files, such as templates (<code class="docutils literal"><span class="pre">app/Resources</span></code>).
+You&#8217;ll learn more about each of these directories in later chapters.</p>
+<div class="sidebar" id="autoloading-introduction-sidebar">
+<p class="first sidebar-title">Ëá™Âä®Âä†ËΩΩ</p>
+<p>When Symfony is loading, a special file - <code class="docutils literal"><span class="pre">vendor/autoload.php</span></code> - is
+included. This file is created by Composer and will autoload all
+application files living in the <code class="docutils literal"><span class="pre">src/</span></code> folder as well as all
+third-party libraries mentioned in the <code class="docutils literal"><span class="pre">composer.json</span></code> file.</p>
+<p>Because of the autoloader, you never need to worry about using <code class="docutils literal"><span class="pre">include</span></code>
+or <code class="docutils literal"><span class="pre">require</span></code> statements. Instead, Composer uses the namespace of a class
+to determine its location and automatically includes the file on your
+behalf the instant you need a class.</p>
+<p>The autoloader is already configured to look in the <code class="docutils literal"><span class="pre">src/</span></code> directory
+for any of your PHP classes. For autoloading to work, the class name and
+path to the file have to follow the same pattern:</p>
+<div class="last highlight-text"><div class="highlight"><pre>Class Name:
+    Acme\DemoBundle\Controller\RandomController
+Path:
+    src/Acme/DemoBundle/Controller/RandomController.php
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-source-src-directory">
+<h2>‰ª£Á†ÅÔºà <code class="docutils literal"><span class="pre">src</span></code> ÔºâÁõÆÂΩï<a class="headerlink" href="#the-source-src-directory" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Put simply, the <code class="docutils literal"><span class="pre">src/</span></code> directory contains all the actual code (PHP code,
+templates, configuration files, stylesheets, etc) that drives <em>your</em> application.
+When developing, the vast majority of your work will be done inside one or
+more bundles that you create in this directory.</p>
+<p>But what exactly is a <a class="reference internal" href="glossary.html#term-bundle" tppabs="http://symfony.cn/docs/glossary.html#term-bundle"><span class="xref std std-term">bundle</span></a>?</p>
+<div class="section" id="the-bundle-system">
+<span id="page-creation-bundles"></span><h3>BundleÁ≥ªÁªü<a class="headerlink" href="#the-bundle-system" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>A bundle is similar to a plugin in other software, but even better. The key
+difference is that <em>everything</em> is a bundle in Symfony, including both the
+core framework functionality and the code written for your application.
+Bundles are first-class citizens in Symfony. This gives you the flexibility
+to use pre-built features packaged in <a class="reference external" href="javascript:if(confirm('http://knpbundles.com/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://knpbundles.com/'" tppabs="http://knpbundles.com/">third-party bundles</a> or to distribute
+your own bundles. It makes it easy to pick and choose which features to enable
+in your application and to optimize them the way you want.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">While you&#8217;ll learn the basics here, an entire cookbook entry is devoted
+to the organization and best practices of <a class="reference internal" href="best_practices.html" tppabs="http://symfony.cn/docs/cookbook/bundles/best_practices.html"><em>bundles</em></a>.</p>
+</div>
+<p>A bundle is simply a structured set of files within a directory that implement
+a single feature. You might create a BlogBundle, a ForumBundle or
+a bundle for user management (many of these exist already as open source
+bundles). Each directory contains everything related to that feature, including
+PHP files, templates, stylesheets, JavaScripts, tests and anything else.
+Every aspect of a feature exists in a bundle and every feature lives in a
+bundle.</p>
+<p>An application is made up of bundles as defined in the <code class="docutils literal"><span class="pre">registerBundles()</span></code>
+method of the <code class="docutils literal"><span class="pre">AppKernel</span></code> class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">registerBundles</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$bundles</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\FrameworkBundle\FrameworkBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\SecurityBundle\SecurityBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\TwigBundle\TwigBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\MonologBundle\MonologBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\DoctrineBundle\DoctrineBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Symfony\Bundle\AsseticBundle\AsseticBundle</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</span><span class="p">(),</span>
+    <span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEnvironment</span><span class="p">(),</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">)))</span> <span class="p">{</span>
+        <span class="nv">$bundles</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Acme\DemoBundle\AcmeDemoBundle</span><span class="p">();</span>
+        <span class="nv">$bundles</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</span><span class="p">();</span>
+        <span class="nv">$bundles</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</span><span class="p">();</span>
+        <span class="nv">$bundles</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nv">$bundles</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With the <code class="docutils literal"><span class="pre">registerBundles()</span></code> method, you have total control over which bundles
+are used by your application (including the core Symfony bundles).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">A bundle can live <em>anywhere</em> as long as it can be autoloaded (via the
+autoloader configured at <code class="docutils literal"><span class="pre">app/autoload.php</span></code>).</p>
+</div>
+</div>
+</div>
+<div class="section" id="creating-a-bundle">
+<h2>ÂàõÂª∫Bundle<a class="headerlink" href="#creating-a-bundle" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The Symfony Standard Edition comes with a handy task that creates a fully-functional
+bundle for you. Of course, creating a bundle by hand is pretty easy as well.</p>
+<p>To show you how simple the bundle system is, create a new bundle called
+AcmeTestBundle and enable it.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">The <code class="docutils literal"><span class="pre">Acme</span></code> portion is just a dummy name that should be replaced by
+some &#8220;vendor&#8221; name that represents you or your organization (e.g.
+ABCTestBundle for some company named <code class="docutils literal"><span class="pre">ABC</span></code>).</p>
+</div>
+<p>Start by creating a <code class="docutils literal"><span class="pre">src/Acme/TestBundle/</span></code> directory and adding a new file
+called <code class="docutils literal"><span class="pre">AcmeTestBundle.php</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/Acme/TestBundle/AcmeTestBundle.php</span>
+<span class="k">namespace</span> <span class="nx">Acme\TestBundle</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Bundle\Bundle</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AcmeTestBundle</span> <span class="k">extends</span> <span class="nx">Bundle</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">The name AcmeTestBundle follows the standard
+<a class="reference internal" href="best_practices.html#bundles-naming-conventions" tppabs="http://symfony.cn/docs/cookbook/bundles/best_practices.html#bundles-naming-conventions"><span>Bundle naming conventions</span></a>. You could
+also choose to shorten the name of the bundle to simply TestBundle by naming
+this class TestBundle (and naming the file <code class="docutils literal"><span class="pre">TestBundle.php</span></code>).</p>
+</div>
+<p>This empty class is the only piece you need to create the new bundle. Though
+commonly empty, this class is powerful and can be used to customize the behavior
+of the bundle.</p>
+<p>Now that you&#8217;ve created the bundle, enable it via the <code class="docutils literal"><span class="pre">AppKernel</span></code> class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">registerBundles</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$bundles</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="c1">// register your bundle</span>
+        <span class="k">new</span> <span class="nx">Acme\TestBundle\AcmeTestBundle</span><span class="p">(),</span>
+    <span class="p">);</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">return</span> <span class="nv">$bundles</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And while it doesn&#8217;t do anything yet, AcmeTestBundle is now ready to be used.</p>
+<p>And as easy as this is, Symfony also provides a command-line interface for
+generating a basic bundle skeleton:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console generate:bundle --namespace<span class="o">=</span>Acme/TestBundle
+</pre></div>
+</div>
+<p>The bundle skeleton generates with a basic controller, template and routing
+resource that can be customized. You&#8217;ll learn more about Symfony&#8217;s command-line
+tools later.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p class="last">Whenever creating a new bundle or using a third-party bundle, always make
+sure the bundle has been enabled in <code class="docutils literal"><span class="pre">registerBundles()</span></code>. When using
+the <code class="docutils literal"><span class="pre">generate:bundle</span></code> command, this is done for you.</p>
+</div>
+</div>
+<div class="section" id="bundle-directory-structure">
+<h2>BundleÁõÆÂΩïÁªìÊûÑ<a class="headerlink" href="#bundle-directory-structure" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The directory structure of a bundle is simple and flexible. By default, the
+bundle system follows a set of conventions that help to keep code consistent
+between all Symfony bundles. Take a look at AcmeDemoBundle, as it contains some
+of the most common elements of a bundle:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">Controller/</span></code></dt>
+<dd>Contains the controllers of the bundle (e.g. <code class="docutils literal"><span class="pre">RandomController.php</span></code>).</dd>
+<dt><code class="docutils literal"><span class="pre">DependencyInjection/</span></code></dt>
+<dd>Holds certain dependency injection extension classes, which may import service
+configuration, register compiler passes or more (this directory is not
+necessary).</dd>
+<dt><code class="docutils literal"><span class="pre">Resources/config/</span></code></dt>
+<dd>Houses configuration, including routing configuration (e.g. <code class="docutils literal"><span class="pre">routing.yml</span></code>).</dd>
+<dt><code class="docutils literal"><span class="pre">Resources/views/</span></code></dt>
+<dd>Holds templates organized by controller name (e.g. <code class="docutils literal"><span class="pre">Hello/index.html.twig</span></code>).</dd>
+<dt><code class="docutils literal"><span class="pre">Resources/public/</span></code></dt>
+<dd>Contains web assets (images, stylesheets, etc) and is copied or symbolically
+linked into the project <code class="docutils literal"><span class="pre">web/</span></code> directory via the <code class="docutils literal"><span class="pre">assets:install</span></code> console
+command.</dd>
+<dt><code class="docutils literal"><span class="pre">Tests/</span></code></dt>
+<dd>Holds all tests for the bundle.</dd>
+</dl>
+<p>A bundle can be as small or large as the feature it implements. It contains
+only the files you need and nothing else.</p>
+<p>As you move through the book, you&#8217;ll learn how to persist objects to a database,
+create and validate forms, create translations for your application, write
+tests and much more. Each of these has their own place and role within the
+bundle.</p>
+<div class="section" id="application-configuration">
+<h3>Â∫îÁî®ÈÖçÁΩÆ<a class="headerlink" href="#application-configuration" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>An application consists of a collection of bundles representing all the
+features and capabilities of your application. Each bundle can be customized
+via configuration files written in YAML, XML or PHP. By default, the main
+configuration file lives in the <code class="docutils literal"><span class="pre">app/config/</span></code> directory and is called
+either <code class="docutils literal"><span class="pre">config.yml</span></code>, <code class="docutils literal"><span class="pre">config.xml</span></code> or <code class="docutils literal"><span class="pre">config.php</span></code> depending on which
+format you prefer:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="nv">parameters.yml</span> <span class="p-Indicator">}</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="nv">security.yml</span> <span class="p-Indicator">}</span>
+
+<span class="l-Scalar-Plain">framework</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">secret</span><span class="p-Indicator">:</span>          <span class="s">&quot;%secret%&quot;</span>
+    <span class="l-Scalar-Plain">router</span><span class="p-Indicator">:</span>          <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&quot;%kernel.root_dir%/config/routing.yml&quot;</span> <span class="p-Indicator">}</span>
+    <span class="c1"># ...</span>
+
+<span class="c1"># Twig Configuration</span>
+<span class="l-Scalar-Plain">twig</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">debug</span><span class="p-Indicator">:</span>            <span class="s">&quot;%kernel.debug%&quot;</span>
+    <span class="l-Scalar-Plain">strict_variables</span><span class="p-Indicator">:</span> <span class="s">&quot;%kernel.debug%&quot;</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:framework=</span><span class="s">&quot;http://symfony.com/schema/dic/symfony&quot;</span>
+    <span class="na">xmlns:twig=</span><span class="s">&quot;http://symfony.com/schema/dic/twig&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/symfony</span>
+<span class="s">        http://symfony.com/schema/dic/symfony/symfony-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/twig</span>
+<span class="s">        http://symfony.com/schema/dic/twig/twig-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;parameters.yml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;security.yml&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+
+    <span class="nt">&lt;framework:config</span> <span class="na">secret=</span><span class="s">&quot;%secret%&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;framework:router</span> <span class="na">resource=</span><span class="s">&quot;%kernel.root_dir%/config/routing.xml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/framework:config&gt;</span>
+
+    <span class="c">&lt;!-- Twig Configuration --&gt;</span>
+    <span class="nt">&lt;twig:config</span> <span class="na">debug=</span><span class="s">&quot;%kernel.debug%&quot;</span> <span class="na">strict-variables=</span><span class="s">&quot;%kernel.debug%&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;parameters.yml&#39;</span><span class="p">);</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;security.yml&#39;</span><span class="p">);</span>
+
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;framework&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;secret&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;%secret%&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;router&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;resource&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;%kernel.root_dir%/config/routing.php&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">));</span>
+
+<span class="c1">// Twig Configuration</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;debug&#39;</span>            <span class="o">=&gt;</span> <span class="s1">&#39;%kernel.debug%&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;strict_variables&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;%kernel.debug%&#39;</span><span class="p">,</span>
+<span class="p">));</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">You&#8217;ll learn exactly how to load each file/format in the next section
+<a href="#id8"><span class="problematic" id="id9">`Environments`_</span></a>.</p>
+</div>
+<p>Each top-level entry like <code class="docutils literal"><span class="pre">framework</span></code> or <code class="docutils literal"><span class="pre">twig</span></code> defines the configuration
+for a particular bundle. For example, the <code class="docutils literal"><span class="pre">framework</span></code> key defines the configuration
+for the core Symfony FrameworkBundle and includes configuration for the
+routing, templating, and other core systems.</p>
+<p>For now, don&#8217;t worry about the specific configuration options in each section.
+The configuration file ships with sensible defaults. As you read more and
+explore each part of Symfony, you&#8217;ll learn about the specific configuration
+options of each feature.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Configuration Formats</p>
+<p>Throughout the chapters, all configuration examples will be shown in all
+three formats (YAML, XML and PHP). Each has its own advantages and
+disadvantages. The choice of which to use is up to you:</p>
+<ul class="last simple">
+<li><em>YAML</em>: Simple, clean and readable (learn more about YAML in
+&#8220;<a class="reference internal" href="yaml_format.html" tppabs="http://symfony.cn/docs/components/yaml/yaml_format.html"><em>The YAML Format</em></a>&#8221;);</li>
+<li><em>XML</em>: More powerful than YAML at times and supports IDE autocompletion;</li>
+<li><em>PHP</em>: Very powerful but less readable than standard configuration formats.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="default-configuration-dump">
+<h2>ÂØºÂÖ•ÈªòËÆ§ÈÖçÁΩÆÈ°π<a class="headerlink" href="#default-configuration-dump" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>You can dump the default configuration for a bundle in YAML to the console using
+the <code class="docutils literal"><span class="pre">config:dump-reference</span></code> command. Here is an example of dumping the default
+FrameworkBundle configuration:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>app/console config:dump-reference FrameworkBundle
+</pre></div>
+</div>
+<p>The extension alias (configuration key) can also be used:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>app/console config:dump-reference framework
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">See the cookbook article: <a class="reference internal" href="extension.html" tppabs="http://symfony.cn/docs/cookbook/bundles/extension.html"><em>Â¶Ç‰ΩïÂú®BundleÂÜÖÈÉ®ËΩΩÂÖ•ServiceÈÖçÁΩÆ</em></a> for
+information on adding configuration for your own bundle.</p>
+</div>
+<div class="section" id="environments">
+<span id="environments-summary"></span><span id="index-4"></span><h3>ËøêË°åÁéØÂ¢É<a class="headerlink" href="#environments" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>An application can run in various environments. The different environments
+share the same PHP code (apart from the front controller), but use different
+configuration. For instance, a <code class="docutils literal"><span class="pre">dev</span></code> environment will log warnings and
+errors, while a <code class="docutils literal"><span class="pre">prod</span></code> environment will only log errors. Some files are
+rebuilt on each request in the <code class="docutils literal"><span class="pre">dev</span></code> environment (for the developer&#8217;s convenience),
+but cached in the <code class="docutils literal"><span class="pre">prod</span></code> environment. All environments live together on
+the same machine and execute the same application.</p>
+<p>A Symfony project generally begins with three environments (<code class="docutils literal"><span class="pre">dev</span></code>, <code class="docutils literal"><span class="pre">test</span></code>
+and <code class="docutils literal"><span class="pre">prod</span></code>), though creating new environments is easy. You can view your
+application in different environments simply by changing the front controller
+in your browser. To see the application in the <code class="docutils literal"><span class="pre">dev</span></code> environment, access
+the application via the development front controller:</p>
+<div class="highlight-text"><div class="highlight"><pre>http://localhost/app_dev.php/random/10
+</pre></div>
+</div>
+<p>If you&#8217;d like to see how your application will behave in the production environment,
+call the <code class="docutils literal"><span class="pre">prod</span></code> front controller instead:</p>
+<div class="highlight-text"><div class="highlight"><pre>http://localhost/app.php/random/10
+</pre></div>
+</div>
+<p>Since the <code class="docutils literal"><span class="pre">prod</span></code> environment is optimized for speed; the configuration,
+routing and Twig templates are compiled into flat PHP classes and cached.
+When viewing changes in the <code class="docutils literal"><span class="pre">prod</span></code> environment, you&#8217;ll need to clear these
+cached files and allow them to rebuild:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console cache:clear --env<span class="o">=</span>prod --no-debug
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p>If you open the <code class="docutils literal"><span class="pre">web/app.php</span></code> file, you&#8217;ll find that it&#8217;s configured explicitly
+to use the <code class="docutils literal"><span class="pre">prod</span></code> environment:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$kernel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppKernel</span><span class="p">(</span><span class="s1">&#39;prod&#39;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="last">You can create a new front controller for a new environment by copying
+this file and changing <code class="docutils literal"><span class="pre">prod</span></code> to some other value.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The <code class="docutils literal"><span class="pre">test</span></code> environment is used when running automated tests and cannot
+be accessed directly through the browser. See the <a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html"><em>testing chapter</em></a>
+for more details.</p>
+</div>
+</div>
+</div>
+<div class="section" id="environment-configuration">
+<span id="index-5"></span><h2>ËøêË°åÁéØÂ¢ÉËÆæÁΩÆ<a class="headerlink" href="#environment-configuration" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The <code class="docutils literal"><span class="pre">AppKernel</span></code> class is responsible for actually loading the configuration
+file of your choice:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/AppKernel.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">registerContainerConfiguration</span><span class="p">(</span><span class="nx">LoaderInterface</span> <span class="nv">$loader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span>
+        <span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/config/config_&#39;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEnvironment</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;.yml&#39;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You already know that the <code class="docutils literal"><span class="pre">.yml</span></code> extension can be changed to <code class="docutils literal"><span class="pre">.xml</span></code> or
+<code class="docutils literal"><span class="pre">.php</span></code> if you prefer to use either XML or PHP to write your configuration.
+Notice also that each environment loads its own configuration file. Consider
+the configuration file for the <code class="docutils literal"><span class="pre">dev</span></code> environment.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config_dev.yml</span>
+<span class="l-Scalar-Plain">imports</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="nv">config.yml</span> <span class="p-Indicator">}</span>
+
+<span class="l-Scalar-Plain">framework</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">router</span><span class="p-Indicator">:</span>   <span class="p-Indicator">{</span> <span class="nv">resource</span><span class="p-Indicator">:</span> <span class="s">&quot;%kernel.root_dir%/config/routing_dev.yml&quot;</span> <span class="p-Indicator">}</span>
+    <span class="l-Scalar-Plain">profiler</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span> <span class="nv">only_exceptions</span><span class="p-Indicator">:</span> <span class="nv">false</span> <span class="p-Indicator">}</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config_dev.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:framework=</span><span class="s">&quot;http://symfony.com/schema/dic/symfony&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services</span>
+<span class="s">        http://symfony.com/schema/dic/services/services-1.0.xsd</span>
+<span class="s">        http://symfony.com/schema/dic/symfony</span>
+<span class="s">        http://symfony.com/schema/dic/symfony/symfony-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;imports&gt;</span>
+        <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&quot;config.xml&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/imports&gt;</span>
+
+    <span class="nt">&lt;framework:config&gt;</span>
+        <span class="nt">&lt;framework:router</span> <span class="na">resource=</span><span class="s">&quot;%kernel.root_dir%/config/routing_dev.xml&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;framework:profiler</span> <span class="na">only-exceptions=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/framework:config&gt;</span>
+
+    <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config_dev.php</span>
+<span class="nv">$loader</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;config.php&#39;</span><span class="p">);</span>
+
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;framework&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;router&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;resource&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;%kernel.root_dir%/config/routing_dev.php&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;profiler&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;only-exceptions&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">),</span>
+<span class="p">));</span>
+
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The <code class="docutils literal"><span class="pre">imports</span></code> key is similar to a PHP <code class="docutils literal"><span class="pre">include</span></code> statement and guarantees
+that the main configuration file (<code class="docutils literal"><span class="pre">config.yml</span></code>) is loaded first. The rest
+of the file tweaks the default configuration for increased logging and other
+settings conducive to a development environment.</p>
+<p>Both the <code class="docutils literal"><span class="pre">prod</span></code> and <code class="docutils literal"><span class="pre">test</span></code> environments follow the same model: each environment
+imports the base configuration file and then modifies its configuration values
+to fit the needs of the specific environment. This is just a convention,
+but one that allows you to reuse most of your configuration and customize
+just pieces of it between environments.</p>
+<div class="section" id="summary">
+<h3>ÊÄªÁªì<a class="headerlink" href="#summary" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>Congratulations! You&#8217;ve now seen every fundamental aspect of Symfony and have
+hopefully discovered how easy and flexible it can be. And while there are
+<em>a lot</em> of features still to come, be sure to keep the following basic points
+in mind:</p>
+<ul class="simple">
+<li>Creating a page is a three-step process involving a <strong>route</strong>, a <strong>controller</strong>
+and (optionally) a <strong>template</strong>;</li>
+<li>Each project contains just a few main directories: <code class="docutils literal"><span class="pre">web/</span></code> (web assets and
+the front controllers), <code class="docutils literal"><span class="pre">app/</span></code> (configuration), <code class="docutils literal"><span class="pre">src/</span></code> (your bundles),
+and <code class="docutils literal"><span class="pre">vendor/</span></code> (third-party code) (there&#8217;s also a <code class="docutils literal"><span class="pre">bin/</span></code> directory that&#8217;s
+used to help updated vendor libraries);</li>
+<li>Each feature in Symfony (including the Symfony framework core) is organized
+into a <em>bundle</em>, which is a structured set of files for that feature;</li>
+<li>The <strong>configuration</strong> for each bundle lives in the <code class="docutils literal"><span class="pre">Resources/config</span></code>
+directory of the bundle and can be specified in YAML, XML or PHP;</li>
+<li>The global <strong>application configuration</strong> lives in the <code class="docutils literal"><span class="pre">app/config</span></code>
+directory;</li>
+<li>Each <strong>environment</strong> is accessible via a different front controller (e.g.
+<code class="docutils literal"><span class="pre">app.php</span></code> and <code class="docutils literal"><span class="pre">app_dev.php</span></code>) and loads a different configuration file.</li>
+</ul>
+<p>From here, each chapter will introduce you to more and more powerful tools
+and advanced concepts. The more you know about Symfony, the more you&#8217;ll
+appreciate the flexibility of its architecture and the power it gives you
+to rapidly develop applications.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html" class="btn btn-neutral float-right" title="ÊéßÂà∂Âô®ÔºàControllerÔºâ">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html" class="btn btn-neutral" title="ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ÁâàÊùÉÊâÄÊúâ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

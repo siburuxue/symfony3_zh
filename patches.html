@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Submitting a Patch &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="è´¡çŒ®ä»£ç " href="index.html"/>
+        <link rel="next" title="Symfony Core Team" href="core_team.html"/>
+        <link rel="prev" title="Reporting a Bug" href="bugs.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a> &raquo;</li>
+      
+          <li><a href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a> &raquo;</li>
+      
+    <li>Submitting a Patch</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="patches.txt" tppabs="http://symfony.cn/docs/_sources/contributing/code/patches.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="submitting-a-patch">
+<h1>Submitting a Patch<a class="headerlink" href="#submitting-a-patch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>Patches are the best way to provide a bug fix or to propose enhancements to
+Symfony.</p>
+<div class="section" id="step-1-setup-your-environment">
+<h2>Step 1: Setup your Environment<a class="headerlink" href="#step-1-setup-your-environment" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="install-the-software-stack">
+<h3>Install the Software Stack<a class="headerlink" href="#install-the-software-stack" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Before working on Symfony, setup a friendly environment with the following
+software:</p>
+<ul class="simple">
+<li>Git;</li>
+<li>PHP version 5.3.3 or above;</li>
+<li><a class="reference external" href="javascript:if(confirm('https://phpunit.de/manual/current/en/installation.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://phpunit.de/manual/current/en/installation.html'" tppabs="https://phpunit.de/manual/current/en/installation.html">PHPUnit</a> 4.2 or above.</li>
+</ul>
+</div>
+<div class="section" id="configure-git">
+<h3>Configure Git<a class="headerlink" href="#configure-git" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Set up your user information with your real name and a working email address:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+<span class="nv">$ </span>git config --global user.email you@example.com
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">If you are new to Git, you are highly recommended to read the excellent and
+free <a class="reference external" href="javascript:if(confirm('http://git-scm.com/book  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git-scm.com/book'" tppabs="http://git-scm.com/book">ProGit</a> book.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">If your IDE creates configuration files inside the project&#8217;s directory,
+you can use global <code class="docutils literal"><span class="pre">.gitignore</span></code> file (for all projects) or
+<code class="docutils literal"><span class="pre">.git/info/exclude</span></code> file (per project) to ignore them. See
+<a class="reference external" href="javascript:if(confirm('https://help.github.com/articles/ignoring-files  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.github.com/articles/ignoring-files'" tppabs="https://help.github.com/articles/ignoring-files">GitHub&#8217;s documentation</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p>Windows users: when installing Git, the installer will ask what to do with
+line endings, and suggests replacing all LF with CRLF. This is the wrong
+setting if you wish to contribute to Symfony! Selecting the as-is method is
+your best choice, as Git will convert your line feeds to the ones in the
+repository. If you have already installed Git, you can check the value of
+this setting by typing:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git config core.autocrlf
+</pre></div>
+</div>
+<p>This will return either &#8220;false&#8221;, &#8220;input&#8221; or &#8220;true&#8221;; &#8220;true&#8221; and &#8220;false&#8221; being
+the wrong values. Change it to &#8220;input&#8221; by typing:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git config --global core.autocrlf input
+</pre></div>
+</div>
+<p class="last">Replace &#8211;global by &#8211;local if you want to set it only for the active
+repository</p>
+</div>
+</div>
+<div class="section" id="get-the-symfony-source-code">
+<h3>Get the Symfony Source Code<a class="headerlink" href="#get-the-symfony-source-code" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Get the Symfony source code:</p>
+<ul class="simple">
+<li>Create a <a class="reference external" href="javascript:if(confirm('https://github.com/signup/free  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/signup/free'" tppabs="https://github.com/signup/free">GitHub</a> account and sign in;</li>
+<li>Fork the <a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/symfony'" tppabs="https://github.com/symfony/symfony">Symfony repository</a> (click on the &#8220;Fork&#8221; button);</li>
+<li>After the &#8220;forking action&#8221; has completed, clone your fork locally
+(this will create a <code class="docutils literal"><span class="pre">symfony</span></code> directory):</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone git@github.com:USERNAME/symfony.git
+</pre></div>
+</div>
+<ul class="simple">
+<li>Add the upstream repository as a remote:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>symfony
+<span class="nv">$ </span>git remote add upstream git://github.com/symfony/symfony.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-that-the-current-tests-pass">
+<h3>Check that the current Tests Pass<a class="headerlink" href="#check-that-the-current-tests-pass" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Now that Symfony is installed, check that all unit tests pass for your
+environment as explained in the dedicated <a class="reference internal" href="tests-1.html" tppabs="http://symfony.cn/docs/contributing/code/tests.html"><em>document</em></a>.</p>
+</div>
+</div>
+<div class="section" id="step-2-work-on-your-patch">
+<h2>Step 2: Work on your Patch<a class="headerlink" href="#step-2-work-on-your-patch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="the-license">
+<h3>The License<a class="headerlink" href="#the-license" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Before you start, you must know that all the patches you are going to submit
+must be released under the <em>MIT license</em>, unless explicitly specified in your
+commits.</p>
+</div>
+<div class="section" id="choose-the-right-branch">
+<h3>Choose the right Branch<a class="headerlink" href="#choose-the-right-branch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Before working on a patch, you must determine on which branch you need to
+work:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">2.3</span></code>, if you are fixing a bug for an existing feature (you may have
+to choose a higher branch if the feature you are fixing was introduced
+in a later version);</li>
+<li><code class="docutils literal"><span class="pre">2.7</span></code>, if you are adding a new feature which is backward compatible;</li>
+<li><code class="docutils literal"><span class="pre">master</span></code>, if you are adding a new and backward incompatible feature.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">All bug fixes merged into maintenance branches are also merged into more
+recent branches on a regular basis. For instance, if you submit a patch
+for the <code class="docutils literal"><span class="pre">2.3</span></code> branch, the patch will also be applied by the core team on
+the <code class="docutils literal"><span class="pre">master</span></code> branch.</p>
+</div>
+</div>
+<div class="section" id="create-a-topic-branch">
+<h3>Create a Topic Branch<a class="headerlink" href="#create-a-topic-branch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Each time you want to work on a patch for a bug or on an enhancement, create a
+topic branch:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git checkout -b BRANCH_NAME master
+</pre></div>
+</div>
+<p>Or, if you want to provide a bugfix for the <code class="docutils literal"><span class="pre">2.3</span></code> branch, first track the remote
+<code class="docutils literal"><span class="pre">2.3</span></code> branch locally:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git checkout -t origin/2.3
+</pre></div>
+</div>
+<p>Then create a new branch off the <code class="docutils literal"><span class="pre">2.3</span></code> branch to work on the bugfix:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git checkout -b BRANCH_NAME 2.3
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">Use a descriptive name for your branch (<code class="docutils literal"><span class="pre">ticket_XXX</span></code> where <code class="docutils literal"><span class="pre">XXX</span></code> is the
+ticket number is a good convention for bug fixes).</p>
+</div>
+<p>The above checkout commands automatically switch the code to the newly created
+branch (check the branch you are working on with <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span></code>).</p>
+</div>
+<div class="section" id="work-on-your-patch">
+<h3>Work on your Patch<a class="headerlink" href="#work-on-your-patch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Work on the code as much as you want and commit as much as you want; but keep
+in mind the following:</p>
+<ul class="simple">
+<li>Read about the Symfony <a class="reference internal" href="conventions.html" tppabs="http://symfony.cn/docs/contributing/code/conventions.html"><em>conventions</em></a> and follow the
+coding <a class="reference internal" href="standards.html" tppabs="http://symfony.cn/docs/contributing/code/standards.html"><em>standards</em></a> (use <code class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--check</span></code> to check for
+trailing spaces &#8211; also read the tip below);</li>
+<li>Add unit tests to prove that the bug is fixed or that the new feature
+actually works;</li>
+<li>Try hard to not break backward compatibility (if you must do so, try to
+provide a compatibility layer to support the old way) &#8211; patches that break
+backward compatibility have less chance to be merged;</li>
+<li>Do atomic and logically separate commits (use the power of <code class="docutils literal"><span class="pre">git</span> <span class="pre">rebase</span></code> to
+have a clean and logical history);</li>
+<li>Squash irrelevant commits that are just about fixing coding standards or
+fixing typos in your own code;</li>
+<li>Never fix coding standards in some existing code as it makes the code review
+more difficult;</li>
+<li>Write good commit messages (see the tip below).</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p>When submitting pull requests, <a class="reference external" href="javascript:if(confirm('http://fabbot.io/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://fabbot.io/'" tppabs="http://fabbot.io/">fabbot</a> checks your code
+for common typos and verifies that you are using the PHP coding standards
+as defined in <a class="reference external" href="javascript:if(confirm('http://www.php-fig.org/psr/psr-1/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.php-fig.org/psr/psr-1/'" tppabs="http://www.php-fig.org/psr/psr-1/">PSR-1</a> and <a class="reference external" href="javascript:if(confirm('http://www.php-fig.org/psr/psr-2/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.php-fig.org/psr/psr-2/'" tppabs="http://www.php-fig.org/psr/psr-2/">PSR-2</a>.</p>
+<p class="last">A status is posted below the pull request description with a summary
+of any problems it detects or any Travis CI build failures.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">A good commit message is composed of a summary (the first line),
+optionally followed by a blank line and a more detailed description. The
+summary should start with the Component you are working on in square
+brackets (<code class="docutils literal"><span class="pre">[DependencyInjection]</span></code>, <code class="docutils literal"><span class="pre">[FrameworkBundle]</span></code>, ...). Use a
+verb (<code class="docutils literal"><span class="pre">fixed</span> <span class="pre">...</span></code>, <code class="docutils literal"><span class="pre">added</span> <span class="pre">...</span></code>, ...) to start the summary and don&#8217;t
+add a period at the end.</p>
+</div>
+</div>
+<div class="section" id="prepare-your-patch-for-submission">
+<h3>Prepare your Patch for Submission<a class="headerlink" href="#prepare-your-patch-for-submission" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>When your patch is not about a bug fix (when you add a new feature or change
+an existing one for instance), it must also include the following:</p>
+<ul class="simple">
+<li>An explanation of the changes in the relevant <code class="docutils literal"><span class="pre">CHANGELOG</span></code> file(s) (the
+<code class="docutils literal"><span class="pre">[BC</span> <span class="pre">BREAK]</span></code> or the <code class="docutils literal"><span class="pre">[DEPRECATION]</span></code> prefix must be used when relevant);</li>
+<li>An explanation on how to upgrade an existing application in the relevant
+<code class="docutils literal"><span class="pre">UPGRADE</span></code> file(s) if the changes break backward compatibility or if you
+deprecate something that will ultimately break backward compatibility.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="step-3-submit-your-patch">
+<h2>Step 3: Submit your Patch<a class="headerlink" href="#step-3-submit-your-patch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Whenever you feel that your patch is ready for submission, follow the
+following steps.</p>
+<div class="section" id="rebase-your-patch">
+<h3>Rebase your Patch<a class="headerlink" href="#rebase-your-patch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Before submitting your patch, update your branch (needed if it takes you a
+while to finish your changes):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git fetch upstream
+<span class="nv">$ </span>git merge upstream/master
+<span class="nv">$ </span>git checkout BRANCH_NAME
+<span class="nv">$ </span>git rebase master
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">Replace <code class="docutils literal"><span class="pre">master</span></code> with the branch you selected previously (e.g. <code class="docutils literal"><span class="pre">2.3</span></code>)
+if you are working on a bugfix</p>
+</div>
+<p>When doing the <code class="docutils literal"><span class="pre">rebase</span></code> command, you might have to fix merge conflicts.
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code> will show you the <em>unmerged</em> files. Resolve all the conflicts,
+then continue the rebase:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git add ... <span class="c"># add resolved files</span>
+<span class="nv">$ </span>git rebase --continue
+</pre></div>
+</div>
+<p>Check that all tests still pass and push your branch remotely:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git push --force origin BRANCH_NAME
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-a-pull-request">
+<h3>Make a Pull Request<a class="headerlink" href="#make-a-pull-request" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>You can now make a pull request on the <code class="docutils literal"><span class="pre">symfony/symfony</span></code> GitHub repository.</p>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">Take care to point your pull request towards <code class="docutils literal"><span class="pre">symfony:2.3</span></code> if you want
+the core team to pull a bugfix based on the <code class="docutils literal"><span class="pre">2.3</span></code> branch.</p>
+</div>
+<p>To ease the core team work, always include the modified components in your
+pull request message, like in:</p>
+<div class="highlight-text"><div class="highlight"><pre>[Yaml] fixed something
+[Form] [Validator] [FrameworkBundle] added something
+</pre></div>
+</div>
+<p>The pull request description must include the following checklist at the top
+to ensure that contributions may be reviewed without needless feedback
+loops and that your contributions can be included into Symfony as quickly as
+possible:</p>
+<div class="highlight-text"><div class="highlight"><pre>| Q             | A
+| ------------- | ---
+| Bug fix?      | [yes|no]
+| New feature?  | [yes|no]
+| BC breaks?    | [yes|no]
+| Deprecations? | [yes|no]
+| Tests pass?   | [yes|no]
+| Fixed tickets | [comma separated list of tickets fixed by the PR]
+| License       | MIT
+| Doc PR        | [The reference to the documentation PR if any]
+</pre></div>
+</div>
+<p>An example submission could now look as follows:</p>
+<div class="highlight-text"><div class="highlight"><pre>| Q             | A
+| ------------- | ---
+| Bug fix?      | no
+| New feature?  | no
+| BC breaks?    | no
+| Deprecations? | no
+| Tests pass?   | yes
+| Fixed tickets | #12, #43
+| License       | MIT
+| Doc PR        | symfony/symfony-docs#123
+</pre></div>
+</div>
+<p>The whole table must be included (do <strong>not</strong> remove lines that you think are
+not relevant). For simple typos, minor changes in the PHPDocs, or changes in
+translation files, use the shorter version of the check-list:</p>
+<div class="highlight-text"><div class="highlight"><pre>| Q             | A
+| ------------- | ---
+| Fixed tickets | [comma separated list of tickets fixed by the PR]
+| License       | MIT
+</pre></div>
+</div>
+<p>Some answers to the questions trigger some more requirements:</p>
+<ul class="simple">
+<li>If you answer yes to &#8220;Bug fix?&#8221;, check if the bug is already listed in the
+Symfony issues and reference it/them in &#8220;Fixed tickets&#8221;;</li>
+<li>If you answer yes to &#8220;New feature?&#8221;, you must submit a pull request to the
+documentation and reference it under the &#8220;Doc PR&#8221; section;</li>
+<li>If you answer yes to &#8220;BC breaks?&#8221;, the patch must contain updates to the
+relevant <code class="docutils literal"><span class="pre">CHANGELOG</span></code> and <code class="docutils literal"><span class="pre">UPGRADE</span></code> files;</li>
+<li>If you answer yes to &#8220;Deprecations?&#8221;, the patch must contain updates to the
+relevant <code class="docutils literal"><span class="pre">CHANGELOG</span></code> and <code class="docutils literal"><span class="pre">UPGRADE</span></code> files;</li>
+<li>If you answer no to &#8220;Tests pass&#8221;, you must add an item to a todo-list with
+the actions that must be done to fix the tests;</li>
+<li>If the &#8220;license&#8221; is not MIT, just don&#8217;t submit the pull request as it won&#8217;t
+be accepted anyway.</li>
+</ul>
+<p>If some of the previous requirements are not met, create a todo-list and add
+relevant items:</p>
+<div class="highlight-text"><div class="highlight"><pre>- [ ] fix the tests as they have not been updated yet
+- [ ] submit changes to the documentation
+- [ ] document the BC breaks
+</pre></div>
+</div>
+<p>If the code is not finished yet because you don&#8217;t have time to finish it or
+because you want early feedback on your work, add an item to todo-list:</p>
+<div class="highlight-text"><div class="highlight"><pre>- [ ] finish the code
+- [ ] gather feedback for my changes
+</pre></div>
+</div>
+<p>As long as you have items in the todo-list, please prefix the pull request
+title with &#8220;[WIP]&#8221;.</p>
+<p>In the pull request description, give as much details as possible about your
+changes (don&#8217;t hesitate to give code examples to illustrate your points). If
+your pull request is about adding a new feature or modifying an existing one,
+explain the rationale for the changes. The pull request description helps the
+code review and it serves as a reference when the code is merged (the pull
+request description and all its associated comments are part of the merge
+commit message).</p>
+<p>In addition to this &#8220;code&#8221; pull request, you must also send a pull request to
+the <a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony-docs  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/symfony-docs'" tppabs="https://github.com/symfony/symfony-docs">documentation repository</a> to update the documentation when appropriate.</p>
+</div>
+<div class="section" id="rework-your-patch">
+<h3>Rework your Patch<a class="headerlink" href="#rework-your-patch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Based on the feedback on the pull request, you might need to rework your
+patch. Before re-submitting the patch, rebase with <code class="docutils literal"><span class="pre">upstream/master</span></code> or
+<code class="docutils literal"><span class="pre">upstream/2.3</span></code>, don&#8217;t merge; and force the push to the origin:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git rebase -f upstream/master
+<span class="nv">$ </span>git push --force origin BRANCH_NAME
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">When doing a <code class="docutils literal"><span class="pre">push</span> <span class="pre">--force</span></code>, always specify the branch name explicitly
+to avoid messing other branches in the repo (<code class="docutils literal"><span class="pre">--force</span></code> tells Git that
+you really want to mess with things so do it carefully).</p>
+</div>
+<p>Often, moderators will ask you to &#8220;squash&#8221; your commits. This means you will
+convert many commits to one commit. To do this, use the rebase command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git rebase -i upstream/master
+<span class="nv">$ </span>git push --force origin BRANCH_NAME
+</pre></div>
+</div>
+<p>After you type this command, an editor will popup showing a list of commits:</p>
+<div class="highlight-text"><div class="highlight"><pre>pick 1a31be6 first commit
+pick 7fc64b4 second commit
+pick 7d33018 third commit
+</pre></div>
+</div>
+<p>To squash all commits into the first one, remove the word <code class="docutils literal"><span class="pre">pick</span></code> before the
+second and the last commits, and replace it by the word <code class="docutils literal"><span class="pre">squash</span></code> or just
+<code class="docutils literal"><span class="pre">s</span></code>. When you save, Git will start rebasing, and if successful, will ask
+you to edit the commit message, which by default is a listing of the commit
+messages of all the commits. When you are finished, execute the push command.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="core_team.html" tppabs="http://symfony.cn/docs/contributing/code/core_team.html" class="btn btn-neutral float-right" title="Symfony Core Team">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bugs.html" tppabs="http://symfony.cn/docs/contributing/code/bugs.html" class="btn btn-neutral" title="Reporting a Bug"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

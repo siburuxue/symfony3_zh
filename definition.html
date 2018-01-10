@@ -1,0 +1,886 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Defining and Processing Configuration Values &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="Config" href="index.html"/>
+        <link rel="next" title="Console" href="../console/index.html"/>
+        <link rel="prev" title="Caching Based on Resources" href="caching.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+          <li><a href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a> &raquo;</li>
+      
+    <li>Defining and Processing Configuration Values</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="definition.txt" tppabs="http://symfony.cn/docs/_sources/components/config/definition.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="defining-and-processing-configuration-values">
+<span id="index-0"></span><h1>Defining and Processing Configuration Values<a class="headerlink" href="#defining-and-processing-configuration-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<div class="section" id="validating-configuration-values">
+<h2>Validating Configuration Values<a class="headerlink" href="#validating-configuration-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>After loading configuration values from all kinds of resources, the values
+and their structure can be validated using the &#8220;Definition&#8221; part of the Config
+Component. Configuration values are usually expected to show some kind of
+hierarchy. Also, values should be of a certain type, be restricted in number
+or be one of a given set of values. For example, the following configuration
+(in YAML) shows a clear hierarchy and some validation rules that should be
+applied to it (like: &#8220;the value for <code class="docutils literal"><span class="pre">auto_connect</span></code> must be a boolean value&#8221;):</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">auto_connect</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="l-Scalar-Plain">default_connection</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="l-Scalar-Plain">connections</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">mysql</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">localhost</span>
+        <span class="l-Scalar-Plain">driver</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">mysql</span>
+        <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">user</span>
+        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pass</span>
+    <span class="l-Scalar-Plain">sqlite</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">localhost</span>
+        <span class="l-Scalar-Plain">driver</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">sqlite</span>
+        <span class="l-Scalar-Plain">memory</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">true</span>
+        <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">user</span>
+        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pass</span>
+</pre></div>
+</div>
+<p>When loading multiple configuration files, it should be possible to merge
+and overwrite some values. Other values should not be merged and stay as
+they are when first encountered. Also, some keys are only available when
+another key has a specific value (in the sample configuration above: the
+<code class="docutils literal"><span class="pre">memory</span></code> key only makes sense when the <code class="docutils literal"><span class="pre">driver</span></code> is <code class="docutils literal"><span class="pre">sqlite</span></code>).</p>
+</div>
+<div class="section" id="defining-a-hierarchy-of-configuration-values-using-the-treebuilder">
+<h2>Defining a Hierarchy of Configuration Values Using the TreeBuilder<a class="headerlink" href="#defining-a-hierarchy-of-configuration-values-using-the-treebuilder" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>All the rules concerning configuration values can be defined using the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html" title="Symfony\Component\Config\Definition\Builder\TreeBuilder"><span class="pre">TreeBuilder</span></a></code>.</p>
+<p>A <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html" title="Symfony\Component\Config\Definition\Builder\TreeBuilder"><span class="pre">TreeBuilder</span></a></code> instance
+should be returned from a custom <code class="docutils literal"><span class="pre">Configuration</span></code> class which implements the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/ConfigurationInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/ConfigurationInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/ConfigurationInterface.html" title="Symfony\Component\Config\Definition\ConfigurationInterface"><span class="pre">ConfigurationInterface</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Acme\DatabaseConfiguration</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Definition\ConfigurationInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Definition\Builder\TreeBuilder</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DatabaseConfiguration</span> <span class="k">implements</span> <span class="nx">ConfigurationInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getConfigTreeBuilder</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$treeBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TreeBuilder</span><span class="p">();</span>
+        <span class="nv">$rootNode</span> <span class="o">=</span> <span class="nv">$treeBuilder</span><span class="o">-&gt;</span><span class="na">root</span><span class="p">(</span><span class="s1">&#39;database&#39;</span><span class="p">);</span>
+
+        <span class="c1">// ... add node definitions to the root of the tree</span>
+
+        <span class="k">return</span> <span class="nv">$treeBuilder</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-node-definitions-to-the-tree">
+<h2>Adding Node Definitions to the Tree<a class="headerlink" href="#adding-node-definitions-to-the-tree" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="variable-nodes">
+<h3>Variable Nodes<a class="headerlink" href="#variable-nodes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>A tree contains node definitions which can be laid out in a semantic way.
+This means, using indentation and the fluent notation, it is possible to
+reflect the real structure of the configuration values:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">booleanNode</span><span class="p">(</span><span class="s1">&#39;auto_connect&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">defaultTrue</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;default_connection&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">defaultValue</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>The root node itself is an array node, and has children, like the boolean
+node <code class="docutils literal"><span class="pre">auto_connect</span></code> and the scalar node <code class="docutils literal"><span class="pre">default_connection</span></code>. In general:
+after defining a node, a call to <code class="docutils literal"><span class="pre">end()</span></code> takes you one step up in the hierarchy.</p>
+</div>
+<div class="section" id="node-type">
+<h3>Node Type<a class="headerlink" href="#node-type" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>It is possible to validate the type of a provided value by using the appropriate
+node definition. Node types are available for:</p>
+<ul class="simple">
+<li>scalar (generic type that includes booleans, strings, integers, floats and <code class="docutils literal"><span class="pre">null</span></code>)</li>
+<li>boolean</li>
+<li>integer</li>
+<li>float</li>
+<li>enum (similar to scalar, but it only allows a finite set of values)</li>
+<li>array</li>
+<li>variable (no validation)</li>
+</ul>
+<p>and are created with <code class="docutils literal"><span class="pre">node($name,</span> <span class="pre">$type)</span></code> or their associated shortcut
+<code class="docutils literal"><span class="pre">xxxxNode($name)</span></code> method.</p>
+</div>
+<div class="section" id="numeric-node-constraints">
+<h3>Numeric Node Constraints<a class="headerlink" href="#numeric-node-constraints" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Numeric nodes (float and integer) provide two extra constraints -
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder.html#method_min'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder.html#method_min" title="Symfony\Component\Config\Definition\Builder::min()"><span class="pre">min()</span></a></code> and
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder.html#method_max'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder.html#method_max" title="Symfony\Component\Config\Definition\Builder::max()"><span class="pre">max()</span></a></code> -
+allowing to validate the value:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">integerNode</span><span class="p">(</span><span class="s1">&#39;positive_value&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">min</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">floatNode</span><span class="p">(</span><span class="s1">&#39;big_value&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">max</span><span class="p">(</span><span class="mf">5E45</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">integerNode</span><span class="p">(</span><span class="s1">&#39;value_inside_a_range&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">min</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">max</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enum-nodes">
+<h3>Enum Nodes<a class="headerlink" href="#enum-nodes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Enum nodes provide a constraint to match the given input against a set of
+values:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">enumNode</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">values</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">))</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>This will restrict the <code class="docutils literal"><span class="pre">gender</span></code> option to be either <code class="docutils literal"><span class="pre">male</span></code> or <code class="docutils literal"><span class="pre">female</span></code>.</p>
+</div>
+<div class="section" id="array-nodes">
+<h3>Array Nodes<a class="headerlink" href="#array-nodes" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>It is possible to add a deeper level to the hierarchy, by adding an array
+node. The array node itself, may have a pre-defined set of variable nodes:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;driver&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;host&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Or you may define a prototype for each node inside an array node:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;connections&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">prototype</span><span class="p">(</span><span class="s1">&#39;array&#39;</span><span class="p">)</span>
+                <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;driver&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;host&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>A prototype can be used to add a definition which may be repeated many times
+inside the current node. According to the prototype definition in the example
+above, it is possible to have multiple connection arrays (containing a <code class="docutils literal"><span class="pre">driver</span></code>,
+<code class="docutils literal"><span class="pre">host</span></code>, etc.).</p>
+</div>
+<div class="section" id="array-node-options">
+<h3>Array Node Options<a class="headerlink" href="#array-node-options" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Before defining the children of an array node, you can provide options like:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">useAttributeAsKey()</span></code></dt>
+<dd>Provide the name of a child node, whose value should be used as the key in the resulting array.</dd>
+<dt><code class="docutils literal"><span class="pre">requiresAtLeastOneElement()</span></code></dt>
+<dd>There should be at least one element in the array (works only when <code class="docutils literal"><span class="pre">isRequired()</span></code> is also
+called).</dd>
+<dt><code class="docutils literal"><span class="pre">addDefaultsIfNotSet()</span></code></dt>
+<dd>If any child nodes have default values, use them if explicit values haven&#8217;t been provided.</dd>
+</dl>
+<p>An example of this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;parameters&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">requiresAtLeastOneElement</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">useAttributeAsKey</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">prototype</span><span class="p">(</span><span class="s1">&#39;array&#39;</span><span class="p">)</span>
+                <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>In YAML, the configuration might look like this:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">parameters</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">param1</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span> <span class="nv">value</span><span class="p-Indicator">:</span> <span class="nv">param1val</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+<p>In XML, each <code class="docutils literal"><span class="pre">parameters</span></code> node would have a <code class="docutils literal"><span class="pre">name</span></code> attribute (along with
+<code class="docutils literal"><span class="pre">value</span></code>), which would be removed and used as the key for that element in
+the final array. The <code class="docutils literal"><span class="pre">useAttributeAsKey</span></code> is useful for normalizing how
+arrays are specified between different formats like XML and YAML.</p>
+</div>
+</div>
+<div class="section" id="default-and-required-values">
+<h2>Default and required Values<a class="headerlink" href="#default-and-required-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>For all node types, it is possible to define default values and replacement
+values in case a node
+has a certain value:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">defaultValue()</span></code></dt>
+<dd>Set a default value</dd>
+<dt><code class="docutils literal"><span class="pre">isRequired()</span></code></dt>
+<dd>Must be defined (but may be empty)</dd>
+<dt><code class="docutils literal"><span class="pre">cannotBeEmpty()</span></code></dt>
+<dd>May not contain an empty value</dd>
+<dt><code class="docutils literal"><span class="pre">default*()</span></code></dt>
+<dd>(<code class="docutils literal"><span class="pre">null</span></code>, <code class="docutils literal"><span class="pre">true</span></code>, <code class="docutils literal"><span class="pre">false</span></code>), shortcut for <code class="docutils literal"><span class="pre">defaultValue()</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">treat*Like()</span></code></dt>
+<dd>(<code class="docutils literal"><span class="pre">null</span></code>, <code class="docutils literal"><span class="pre">true</span></code>, <code class="docutils literal"><span class="pre">false</span></code>), provide a replacement value in case the value is <code class="docutils literal"><span class="pre">*.</span></code></dd>
+</dl>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;driver&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">cannotBeEmpty</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;host&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">defaultValue</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">booleanNode</span><span class="p">(</span><span class="s1">&#39;memory&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">defaultFalse</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;settings&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">addDefaultsIfNotSet</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">cannotBeEmpty</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">defaultValue</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="documenting-the-option">
+<h2>Documenting the Option<a class="headerlink" href="#documenting-the-option" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>All options can be documented using the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/NodeDefinition.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/NodeDefinition.html#method_info'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/NodeDefinition.html#method_info" title="Symfony\Component\Config\Definition\Builder\NodeDefinition::info()"><span class="pre">info()</span></a></code>
+method.</p>
+<p>The info will be printed as a comment when dumping the configuration tree with
+the <code class="docutils literal"><span class="pre">config:dump</span></code> command.</p>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>Since Symfony 2.6, the info will also be added to the exception message
+when an invalid type is given.</p>
+</div>
+</div>
+<div class="section" id="optional-sections">
+<h2>Optional Sections<a class="headerlink" href="#optional-sections" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>If you have entire sections which are optional and can be enabled/disabled,
+you can take advantage of the shortcut
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ArrayNodeDefinition.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ArrayNodeDefinition.html#method_canBeEnabled'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ArrayNodeDefinition.html#method_canBeEnabled" title="Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::canBeEnabled()"><span class="pre">canBeEnabled()</span></a></code> and
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ArrayNodeDefinition.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ArrayNodeDefinition.html#method_canBeDisabled'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ArrayNodeDefinition.html#method_canBeDisabled" title="Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::canBeDisabled()"><span class="pre">canBeDisabled()</span></a></code> methods:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$arrayNode</span>
+    <span class="o">-&gt;</span><span class="na">canBeEnabled</span><span class="p">()</span>
+<span class="p">;</span>
+
+<span class="c1">// is equivalent to</span>
+
+<span class="nv">$arrayNode</span>
+    <span class="o">-&gt;</span><span class="na">treatFalseLike</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">treatTrueLike</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">treatNullLike</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">booleanNode</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">defaultFalse</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">canBeDisabled</span></code> method looks about the same except that the section
+would be enabled by default.</p>
+</div>
+<div class="section" id="merging-options">
+<h2>Merging Options<a class="headerlink" href="#merging-options" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Extra options concerning the merge process may be provided. For arrays:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">performNoDeepMerging()</span></code></dt>
+<dd>When the value is also defined in a second configuration array, donâ€™t
+try to merge an array, but overwrite it entirely</dd>
+</dl>
+<p>For all nodes:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">cannotBeOverwritten()</span></code></dt>
+<dd>donâ€™t let other configuration arrays overwrite an existing value for this node</dd>
+</dl>
+</div>
+<div class="section" id="appending-sections">
+<h2>Appending Sections<a class="headerlink" href="#appending-sections" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>If you have a complex configuration to validate then the tree can grow to
+be large and you may want to split it up into sections. You can do this by
+making a section a separate node and then appending it into the main tree
+with <code class="docutils literal"><span class="pre">append()</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">getConfigTreeBuilder</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$treeBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TreeBuilder</span><span class="p">();</span>
+    <span class="nv">$rootNode</span> <span class="o">=</span> <span class="nv">$treeBuilder</span><span class="o">-&gt;</span><span class="na">root</span><span class="p">(</span><span class="s1">&#39;database&#39;</span><span class="p">);</span>
+
+    <span class="nv">$rootNode</span>
+        <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">)</span>
+                <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;driver&#39;</span><span class="p">)</span>
+                        <span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+                        <span class="o">-&gt;</span><span class="na">cannotBeEmpty</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;host&#39;</span><span class="p">)</span>
+                        <span class="o">-&gt;</span><span class="na">defaultValue</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">booleanNode</span><span class="p">(</span><span class="s1">&#39;memory&#39;</span><span class="p">)</span>
+                        <span class="o">-&gt;</span><span class="na">defaultFalse</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">append</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">addParametersNode</span><span class="p">())</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="p">;</span>
+
+    <span class="k">return</span> <span class="nv">$treeBuilder</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">addParametersNode</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$builder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TreeBuilder</span><span class="p">();</span>
+    <span class="nv">$node</span> <span class="o">=</span> <span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">root</span><span class="p">(</span><span class="s1">&#39;parameters&#39;</span><span class="p">);</span>
+
+    <span class="nv">$node</span>
+        <span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">requiresAtLeastOneElement</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">useAttributeAsKey</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">prototype</span><span class="p">(</span><span class="s1">&#39;array&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="p">;</span>
+
+    <span class="k">return</span> <span class="nv">$node</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is also useful to help you avoid repeating yourself if you have sections
+of the config that are repeated in different places.</p>
+</div>
+<div class="section" id="normalization">
+<span id="component-config-normalization"></span><h2>Normalization<a class="headerlink" href="#normalization" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>When the config files are processed they are first normalized, then merged
+and finally the tree is used to validate the resulting array. The normalization
+process is used to remove some of the differences that result from different
+configuration formats, mainly the differences between YAML and XML.</p>
+<p>The separator used in keys is typically <code class="docutils literal"><span class="pre">_</span></code> in YAML and <code class="docutils literal"><span class="pre">-</span></code> in XML. For
+example, <code class="docutils literal"><span class="pre">auto_connect</span></code> in YAML and <code class="docutils literal"><span class="pre">auto-connect</span></code> in XML.
+The normalization would make both of these <code class="docutils literal"><span class="pre">auto_connect</span></code>.</p>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">The target key will not be altered if it&#8217;s mixed like
+<code class="docutils literal"><span class="pre">foo-bar_moo</span></code> or if it already exists.</p>
+</div>
+<p>Another difference between YAML and XML is in the way arrays of values may
+be represented. In YAML you may have:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">twig</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">extensions</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="s">&#39;twig.extension.foo&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;twig.extension.bar&#39;</span><span class="p-Indicator">]</span>
+</pre></div>
+</div>
+<p>and in XML:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;twig:config&gt;</span>
+    <span class="nt">&lt;twig:extension&gt;</span>twig.extension.foo<span class="nt">&lt;/twig:extension&gt;</span>
+    <span class="nt">&lt;twig:extension&gt;</span>twig.extension.bar<span class="nt">&lt;/twig:extension&gt;</span>
+<span class="nt">&lt;/twig:config&gt;</span>
+</pre></div>
+</div>
+<p>This difference can be removed in normalization by pluralizing the key used
+in XML. You can specify that you want a key to be pluralized in this way with
+<code class="docutils literal"><span class="pre">fixXmlConfig()</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">fixXmlConfig</span><span class="p">(</span><span class="s1">&#39;extension&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;extensions&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">prototype</span><span class="p">(</span><span class="s1">&#39;scalar&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>If it is an irregular pluralization you can specify the plural to use as
+a second argument:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">fixXmlConfig</span><span class="p">(</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+            <span class="c1">// ...</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>As well as fixing this, <code class="docutils literal"><span class="pre">fixXmlConfig</span></code> ensures that single XML elements
+are still turned into an array. So you may have:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;connection&gt;</span>default<span class="nt">&lt;/connection&gt;</span>
+<span class="nt">&lt;connection&gt;</span>extra<span class="nt">&lt;/connection&gt;</span>
+</pre></div>
+</div>
+<p>and sometimes only:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;connection&gt;</span>default<span class="nt">&lt;/connection&gt;</span>
+</pre></div>
+</div>
+<p>By default <code class="docutils literal"><span class="pre">connection</span></code> would be an array in the first case and a string
+in the second making it difficult to validate. You can ensure it is always
+an array with <code class="docutils literal"><span class="pre">fixXmlConfig</span></code>.</p>
+<p>You can further control the normalization process if you need to. For example,
+you may want to allow a string to be set and used as a particular key or several
+keys to be set explicitly. So that, if everything apart from <code class="docutils literal"><span class="pre">name</span></code> is optional
+in this config:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">connection</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">my_mysql_connection</span>
+    <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">localhost</span>
+    <span class="l-Scalar-Plain">driver</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">mysql</span>
+    <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">user</span>
+    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pass</span>
+</pre></div>
+</div>
+<p>you can allow the following as well:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">connection</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">my_mysql_connection</span>
+</pre></div>
+</div>
+<p>By changing a string value into an associative array with <code class="docutils literal"><span class="pre">name</span></code> as the key:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">beforeNormalization</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">ifString</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">then</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$v</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$v</span><span class="p">);</span> <span class="p">})</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+                <span class="c1">// ...</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="validation-rules">
+<h2>Validation Rules<a class="headerlink" href="#validation-rules" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>More advanced validation rules can be provided using the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ExprBuilder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ExprBuilder.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/ExprBuilder.html" title="Symfony\Component\Config\Definition\Builder\ExprBuilder"><span class="pre">ExprBuilder</span></a></code>. This
+builder implements a fluent interface for a well-known control structure.
+The builder is used for adding advanced validation rules to node definitions, like:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$rootNode</span>
+    <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">arrayNode</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;driver&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">isRequired</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">validate</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="na">ifNotInArray</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;mysql&#39;</span><span class="p">,</span> <span class="s1">&#39;sqlite&#39;</span><span class="p">,</span> <span class="s1">&#39;mssql&#39;</span><span class="p">))</span>
+                        <span class="o">-&gt;</span><span class="na">thenInvalid</span><span class="p">(</span><span class="s1">&#39;Invalid database driver &quot;%s&quot;&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+                <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">end</span><span class="p">()</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>A validation rule always has an &#8220;if&#8221; part. You can specify this part in the
+following ways:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">ifTrue()</span></code></li>
+<li><code class="docutils literal"><span class="pre">ifString()</span></code></li>
+<li><code class="docutils literal"><span class="pre">ifNull()</span></code></li>
+<li><code class="docutils literal"><span class="pre">ifArray()</span></code></li>
+<li><code class="docutils literal"><span class="pre">ifInArray()</span></code></li>
+<li><code class="docutils literal"><span class="pre">ifNotInArray()</span></code></li>
+<li><code class="docutils literal"><span class="pre">always()</span></code></li>
+</ul>
+<p>A validation rule also requires a &#8220;then&#8221; part:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">then()</span></code></li>
+<li><code class="docutils literal"><span class="pre">thenEmptyArray()</span></code></li>
+<li><code class="docutils literal"><span class="pre">thenInvalid()</span></code></li>
+<li><code class="docutils literal"><span class="pre">thenUnset()</span></code></li>
+</ul>
+<p>Usually, &#8220;then&#8221; is a closure. Its return value will be used as a new value
+for the node, instead
+of the node&#8217;s original value.</p>
+</div>
+<div class="section" id="processing-configuration-values">
+<h2>Processing Configuration Values<a class="headerlink" href="#processing-configuration-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Processor.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Processor.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Processor.html" title="Symfony\Component\Config\Definition\Processor"><span class="pre">Processor</span></a></code> uses the tree
+as it was built using the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Config/Definition/Builder/TreeBuilder.html" title="Symfony\Component\Config\Definition\Builder\TreeBuilder"><span class="pre">TreeBuilder</span></a></code>
+to process multiple arrays of configuration values that should be merged.
+If any value is not of the expected type, is mandatory and yet undefined,
+or could not be validated in some other way, an exception will be thrown.
+Otherwise the result is a clean array of configuration values:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Yaml\Yaml</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Definition\Processor</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Acme\DatabaseConfiguration</span><span class="p">;</span>
+
+<span class="nv">$config1</span> <span class="o">=</span> <span class="nx">Yaml</span><span class="o">::</span><span class="na">parse</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/src/Matthias/config/config.yml&#39;</span><span class="p">));</span>
+<span class="nv">$config2</span> <span class="o">=</span> <span class="nx">Yaml</span><span class="o">::</span><span class="na">parse</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/src/Matthias/config/config_extra.yml&#39;</span><span class="p">));</span>
+
+<span class="nv">$configs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nv">$config1</span><span class="p">,</span> <span class="nv">$config2</span><span class="p">);</span>
+
+<span class="nv">$processor</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Processor</span><span class="p">();</span>
+<span class="nv">$configuration</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatabaseConfiguration</span><span class="p">();</span>
+<span class="nv">$processedConfiguration</span> <span class="o">=</span> <span class="nv">$processor</span><span class="o">-&gt;</span><span class="na">processConfiguration</span><span class="p">(</span>
+    <span class="nv">$configuration</span><span class="p">,</span>
+    <span class="nv">$configs</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html" class="btn btn-neutral float-right" title="Console">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="caching.html" tppabs="http://symfony.cn/docs/components/config/caching.html" class="btn btn-neutral" title="Caching Based on Resources"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

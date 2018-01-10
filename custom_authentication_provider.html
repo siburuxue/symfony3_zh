@@ -1,0 +1,939 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to Create a custom Authentication Provider &mdash; Symfony Framework Documentation  ÊñáÊ°£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  ÊñáÊ°£" href="../../index.html"/>
+        <link rel="up" title="Security" href="index.html"/>
+        <link rel="next" title="Using pre Authenticated Security Firewalls" href="pre_authenticated.html"/>
+        <link rel="prev" title="How to Authenticate Users with API Keys" href="api_key_authentication.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">Âø´ÈÄüÂÖ•Èó®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">ÊÄªËßà</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">ËßÜÂõæ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">‰ª£Á†ÅÁªìÊûÑ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">ÊïôÁ®ã</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">SymfonyÂíåHTTPÂü∫Á°ÄÂ∑•ÂÖ∑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs Á∫ØPHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">ÂÆâË£ÖÂíåÈÖçÁΩÆSymfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">ÂàõÂª∫È°µÈù¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">Ë∑ØÁî±ÔºàRoutingÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">ÂàõÂª∫Âíå‰ΩøÁî®Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">Êï∞ÊçÆÂ∫ìÂíåDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">Êï∞ÊçÆÂ∫ìÂíåPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">ÊµãËØï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">Ê†°È™å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">ÂÆâÂÖ®ÊÄß</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">Â§öËØ≠Ë®Ä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">ÊúçÂä°ÂÆπÂô®ÔºàService ContainerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">ÊÄßËÉΩ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">Ê†∏ÂøÉÂäüËÉΩ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">ÈùôÊÄÅÊñá‰ª∂Â§ÑÁêÜÔºàAsseticÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">ÂåÖÔºàBundleÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ÁºìÂ≠ò</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">ÈÖçÁΩÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">ÂëΩ‰ª§Ë°å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">ÈÉ®ÁΩ≤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">ÈÇÆ‰ª∂</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">‰∫ã‰ª∂ÂàÜÂèëÂô®ÔºàDispatcherÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">Ë°®ËææÂºèÔºàExpressionÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">ÊúÄ‰Ω≥ÂÆûË∑µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">SymfonyÊ°ÜÊû∂ÊúÄ‰Ω≥ÂÆûË∑µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">ÂàõÂª∫È°πÁõÆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">ÈÖçÁΩÆÂèÇÊï∞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">‰∏öÂä°ÈÄªËæë‰ª£Á†ÅÁöÑÁªÑÁªá</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">ÊéßÂà∂Âô®ÔºàControllerÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">Ê®°Êùø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">Ë°®Âçï</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">Â§öËØ≠Ë®ÄÊîØÊåÅ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">ÂÆâÂÖ®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">ÈùôÊÄÅÊñá‰ª∂ÔºàAssetsÔºâ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">ÊµãËØï</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ÁªÑ‰ª∂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">ÂèÇËÄÉ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">Ë¥°ÁåÆ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">Ë¥°ÁåÆ‰ª£Á†Å</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">Ë¥°ÁåÆÊñáÊ°£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">Á§æÂå∫</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">ÊâãÂÜå</a> &raquo;</li>
+      
+          <li><a href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a> &raquo;</li>
+      
+    <li>How to Create a custom Authentication Provider</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="custom_authentication_provider.txt" tppabs="http://symfony.cn/docs/_sources/cookbook/security/custom_authentication_provider.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-to-create-a-custom-authentication-provider">
+<span id="index-0"></span><h1>How to Create a custom Authentication Provider<a class="headerlink" href="#how-to-create-a-custom-authentication-provider" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h1>
+<div class="admonition tip">
+<p class="first admonition-title">Â∞èÊäÄÂ∑ß</p>
+<p>Creating a custom authentication system is hard, and this entry will walk
+you through that process. But depending on your needs, you may be able
+to solve your problem in a simpler way using these documents:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="custom_password_authenticator.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_password_authenticator.html"><em>How to Create a Custom Form Password Authenticator</em></a></li>
+<li><a class="reference internal" href="api_key_authentication.html" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html"><em>How to Authenticate Users with API Keys</em></a></li>
+</ul>
+</div>
+<p>If you have read the chapter on <a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html"><em>ÂÆâÂÖ®ÊÄß</em></a>, you understand the
+distinction Symfony makes between authentication and authorization in the
+implementation of security. This chapter discusses the core classes involved
+in the authentication process, and how to implement a custom authentication
+provider. Because authentication and authorization are separate concepts,
+this extension will be user-provider agnostic, and will function with your
+application&#8217;s user providers, may they be based in memory, a database, or
+wherever else you choose to store them.</p>
+<div class="section" id="meet-wsse">
+<h2>Meet WSSE<a class="headerlink" href="#meet-wsse" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The following chapter demonstrates how to create a custom authentication
+provider for WSSE authentication. The security protocol for WSSE provides
+several security benefits:</p>
+<ol class="arabic simple">
+<li>Username / Password encryption</li>
+<li>Safe guarding against replay attacks</li>
+<li>No web server configuration required</li>
+</ol>
+<p>WSSE is very useful for the securing of web services, may they be SOAP or
+REST.</p>
+<p>There is plenty of great documentation on <a class="reference external" href="javascript:if(confirm('http://www.xml.com/pub/a/2003/12/17/dive.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://www.xml.com/pub/a/2003/12/17/dive.html'" tppabs="http://www.xml.com/pub/a/2003/12/17/dive.html">WSSE</a>, but this article will
+focus not on the security protocol, but rather the manner in which a custom
+protocol can be added to your Symfony application. The basis of WSSE is
+that a request header is checked for encrypted credentials, verified using
+a timestamp and <a class="reference external" href="javascript:if(confirm('http://en.wikipedia.org/wiki/Cryptographic_nonce  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://en.wikipedia.org/wiki/Cryptographic_nonce'" tppabs="http://en.wikipedia.org/wiki/Cryptographic_nonce">nonce</a>, and authenticated for the requested user using a
+password digest.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">WSSE also supports application key validation, which is useful for web
+services, but is outside the scope of this chapter.</p>
+</div>
+</div>
+<div class="section" id="the-token">
+<h2>The Token<a class="headerlink" href="#the-token" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The role of the token in the Symfony security context is an important one.
+A token represents the user authentication data present in the request. Once
+a request is authenticated, the token retains the user&#8217;s data, and delivers
+this data across the security context. First, you&#8217;ll create your token class.
+This will allow the passing of all relevant information to your authentication
+provider.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Security/Authentication/Token/WsseUserToken.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Security\Authentication\Token</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Authentication\Token\AbstractToken</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">WsseUserToken</span> <span class="k">extends</span> <span class="nx">AbstractToken</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$created</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$digest</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$nonce</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="k">array</span> <span class="nv">$roles</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$roles</span><span class="p">);</span>
+
+        <span class="c1">// If the user has roles, consider it authenticated</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">setAuthenticated</span><span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$roles</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCredentials</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The <code class="docutils literal"><span class="pre">WsseUserToken</span></code> class extends the Security component&#8217;s
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Token/AbstractToken.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Token/AbstractToken.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Token/AbstractToken.html" title="Symfony\Component\Security\Core\Authentication\Token\AbstractToken"><span class="pre">AbstractToken</span></a></code>
+class, which provides basic token functionality. Implement the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Token/TokenInterface.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Token/TokenInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Token/TokenInterface.html" title="Symfony\Component\Security\Core\Authentication\Token\TokenInterface"><span class="pre">TokenInterface</span></a></code>
+on any class to use as a token.</p>
+</div>
+</div>
+<div class="section" id="the-listener">
+<h2>The Listener<a class="headerlink" href="#the-listener" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>Next, you need a listener to listen on the firewall. The listener
+is responsible for fielding requests to the firewall and calling the authentication
+provider. A listener must be an instance of
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Http/Firewall/ListenerInterface.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Http/Firewall/ListenerInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Http/Firewall/ListenerInterface.html" title="Symfony\Component\Security\Http\Firewall\ListenerInterface"><span class="pre">ListenerInterface</span></a></code>.
+A security listener should handle the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpKernel/Event/GetResponseEvent.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpKernel/Event/GetResponseEvent.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpKernel/Event/GetResponseEvent.html" title="Symfony\Component\HttpKernel\Event\GetResponseEvent"><span class="pre">GetResponseEvent</span></a></code> event, and
+set an authenticated token in the token storage if successful.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Security/Firewall/WsseListener.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Security\Firewall</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Event\GetResponseEvent</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Exception\AuthenticationException</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Http\Firewall\ListenerInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">AppBundle\Security\Authentication\Token\WsseUserToken</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">WsseListener</span> <span class="k">implements</span> <span class="nx">ListenerInterface</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$tokenStorage</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$authenticationManager</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">TokenStorageInterface</span> <span class="nv">$tokenStorage</span><span class="p">,</span> <span class="nx">AuthenticationManagerInterface</span> <span class="nv">$authenticationManager</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tokenStorage</span> <span class="o">=</span> <span class="nv">$tokenStorage</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">authenticationManager</span> <span class="o">=</span> <span class="nv">$authenticationManager</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">handle</span><span class="p">(</span><span class="nx">GetResponseEvent</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$request</span> <span class="o">=</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">();</span>
+
+        <span class="nv">$wsseRegex</span> <span class="o">=</span> <span class="s1">&#39;/UsernameToken Username=&quot;([^&quot;]+)&quot;, PasswordDigest=&quot;([^&quot;]+)&quot;, Nonce=&quot;([^&quot;]+)&quot;, Created=&quot;([^&quot;]+)&quot;/&#39;</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">headers</span><span class="o">-&gt;</span><span class="na">has</span><span class="p">(</span><span class="s1">&#39;x-wsse&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="mi">1</span> <span class="o">!==</span> <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$wsseRegex</span><span class="p">,</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">headers</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;x-wsse&#39;</span><span class="p">),</span> <span class="nv">$matches</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nv">$token</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WsseUserToken</span><span class="p">();</span>
+        <span class="nv">$token</span><span class="o">-&gt;</span><span class="na">setUser</span><span class="p">(</span><span class="nv">$matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+        <span class="nv">$token</span><span class="o">-&gt;</span><span class="na">digest</span>   <span class="o">=</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+        <span class="nv">$token</span><span class="o">-&gt;</span><span class="na">nonce</span>    <span class="o">=</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+        <span class="nv">$token</span><span class="o">-&gt;</span><span class="na">created</span>  <span class="o">=</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="nv">$authToken</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">authenticationManager</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">(</span><span class="nv">$token</span><span class="p">);</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tokenStorage</span><span class="o">-&gt;</span><span class="na">setToken</span><span class="p">(</span><span class="nv">$authToken</span><span class="p">);</span>
+
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">AuthenticationException</span> <span class="nv">$failed</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// ... you might log something here</span>
+
+            <span class="c1">// To deny the authentication clear the token. This will redirect to the login page.</span>
+            <span class="c1">// Make sure to only clear your token, not those of other authentication listeners.</span>
+            <span class="c1">// $token = $this-&gt;tokenStorage-&gt;getToken();</span>
+            <span class="c1">// if ($token instanceof WsseUserToken &amp;&amp; $this-&gt;providerKey === $token-&gt;getProviderKey()) {</span>
+            <span class="c1">//     $this-&gt;tokenStorage-&gt;setToken(null);</span>
+            <span class="c1">// }</span>
+            <span class="c1">// return;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// By default deny authorization</span>
+        <span class="nv">$response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">();</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">setStatusCode</span><span class="p">(</span><span class="nx">Response</span><span class="o">::</span><span class="na">HTTP_FORBIDDEN</span><span class="p">);</span>
+        <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">setResponse</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This listener checks the request for the expected <code class="docutils literal"><span class="pre">X-WSSE</span></code> header, matches
+the value returned for the expected WSSE information, creates a token using
+that information, and passes the token on to the authentication manager. If
+the proper information is not provided, or the authentication manager throws
+an <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Core/Exception/AuthenticationException.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Core/Exception/AuthenticationException.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Core/Exception/AuthenticationException.html" title="Symfony\Component\Security\Core\Exception\AuthenticationException"><span class="pre">AuthenticationException</span></a></code>,
+a 403 Response is returned.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">A class not used above, the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Http/Firewall/AbstractAuthenticationListener.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Http/Firewall/AbstractAuthenticationListener.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Http/Firewall/AbstractAuthenticationListener.html" title="Symfony\Component\Security\Http\Firewall\AbstractAuthenticationListener"><span class="pre">AbstractAuthenticationListener</span></a></code>
+class, is a very useful base class which provides commonly needed functionality
+for security extensions. This includes maintaining the token in the session,
+providing success / failure handlers, login form URLs, and more. As WSSE
+does not require maintaining authentication sessions or login forms, it
+won&#8217;t be used for this example.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">Returning prematurely from the listener is relevant only if you want to chain
+authentication providers (for example to allow anonymous users). If you want
+to forbid access to anonymous users and have a nice 403 error, you should set
+the status code of the response before returning.</p>
+</div>
+</div>
+<div class="section" id="the-authentication-provider">
+<h2>The Authentication Provider<a class="headerlink" href="#the-authentication-provider" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>The authentication provider will do the verification of the <code class="docutils literal"><span class="pre">WsseUserToken</span></code>.
+Namely, the provider will verify the <code class="docutils literal"><span class="pre">Created</span></code> header value is valid within
+five minutes, the <code class="docutils literal"><span class="pre">Nonce</span></code> header value is unique within five minutes, and
+the <code class="docutils literal"><span class="pre">PasswordDigest</span></code> header value matches with the user&#8217;s password.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Security/Authentication/Provider/WsseProvider.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Security\Authentication\Provider</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\User\UserProviderInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Exception\AuthenticationException</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Exception\NonceExpiredException</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Authentication\Token\TokenInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">AppBundle\Security\Authentication\Token\WsseUserToken</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Security\Core\Util\StringUtils</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">WsseProvider</span> <span class="k">implements</span> <span class="nx">AuthenticationProviderInterface</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$userProvider</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$cacheDir</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">UserProviderInterface</span> <span class="nv">$userProvider</span><span class="p">,</span> <span class="nv">$cacheDir</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">userProvider</span> <span class="o">=</span> <span class="nv">$userProvider</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cacheDir</span>     <span class="o">=</span> <span class="nv">$cacheDir</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">authenticate</span><span class="p">(</span><span class="nx">TokenInterface</span> <span class="nv">$token</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">userProvider</span><span class="o">-&gt;</span><span class="na">loadUserByUsername</span><span class="p">(</span><span class="nv">$token</span><span class="o">-&gt;</span><span class="na">getUsername</span><span class="p">());</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">validateDigest</span><span class="p">(</span><span class="nv">$token</span><span class="o">-&gt;</span><span class="na">digest</span><span class="p">,</span> <span class="nv">$token</span><span class="o">-&gt;</span><span class="na">nonce</span><span class="p">,</span> <span class="nv">$token</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">,</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getPassword</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="nv">$authenticatedToken</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WsseUserToken</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getRoles</span><span class="p">());</span>
+            <span class="nv">$authenticatedToken</span><span class="o">-&gt;</span><span class="na">setUser</span><span class="p">(</span><span class="nv">$user</span><span class="p">);</span>
+
+            <span class="k">return</span> <span class="nv">$authenticatedToken</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">throw</span> <span class="k">new</span> <span class="nx">AuthenticationException</span><span class="p">(</span><span class="s1">&#39;The WSSE authentication failed.&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * This function is specific to Wsse authentication and is only used to help this example</span>
+<span class="sd">     *</span>
+<span class="sd">     * For more information specific to the logic here, see</span>
+<span class="sd">     * https://github.com/symfony/symfony-docs/pull/3134#issuecomment-27699129</span>
+<span class="sd">     */</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">validateDigest</span><span class="p">(</span><span class="nv">$digest</span><span class="p">,</span> <span class="nv">$nonce</span><span class="p">,</span> <span class="nv">$created</span><span class="p">,</span> <span class="nv">$secret</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Check created time is not in the future</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">strtotime</span><span class="p">(</span><span class="nv">$created</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">time</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Expire timestamp after 5 minutes</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">time</span><span class="p">()</span> <span class="o">-</span> <span class="nb">strtotime</span><span class="p">(</span><span class="nv">$created</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Validate that the nonce is *not* used in the last 5 minutes</span>
+        <span class="c1">// if it has, this could be a replay attack</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cacheDir</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="nv">$nonce</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cacheDir</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="nv">$nonce</span><span class="p">)</span> <span class="o">+</span> <span class="mi">300</span> <span class="o">&gt;</span> <span class="nb">time</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">NonceExpiredException</span><span class="p">(</span><span class="s1">&#39;Previously used nonce detected&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// If cache directory does not exist we create it</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cacheDir</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nb">mkdir</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cacheDir</span><span class="p">,</span> <span class="mo">0777</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nb">file_put_contents</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cacheDir</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="nv">$nonce</span><span class="p">,</span> <span class="nb">time</span><span class="p">());</span>
+
+        <span class="c1">// Validate Secret</span>
+        <span class="nv">$expected</span> <span class="o">=</span> <span class="nb">base64_encode</span><span class="p">(</span><span class="nb">sha1</span><span class="p">(</span><span class="nb">base64_decode</span><span class="p">(</span><span class="nv">$nonce</span><span class="p">)</span><span class="o">.</span><span class="nv">$created</span><span class="o">.</span><span class="nv">$secret</span><span class="p">,</span> <span class="k">true</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="nx">StringUtils</span><span class="o">::</span><span class="na">equals</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$digest</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">supports</span><span class="p">(</span><span class="nx">TokenInterface</span> <span class="nv">$token</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$token</span> <span class="nx">instanceof</span> <span class="nx">WsseUserToken</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Provider/AuthenticationProviderInterface.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Provider/AuthenticationProviderInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Core/Authentication/Provider/AuthenticationProviderInterface.html" title="Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface"><span class="pre">AuthenticationProviderInterface</span></a></code>
+requires an <code class="docutils literal"><span class="pre">authenticate</span></code> method on the user token, and a <code class="docutils literal"><span class="pre">supports</span></code>
+method, which tells the authentication manager whether or not to use this
+provider for the given token. In the case of multiple providers, the
+authentication manager will then move to the next provider in the list.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">The comparsion of the expected and the provided digests uses a constant
+time comparison provided by the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Security/Core/Util/StringUtils.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Component/Security/Core/Util/StringUtils.html#method_equals'" tppabs="http://api.symfony.com/master/Symfony/Component/Security/Core/Util/StringUtils.html#method_equals" title="Symfony\Component\Security\Core\Util\StringUtils::equals()"><span class="pre">equals()</span></a></code>
+method of the <code class="docutils literal"><span class="pre">StringUtils</span></code> class. It is used to mitigate possible
+<a class="reference external" href="javascript:if(confirm('http://en.wikipedia.org/wiki/Timing_attack  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://en.wikipedia.org/wiki/Timing_attack'" tppabs="http://en.wikipedia.org/wiki/Timing_attack">timing attacks</a>.</p>
+</div>
+</div>
+<div class="section" id="the-factory">
+<h2>The Factory<a class="headerlink" href="#the-factory" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>You have created a custom token, custom listener, and custom provider. Now
+you need to tie them all together. How do you make a unique provider available
+for every firewall? The answer is by using a <em>factory</em>. A factory
+is where you hook into the Security component, telling it the name of your
+provider and any configuration options available for it. First, you must
+create a class which implements
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/SecurityFactoryInterface.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/SecurityFactoryInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/SecurityFactoryInterface.html" title="Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface"><span class="pre">SecurityFactoryInterface</span></a></code>.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/DependencyInjection/Security/Factory/WsseFactory.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\DependencyInjection\Security\Factory</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\ContainerBuilder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\Reference</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\DefinitionDecorator</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Config\Definition\Builder\NodeDefinition</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">WsseFactory</span> <span class="k">implements</span> <span class="nx">SecurityFactoryInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">(</span><span class="nx">ContainerBuilder</span> <span class="nv">$container</span><span class="p">,</span> <span class="nv">$id</span><span class="p">,</span> <span class="nv">$config</span><span class="p">,</span> <span class="nv">$userProvider</span><span class="p">,</span> <span class="nv">$defaultEntryPoint</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$providerId</span> <span class="o">=</span> <span class="s1">&#39;security.authentication.provider.wsse.&#39;</span><span class="o">.</span><span class="nv">$id</span><span class="p">;</span>
+        <span class="nv">$container</span>
+            <span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="nv">$providerId</span><span class="p">,</span> <span class="k">new</span> <span class="nx">DefinitionDecorator</span><span class="p">(</span><span class="s1">&#39;wsse.security.authentication.provider&#39;</span><span class="p">))</span>
+            <span class="o">-&gt;</span><span class="na">replaceArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Reference</span><span class="p">(</span><span class="nv">$userProvider</span><span class="p">))</span>
+        <span class="p">;</span>
+
+        <span class="nv">$listenerId</span> <span class="o">=</span> <span class="s1">&#39;security.authentication.listener.wsse.&#39;</span><span class="o">.</span><span class="nv">$id</span><span class="p">;</span>
+        <span class="nv">$listener</span> <span class="o">=</span> <span class="nv">$container</span><span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="nv">$listenerId</span><span class="p">,</span> <span class="k">new</span> <span class="nx">DefinitionDecorator</span><span class="p">(</span><span class="s1">&#39;wsse.security.authentication.listener&#39;</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="nv">$providerId</span><span class="p">,</span> <span class="nv">$listenerId</span><span class="p">,</span> <span class="nv">$defaultEntryPoint</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getPosition</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;pre_auth&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getKey</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;wsse&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">addConfiguration</span><span class="p">(</span><span class="nx">NodeDefinition</span> <span class="nv">$node</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/SecurityFactoryInterface.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/SecurityFactoryInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/SecurityFactoryInterface.html" title="Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface"><span class="pre">SecurityFactoryInterface</span></a></code>
+requires the following methods:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">create</span></code></dt>
+<dd>Method which adds the listener and authentication provider
+to the DI container for the appropriate security context.</dd>
+<dt><code class="docutils literal"><span class="pre">getPosition</span></code></dt>
+<dd>Method which must be of type <code class="docutils literal"><span class="pre">pre_auth</span></code>, <code class="docutils literal"><span class="pre">form</span></code>, <code class="docutils literal"><span class="pre">http</span></code>,
+and <code class="docutils literal"><span class="pre">remember_me</span></code> and defines the position at which the provider is called.</dd>
+<dt><code class="docutils literal"><span class="pre">getKey</span></code></dt>
+<dd>Method which defines the configuration key used to reference
+the provider in the firewall configuration.</dd>
+<dt><code class="docutils literal"><span class="pre">addConfiguration</span></code></dt>
+<dd>Method which is used to define the configuration
+options underneath the configuration key in your security configuration.
+Setting configuration options are explained later in this chapter.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">A class not used in this example,
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.html'" tppabs="http://api.symfony.com/master/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.html" title="Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\AbstractFactory"><span class="pre">AbstractFactory</span></a></code>,
+is a very useful base class which provides commonly needed functionality
+for security factories. It may be useful when defining an authentication
+provider of a different type.</p>
+</div>
+<p>Now that you have created a factory class, the <code class="docutils literal"><span class="pre">wsse</span></code> key can be used as
+a firewall in your security configuration.</p>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">You may be wondering &#8220;why do you need a special factory class to add listeners
+and providers to the dependency injection container?&#8221;. This is a very
+good question. The reason is you can use your firewall multiple times,
+to secure multiple parts of your application. Because of this, each
+time your firewall is used, a new service is created in the DI container.
+The factory is what creates these new services.</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>It&#8217;s time to see your authentication provider in action. You will need to
+do a few things in order to make this work. The first thing is to add the
+services above to the DI container. Your factory class above makes reference
+to service ids that do not exist yet: <code class="docutils literal"><span class="pre">wsse.security.authentication.provider</span></code> and
+<code class="docutils literal"><span class="pre">wsse.security.authentication.listener</span></code>. It&#8217;s time to define those services.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># src/AppBundle/Resources/config/services.yml</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">wsse.security.authentication.provider</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">AppBundle\Security\Authentication\Provider\WsseProvider</span>
+        <span class="l-Scalar-Plain">arguments</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p-Indicator">,</span> <span class="s">&quot;%kernel.cache_dir%/security/nonces&quot;</span><span class="p-Indicator">]</span>
+
+    <span class="l-Scalar-Plain">wsse.security.authentication.listener</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">AppBundle\Security\Firewall\WsseListener</span>
+        <span class="l-Scalar-Plain">arguments</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="s">&quot;@security.token_storage&quot;</span><span class="p-Indicator">,</span> <span class="s">&quot;@security.authentication.manager&quot;</span><span class="p-Indicator">]</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- src/AppBundle/Resources/config/services.xml --&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;services&gt;</span>
+        <span class="nt">&lt;service</span> <span class="na">id=</span><span class="s">&quot;wsse.security.authentication.provider&quot;</span>
+            <span class="na">class=</span><span class="s">&quot;AppBundle\Security\Authentication\Provider\WsseProvider&quot;</span> <span class="na">public=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- User Provider --&gt;</span>
+            <span class="nt">&lt;argument&gt;</span>%kernel.cache_dir%/security/nonces<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/service&gt;</span>
+
+        <span class="nt">&lt;service</span> <span class="na">id=</span><span class="s">&quot;wsse.security.authentication.listener&quot;</span>
+            <span class="na">class=</span><span class="s">&quot;AppBundle\Security\Firewall\WsseListener&quot;</span> <span class="na">public=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">type=</span><span class="s">&quot;service&quot;</span> <span class="na">id=</span><span class="s">&quot;security.token_storage&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">type=</span><span class="s">&quot;service&quot;</span> <span class="na">id=</span><span class="s">&quot;security.authentication.manager&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/service&gt;</span>
+    <span class="nt">&lt;/services&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Resources/config/services.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\Definition</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\Reference</span><span class="p">;</span>
+
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="s1">&#39;wsse.security.authentication.provider&#39;</span><span class="p">,</span>
+    <span class="k">new</span> <span class="nx">Definition</span><span class="p">(</span>
+        <span class="s1">&#39;AppBundle\Security\Authentication\Provider\WsseProvider&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;%kernel.cache_dir%/security/nonces&#39;</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="s1">&#39;wsse.security.authentication.listener&#39;</span><span class="p">,</span>
+    <span class="k">new</span> <span class="nx">Definition</span><span class="p">(</span>
+        <span class="s1">&#39;AppBundle\Security\Firewall\WsseListener&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+            <span class="k">new</span> <span class="nx">Reference</span><span class="p">(</span><span class="s1">&#39;security.token_storage&#39;</span><span class="p">),</span>
+            <span class="k">new</span> <span class="nx">Reference</span><span class="p">(</span><span class="s1">&#39;security.authentication.manager&#39;</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Now that your services are defined, tell your security context about your
+factory in your bundle class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/AppBundle.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">AppBundle\DependencyInjection\Security\Factory\WsseFactory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Bundle\Bundle</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\DependencyInjection\ContainerBuilder</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">AppBundle</span> <span class="k">extends</span> <span class="nx">Bundle</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">build</span><span class="p">(</span><span class="nx">ContainerBuilder</span> <span class="nv">$container</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">build</span><span class="p">(</span><span class="nv">$container</span><span class="p">);</span>
+
+        <span class="nv">$extension</span> <span class="o">=</span> <span class="nv">$container</span><span class="o">-&gt;</span><span class="na">getExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">);</span>
+        <span class="nv">$extension</span><span class="o">-&gt;</span><span class="na">addSecurityListenerFactory</span><span class="p">(</span><span class="k">new</span> <span class="nx">WsseFactory</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You are finished! You can now define parts of your app as under WSSE protection.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">wsse_secured</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">pattern</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/api/.*</span>
+            <span class="l-Scalar-Plain">stateless</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+            <span class="l-Scalar-Plain">wsse</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;config&gt;</span>
+    <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;wsse_secured&quot;</span> <span class="na">pattern=</span><span class="s">&quot;/api/.*&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;stateless</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;wsse</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/firewall&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;wsse_secured&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;pattern&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/api/.*&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;stateless&#39;</span>    <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s1">&#39;wsse&#39;</span>    <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Congratulations! You have written your very own custom security authentication
+provider!</p>
+</div>
+<div class="section" id="a-little-extra">
+<h2>A little Extra<a class="headerlink" href="#a-little-extra" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h2>
+<p>How about making your WSSE authentication provider a bit more exciting? The
+possibilities are endless. Why don&#8217;t you start by adding some sparkle
+to that shine?</p>
+<div class="section" id="id1">
+<h3>Configuration<a class="headerlink" href="#id1" title="Ê∞∏‰πÖÈìæÊé•Ëá≥Ê†áÈ¢ò">¬∂</a></h3>
+<p>You can add custom options under the <code class="docutils literal"><span class="pre">wsse</span></code> key in your security configuration.
+For instance, the time allowed before expiring the <code class="docutils literal"><span class="pre">Created</span></code> header item,
+by default, is 5 minutes. Make this configurable, so different firewalls
+can have different timeout lengths.</p>
+<p>You will first need to edit <code class="docutils literal"><span class="pre">WsseFactory</span></code> and define the new option in
+the <code class="docutils literal"><span class="pre">addConfiguration</span></code> method.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">class</span> <span class="nc">WsseFactory</span> <span class="k">implements</span> <span class="nx">SecurityFactoryInterface</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">addConfiguration</span><span class="p">(</span><span class="nx">NodeDefinition</span> <span class="nv">$node</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="nv">$node</span>
+        <span class="o">-&gt;</span><span class="na">children</span><span class="p">()</span>
+        <span class="o">-&gt;</span><span class="na">scalarNode</span><span class="p">(</span><span class="s1">&#39;lifetime&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">defaultValue</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">end</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now, in the <code class="docutils literal"><span class="pre">create</span></code> method of the factory, the <code class="docutils literal"><span class="pre">$config</span></code> argument will
+contain a <code class="docutils literal"><span class="pre">lifetime</span></code> key, set to 5 minutes (300 seconds) unless otherwise
+set in the configuration. Pass this argument to your authentication provider
+in order to put it to use.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">class</span> <span class="nc">WsseFactory</span> <span class="k">implements</span> <span class="nx">SecurityFactoryInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">(</span><span class="nx">ContainerBuilder</span> <span class="nv">$container</span><span class="p">,</span> <span class="nv">$id</span><span class="p">,</span> <span class="nv">$config</span><span class="p">,</span> <span class="nv">$userProvider</span><span class="p">,</span> <span class="nv">$defaultEntryPoint</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$providerId</span> <span class="o">=</span> <span class="s1">&#39;security.authentication.provider.wsse.&#39;</span><span class="o">.</span><span class="nv">$id</span><span class="p">;</span>
+        <span class="nv">$container</span>
+            <span class="o">-&gt;</span><span class="na">setDefinition</span><span class="p">(</span><span class="nv">$providerId</span><span class="p">,</span>
+              <span class="k">new</span> <span class="nx">DefinitionDecorator</span><span class="p">(</span><span class="s1">&#39;wsse.security.authentication.provider&#39;</span><span class="p">))</span>
+            <span class="o">-&gt;</span><span class="na">replaceArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Reference</span><span class="p">(</span><span class="nv">$userProvider</span><span class="p">))</span>
+            <span class="o">-&gt;</span><span class="na">replaceArgument</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;lifetime&#39;</span><span class="p">]);</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Ê≥®Ëß£</p>
+<p class="last">You&#8217;ll also need to add a third argument to the <code class="docutils literal"><span class="pre">wsse.security.authentication.provider</span></code>
+service configuration, which can be blank, but will be filled in with
+the lifetime in the factory. The <code class="docutils literal"><span class="pre">WsseProvider</span></code> class will also now
+need to accept a third constructor argument - the lifetime - which it
+should use instead of the hard-coded 300 seconds. These two steps are
+not shown here.</p>
+</div>
+<p>The lifetime of each WSSE request is now configurable, and can be
+set to any desirable value per firewall.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">wsse_secured</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">pattern</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/api/.*</span>
+            <span class="l-Scalar-Plain">stateless</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+            <span class="l-Scalar-Plain">wsse</span><span class="p-Indicator">:</span>      <span class="p-Indicator">{</span> <span class="nv">lifetime</span><span class="p-Indicator">:</span> <span class="nv">30</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;config&gt;</span>
+    <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;wsse_secured&quot;</span>
+        <span class="na">pattern=</span><span class="s">&quot;/api/.*&quot;</span>
+    <span class="nt">&gt;</span>
+        <span class="nt">&lt;stateless</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;wsse</span> <span class="na">lifetime=</span><span class="s">&quot;30&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/firewall&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;wsse_secured&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;pattern&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/api/.*&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;stateless&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s1">&#39;wsse&#39;</span>    <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;lifetime&#39;</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The rest is up to you! Any relevant configuration items can be defined
+in the factory and consumed or passed to the other classes in the container.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pre_authenticated.html" tppabs="http://symfony.cn/docs/cookbook/security/pre_authenticated.html" class="btn btn-neutral float-right" title="Using pre Authenticated Security Firewalls">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api_key_authentication.html" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html" class="btn btn-neutral" title="How to Authenticate Users with API Keys"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ÁâàÊùÉÊâÄÊúâ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,783 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The DomCrawler Component &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../index.html"/>
+        <link rel="up" title="ç»„ä»¶" href="index.html"/>
+        <link rel="next" title="EventDispatcher" href="event_dispatcher/index.html"/>
+        <link rel="prev" title="Container Building Workflow" href="dependency_injection/workflow.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+    <li>The DomCrawler Component</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="dom_crawler.txt.htm" tppabs="http://symfony.cn/docs/_sources/components/dom_crawler.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-domcrawler-component">
+<span id="index-0"></span><h1>The DomCrawler Component<a class="headerlink" href="#the-domcrawler-component" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<blockquote>
+<div>The DomCrawler component eases DOM navigation for HTML and XML documents.</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">While possible, the DomCrawler component is not designed for manipulation
+of the DOM or re-dumping HTML/XML.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You can install the component in 2 different ways:</p>
+<ul class="simple">
+<li><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html"><em>Install it via Composer</em></a> (<code class="docutils literal"><span class="pre">symfony/dom-crawler</span></code> on <a class="reference external" href="javascript:if(confirm('https://packagist.org/packages/symfony/dom-crawler  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://packagist.org/packages/symfony/dom-crawler'" tppabs="https://packagist.org/packages/symfony/dom-crawler">Packagist</a>);</li>
+<li>Use the official Git repository (<a class="reference external" href="javascript:if(confirm('https://github.com/symfony/DomCrawler  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/DomCrawler'" tppabs="https://github.com/symfony/DomCrawler">https://github.com/symfony/DomCrawler</a>).</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html" title="Symfony\Component\DomCrawler\Crawler"><span class="pre">Crawler</span></a></code> class provides methods
+to query and manipulate HTML and XML documents.</p>
+<p>An instance of the Crawler represents a set (<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.splobjectstorage.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.splobjectstorage.php'" tppabs="http://php.net/manual/en/class.splobjectstorage.php" title="SplObjectStorage"><span class="pre">SplObjectStorage</span></a></code>)
+of <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domelement.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domelement.php'" tppabs="http://php.net/manual/en/class.domelement.php" title="DOMElement"><span class="pre">DOMElement</span></a></code> objects, which are basically nodes that you can
+traverse easily:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\DomCrawler\Crawler</span><span class="p">;</span>
+
+<span class="nv">$html</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;&#39;HTML&#39;</span>
+<span class="s">&lt;!DOCTYPE html&gt;</span>
+<span class="s">&lt;html&gt;</span>
+<span class="s">    &lt;body&gt;</span>
+<span class="s">        &lt;p class=&quot;message&quot;&gt;Hello World!&lt;/p&gt;</span>
+<span class="s">        &lt;p&gt;Hello Crawler!&lt;/p&gt;</span>
+<span class="s">    &lt;/body&gt;</span>
+<span class="s">&lt;/html&gt;</span>
+<span class="s">HTML;</span>
+
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Crawler</span><span class="p">(</span><span class="nv">$html</span><span class="p">);</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$crawler</span> <span class="k">as</span> <span class="nv">$domElement</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span> <span class="nv">$domElement</span><span class="o">-&gt;</span><span class="na">nodeName</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Specialized <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html" title="Symfony\Component\DomCrawler\Link"><span class="pre">Link</span></a></code> and
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html" title="Symfony\Component\DomCrawler\Form"><span class="pre">Form</span></a></code> classes are useful for
+interacting with html links and forms as you traverse through the HTML tree.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">The DomCrawler will attempt to automatically fix your HTML to match the
+official specification. For example, if you nest a <code class="docutils literal"><span class="pre">&lt;p&gt;</span></code> tag inside
+another <code class="docutils literal"><span class="pre">&lt;p&gt;</span></code> tag, it will be moved to be a sibling of the parent tag.
+This is expected and is part of the HTML5 spec. But if you&#8217;re getting
+unexpected behavior, this could be a cause. And while the DomCrawler
+isn&#8217;t meant to dump content, you can see the &#8220;fixed&#8221; version of your HTML
+by <a class="reference internal" href="#component-dom-crawler-dumping"><span>dumping it</span></a>.</p>
+</div>
+<div class="section" id="node-filtering">
+<h3>Node Filtering<a class="headerlink" href="#node-filtering" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Using XPath expressions is really easy:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filterXPath</span><span class="p">(</span><span class="s1">&#39;descendant-or-self::body/p&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last"><code class="docutils literal"><span class="pre">DOMXPath::query</span></code> is used internally to actually perform an XPath query.</p>
+</div>
+<p>Filtering is even easier if you have the CssSelector component installed.
+This allows you to use jQuery-like selectors to traverse:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Anonymous function can be used to filter with more complex criteria:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\DomCrawler\Crawler</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$crawler</span>
+    <span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">reduce</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">Crawler</span> <span class="nv">$node</span><span class="p">,</span> <span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// filter even nodes</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">});</span>
+</pre></div>
+</div>
+<p>To remove a node the anonymous function must return false.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">All filter methods return a new <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html" title="Symfony\Component\DomCrawler\Crawler"><span class="pre">Crawler</span></a></code>
+instance with filtered content.</p>
+</div>
+<p>Both the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filterXPath'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filterXPath" title="Symfony\Component\DomCrawler\Crawler::filterXPath()"><span class="pre">filterXPath()</span></a></code> and
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filter'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filter" title="Symfony\Component\DomCrawler\Crawler::filter()"><span class="pre">filter()</span></a></code> methods work with
+XML namespaces, which can be either automatically discovered or registered
+explicitly.</p>
+<p>Consider the XML below:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;entry</span>
+    <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span>
+    <span class="na">xmlns:media=</span><span class="s">&quot;http://search.yahoo.com/mrss/&quot;</span>
+    <span class="na">xmlns:yt=</span><span class="s">&quot;http://gdata.youtube.com/schemas/2007&quot;</span>
+<span class="nt">&gt;</span>
+    <span class="nt">&lt;id&gt;</span>tag:youtube.com,2008:video:kgZRZmEc9j4<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;yt:accessControl</span> <span class="na">action=</span><span class="s">&quot;comment&quot;</span> <span class="na">permission=</span><span class="s">&quot;allowed&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;yt:accessControl</span> <span class="na">action=</span><span class="s">&quot;videoRespond&quot;</span> <span class="na">permission=</span><span class="s">&quot;moderated&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;media:group&gt;</span>
+        <span class="nt">&lt;media:title</span> <span class="na">type=</span><span class="s">&quot;plain&quot;</span><span class="nt">&gt;</span>Chordates - CrashCourse Biology #24<span class="nt">&lt;/media:title&gt;</span>
+        <span class="nt">&lt;yt:aspectRatio&gt;</span>widescreen<span class="nt">&lt;/yt:aspectRatio&gt;</span>
+    <span class="nt">&lt;/media:group&gt;</span>
+<span class="nt">&lt;/entry&gt;</span>
+</pre></div>
+</div>
+<p>This can be filtered with the  <code class="docutils literal"><span class="pre">Crawler</span></code> without needing to register namespace
+aliases both with <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filterXPath'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filterXPath" title="Symfony\Component\DomCrawler\Crawler::filterXPath()"><span class="pre">filterXPath()</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filterXPath</span><span class="p">(</span><span class="s1">&#39;//default:entry/media:group//yt:aspectRatio&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>and <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filter'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_filter" title="Symfony\Component\DomCrawler\Crawler::filter()"><span class="pre">filter()</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\CssSelector\CssSelector</span><span class="p">;</span>
+
+<span class="nx">CssSelector</span><span class="o">::</span><span class="na">disableHtmlExtension</span><span class="p">();</span>
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;default|entry media|group yt|aspectRatio&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p>The default namespace is registered with a prefix &#8220;default&#8221;. It can be
+changed with the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_setDefaultNamespacePrefix'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_setDefaultNamespacePrefix" title="Symfony\Component\DomCrawler\Crawler::setDefaultNamespacePrefix()"><span class="pre">setDefaultNamespacePrefix()</span></a></code>
+method.</p>
+<p class="last">The default namespace is removed when loading the content if it&#8217;s the only
+namespace in the document. It&#8217;s done to simplify the xpath queries.</p>
+</div>
+<p>Namespaces can be explicitly registered with the
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_registerNamespace'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_registerNamespace" title="Symfony\Component\DomCrawler\Crawler::registerNamespace()"><span class="pre">registerNamespace()</span></a></code> method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">registerNamespace</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;http://search.yahoo.com/mrss/&#39;</span><span class="p">);</span>
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filterXPath</span><span class="p">(</span><span class="s1">&#39;//m:group//yt:aspectRatio&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">To query XML with a CSS selector, the HTML extension needs to be disabled with
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/CssSelector/CssSelector.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/CssSelector/CssSelector.html#method_disableHtmlExtension'" tppabs="http://api.symfony.com/master/Symfony/Component/CssSelector/CssSelector.html#method_disableHtmlExtension" title="Symfony\Component\CssSelector\CssSelector::disableHtmlExtension()"><span class="pre">CssSelector::disableHtmlExtension</span></a></code>
+to avoid converting the selector to lowercase.</p>
+</div>
+</div>
+<div class="section" id="node-traversing">
+<h3>Node Traversing<a class="headerlink" href="#node-traversing" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Access node by its position on the list:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Get the first or last node of the current selection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">last</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Get the nodes of the same level as the current selection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">siblings</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Get the same level nodes after or before the current selection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">nextAll</span><span class="p">();</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">previousAll</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Get all the child or parent nodes:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">children</span><span class="p">();</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;body &gt; p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">parents</span><span class="p">();</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">All the traversal methods return a new <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html" title="Symfony\Component\DomCrawler\Crawler"><span class="pre">Crawler</span></a></code>
+instance.</p>
+</div>
+</div>
+<div class="section" id="accessing-node-values">
+<h3>Accessing Node Values<a class="headerlink" href="#accessing-node-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_nodeName'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_nodeName" title="Symfony\Component\DomCrawler\Crawler::nodeName()"><span class="pre">nodeName()</span></a></code>
+method was introduced in Symfony 2.6.</p>
+</div>
+<p>Access the node name (HTML tag name) of the first node of the current selection (eg. &#8220;p&#8221; or &#8220;div&#8221;):</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// will return the node name (HTML tag name) of the first child element under &lt;body&gt;</span>
+<span class="nv">$tag</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filterXPath</span><span class="p">(</span><span class="s1">&#39;//body/*&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">nodeName</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Access the value of the first node of the current selection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$message</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filterXPath</span><span class="p">(</span><span class="s1">&#39;//body/p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">text</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Access the attribute value of the first node of the current selection:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$class</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filterXPath</span><span class="p">(</span><span class="s1">&#39;//body/p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">attr</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Extract attribute and/or node values from the list of nodes:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$attributes</span> <span class="o">=</span> <span class="nv">$crawler</span>
+    <span class="o">-&gt;</span><span class="na">filterXpath</span><span class="p">(</span><span class="s1">&#39;//body/p&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">extract</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;_text&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">))</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">Special attribute <code class="docutils literal"><span class="pre">_text</span></code> represents a node value.</p>
+</div>
+<p>Call an anonymous function on each node of the list:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\DomCrawler\Crawler</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$nodeValues</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">filter</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">each</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">Crawler</span> <span class="nv">$node</span><span class="p">,</span> <span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$node</span><span class="o">-&gt;</span><span class="na">text</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">2.3 æ–°ç‰ˆåŠŸèƒ½: </span>As seen here, in Symfony 2.3, the <code class="docutils literal"><span class="pre">each</span></code> and <code class="docutils literal"><span class="pre">reduce</span></code> Closure functions
+are passed a <code class="docutils literal"><span class="pre">Crawler</span></code> as the first argument. Previously, that argument
+was a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domnode.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domnode.php'" tppabs="http://php.net/manual/en/class.domnode.php" title="DOMNode"><span class="pre">DOMNode</span></a></code>.</p>
+</div>
+<p>The anonymous function receives the node (as a Crawler) and the position as arguments.
+The result is an array of values returned by the anonymous function calls.</p>
+</div>
+<div class="section" id="adding-the-content">
+<h3>Adding the Content<a class="headerlink" href="#adding-the-content" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The crawler supports multiple ways of adding the content:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$crawler</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Crawler</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body /&gt;&lt;/html&gt;&#39;</span><span class="p">);</span>
+
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addHtmlContent</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body /&gt;&lt;/html&gt;&#39;</span><span class="p">);</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addXmlContent</span><span class="p">(</span><span class="s1">&#39;&lt;root&gt;&lt;node /&gt;&lt;/root&gt;&#39;</span><span class="p">);</span>
+
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addContent</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body /&gt;&lt;/html&gt;&#39;</span><span class="p">);</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addContent</span><span class="p">(</span><span class="s1">&#39;&lt;root&gt;&lt;node /&gt;&lt;/root&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;text/xml&#39;</span><span class="p">);</span>
+
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body /&gt;&lt;/html&gt;&#39;</span><span class="p">);</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;&lt;root&gt;&lt;node /&gt;&lt;/root&gt;&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">When dealing with character sets other than ISO-8859-1, always add HTML
+content using the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_addHTMLContent'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_addHTMLContent" title="Symfony\Component\DomCrawler\Crawler::addHTMLContent()"><span class="pre">addHTMLContent()</span></a></code>
+method where you can specify the second parameter to be your target character
+set.</p>
+</div>
+<p>As the Crawler&#8217;s implementation is based on the DOM extension, it is also able
+to interact with native <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domdocument.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domdocument.php'" tppabs="http://php.net/manual/en/class.domdocument.php" title="DOMDocument"><span class="pre">DOMDocument</span></a></code>, <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domnodelist.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domnodelist.php'" tppabs="http://php.net/manual/en/class.domnodelist.php" title="DOMNodeList"><span class="pre">DOMNodeList</span></a></code>
+and <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domnode.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domnode.php'" tppabs="http://php.net/manual/en/class.domnode.php" title="DOMNode"><span class="pre">DOMNode</span></a></code> objects:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$document</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\DOMDocument</span><span class="p">();</span>
+<span class="nv">$document</span><span class="o">-&gt;</span><span class="na">loadXml</span><span class="p">(</span><span class="s1">&#39;&lt;root&gt;&lt;node /&gt;&lt;node /&gt;&lt;/root&gt;&#39;</span><span class="p">);</span>
+<span class="nv">$nodeList</span> <span class="o">=</span> <span class="nv">$document</span><span class="o">-&gt;</span><span class="na">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">);</span>
+<span class="nv">$node</span> <span class="o">=</span> <span class="nv">$document</span><span class="o">-&gt;</span><span class="na">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">item</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addDocument</span><span class="p">(</span><span class="nv">$document</span><span class="p">);</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addNodeList</span><span class="p">(</span><span class="nv">$nodeList</span><span class="p">);</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addNodes</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="nv">$node</span><span class="p">));</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">addNode</span><span class="p">(</span><span class="nv">$node</span><span class="p">);</span>
+<span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$document</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="sidebar" id="component-dom-crawler-dumping">
+<p class="first sidebar-title">Manipulating and Dumping a <code class="docutils literal"><span class="pre">Crawler</span></code></p>
+<p>These methods on the <code class="docutils literal"><span class="pre">Crawler</span></code> are intended to initially populate your
+<code class="docutils literal"><span class="pre">Crawler</span></code> and aren&#8217;t intended to be used to further manipulate a DOM
+(though this is possible). However, since the <code class="docutils literal"><span class="pre">Crawler</span></code> is a set of
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domelement.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domelement.php'" tppabs="http://php.net/manual/en/class.domelement.php" title="DOMElement"><span class="pre">DOMElement</span></a></code> objects, you can use any method or property available
+on <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domelement.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domelement.php'" tppabs="http://php.net/manual/en/class.domelement.php" title="DOMElement"><span class="pre">DOMElement</span></a></code>, <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domnode.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domnode.php'" tppabs="http://php.net/manual/en/class.domnode.php" title="DOMNode"><span class="pre">DOMNode</span></a></code> or <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://php.net/manual/en/class.domdocument.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://php.net/manual/en/class.domdocument.php'" tppabs="http://php.net/manual/en/class.domdocument.php" title="DOMDocument"><span class="pre">DOMDocument</span></a></code>.
+For example, you could get the HTML of a <code class="docutils literal"><span class="pre">Crawler</span></code> with something like
+this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$html</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$crawler</span> <span class="k">as</span> <span class="nv">$domElement</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$html</span> <span class="o">.=</span> <span class="nv">$domElement</span><span class="o">-&gt;</span><span class="na">ownerDocument</span><span class="o">-&gt;</span><span class="na">saveHTML</span><span class="p">(</span><span class="nv">$domElement</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Or you can get the HTML of the first node using
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Crawler.html#method_html" title="Symfony\Component\DomCrawler\Crawler::html()"><span class="pre">html()</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$html</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">html</span><span class="p">();</span>
+</pre></div>
+</div>
+<p class="last">The <code class="docutils literal"><span class="pre">html</span></code> method is new in Symfony 2.3.</p>
+</div>
+</div>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>To find a link by name (or a clickable image by its <code class="docutils literal"><span class="pre">alt</span></code> attribute), use
+the <code class="docutils literal"><span class="pre">selectLink</span></code> method on an existing crawler. This returns a Crawler
+instance with just the selected link(s). Calling <code class="docutils literal"><span class="pre">link()</span></code> gives you a special
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html" title="Symfony\Component\DomCrawler\Link"><span class="pre">Link</span></a></code> object:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$linksCrawler</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">selectLink</span><span class="p">(</span><span class="s1">&#39;Go elsewhere...&#39;</span><span class="p">);</span>
+<span class="nv">$link</span> <span class="o">=</span> <span class="nv">$linksCrawler</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">();</span>
+
+<span class="c1">// or do this all at once</span>
+<span class="nv">$link</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">selectLink</span><span class="p">(</span><span class="s1">&#39;Go elsewhere...&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Link.html" title="Symfony\Component\DomCrawler\Link"><span class="pre">Link</span></a></code> object has several useful
+methods to get more information about the selected link itself:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// return the proper URI that can be used to make another request</span>
+<span class="nv">$uri</span> <span class="o">=</span> <span class="nv">$link</span><span class="o">-&gt;</span><span class="na">getUri</span><span class="p">();</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">The <code class="docutils literal"><span class="pre">getUri()</span></code> is especially useful as it cleans the <code class="docutils literal"><span class="pre">href</span></code> value and
+transforms it into how it should really be processed. For example, for a
+link with <code class="docutils literal"><span class="pre">href=&quot;#foo&quot;</span></code>, this would return the full URI of the current
+page suffixed with <code class="docutils literal"><span class="pre">#foo</span></code>. The return from <code class="docutils literal"><span class="pre">getUri()</span></code> is always a full
+URI that you can act on.</p>
+</div>
+</div>
+<div class="section" id="forms">
+<h3>Forms<a class="headerlink" href="#forms" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Special treatment is also given to forms. A <code class="docutils literal"><span class="pre">selectButton()</span></code> method is
+available on the Crawler which returns another Crawler that matches a button
+(<code class="docutils literal"><span class="pre">input[type=submit]</span></code>, <code class="docutils literal"><span class="pre">input[type=image]</span></code>, or a <code class="docutils literal"><span class="pre">button</span></code>) with the
+given text. This method is especially useful because you can use it to return
+a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html" title="Symfony\Component\DomCrawler\Form"><span class="pre">Form</span></a></code> object that represents the
+form that the button lives in:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$form</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">selectButton</span><span class="p">(</span><span class="s1">&#39;validate&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">form</span><span class="p">();</span>
+
+<span class="c1">// or &quot;fill&quot; the form fields with data</span>
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">selectButton</span><span class="p">(</span><span class="s1">&#39;validate&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">form</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Ryan&#39;</span><span class="p">,</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html" title="Symfony\Component\DomCrawler\Form"><span class="pre">Form</span></a></code> object has lots of very
+useful methods for working with forms:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$uri</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getUri</span><span class="p">();</span>
+
+<span class="nv">$method</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html#method_getUri'" tppabs="http://api.symfony.com/master/Symfony/Component/DomCrawler/Form.html#method_getUri" title="Symfony\Component\DomCrawler\Form::getUri()"><span class="pre">getUri()</span></a></code> method does more
+than just return the <code class="docutils literal"><span class="pre">action</span></code> attribute of the form. If the form method
+is GET, then it mimics the browser&#8217;s behavior and returns the <code class="docutils literal"><span class="pre">action</span></code>
+attribute followed by a query string of all of the form&#8217;s values.</p>
+<p>You can virtually set and get values on the form:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// set values on the form internally</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">setValues</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;registration[username]&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;symfonyfan&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;registration[terms]&#39;</span>    <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">));</span>
+
+<span class="c1">// get back an array of values - in the &quot;flat&quot; array like above</span>
+<span class="nv">$values</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getValues</span><span class="p">();</span>
+
+<span class="c1">// returns the values like PHP would see them,</span>
+<span class="c1">// where &quot;registration&quot; is its own array</span>
+<span class="nv">$values</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getPhpValues</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>To work with multi-dimensional fields:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;multi[]&quot;</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;multi[]&quot;</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;multi[dimensional]&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="nx">form</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Pass an array of values:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// Set a single field</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">setValues</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;multi&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)));</span>
+
+<span class="c1">// Set multiple fields at once</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">setValues</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;multi&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+    <span class="mi">1</span>             <span class="o">=&gt;</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dimensional&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;an other value&#39;</span>
+<span class="p">)));</span>
+</pre></div>
+</div>
+<p>This is great, but it gets better! The <code class="docutils literal"><span class="pre">Form</span></code> object allows you to interact
+with your form like a browser, selecting radio values, ticking checkboxes,
+and uploading files:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;registration[username]&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">setValue</span><span class="p">(</span><span class="s1">&#39;symfonyfan&#39;</span><span class="p">);</span>
+
+<span class="c1">// check or uncheck a checkbox</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;registration[terms]&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">tick</span><span class="p">();</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;registration[terms]&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">untick</span><span class="p">();</span>
+
+<span class="c1">// select an option</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;registration[birthday][year]&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="mi">1984</span><span class="p">);</span>
+
+<span class="c1">// select many options from a &quot;multiple&quot; select</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;registration[interests]&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;symfony&#39;</span><span class="p">,</span> <span class="s1">&#39;cookies&#39;</span><span class="p">));</span>
+
+<span class="c1">// even fake a file upload</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;registration[photo]&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">upload</span><span class="p">(</span><span class="s1">&#39;/path/to/lucas.jpg&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="using-the-form-data">
+<h4>Using the Form Data<a class="headerlink" href="#using-the-form-data" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>What&#8217;s the point of doing all of this? If you&#8217;re testing internally, you
+can grab the information off of your form as if it had just been submitted
+by using the PHP values:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$values</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getPhpValues</span><span class="p">();</span>
+<span class="nv">$files</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getPhpFiles</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>If you&#8217;re using an external HTTP client, you can use the form to grab all
+of the information you need to create a POST request for the form:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$uri</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getUri</span><span class="p">();</span>
+<span class="nv">$method</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">();</span>
+<span class="nv">$values</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getValues</span><span class="p">();</span>
+<span class="nv">$files</span> <span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">getFiles</span><span class="p">();</span>
+
+<span class="c1">// now use some HTTP client and post using this information</span>
+</pre></div>
+</div>
+<p>One great example of an integrated system that uses all of this is <a class="reference external" href="javascript:if(confirm('https://github.com/fabpot/goutte  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/fabpot/goutte'" tppabs="https://github.com/fabpot/goutte">Goutte</a>.
+Goutte understands the Symfony Crawler object and can use it to submit forms
+directly:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Goutte\Client</span><span class="p">;</span>
+
+<span class="c1">// make a real request to an external site</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">();</span>
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;https://github.com/login&#39;</span><span class="p">);</span>
+
+<span class="c1">// select the form and fill in some values</span>
+<span class="nv">$form</span> <span class="o">=</span> <span class="nv">$crawler</span><span class="o">-&gt;</span><span class="na">selectButton</span><span class="p">(</span><span class="s1">&#39;Log in&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">form</span><span class="p">();</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;login&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;symfonyfan&#39;</span><span class="p">;</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;anypass&#39;</span><span class="p">;</span>
+
+<span class="c1">// submit that form</span>
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">submit</span><span class="p">(</span><span class="nv">$form</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="selecting-invalid-choice-values">
+<span id="components-dom-crawler-invalid"></span><h4>Selecting Invalid Choice Values<a class="headerlink" href="#selecting-invalid-choice-values" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>By default, choice fields (select, radio) have internal validation activated
+to prevent you from setting invalid values. If you want to be able to set
+invalid values, you can use the  <code class="docutils literal"><span class="pre">disableValidation()</span></code> method on either
+the whole form or specific field(s):</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// Disable validation for a specific field</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">disableValidation</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;Invalid value&#39;</span><span class="p">);</span>
+
+<span class="c1">// Disable validation for the whole form</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">disableValidation</span><span class="p">();</span>
+<span class="nv">$form</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;Invalid value&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html" class="btn btn-neutral float-right" title="EventDispatcher">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="workflow.html" tppabs="http://symfony.cn/docs/components/dependency_injection/workflow.html" class="btn btn-neutral" title="Container Building Workflow"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

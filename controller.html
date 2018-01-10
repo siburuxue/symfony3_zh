@@ -1,0 +1,1070 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>æ§åˆ¶å™¨ï¼ˆControllerï¼‰ &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../index.html"/>
+        <link rel="up" title="æ•™ç¨‹" href="index.html"/>
+        <link rel="next" title="è·¯ç”±ï¼ˆRoutingï¼‰" href="routing.html"/>
+        <link rel="prev" title="åˆ›å»ºé¡µé¢" href="page_creation.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a> &raquo;</li>
+      
+    <li>æ§åˆ¶å™¨ï¼ˆControllerï¼‰</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="controller.txt" tppabs="http://symfony.cn/docs/_sources/book/controller.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="controller">
+<span id="index-0"></span><h1>æ§åˆ¶å™¨ï¼ˆControllerï¼‰<a class="headerlink" href="#controller" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>A controller is a PHP callable you create that takes information from the
+HTTP request and constructs and returns an HTTP response (as a Symfony
+<code class="docutils literal"><span class="pre">Response</span></code> object). The response could be an HTML page, an XML document,
+a serialized JSON array, an image, a redirect, a 404 error or anything else
+you can dream up. The controller contains whatever arbitrary logic <em>your
+application</em> needs to render the content of a page.</p>
+<p>See how simple this is by looking at a Symfony controller in action.
+This renders a page that prints the famous <code class="docutils literal"><span class="pre">Hello</span> <span class="pre">world!</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The goal of a controller is always the same: create and return a <code class="docutils literal"><span class="pre">Response</span></code>
+object. Along the way, it might read information from the request, load a
+database resource, send an email, or set information on the user&#8217;s session.
+But in all cases, the controller will eventually return the <code class="docutils literal"><span class="pre">Response</span></code> object
+that will be delivered back to the client.</p>
+<p>There&#8217;s no magic and no other requirements to worry about! Here are a few
+common examples:</p>
+<ul class="simple">
+<li><em>Controller A</em> prepares a <code class="docutils literal"><span class="pre">Response</span></code> object representing the content
+for the homepage of the site.</li>
+<li><em>Controller B</em> reads the <code class="docutils literal"><span class="pre">slug</span></code> parameter from the request to load a
+blog entry from the database and create a <code class="docutils literal"><span class="pre">Response</span></code> object displaying
+that blog. If the <code class="docutils literal"><span class="pre">slug</span></code> can&#8217;t be found in the database, it creates and
+returns a <code class="docutils literal"><span class="pre">Response</span></code> object with a 404 status code.</li>
+<li><em>Controller C</em> handles the form submission of a contact form. It reads
+the form information from the request, saves the contact information to
+the database and emails the contact information to you. Finally, it creates
+a <code class="docutils literal"><span class="pre">Response</span></code> object that redirects the client&#8217;s browser to the contact
+form &#8220;thank you&#8221; page.</li>
+</ul>
+<div class="section" id="requests-controller-response-lifecycle">
+<span id="index-1"></span><h2>Requests-&gt;Controller-&gt;Responseçš„è¿‡ç¨‹<a class="headerlink" href="#requests-controller-response-lifecycle" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Every request handled by a Symfony project goes through the same simple lifecycle.
+The framework takes care of all the repetitive stuff: you just need to write
+your custom code in the controller function:</p>
+<ol class="arabic simple">
+<li>Each request is handled by a single front controller file (e.g. <code class="docutils literal"><span class="pre">app.php</span></code>
+or <code class="docutils literal"><span class="pre">app_dev.php</span></code>) that bootstraps the application;</li>
+<li>The <code class="docutils literal"><span class="pre">Router</span></code> reads information from the request (e.g. the URI), finds
+a route that matches that information, and reads the <code class="docutils literal"><span class="pre">_controller</span></code> parameter
+from the route;</li>
+<li>The controller from the matched route is executed and the code inside the
+controller creates and returns a <code class="docutils literal"><span class="pre">Response</span></code> object;</li>
+<li>The HTTP headers and content of the <code class="docutils literal"><span class="pre">Response</span></code> object are sent back to
+the client.</li>
+</ol>
+<p>Creating a page is as easy as creating a controller (#3) and making a route that
+maps a URL to that controller (#2).</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">Though similarly named, a &#8220;front controller&#8221; is different from the
+&#8220;controllers&#8221; talked about in this chapter. A front controller
+is a short PHP file that lives in your web directory and through which
+all requests are directed. A typical application will have a production
+front controller (e.g. <code class="docutils literal"><span class="pre">app.php</span></code>) and a development front controller
+(e.g. <code class="docutils literal"><span class="pre">app_dev.php</span></code>). You&#8217;ll likely never need to edit, view or worry
+about the front controllers in your application.</p>
+</div>
+</div>
+<div class="section" id="a-simple-controller">
+<span id="index-2"></span><h2>ç®€å•ç¤ºä¾‹<a class="headerlink" href="#a-simple-controller" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>While a controller can be any PHP callable (a function, method on an object,
+or a <code class="docutils literal"><span class="pre">Closure</span></code>), a controller is usually a method inside a controller class.
+Controllers are also called <em>actions</em>.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Controller/HelloController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">HelloController</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body&gt;Hello &#39;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s1">&#39;!&lt;/body&gt;&lt;/html&gt;&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">Note that the <em>controller</em> is the <code class="docutils literal"><span class="pre">indexAction</span></code> method, which lives
+inside a <em>controller class</em> (<code class="docutils literal"><span class="pre">HelloController</span></code>). Don&#8217;t be confused
+by the naming: a <em>controller class</em> is simply a convenient way to group
+several controllers/actions together. Typically, the controller class
+will house several controllers/actions (e.g. <code class="docutils literal"><span class="pre">updateAction</span></code>, <code class="docutils literal"><span class="pre">deleteAction</span></code>,
+etc).</p>
+</div>
+<p>This controller is pretty straightforward:</p>
+<ul class="simple">
+<li><em>line 4</em>: Symfony takes advantage of PHP&#8217;s namespace functionality to
+namespace the entire controller class. The <code class="docutils literal"><span class="pre">use</span></code> keyword imports the
+<code class="docutils literal"><span class="pre">Response</span></code> class, which the controller must return.</li>
+<li><em>line 6</em>: The class name is the concatenation of a name for the controller
+class (i.e. <code class="docutils literal"><span class="pre">Hello</span></code>) and the word <code class="docutils literal"><span class="pre">Controller</span></code>. This is a convention
+that provides consistency to controllers and allows them to be referenced
+only by the first part of the name (i.e. <code class="docutils literal"><span class="pre">Hello</span></code>) in the routing configuration.</li>
+<li><em>line 8</em>: Each action in a controller class is suffixed with <code class="docutils literal"><span class="pre">Action</span></code>
+and is referenced in the routing configuration by the action&#8217;s name (<code class="docutils literal"><span class="pre">index</span></code>).
+In the next section, you&#8217;ll create a route that maps a URI to this action.
+You&#8217;ll learn how the route&#8217;s placeholders (<code class="docutils literal"><span class="pre">{name}</span></code>) become arguments
+to the action method (<code class="docutils literal"><span class="pre">$name</span></code>).</li>
+<li><em>line 10</em>: The controller creates and returns a <code class="docutils literal"><span class="pre">Response</span></code> object.</li>
+</ul>
+</div>
+<div class="section" id="mapping-a-url-to-a-controller">
+<span id="index-3"></span><h2>åˆ›å»ºURL-&gt;Controllerçš„æ˜ å°„å…³ç³»<a class="headerlink" href="#mapping-a-url-to-a-controller" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The new controller returns a simple HTML page. To actually view this page
+in your browser, you need to create a route, which maps a specific URL path
+to the controller:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Annotations</em><div class="highlight-php-annotations"><div class="highlight"><pre><span class="c1">// src/AppBundle/Controller/HelloController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">HelloController</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/hello/{name}&quot;, name=&quot;hello&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body&gt;Hello &#39;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s1">&#39;!&lt;/body&gt;&lt;/html&gt;&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/routing.yml</span>
+<span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">/hello/{name}</span>
+    <span class="c1"># uses a special syntax to point to the controller - see note below</span>
+    <span class="l-Scalar-Plain">defaults</span><span class="p-Indicator">:</span>  <span class="p-Indicator">{</span> <span class="nv">_controller</span><span class="p-Indicator">:</span> <span class="nv">AppBundle</span><span class="p-Indicator">:</span><span class="nv">Hello</span><span class="p-Indicator">:</span><span class="nv">index</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/routing.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;routes</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/routing&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/routing</span>
+<span class="s">        http://symfony.com/schema/routing/routing-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;route</span> <span class="na">id=</span><span class="s">&quot;hello&quot;</span> <span class="na">path=</span><span class="s">&quot;/hello/{name}&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- uses a special syntax to point to the controller - see note below --&gt;</span>
+        <span class="nt">&lt;default</span> <span class="na">key=</span><span class="s">&quot;_controller&quot;</span><span class="nt">&gt;</span>AppBundle:Hello:index<span class="nt">&lt;/default&gt;</span>
+    <span class="nt">&lt;/route&gt;</span>
+<span class="nt">&lt;/routes&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/routing.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\RouteCollection</span><span class="p">;</span>
+
+<span class="nv">$collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RouteCollection</span><span class="p">();</span>
+<span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Route</span><span class="p">(</span><span class="s1">&#39;/hello/{name}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// uses a special syntax to point to the controller - see note below</span>
+    <span class="s1">&#39;_controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AppBundle:Hello:index&#39;</span><span class="p">,</span>
+<span class="p">)));</span>
+
+<span class="k">return</span> <span class="nv">$collection</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Now, you can go to <code class="docutils literal"><span class="pre">/hello/ryan</span></code> (e.g. <code class="docutils literal"><span class="pre">http://localhost:8000/app_dev.php/hello/ryan</span></code>
+if you&#8217;re using the <a class="reference internal" href="built_in.html" tppabs="http://symfony.cn/docs/cookbook/web_server/built_in.html"><em>built-in web server</em></a>)
+and Symfony will execute the <code class="docutils literal"><span class="pre">HelloController::indexAction()</span></code> controller
+and pass in <code class="docutils literal"><span class="pre">ryan</span></code> for the <code class="docutils literal"><span class="pre">$name</span></code> variable. Creating a &#8220;page&#8221; means
+simply creating a controller method and an associated route.</p>
+<p>Simple, right?</p>
+<div class="sidebar">
+<p class="first sidebar-title">The AppBundle:Hello:index controller syntax</p>
+<p class="last">If you use the YML or XML formats, you&#8217;ll refer to the controller using
+a special shortcut syntax: <code class="docutils literal"><span class="pre">AppBundle:Hello:index</span></code>. For more details
+on the controller format, see <a class="reference internal" href="routing.html#controller-string-syntax" tppabs="http://symfony.cn/docs/book/routing.html#controller-string-syntax"><span>Controllerå‘½åè§„åˆ™</span></a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">å‚è§</p>
+<p class="last">You can learn much more about the routing system in the
+<a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html"><em>Routing chapter</em></a>.</p>
+</div>
+<div class="section" id="route-parameters-as-controller-arguments">
+<span id="route-parameters-controller-arguments"></span><span id="index-4"></span><h3>ä½¿ç”¨Routeå‚æ•°ä½œä¸ºControllerå‚æ•°<a class="headerlink" href="#route-parameters-as-controller-arguments" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>You already know that the route points to the
+<code class="docutils literal"><span class="pre">HelloController::indexAction()</span></code> method that lives inside AppBundle. What&#8217;s
+more interesting is the argument that is passed to that method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Controller/HelloController.php</span>
+<span class="c1">// ...</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Route(&quot;/hello/{name}&quot;, name=&quot;hello&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The controller has a single argument, <code class="docutils literal"><span class="pre">$name</span></code>, which corresponds to the
+<code class="docutils literal"><span class="pre">{name}</span></code> parameter from the matched route (<code class="docutils literal"><span class="pre">ryan</span></code> if you go to <code class="docutils literal"><span class="pre">/hello/ryan</span></code>).
+When executing your controller, Symfony matches each argument with a parameter
+from the route. So the value for <code class="docutils literal"><span class="pre">{name}</span></code> is passed to <code class="docutils literal"><span class="pre">$name</span></code>.</p>
+<p>Take the following more-interesting example:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Annotations</em><div class="highlight-php-annotations"><div class="highlight"><pre><span class="c1">// src/AppBundle/Controller/HelloController.php</span>
+<span class="c1">// ...</span>
+
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">HelloController</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/hello/{firstName}/{lastName}&quot;, name=&quot;hello&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">,</span> <span class="nv">$lastName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/routing.yml</span>
+<span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">/hello/{firstName}/{lastName}</span>
+    <span class="l-Scalar-Plain">defaults</span><span class="p-Indicator">:</span>  <span class="p-Indicator">{</span> <span class="nv">_controller</span><span class="p-Indicator">:</span> <span class="nv">AppBundle</span><span class="p-Indicator">:</span><span class="nv">Hello</span><span class="p-Indicator">:</span><span class="nv">index</span> <span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/routing.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;routes</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/routing&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://symfony.com/schema/routing</span>
+<span class="s">        http://symfony.com/schema/routing/routing-1.0.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;route</span> <span class="na">id=</span><span class="s">&quot;hello&quot;</span> <span class="na">path=</span><span class="s">&quot;/hello/{firstName}/{lastName}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;default</span> <span class="na">key=</span><span class="s">&quot;_controller&quot;</span><span class="nt">&gt;</span>AppBundle:Hello:index<span class="nt">&lt;/default&gt;</span>
+    <span class="nt">&lt;/route&gt;</span>
+<span class="nt">&lt;/routes&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/routing.php</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Routing\RouteCollection</span><span class="p">;</span>
+
+<span class="nv">$collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RouteCollection</span><span class="p">();</span>
+<span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Route</span><span class="p">(</span><span class="s1">&#39;/hello/{firstName}/{lastName}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;_controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AppBundle:Hello:index&#39;</span><span class="p">,</span>
+<span class="p">)));</span>
+
+<span class="k">return</span> <span class="nv">$collection</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Now, the controller can have two arguments:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">,</span> <span class="nv">$lastName</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Mapping route parameters to controller arguments is easy and flexible. Keep
+the following guidelines in mind while you develop.</p>
+<ul>
+<li><p class="first"><strong>The order of the controller arguments does not matter</strong></p>
+<p>Symfony matches the parameter <strong>names</strong> from the route to the variable
+<strong>names</strong> of the controller. The arguments of the controller could be totally
+reordered and still work perfectly:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$lastName</span><span class="p">,</span> <span class="nv">$firstName</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><strong>Each required controller argument must match up with a routing parameter</strong></p>
+<p>The following would throw a <code class="docutils literal"><span class="pre">RuntimeException</span></code> because there is no <code class="docutils literal"><span class="pre">foo</span></code>
+parameter defined in the route:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">,</span> <span class="nv">$lastName</span><span class="p">,</span> <span class="nv">$foo</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Making the argument optional, however, is perfectly ok. The following
+example would not throw an exception:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">,</span> <span class="nv">$lastName</span><span class="p">,</span> <span class="nv">$foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><strong>Not all routing parameters need to be arguments on your controller</strong></p>
+<p>If, for example, the <code class="docutils literal"><span class="pre">lastName</span></code> weren&#8217;t important for your controller,
+you could omit it entirely:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">Every route also has a special <code class="docutils literal"><span class="pre">_route</span></code> parameter, which is equal to
+the name of the route that was matched (e.g. <code class="docutils literal"><span class="pre">hello</span></code>). Though not usually
+useful, this is also available as a controller argument. You can also
+pass other variables from your route to your controller arguments. See
+<a class="reference internal" href="extra_information.html" tppabs="http://symfony.cn/docs/cookbook/routing/extra_information.html"><em>How to Pass Extra Information from a Route to a Controller</em></a>.</p>
+</div>
+</div>
+<div class="section" id="the-request-as-a-controller-argument">
+<span id="book-controller-request-argument"></span><h3>ä½¿ç”¨ <code class="docutils literal"><span class="pre">Request</span></code> å¯¹è±¡ä½œä¸ºControllerå‚æ•°<a class="headerlink" href="#the-request-as-a-controller-argument" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>What if you need to read query parameters, grab a request header or get access
+to an uploaded file? All of that information is stored in Symfony&#8217;s <code class="docutils literal"><span class="pre">Request</span></code>
+object. To get it in your controller, just add it as an argument and
+<strong>type-hint it with the Request class</strong>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$firstName</span><span class="p">,</span> <span class="nv">$lastName</span><span class="p">,</span> <span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$page</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">query</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">å‚è§</p>
+<p class="last">Want to know more about getting information from the request? See
+<a class="reference internal" href="introduction-1.html#component-http-foundation-request" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html#component-http-foundation-request"><span>Access Request Information</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="the-base-controller-class">
+<span id="index-5"></span><h2>ControlleråŸºç±»<a class="headerlink" href="#the-base-controller-class" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>For convenience, Symfony comes with an optional base <code class="docutils literal"><span class="pre">Controller</span></code> class.
+If you extend it, you&#8217;ll get access to a number of helper methods and all
+of your service objects via the container (see <a class="reference internal" href="#controller-accessing-services"><span>è®¿é—®å…¶ä»–Services</span></a>).</p>
+<p>Add the <code class="docutils literal"><span class="pre">use</span></code> statement atop the <code class="docutils literal"><span class="pre">Controller</span></code> class and then modify the
+<code class="docutils literal"><span class="pre">HelloController</span></code> to extend it:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// src/AppBundle/Controller/HelloController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">HelloController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This doesn&#8217;t actually change anything about how your controller works: it
+just gives you access to helper methods that the base controller class makes
+available. These are just shortcuts to using core Symfony functionality that&#8217;s
+available to you with or without the use of the base <code class="docutils literal"><span class="pre">Controller</span></code> class.
+A great way to see the core functionality in action is to look in the
+<a class="reference external" href="javascript:if(confirm('https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php'" tppabs="https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">Controller class</a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">å‚è§</p>
+<p class="last">If you&#8217;re curious about how a controller would work that did <em>not</em> extend
+this base class, check out <a class="reference internal" href="service.html" tppabs="http://symfony.cn/docs/cookbook/controller/service.html"><em>Controllers as Services</em></a>.
+This is optional, but can give you more control over the exact objects/dependencies
+that are injected into your controller.</p>
+</div>
+<div class="section" id="redirecting">
+<span id="index-6"></span><h3>Redirecting<a class="headerlink" href="#redirecting" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>If you want to redirect the user to another page, use the <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="s1">&#39;homepage&#39;</span><span class="p">);</span>
+
+    <span class="c1">// redirectToRoute is equivalent to using redirect() and generateUrl() together:</span>
+    <span class="c1">// return $this-&gt;redirect($this-&gt;generateUrl(&#39;homepage&#39;), 301);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method was added in Symfony 2.6. Previously (and still now), you
+could use <code class="docutils literal"><span class="pre">redirect()</span></code> and <code class="docutils literal"><span class="pre">generateUrl()</span></code> together for this (see the example above).</p>
+</div>
+<p>Or, if you want to redirect externally, just use <code class="docutils literal"><span class="pre">redirect()</span></code> and pass it the URL:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="s1">&#39;http://symfony.com/doc&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>By default, the <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method performs a 302 (temporary) redirect. To
+perform a 301 (permanent) redirect, modify the third argument:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="s1">&#39;homepage&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="mi">301</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p>The <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method is simply a shortcut that creates a
+<code class="docutils literal"><span class="pre">Response</span></code> object that specializes in redirecting the user. It&#8217;s
+equivalent to:</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\RedirectResponse</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">RedirectResponse</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">generateUrl</span><span class="p">(</span><span class="s1">&#39;homepage&#39;</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rendering-templates">
+<span id="controller-rendering-templates"></span><span id="index-7"></span><h3>æ¨¡æ¿æ¸²æŸ“<a class="headerlink" href="#rendering-templates" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>If you&#8217;re serving HTML, you&#8217;ll want to render a template. The <code class="docutils literal"><span class="pre">render()</span></code>
+method renders a template <strong>and</strong> puts that content into a <code class="docutils literal"><span class="pre">Response</span></code>
+object for you:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// renders app/Resources/views/hello/index.html.twig</span>
+<span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;hello/index.html.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>You can also put templates in deeper sub-directories. Just try to avoid creating
+unnecessarily deep structures:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// renders app/Resources/views/hello/greetings/index.html.twig</span>
+<span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;hello/greetings/index.html.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>The Symfony templating engine is explained in great detail in the
+<a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html"><em>Templating</em></a> chapter.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Referencing Templates that Live inside the Bundle</p>
+<p class="last">You can also put templates in the <code class="docutils literal"><span class="pre">Resources/views</span></code> directory of a
+bundle and reference them with a
+<code class="docutils literal"><span class="pre">BundleName:DirectoryName:FileName</span></code> syntax. For example,
+<code class="docutils literal"><span class="pre">AppBundle:Hello:index.html.twig</span></code> would refer to the template located in
+<code class="docutils literal"><span class="pre">src/AppBundle/Resources/views/Hello/index.html.twig</span></code>. See <a class="reference internal" href="templating.html#template-referencing-in-bundle" tppabs="http://symfony.cn/docs/book/templating.html#template-referencing-in-bundle"><span>å¼•ç”¨Bundleé‡Œçš„æ¨¡æ¿</span></a>.</p>
+</div>
+</div>
+<div class="section" id="accessing-other-services">
+<span id="controller-accessing-services"></span><span id="index-8"></span><h3>è®¿é—®å…¶ä»–Services<a class="headerlink" href="#accessing-other-services" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Symfony comes packed with a lot of useful objects, called services. These
+are used for rendering templates, sending emails, querying the database and
+any other &#8220;work&#8221; you can think of. When you install a new bundle, it probably
+brings in even <em>more</em> services.</p>
+<p>When extending the base controller class, you can access any Symfony service
+via the <code class="docutils literal"><span class="pre">get()</span></code> method. Here are several common services you might need:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$templating</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;templating&#39;</span><span class="p">);</span>
+
+<span class="nv">$router</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;router&#39;</span><span class="p">);</span>
+
+<span class="nv">$mailer</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;mailer&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>What other services exist? You can list all services, use the <code class="docutils literal"><span class="pre">debug:container</span></code>
+console command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console debug:container
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>Prior to Symfony 2.6, this command was called <code class="docutils literal"><span class="pre">container:debug</span></code>.</p>
+</div>
+<p>For more information, see the <a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html"><em>æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</em></a> chapter.</p>
+</div>
+</div>
+<div class="section" id="managing-errors-and-404-pages">
+<span id="index-9"></span><h2>ç”Ÿæˆ404æˆ–å…¶ä»–é”™è¯¯é¡µé¢<a class="headerlink" href="#managing-errors-and-404-pages" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>When things are not found, you should play well with the HTTP protocol and
+return a 404 response. To do this, you&#8217;ll throw a special type of exception.
+If you&#8217;re extending the base controller class, do the following:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// retrieve the object from database</span>
+    <span class="nv">$product</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$product</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createNotFoundException</span><span class="p">(</span><span class="s1">&#39;The product does not exist&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">createNotFoundException()</span></code> method is just a shortcut to create a
+special <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpKernel/Exception/NotFoundHttpException.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpKernel/Exception/NotFoundHttpException.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpKernel/Exception/NotFoundHttpException.html" title="Symfony\Component\HttpKernel\Exception\NotFoundHttpException"><span class="pre">NotFoundHttpException</span></a></code>
+object, which ultimately triggers a 404 HTTP response inside Symfony.</p>
+<p>Of course, you&#8217;re free to throw any <code class="docutils literal"><span class="pre">Exception</span></code> class in your controller -
+Symfony will automatically return a 500 HTTP response code.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">throw</span> <span class="k">new</span> <span class="nx">\Exception</span><span class="p">(</span><span class="s1">&#39;Something went wrong!&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In every case, an error page is shown to the end user and a full debug
+error page is shown to the developer (i.e. when you&#8217;re using <code class="docutils literal"><span class="pre">app_dev.php</span></code> -
+see <a class="reference internal" href="page_creation.html#page-creation-environments" tppabs="http://symfony.cn/docs/book/page_creation.html#page-creation-environments"><span>è¿è¡Œç¯å¢ƒ &amp; Front Controllers</span></a>).</p>
+<p>You&#8217;ll want to customize the error page your user sees. To do that, see the
+&#8220;<a class="reference internal" href="error_pages.html" tppabs="http://symfony.cn/docs/cookbook/controller/error_pages.html"><em>å¦‚ä½•è‡ªå®šä¹‰é”™è¯¯é¡µé¢</em></a>&#8221; cookbook recipe.</p>
+</div>
+<div class="section" id="managing-the-session">
+<span id="index-10"></span><h2>Sessionç®¡ç†<a class="headerlink" href="#managing-the-session" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Symfony provides a nice session object that you can use to store information
+about the user (be it a real person using a browser, a bot, or a web service)
+between requests. By default, Symfony stores the attributes in a cookie
+by using the native PHP sessions.</p>
+<p>Storing and retrieving information from the session can be easily achieved
+from any controller:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$session</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
+
+    <span class="c1">// store an attribute for reuse during a later user request</span>
+    <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+
+    <span class="c1">// get the attribute set by another controller in another request</span>
+    <span class="nv">$foobar</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;foobar&#39;</span><span class="p">);</span>
+
+    <span class="c1">// use a default value if the attribute doesn&#39;t exist</span>
+    <span class="nv">$filters</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;filters&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>These attributes will remain on the user for the remainder of that user&#8217;s
+session.</p>
+<div class="section" id="flash-messages">
+<span id="index-11"></span><h3>Flashæ¶ˆæ¯<a class="headerlink" href="#flash-messages" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>You can also store small messages that will be stored on the user&#8217;s session
+for exactly one additional request. This is useful when processing a form:
+you want to redirect and have a special message shown on the <em>next</em> page.
+These types of messages are called &#8220;flash&#8221; messages.</p>
+<p>For example, imagine you&#8217;re processing a form submit:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">updateAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$form</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createForm</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+
+    <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">handleRequest</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">isValid</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1">// do some sort of processing</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">addFlash</span><span class="p">(</span>
+            <span class="s1">&#39;notice&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Your changes were saved!&#39;</span>
+        <span class="p">);</span>
+
+        <span class="c1">// $this-&gt;addFlash is equivalent to $this-&gt;get(&#39;session&#39;)-&gt;getFlashBag()-&gt;add</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>After processing the request, the controller sets a <code class="docutils literal"><span class="pre">notice</span></code> flash message
+in the session and then redirects. The name (<code class="docutils literal"><span class="pre">notice</span></code>) isn&#8217;t significant -
+it&#8217;s just something you invent and reference next.</p>
+<p>In the template of the next action, the following code could be used to render
+the <code class="docutils literal"><span class="pre">notice</span></code> message:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">for</span> <span class="nv">flashMessage</span> <span class="k">in</span> <span class="nv">app.session.flashbag.get</span><span class="o">(</span><span class="s1">&#39;notice&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;flash-notice&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">{{</span> <span class="nv">flashMessage</span> <span class="cp">}}</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">getFlash</span><span class="p">(</span><span class="s1">&#39;notice&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$message</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;flash-notice&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;&lt;div class=&#39;flash-error&#39;&gt;</span><span class="si">$message</span><span class="s2">&lt;/div&gt;&quot;</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>By design, flash messages are meant to live for exactly one request (they&#8217;re
+&#8220;gone in a flash&#8221;). They&#8217;re designed to be used across redirects exactly as
+you&#8217;ve done in this example.</p>
+</div>
+</div>
+<div class="section" id="the-response-object">
+<span id="index-12"></span><h2>Responseå¯¹è±¡<a class="headerlink" href="#the-response-object" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The only requirement for a controller is to return a <code class="docutils literal"><span class="pre">Response</span></code> object. The
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Response.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Response.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Response.html" title="Symfony\Component\HttpFoundation\Response"><span class="pre">Response</span></a></code> class is an abstraction
+around the HTTP response: the text-based message filled with headers and
+content that&#8217;s sent back to the client:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="c1">// create a simple Response with a 200 status code (the default)</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span><span class="o">.</span><span class="nv">$name</span><span class="p">,</span> <span class="nx">Response</span><span class="o">::</span><span class="na">HTTP_OK</span><span class="p">);</span>
+
+<span class="c1">// create a JSON-response with a 200 status code</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">)));</span>
+<span class="nv">$response</span><span class="o">-&gt;</span><span class="na">headers</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">headers</span></code> property is a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/HeaderBag.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/HeaderBag.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/HeaderBag.html" title="Symfony\Component\HttpFoundation\HeaderBag"><span class="pre">HeaderBag</span></a></code>
+object and has some nice methods for getting and setting the headers. The
+header names are normalized so that using <code class="docutils literal"><span class="pre">Content-Type</span></code> is equivalent to
+<code class="docutils literal"><span class="pre">content-type</span></code> or even <code class="docutils literal"><span class="pre">content_type</span></code>.</p>
+<p>There are also special classes to make certain kinds of responses easier:</p>
+<ul class="simple">
+<li>For JSON, there is <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/JsonResponse.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/JsonResponse.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/JsonResponse.html" title="Symfony\Component\HttpFoundation\JsonResponse"><span class="pre">JsonResponse</span></a></code>.
+See <a class="reference internal" href="introduction-1.html#component-http-foundation-json-response" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html#component-http-foundation-json-response"><span>Creating a JSON Response</span></a>.</li>
+<li>For files, there is <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/BinaryFileResponse.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/BinaryFileResponse.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/BinaryFileResponse.html" title="Symfony\Component\HttpFoundation\BinaryFileResponse"><span class="pre">BinaryFileResponse</span></a></code>.
+See <a class="reference internal" href="introduction-1.html#component-http-foundation-serving-files" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html#component-http-foundation-serving-files"><span>Serving Files</span></a>.</li>
+<li>For streamed responses, there is <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/StreamedResponse.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/StreamedResponse.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/StreamedResponse.html" title="Symfony\Component\HttpFoundation\StreamedResponse"><span class="pre">StreamedResponse</span></a></code>.
+See <a class="reference internal" href="introduction-1.html#streaming-response" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html#streaming-response"><span>Streaming a Response</span></a>.</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">å‚è§</p>
+<p class="last">Don&#8217;t worry! There is a lot more information about the Response object
+in the component documentation. See <a class="reference internal" href="introduction-1.html#component-http-foundation-response" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html#component-http-foundation-response"><span>Response</span></a>.</p>
+</div>
+</div>
+<div class="section" id="the-request-object">
+<span id="index-13"></span><h2>Requestå¯¹è±¡<a class="headerlink" href="#the-request-object" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Besides the values of the routing placeholders, the controller also has access
+to the <code class="docutils literal"><span class="pre">Request</span></code> object. The framework injects the <code class="docutils literal"><span class="pre">Request</span></code> object in the
+controller if a variable is type-hinted with
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/HttpFoundation/Request.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/HttpFoundation/Request.html'" tppabs="http://api.symfony.com/master/Symfony/Component/HttpFoundation/Request.html" title="Symfony\Component\HttpFoundation\Request"><span class="pre">Request</span></a></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">isXmlHttpRequest</span><span class="p">();</span> <span class="c1">// is it an Ajax request?</span>
+
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getPreferredLanguage</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="s1">&#39;fr&#39;</span><span class="p">));</span>
+
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">query</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">);</span> <span class="c1">// get a $_GET parameter</span>
+
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">);</span> <span class="c1">// get a $_POST parameter</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Like the <code class="docutils literal"><span class="pre">Response</span></code> object, the request headers are stored in a <code class="docutils literal"><span class="pre">HeaderBag</span></code>
+object and are easily accessible.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">å‚è§</p>
+<p class="last">Don&#8217;t worry! There is a lot more information about the Request object
+in the component documentation. See <a class="reference internal" href="introduction-1.html#component-http-foundation-request" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html#component-http-foundation-request"><span>Request</span></a>.</p>
+</div>
+</div>
+<div class="section" id="creating-static-pages">
+<h2>åˆ›å»ºé™æ€é¡µ<a class="headerlink" href="#creating-static-pages" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You can create a static page without even creating a controller (only a route
+and template are needed).</p>
+<p>See <a class="reference internal" href="render_without_controller.html" tppabs="http://symfony.cn/docs/cookbook/templating/render_without_controller.html"><em>How to Render a Template without a custom Controller</em></a>.</p>
+</div>
+<div class="section" id="forwarding-to-another-controller">
+<span id="index-14"></span><h2>Forwardåˆ°å…¶ä»–Controller<a class="headerlink" href="#forwarding-to-another-controller" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Though not very common, you can also forward to another controller internally
+with the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html#method_forward'" tppabs="http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Controller/Controller.html#method_forward" title="Symfony\Bundle\FrameworkBundle\Controller\Controller::forward()"><span class="pre">forward()</span></a></code>
+method. Instead of redirecting the user&#8217;s browser, it makes an internal sub-request,
+and calls the controller. The <code class="docutils literal"><span class="pre">forward()</span></code> method returns the <code class="docutils literal"><span class="pre">Response</span></code>
+object that&#8217;s returned from <em>that</em> controller:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">forward</span><span class="p">(</span><span class="s1">&#39;AppBundle:Something:fancy&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;name&#39;</span>  <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span>
+        <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+    <span class="p">));</span>
+
+    <span class="c1">// ... further modify the response or return it directly</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Notice that the <code class="docutils literal"><span class="pre">forward()</span></code> method uses a special string representation
+of the controller (see <a class="reference internal" href="routing.html#controller-string-syntax" tppabs="http://symfony.cn/docs/book/routing.html#controller-string-syntax"><span>Controllerå‘½åè§„åˆ™</span></a>). In this case, the
+target controller function will be <code class="docutils literal"><span class="pre">SomethingController::fancyAction()</span></code>
+inside the AppBundle. The array passed to the method becomes the arguments on
+the resulting controller. This same idea is used when embedding controllers
+into templates (see <a class="reference internal" href="templating.html#templating-embedding-controller" tppabs="http://symfony.cn/docs/book/templating.html#templating-embedding-controller"><span>åµŒå…¥Controller</span></a>). The target
+controller method would look something like this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">fancyAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$color</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ... create and return a Response object</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Just like when creating a controller for a route, the order of the arguments of
+<code class="docutils literal"><span class="pre">fancyAction</span></code> doesn&#8217;t matter. Symfony matches the index key names (e.g.
+<code class="docutils literal"><span class="pre">name</span></code>) with the method argument names (e.g. <code class="docutils literal"><span class="pre">$name</span></code>). If you change the
+order of the arguments, Symfony will still pass the correct value to each
+variable.</p>
+</div>
+<div class="section" id="final-thoughts">
+<h2>æ€»ç»“<a class="headerlink" href="#final-thoughts" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Whenever you create a page, you&#8217;ll ultimately need to write some code that
+contains the logic for that page. In Symfony, this is called a controller,
+and it&#8217;s a PHP function where you can do anything in order to return the
+final <code class="docutils literal"><span class="pre">Response</span></code> object that will be returned to the user.</p>
+<p>To make life easier, you can choose to extend a base <code class="docutils literal"><span class="pre">Controller</span></code> class,
+which contains shortcut methods for many common controller tasks. For example,
+since you don&#8217;t want to put HTML code in your controller, you can use
+the <code class="docutils literal"><span class="pre">render()</span></code> method to render and return the content from a template.</p>
+<p>In other chapters, you&#8217;ll see how the controller can be used to persist and
+fetch objects from a database, process form submissions, handle caching and
+more.</p>
+</div>
+<div class="section" id="learn-more-from-the-cookbook">
+<h2>äº†è§£æ›´å¤š<a class="headerlink" href="#learn-more-from-the-cookbook" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="error_pages.html" tppabs="http://symfony.cn/docs/cookbook/controller/error_pages.html"><em>å¦‚ä½•è‡ªå®šä¹‰é”™è¯¯é¡µé¢</em></a></li>
+<li><a class="reference internal" href="service.html" tppabs="http://symfony.cn/docs/cookbook/controller/service.html"><em>å¦‚ä½•å°†Controlleræ³¨å†Œä¸ºService</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html" class="btn btn-neutral float-right" title="è·¯ç”±ï¼ˆRoutingï¼‰">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html" class="btn btn-neutral" title="åˆ›å»ºé¡µé¢"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

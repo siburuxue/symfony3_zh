@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制器（Controller） &mdash; Symfony Framework Documentation 文档</title>
+    <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css"/>
+    <link rel="top" title="Symfony Framework Documentation  文档" href="../index.html"/>
+    <link rel="up" title="快速入门" href="index.html"/>
+    <link rel="next" title="代码结构" href="the_architecture.html"/>
+    <link rel="prev" title="视图" href="the_view.html"/>
+    <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-nav-search">
+            <a href="index.html" class="fa fa-home">Symfony框架开发文档</a>
+            <div role="search">
+                <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+                    <input type="text" name="q" placeholder="Search docs"/>
+                    <input type="hidden" name="check_keywords" value="yes"/>
+                    <input type="hidden" name="area" value="default"/>
+                </form>
+            </div>
+        </div>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February,2015</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January,2015</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February,2014</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January,2014</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1 current">
+                    <a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">快速入门</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">总览</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">视图</a></li>
+                        <li class="toctree-l2 current"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">控制器（Controller）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">代码结构</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">教程</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfony和HTTP基础工具</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfonyvs 纯PHP</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">安装和配置Symfony</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">创建页面</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">控制器（Controller）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">路由（Routing）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">创建和使用模板</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">数据库和Doctrine</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">数据库和Propel</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">测试</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">校验</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">表单</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">安全性</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTP缓存</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">多语言</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">服务容器（Service Container）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">性能</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">核心功能</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">手册</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">静态文件处理（Assetic）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">包（Bundle）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">缓存</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">配置</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">命令行</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">控制器（Controller）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">部署</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">邮件</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">事件分发器（Dispatcher）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">表达式（Expression）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">最佳实践</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfony框架最佳实践</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">创建项目</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">配置参数</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">业务逻辑代码的组织</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">控制器（Controller）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">模板</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">表单</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">多语言支持</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">安全</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">静态文件（Assets）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">组件</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">参考</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">贡献</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">贡献代码</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">贡献文档</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">社区</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>&nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+        </nav>
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+                        <li><a href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">快速入门</a> &raquo; </li>
+                        <li>控制器（Controller）</li>
+                        <li class="wy-breadcrumbs-aside">
+                            <a href="the_controller.txt" tppabs="http://symfony.cn/docs/_sources/quick_tour/the_controller.txt" rel="nofollow"> View page source</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document">
+                    <div class="section" id="the-controller">
+                        <h1>控制器（Controller）<a class="headerlink" href="#the-controller" title="永久链接至标题">¶</a></h1>
+                        <p>
+                            在前两个部分之后仍然在这？你已经变成了一个Symfony粉丝！无需再费周折，发现控制器可以为你做什么。
+                        </p>
+                        <div class="section" id="returning-raw-responses">
+                            <h2>返回原始相应<a class="headerlink" href="#returning-raw-responses" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Symfony将自己定义为一个请求响应式的框架。
+                                当用户向你的应用程序发送一个请求时，Symfony创建一个<code class="docutils literal"><span class="pre">Request</span></code>对象来封装所有重新加载到改签请求的信息。
+                                类似地，执行任何控制器的任何action结果是创建一个<code class="docutils literal"><span class="pre">Response</span></code>对象，Symfony用来生成返回给用户的html内容
+                            </p>
+                            <p>
+                                到目前为止，本教程所有的操作都使用<code class="docutils literal"><span class="pre">$this-&gt;render()</span></code>的方式来返回相应的结果。
+                                如果有必要，你可以创建原始的<code class="docutils literal"><span class="pre">Response</span></code>对象来返回任何文本内容：
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre>
+<span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/&quot;, name=&quot;homepage&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Welcome to Symfony!&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="route-parameters">
+                            <h2>路由参数<a class="headerlink" href="#route-parameters" title="永久链接至标题">¶</a>
+                            </h2>
+                            <p>
+                                大多数情况下，应用程序的URL包含可变部分。
+                                如果您正在创建博客这样的应用程序，则显示文章的网址应包含起标题或其他唯一标识符，以便让应用程序知道要显示的确切文章。
+                            </p>
+                            <p>
+                                在Symfony的应用程序中，路径的变量部分用大括号括起来。（例如：<code class="docutils literal"><span class="pre">/blog/read/{article_title}/</span></code>）。
+                                每个变量部分都被分配一个唯一的名字，以后可以在控制器中使用来检索每个值。
+                            </p>
+                            <p>
+                                让我们用路由变量创建一个新的action来显示这个功能。
+                                打开<code class="docutils literal"><span class="pre">src/AppBundle/Controller/DefaultController.php</span></code>文件并添加一个<code class="docutils literal"><span class="pre">helloAction</span></code>方法，其中包含以下内容：
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre>
+<span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/hello/{name}&quot;, name=&quot;hello&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;default/hello.html.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span>
+        <span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                打开浏览器并访问<code class="docutils literal"><span class="pre">http://localhost:8000/hello/fabien</span></code> URL来查看执行这个新的action的结果。
+                                代替这个action的结果的是你将看到的错误的页面。
+                                正如你猜的那样，我们正在渲染一个还不存在的模板(<code class="docutils literal"><span class="pre">default/hello.html.twig</span></code>)。
+                            </p>
+                            <p>
+                                用以下内容创建一个新的<code class="docutils literal"><span class="pre">app/Resources/views/default/hello.html.twig</span></code>模板：
+                            </p>
+                            <div class="highlight-html+jinja">
+                                <div class="highlight">
+<pre>
+<span class="c">{# app/Resources/views/default/hello.html.twig #}</span>
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;base.html.twig&#39;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span>
+    <span class="nt">&lt;h1&gt;</span>Hi <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>! Welcome to Symfony!<span class="nt">&lt;/h1&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                再次浏览<code class="docutils literal"><span class="pre">http://localhost:8000/hello/fabien</span></code>网址,你将会看到这个新的模板呈现了控制器传递的信息。
+                                如果您更改网址的最后一部分(例如 <code class="docutils literal"><span class="pre">http://localhost:8000/hello/thomas</span></code>)，并重新加载浏览器，页面将显示不同的信息。
+                                如果你删除了网址的最后一部分(例如 <code class="docutils literal"><span class="pre">http://localhost:8000/hello</span></code>)，Symfony会显示错误，因为路由希望有一个名字，而你没有提供它。
+                            </p>
+                        </div>
+                        <div class="section" id="using-formats">
+                            <h2>使用Format<a class="headerlink" href="#using-formats" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                如今，一个Web应用程序不仅仅能提供html页面。从xml格式的RSS或者Web Service,到JSON格式的ajax请求，有很多不同的格式可供选择。
+                                在Symfony中支持这些格式很直接，这要归功于一个叫做<code class="docutils literal"><span class="pre">_format</span></code>的特殊变量，它存储了用户请求的格式。
+                            </p>
+                            <p>
+                                通过添加一个新的<code class="docutils literal"><span class="pre">_format</span></code>变量并且<code class="docutils literal"><span class="pre">html</span></code>作为默认值来调整<code class="docutils literal"><span class="pre">hello</span></code>路由。
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre>
+<span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Template</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Route(&quot;/hello/{name}.{_format}&quot;, defaults={&quot;_format&quot;=&quot;html&quot;}, name=&quot;hello&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$_format</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;default/hello.&#39;</span><span class="o">.</span><span class="nv">$_format</span><span class="o">.</span><span class="s1">&#39;.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                很显然，当你支持某种服务请求的格式时，你必须为每种支持的格式提供一个模板。
+                                在这种情况下，你应该创建一个新的<code class="docutils literal"><span class="pre">hello.xml.twig</span></code>模板。
+                            </p>
+                            <div class="highlight-xml+php">
+                                <div class="highlight">
+<pre>
+<span class="c">&lt;!-- app/Resources/views/default/hello.xml.twig --&gt;</span>
+<span class="nt">&lt;hello&gt;</span>
+    <span class="nt">&lt;name&gt;</span>{{ name }}<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;/hello&gt;</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                现在当你浏览<code class="docutils literal"><span class="pre">http://localhost:8000/hello/fabien</span></code>，显示是正常的，应为<code class="docutils literal"><span class="pre">html</span></code>是默认格式。
+                                当你浏览<code class="docutils literal"><span class="pre">http://localhost:8000/hello/fabien.html</span></code>时，你依然会看到html页面，因为这次你指定了html页面。
+                                最后，如果你访问<code class="docutils literal"><span class="pre">http://localhost:8000/hello/fabien.xml</span></code>，你会看到在浏览器中呈现的xml模板。
+                            </p>
+                            <p>
+                                就这么简单。对于标准格式，Symfony也会自动为响应提供更好的<code class="docutils literal"><span class="pre">Content-Type</span></code>响应头。
+                                要限制给定动作所支持的格式，请使用 <code class="docutils literal"><span class="pre">&#64;Route()</span></code>注释的<code class="docutils literal"><span class="pre">requirements</span></code>选项。
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre>
+<span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Template</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Route(&quot;/hello/{name}.{_format}&quot;,</span>
+<span class="sd"> *     defaults = {&quot;_format&quot;=&quot;html&quot;},</span>
+<span class="sd"> *     requirements = { &quot;_format&quot; = &quot;html|xml|json&quot; },</span>
+<span class="sd"> *     name = &quot;hello&quot;</span>
+<span class="sd"> * )</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$_format</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;default/hello.&#39;</span><span class="o">.</span><span class="nv">$_format</span><span class="o">.</span><span class="s1">&#39;.twig&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                这个<code class="docutils literal"><span class="pre">hello</span></code> action现在将匹配<code class="docutils literal"><span class="pre">/hello/fabien.xml</span></code>或者<code class="docutils literal"><span class="pre">/hello/fabien.json</span></code>的网址，
+                                但是如果您尝试获取<code class="docutils literal"><span class="pre">/hello/fabien.js</span></code>的网址，它将显示404错误，因为<code class="docutils literal"><span class="pre">_format</span></code>的值不符合要求。
+                            </p>
+                        </div>
+                        <div class="section" id="redirecting">
+                            <span id="redirecting-and-forwarding"></span>
+                            <h2>Redirecting<a class="headerlink" href="#redirecting" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                If you want to redirect the user to another page, use the <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method:
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre>
+<span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/&quot;, name=&quot;homepage&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Fabien&#39;</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                The <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method takes as arguments the route name and an optional array of parameters and redirects the user to the URL generated with those arguments.
+                            </p>
+                        </div>
+                        <div class="section" id="displaying-error-pages">
+                            <h2>Displaying Error Pages<a class="headerlink" href="#displaying-error-pages" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Errors will inevitably happen during the execution of every web application.
+                                In the case of <code class="docutils literal"><span class="pre">404</span></code> errors, Symfony includes a handy shortcut that you can use in your controllers:
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre><span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="c1">// ...</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/&quot;, name=&quot;homepage&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+        <span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createNotFoundException</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                For <code class="docutils literal"><span class="pre">500</span></code> errors, just throw a regular PHP exception inside the controller and Symfony will transform it into a proper <code class="docutils literal"><span class="pre">500</span></code> error page:
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre><span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="c1">// ...</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/&quot;, name=&quot;homepage&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nx">\Exception</span><span class="p">(</span><span class="s1">&#39;Something went horribly wrong!&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="getting-information-from-the-request">
+                            <h2>Getting Information from the Request<a class="headerlink" href="#getting-information-from-the-request" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Sometimes your controllers need to access the information related to the user request, such as their preferred language, IP address or the URL query parameters.
+                                To get access to this information, add a new argument of type <code class="docutils literal"><span class="pre">Request</span></code> to the action. The name of this new argument doesn&#8217;t matter,
+                                but it must be preceded by the <code class="docutils literal"><span class="pre">Request</span></code> type in order to work (don&#8217;t forget to add the new <code class="docutils literal"><span class="pre">use</span></code> statement that imports this <code class="docutils literal"><span class="pre">Request</span></code> class):
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre>
+<span class="c1">// src/AppBundle/Controller/DefaultController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @Route(&quot;/&quot;, name=&quot;homepage&quot;)</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// is it an Ajax request?</span>
+        <span class="nv">$isAjax</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">isXmlHttpRequest</span><span class="p">();</span>
+
+        <span class="c1">// what&#39;s the preferred language of the user?</span>
+        <span class="nv">$language</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getPreferredLanguage</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="s1">&#39;fr&#39;</span><span class="p">));</span>
+
+        <span class="c1">// get the value of a $_GET parameter</span>
+        <span class="nv">$pageName</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">query</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">);</span>
+
+        <span class="c1">// get the value of a $_POST parameter</span>
+        <span class="nv">$pageName</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                In a template, you can also access the <code class="docutils literal"><span class="pre">Request</span></code> object via the special <code class="docutils literal"><span class="pre">app.request</span></code> variable automatically provided by Symfony:
+                            </p>
+                            <div class="highlight-html+jinja">
+                                <div class="highlight">
+<pre>
+<span class="cp">{{</span> <span class="nv">app.request.query.get</span><span class="o">(</span><span class="s1">&#39;page&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+
+<span class="cp">{{</span> <span class="nv">app.request.request.get</span><span class="o">(</span><span class="s1">&#39;page&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="persisting-data-in-the-session">
+                            <h2>Persisting Data in the Session<a class="headerlink" href="#persisting-data-in-the-session" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Even if the HTTP protocol is stateless,
+                                Symfony provides a nice session object that represents the client (be it a real person using a browser, a bot, or a web service).
+                                Between two requests, Symfony stores the attributes in a cookie by using native PHP sessions.
+                            </p>
+                            <p>
+                                Storing and retrieving information from the session can be easily achieved from any controller:
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$session</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
+
+    <span class="c1">// store an attribute for reuse during a later user request</span>
+    <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+
+    <span class="c1">// get the value of a session attribute</span>
+    <span class="nv">$foo</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+
+    <span class="c1">// use a default value if the attribute doesn&#39;t exist</span>
+    <span class="nv">$foo</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;default_value&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                You can also store &#8220;flash messages&#8221; that will auto-delete after the next request.
+                                They are useful when you need to set a success message before redirecting the user to another page (which will then show the message):
+                            </p>
+                            <div class="highlight-php">
+                                <div class="highlight">
+<pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="c1">// store a message for the very next request</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">addFlash</span><span class="p">(</span><span class="s1">&#39;notice&#39;</span><span class="p">,</span> <span class="s1">&#39;Congratulations, your action succeeded!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                And you can display the flash message in the template like this:
+                            </p>
+                            <div class="highlight-html+jinja">
+                                <div class="highlight">
+<pre><span class="nt">&lt;div&gt;</span>
+    <span class="cp">{{</span> <span class="nv">app.session.flashbag.get</span><span class="o">(</span><span class="s1">&#39;notice&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="final-thoughts">
+                            <h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                That&#8217;s all there is to it, and I&#8217;m not even sure you&#8217;ll have spent the full 10 minutes.
+                                You were briefly introduced to bundles in the first part, and all the features you&#8217;ve learned about so far are part of the core framework bundle.
+                                But thanks to bundles, everything in Symfony can be extended or replaced.
+                                That&#8217;s the topic of the <a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html"><em>next part of this tutorial</em></a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+                        <a href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html" class="btn btn-neutral float-right" title="代码结构">Next <span class="fa fa-arrow-circle-right"></span></a>
+                        <a href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html" class="btn btn-neutral" title="视图"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+                    </div>
+                    <hr/>
+                    <div role="contentinfo">
+                        <p>
+                            &copy; 版权所有 Creative Commons Attribution-Share Alike 3.0 Unported.
+                        </p>
+                    </div>
+                    Built with <a
+                        href="javascript:if(confirm('http://sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx-doc.org/'"
+                        tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/snide/sphinx_rtd_theme'"
+                        tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+                        href="javascript:if(confirm('https://readthedocs.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://readthedocs.org/'"
+                        tppabs="https://readthedocs.org/">Read the Docs</a>.
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+<script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+<script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+<script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+<script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+<script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.StickyNav.enable();
+    });
+</script>
+</body>
+</html>

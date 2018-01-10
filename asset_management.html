@@ -1,0 +1,873 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>如何使用Assetic管理静态文件 &mdash; Symfony Framework Documentation  文档</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  文档" href="../../index.html"/>
+        <link rel="up" title="静态文件处理（Assetic）" href="index.html"/>
+        <link rel="next" title="如何压缩CSS/JS文件（使用UglifyJS和UglifyCSS）" href="uglifyjs.html"/>
+        <link rel="prev" title="静态文件处理（Assetic）" href="index.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">快速入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">控制器（Controller）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">代码结构</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfony和HTTP基础工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs 纯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">安装和配置Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">创建页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">控制器（Controller）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">路由（Routing）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">创建和使用模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">数据库和Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">数据库和Propel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">校验</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">表单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">安全性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTP缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">多语言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">服务容器（Service Container）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">核心功能</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">手册</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">静态文件处理（Assetic）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">包（Bundle）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">命令行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">控制器（Controller）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">部署</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">邮件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">事件分发器（Dispatcher）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">表达式（Expression）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">最佳实践</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfony框架最佳实践</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">创建项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">配置参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">业务逻辑代码的组织</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">控制器（Controller）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">表单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">多语言支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">静态文件（Assets）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">测试</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">组件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">贡献</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">贡献代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">贡献文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">社区</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">手册</a> &raquo;</li>
+      
+          <li><a href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">静态文件处理（Assetic）</a> &raquo;</li>
+      
+    <li>如何使用Assetic管理静态文件</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="asset_management.txt.htm" tppabs="http://symfony.cn/docs/_sources/cookbook/assetic/asset_management.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-to-use-assetic-for-asset-management">
+<span id="index-0"></span><h1>如何使用Assetic管理静态文件<a class="headerlink" href="#how-to-use-assetic-for-asset-management" title="永久链接至标题">¶</a></h1>
+<p>Assetic combines two major ideas: <a class="reference internal" href="#cookbook-assetic-assets"><span>assets</span></a> and
+<a class="reference internal" href="#cookbook-assetic-filters"><span>filters</span></a>. The assets are files such as CSS,
+JavaScript and image files. The filters are things that can be applied to
+these files before they are served to the browser. This allows a separation
+between the asset files stored in the application and the files actually presented
+to the user.</p>
+<p>Without Assetic, you just serve the files that are stored in the application
+directly:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">&#39;js/script.js&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;&lt;?php echo </span><span class="si">$view[&#39;assets&#39;]</span><span class="s2">-&gt;getUrl(&#39;js/script.js&#39;) ?&gt;&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>But <em>with</em> Assetic, you can manipulate these assets however you want (or
+load them from anywhere) before serving them. This means you can:</p>
+<ul class="simple">
+<li>Minify and combine all of your CSS and JS files</li>
+<li>Run all (or just some) of your CSS or JS files through some sort of compiler,
+such as LESS, SASS or CoffeeScript</li>
+<li>Run image optimizations on your images</li>
+</ul>
+<div class="section" id="assets">
+<span id="cookbook-assetic-assets"></span><h2>Assets<a class="headerlink" href="#assets" title="永久链接至标题">¶</a></h2>
+<p>Using Assetic provides many advantages over directly serving the files.
+The files do not need to be stored where they are served from and can be
+drawn from various sources such as from within a bundle.</p>
+<p>You can use Assetic to process <a class="reference internal" href="#cookbook-assetic-including-css"><span>CSS stylesheets</span></a>,
+<a class="reference internal" href="#cookbook-assetic-including-javascript"><span>JavaScript files</span></a> and
+<a class="reference internal" href="#cookbook-assetic-including-image"><span>images</span></a>. The philosophy
+behind adding either is basically the same, but with a slightly different syntax.</p>
+<div class="section" id="including-javascript-files">
+<span id="cookbook-assetic-including-javascript"></span><h3>Including JavaScript Files<a class="headerlink" href="#including-javascript-files" title="永久链接至标题">¶</a></h3>
+<p>To include JavaScript files, use the <code class="docutils literal"><span class="pre">javascripts</span></code> tag in any template:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span> <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>If your application templates use the default block names from the Symfony
+Standard Edition, the <code class="docutils literal"><span class="pre">javascripts</span></code> tag will most commonly live in the
+<code class="docutils literal"><span class="pre">javascripts</span></code> block:</p>
+<div class="last highlight-html+jinja"><div class="highlight"><pre><span class="c">{# ... #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">javascripts</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">javascripts</span> <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="cp">%}</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="c">{# ... #}</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">You can also include CSS Stylesheets: see <a class="reference internal" href="#cookbook-assetic-including-css"><span>Including CSS Stylesheets</span></a>.</p>
+</div>
+<p>In this example, all of the files in the <code class="docutils literal"><span class="pre">Resources/public/js/</span></code> directory
+of the AppBundle will be loaded and served from a different location.
+The actual rendered tag might simply look like:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/app_dev.php/js/abcd123.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+<p>This is a key point: once you let Assetic handle your assets, the files are
+served from a different location. This <em>will</em> cause problems with CSS files
+that reference images by their relative path. See <a class="reference internal" href="#cookbook-assetic-cssrewrite"><span>Fixing CSS Paths with the cssrewrite Filter</span></a>.</p>
+</div>
+<div class="section" id="including-css-stylesheets">
+<span id="cookbook-assetic-including-css"></span><h3>Including CSS Stylesheets<a class="headerlink" href="#including-css-stylesheets" title="永久链接至标题">¶</a></h3>
+<p>To bring in CSS stylesheets, you can use the same technique explained above,
+except with the <code class="docutils literal"><span class="pre">stylesheets</span></code> tag:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">stylesheets</span> <span class="s1">&#39;bundles/app/css/*&#39;</span> <span class="nv">filter</span><span class="o">=</span><span class="s1">&#39;cssrewrite&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="nt">/&gt;</span>
+<span class="cp">{%</span> <span class="k">endstylesheets</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">stylesheets</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;bundles/app/css/*&#39;</span><span class="p">),</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;cssrewrite&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span> <span class="nt">/&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>If your application templates use the default block names from the Symfony
+Standard Edition, the <code class="docutils literal"><span class="pre">stylesheets</span></code> tag will most commonly live in the
+<code class="docutils literal"><span class="pre">stylesheets</span></code> block:</p>
+<div class="last highlight-html+jinja"><div class="highlight"><pre><span class="c">{# ... #}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">stylesheets</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">stylesheets</span> <span class="s1">&#39;bundles/app/css/*&#39;</span> <span class="nv">filter</span><span class="o">=</span><span class="s1">&#39;cssrewrite&#39;</span> <span class="cp">%}</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="nt">/&gt;</span>
+    <span class="cp">{%</span> <span class="k">endstylesheets</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="c">{# ... #}</span>
+</pre></div>
+</div>
+</div>
+<p>But because Assetic changes the paths to your assets, this <em>will</em> break any
+background images (or other paths) that uses relative paths, unless you use
+the <a class="reference internal" href="#cookbook-assetic-cssrewrite"><span>cssrewrite</span></a> filter.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Notice that in the original example that included JavaScript files, you
+referred to the files using a path like <code class="docutils literal"><span class="pre">&#64;AppBundle/Resources/public/file.js</span></code>,
+but that in this example, you referred to the CSS files using their actual,
+publicly-accessible path: <code class="docutils literal"><span class="pre">bundles/app/css</span></code>. You can use either, except
+that there is a known issue that causes the <code class="docutils literal"><span class="pre">cssrewrite</span></code> filter to fail
+when using the <code class="docutils literal"><span class="pre">&#64;AppBundle</span></code> syntax for CSS Stylesheets.</p>
+</div>
+</div>
+<div class="section" id="including-images">
+<span id="cookbook-assetic-including-image"></span><h3>Including Images<a class="headerlink" href="#including-images" title="永久链接至标题">¶</a></h3>
+<p>To include an image you can use the <code class="docutils literal"><span class="pre">image</span></code> tag.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">image</span> <span class="s1">&#39;@AppBundle/Resources/public/images/example.jpg&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">alt=</span><span class="s">&quot;Example&quot;</span> <span class="nt">/&gt;</span>
+<span class="cp">{%</span> <span class="k">endimage</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">image</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;@AppBundle/Resources/public/images/example.jpg&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span> <span class="na">alt=</span><span class="s">&quot;Example&quot;</span> <span class="nt">/&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>You can also use Assetic for image optimization. More information in
+<a class="reference internal" href="jpeg_optimize.html" tppabs="http://symfony.cn/docs/cookbook/assetic/jpeg_optimize.html"><em>如何Asstic和Twig优化图片</em></a>.</p>
+</div>
+<div class="section" id="fixing-css-paths-with-the-cssrewrite-filter">
+<span id="cookbook-assetic-cssrewrite"></span><h3>Fixing CSS Paths with the <code class="docutils literal"><span class="pre">cssrewrite</span></code> Filter<a class="headerlink" href="#fixing-css-paths-with-the-cssrewrite-filter" title="永久链接至标题">¶</a></h3>
+<p>Since Assetic generates new URLs for your assets, any relative paths inside
+your CSS files will break. To fix this, make sure to use the <code class="docutils literal"><span class="pre">cssrewrite</span></code>
+filter with your <code class="docutils literal"><span class="pre">stylesheets</span></code> tag. This parses your CSS files and corrects
+the paths internally to reflect the new location.</p>
+<p>You can see an example in the previous section.</p>
+<div class="admonition caution">
+<p class="first admonition-title">警告</p>
+<p class="last">When using the <code class="docutils literal"><span class="pre">cssrewrite</span></code> filter, don&#8217;t refer to your CSS files using
+the <code class="docutils literal"><span class="pre">&#64;AppBundle</span></code> syntax. See the note in the above section for details.</p>
+</div>
+</div>
+<div class="section" id="combining-assets">
+<h3>Combining Assets<a class="headerlink" href="#combining-assets" title="永久链接至标题">¶</a></h3>
+<p>One feature of Assetic is that it will combine many files into one. This helps
+to reduce the number of HTTP requests, which is great for frontend performance.
+It also allows you to maintain the files more easily by splitting them into
+manageable parts. This can help with re-usability as you can easily split
+project-specific files from those which can be used in other applications,
+but still serve them as a single file:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span>
+    <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span>
+    <span class="s1">&#39;@AcmeBarBundle/Resources/public/js/form.js&#39;</span>
+    <span class="s1">&#39;@AcmeBarBundle/Resources/public/js/calendar.js&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;@AcmeBarBundle/Resources/public/js/form.js&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;@AcmeBarBundle/Resources/public/js/calendar.js&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>In the <code class="docutils literal"><span class="pre">dev</span></code> environment, each file is still served individually, so that
+you can debug problems more easily. However, in the <code class="docutils literal"><span class="pre">prod</span></code> environment
+(or more specifically, when the <code class="docutils literal"><span class="pre">debug</span></code> flag is <code class="docutils literal"><span class="pre">false</span></code>), this will be
+rendered as a single <code class="docutils literal"><span class="pre">script</span></code> tag, which contains the contents of all of
+the JavaScript files.</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">If you&#8217;re new to Assetic and try to use your application in the <code class="docutils literal"><span class="pre">prod</span></code>
+environment (by using the <code class="docutils literal"><span class="pre">app.php</span></code> controller), you&#8217;ll likely see
+that all of your CSS and JS breaks. Don&#8217;t worry! This is on purpose.
+For details on using Assetic in the <code class="docutils literal"><span class="pre">prod</span></code> environment, see <a class="reference internal" href="#cookbook-assetic-dumping"><span>Dumping Asset Files</span></a>.</p>
+</div>
+<p>And combining files doesn&#8217;t only apply to <em>your</em> files. You can also use Assetic to
+combine third party assets, such as jQuery, with your own into a single file:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span>
+    <span class="s1">&#39;@AppBundle/Resources/public/js/thirdparty/jquery.js&#39;</span>
+    <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;@AppBundle/Resources/public/js/thirdparty/jquery.js&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-named-assets">
+<h3>Using Named Assets<a class="headerlink" href="#using-named-assets" title="永久链接至标题">¶</a></h3>
+<p>AsseticBundle configuration directives allow you to define named asset sets.
+You can do so by defining the input files, filters and output files in your
+configuration under the <code class="docutils literal"><span class="pre">assetic</span></code> section. Read more in the
+<a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html"><em>assetic config reference</em></a>.</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">assetic</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">jquery_and_ui</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">inputs</span><span class="p-Indicator">:</span>
+                <span class="p-Indicator">-</span> <span class="s">&#39;@AppBundle/Resources/public/js/thirdparty/jquery.js&#39;</span>
+                <span class="p-Indicator">-</span> <span class="s">&#39;@AppBundle/Resources/public/js/thirdparty/jquery.ui.js&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;container</span> <span class="na">xmlns=</span><span class="s">&quot;http://symfony.com/schema/dic/services&quot;</span>
+    <span class="na">xmlns:assetic=</span><span class="s">&quot;http://symfony.com/schema/dic/assetic&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;assetic:config&gt;</span>
+        <span class="nt">&lt;assetic:asset</span> <span class="na">name=</span><span class="s">&quot;jquery_and_ui&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;assetic:input&gt;</span>@AppBundle/Resources/public/js/thirdparty/jquery.js<span class="nt">&lt;/assetic:input&gt;</span>
+            <span class="nt">&lt;assetic:input&gt;</span>@AppBundle/Resources/public/js/thirdparty/jquery.ui.js<span class="nt">&lt;/assetic:input&gt;</span>
+        <span class="nt">&lt;/assetic:asset&gt;</span>
+    <span class="nt">&lt;/assetic:config&gt;</span>
+<span class="nt">&lt;/container&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;assetic&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;assets&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;jquery_and_ui&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;inputs&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;@AppBundle/Resources/public/js/thirdparty/jquery.js&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;@AppBundle/Resources/public/js/thirdparty/jquery.ui.js&#39;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>After you have defined the named assets, you can reference them in your templates
+with the <code class="docutils literal"><span class="pre">&#64;named_asset</span></code> notation:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span>
+    <span class="s1">&#39;@jquery_and_ui&#39;</span>
+    <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;@jquery_and_ui&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="filters">
+<span id="cookbook-assetic-filters"></span><h2>Filters<a class="headerlink" href="#filters" title="永久链接至标题">¶</a></h2>
+<p>Once they&#8217;re managed by Assetic, you can apply filters to your assets before
+they are served. This includes filters that compress the output of your assets
+for smaller file sizes (and better frontend optimization). Other filters
+can compile JavaScript file from CoffeeScript files and process SASS into CSS.
+In fact, Assetic has a long list of available filters.</p>
+<p>Many of the filters do not do the work directly, but use existing third-party
+libraries to do the heavy-lifting. This means that you&#8217;ll often need to install
+a third-party library to use a filter. The great advantage of using Assetic
+to invoke these libraries (as opposed to using them directly) is that instead
+of having to run them manually after you work on the files, Assetic will
+take care of this for you and remove this step altogether from your development
+and deployment processes.</p>
+<p>To use a filter, you first need to specify it in the Assetic configuration.
+Adding a filter here doesn&#8217;t mean it&#8217;s being used - it just means that it&#8217;s
+available to use (you&#8217;ll use the filter below).</p>
+<p>For example to use the UglifyJS JavaScript minifier the following configuration
+should be defined:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">assetic</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">filters</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">uglifyjs2</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">bin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/usr/local/bin/uglifyjs</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config.xml --&gt;</span>
+<span class="nt">&lt;assetic:config&gt;</span>
+    <span class="nt">&lt;assetic:filter</span>
+        <span class="na">name=</span><span class="s">&quot;uglifyjs2&quot;</span>
+        <span class="na">bin=</span><span class="s">&quot;/usr/local/bin/uglifyjs&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/assetic:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;assetic&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;filters&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;uglifyjs2&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;bin&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/usr/local/bin/uglifyjs&#39;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Now, to actually <em>use</em> the filter on a group of JavaScript files, add it
+into your template:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span> <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="nv">filter</span><span class="o">=</span><span class="s1">&#39;uglifyjs2&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">),</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;uglifyjs2&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>A more detailed guide about configuring and using Assetic filters as well as
+details of Assetic&#8217;s debug mode can be found in <a class="reference internal" href="uglifyjs.html" tppabs="http://symfony.cn/docs/cookbook/assetic/uglifyjs.html"><em>如何压缩CSS/JS文件（使用UglifyJS和UglifyCSS）</em></a>.</p>
+</div>
+<div class="section" id="controlling-the-url-used">
+<h2>Controlling the URL Used<a class="headerlink" href="#controlling-the-url-used" title="永久链接至标题">¶</a></h2>
+<p>If you wish to, you can control the URLs that Assetic produces. This is
+done from the template and is relative to the public document root:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span> <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="nv">output</span><span class="o">=</span><span class="s1">&#39;js/compiled/main.js&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">),</span>
+    <span class="k">array</span><span class="p">(),</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;output&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;js/compiled/main.js&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Symfony also contains a method for cache <em>busting</em>, where the final URL
+generated by Assetic contains a query parameter that can be incremented
+via configuration on each deployment. For more information, see the
+<a class="reference internal" href="framework.html#ref-framework-assets-version" tppabs="http://symfony.cn/docs/reference/configuration/framework.html#ref-framework-assets-version"><span>assets_version</span></a> configuration option.</p>
+</div>
+</div>
+<div class="section" id="dumping-asset-files">
+<span id="cookbook-assetic-dumping"></span><h2>Dumping Asset Files<a class="headerlink" href="#dumping-asset-files" title="永久链接至标题">¶</a></h2>
+<p>In the <code class="docutils literal"><span class="pre">dev</span></code> environment, Assetic generates paths to CSS and JavaScript
+files that don&#8217;t physically exist on your computer. But they render nonetheless
+because an internal Symfony controller opens the files and serves back the
+content (after running any filters).</p>
+<p>This kind of dynamic serving of processed assets is great because it means
+that you can immediately see the new state of any asset files you change.
+It&#8217;s also bad, because it can be quite slow. If you&#8217;re using a lot of filters,
+it might be downright frustrating.</p>
+<p>Fortunately, Assetic provides a way to dump your assets to real files, instead
+of being generated dynamically.</p>
+<div class="section" id="dumping-asset-files-in-the-prod-environment">
+<h3>Dumping Asset Files in the <code class="docutils literal"><span class="pre">prod</span></code> Environment<a class="headerlink" href="#dumping-asset-files-in-the-prod-environment" title="永久链接至标题">¶</a></h3>
+<p>In the <code class="docutils literal"><span class="pre">prod</span></code> environment, your JS and CSS files are represented by a single
+tag each. In other words, instead of seeing each JavaScript file you&#8217;re including
+in your source, you&#8217;ll likely just see something like this:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/js/abcd123.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+<p>Moreover, that file does <strong>not</strong> actually exist, nor is it dynamically rendered
+by Symfony (as the asset files are in the <code class="docutils literal"><span class="pre">dev</span></code> environment). This is on
+purpose - letting Symfony generate these files dynamically in a production
+environment is just too slow.</p>
+<p id="cookbook-assetic-dump-prod">Instead, each time you use your application in the <code class="docutils literal"><span class="pre">prod</span></code> environment (and therefore,
+each time you deploy), you should run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console assetic:dump --env<span class="o">=</span>prod --no-debug
+</pre></div>
+</div>
+<p>This will physically generate and write each file that you need (e.g. <code class="docutils literal"><span class="pre">/js/abcd123.js</span></code>).
+If you update any of your assets, you&#8217;ll need to run this again to regenerate
+the file.</p>
+</div>
+<div class="section" id="dumping-asset-files-in-the-dev-environment">
+<h3>Dumping Asset Files in the <code class="docutils literal"><span class="pre">dev</span></code> Environment<a class="headerlink" href="#dumping-asset-files-in-the-dev-environment" title="永久链接至标题">¶</a></h3>
+<p>By default, each asset path generated in the <code class="docutils literal"><span class="pre">dev</span></code> environment is handled
+dynamically by Symfony. This has no disadvantage (you can see your changes
+immediately), except that assets can load noticeably slow. If you feel like
+your assets are loading too slowly, follow this guide.</p>
+<p>First, tell Symfony to stop trying to process these files dynamically. Make
+the following change in your <code class="docutils literal"><span class="pre">config_dev.yml</span></code> file:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/config_dev.yml</span>
+<span class="l-Scalar-Plain">assetic</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">use_controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/config_dev.xml --&gt;</span>
+<span class="nt">&lt;assetic:config</span> <span class="na">use-controller=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/config_dev.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;assetic&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;use_controller&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Next, since Symfony is no longer generating these assets for you, you&#8217;ll
+need to dump them manually. To do so, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console assetic:dump
+</pre></div>
+</div>
+<p>This physically writes all of the asset files you need for your <code class="docutils literal"><span class="pre">dev</span></code>
+environment. The big disadvantage is that you need to run this each time
+you update an asset. Fortunately, by using the <code class="docutils literal"><span class="pre">assetic:watch</span></code> command,
+assets will be regenerated automatically <em>as they change</em>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console assetic:watch
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">assetic:watch</span></code> command was introduced in AsseticBundle 2.4. In prior
+versions, you had to use the <code class="docutils literal"><span class="pre">--watch</span></code> option of the <code class="docutils literal"><span class="pre">assetic:dump</span></code>
+command for the same behavior.</p>
+<p>Since running this command in the <code class="docutils literal"><span class="pre">dev</span></code> environment may generate a bunch
+of files, it&#8217;s usually a good idea to point your generated asset files to
+some isolated directory (e.g. <code class="docutils literal"><span class="pre">/js/compiled</span></code>), to keep things organized:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>Twig</em><div class="highlight-html+jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">javascripts</span> <span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span> <span class="nv">output</span><span class="o">=</span><span class="s1">&#39;js/compiled/main.js&#39;</span> <span class="cp">%}</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset_url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endjavascripts</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-html+php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$view</span><span class="p">[</span><span class="s1">&#39;assetic&#39;</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">javascripts</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;@AppBundle/Resources/public/js/*&#39;</span><span class="p">),</span>
+    <span class="k">array</span><span class="p">(),</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;output&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;js/compiled/main.js&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="k">as</span> <span class="nv">$url</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="uglifyjs.html" tppabs="http://symfony.cn/docs/cookbook/assetic/uglifyjs.html" class="btn btn-neutral float-right" title="如何压缩CSS/JS文件（使用UglifyJS和UglifyCSS）">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html" class="btn btn-neutral" title="静态文件处理（Assetic）"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

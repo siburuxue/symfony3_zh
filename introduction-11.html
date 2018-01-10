@@ -1,0 +1,642 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Asset Component &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="Asset" href="index.html"/>
+        <link rel="next" title="ClassLoader" href="../class_loader/index.html"/>
+        <link rel="prev" title="Asset" href="index.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a> &raquo;</li>
+      
+          <li><a href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a> &raquo;</li>
+      
+    <li>The Asset Component</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="introduction-12.txt.htm" tppabs="http://symfony.cn/docs/_sources/components/asset/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-asset-component">
+<span id="index-0"></span><h1>The Asset Component<a class="headerlink" href="#the-asset-component" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<blockquote>
+<div>The Asset component manages URL generation and versioning of web assets such
+as CSS stylesheets, JavaScript files and image files.</div></blockquote>
+<p>In the past, it was common for web applications to hardcode URLs of web assets.
+For example:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;/css/main.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- ... --&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/logo.png&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>This practice is no longer recommended unless the web application is extremely
+simple. Hardcoding URLs can be a disadvantage because:</p>
+<ul class="simple">
+<li><strong>Templates get verbose</strong>: you have to write the full path for each
+asset. When using the Asset component, you can group assets in packages to
+avoid repeating the common part of their path;</li>
+<li><strong>Versioning is difficult</strong>: it has to be custom managed for each
+application. Adding a version (e.g. <code class="docutils literal"><span class="pre">main.css?v=5</span></code>) to the asset URLs
+is essential for some applications because it allows you to control how
+the assets are cached. The Asset component allows you to define different
+versioning strategies for each package;</li>
+<li><strong>Moving assets location</strong> is cumbersome and error-prone: it requires you to
+carefully update the URLs of all assets included in all templates. The Asset
+component allows to move assets effortlessly just by changing the base path
+value associated with the package of assets;</li>
+<li><strong>It&#8217;s nearly impossible to use multiple CDNs</strong>: this technique requires
+you to change the URL of the asset randomly for each request. The Asset component
+provides out-of-the-box support for any number of multiple CDNs, both regular
+(<code class="docutils literal"><span class="pre">http://</span></code>) and secure (<code class="docutils literal"><span class="pre">https://</span></code>).</li>
+</ul>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>You can install the component in two different ways:</p>
+<ul class="simple">
+<li><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html"><em>Install it via Composer</em></a> (<code class="docutils literal"><span class="pre">symfony/asset</span></code> on <a class="reference external" href="javascript:if(confirm('https://packagist.org/packages/symfony/asset  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://packagist.org/packages/symfony/asset'" tppabs="https://packagist.org/packages/symfony/asset">Packagist</a>);</li>
+<li>Use the official Git repository (<a class="reference external" href="javascript:if(confirm('https://github.com/symfony/Asset  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/symfony/Asset'" tppabs="https://github.com/symfony/Asset">https://github.com/symfony/Asset</a>).</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="asset-packages">
+<h3>Asset Packages<a class="headerlink" href="#asset-packages" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The Asset component manages assets through packages. A package groups all the
+assets which share the same properties: versioning strategy, base path, CDN hosts,
+etc. In the following basic example, a package is created to manage assets without
+any versioning:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\Package</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy</span><span class="p">;</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Package</span><span class="p">(</span><span class="k">new</span> <span class="nx">EmptyVersionStrategy</span><span class="p">());</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/image.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: /image.png</span>
+</pre></div>
+</div>
+<p>Packages implement <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html" title="Symfony\Component\Asset\PackageInterface"><span class="pre">PackageInterface</span></a></code>,
+which defines the following two methods:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html#method_getVersion'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html#method_getVersion" title="Symfony\Component\Asset\PackageInterface::getVersion()"><span class="pre">getVersion()</span></a></code></dt>
+<dd>Returns the asset version for an asset.</dd>
+<dt><code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html#method_getUrl'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/PackageInterface.html#method_getUrl" title="Symfony\Component\Asset\PackageInterface::getUrl()"><span class="pre">getUrl()</span></a></code></dt>
+<dd>Returns an absolute or root-relative public path.</dd>
+</dl>
+<p>With a package, you can:</p>
+<ol class="upperalpha simple">
+<li><a class="reference internal" href="#component-assets-versioning"><span>version the assets</span></a>;</li>
+<li>set a <a class="reference internal" href="#component-assets-path-package"><span>common base path</span></a> (e.g. <code class="docutils literal"><span class="pre">/css</span></code>)
+for the assets;</li>
+<li><a class="reference internal" href="#component-assets-cdn"><span>configure a CDN</span></a> for the assets</li>
+</ol>
+</div>
+<div class="section" id="versioned-assets">
+<span id="component-assets-versioning"></span><h3>Versioned Assets<a class="headerlink" href="#versioned-assets" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>One of the main features of the Asset component is the ability to manage
+the versioning of the application&#8217;s assets. Asset versions are commonly used
+to control how these assets are cached.</p>
+<p>Instead of relying on a simple version mechanism, the Asset component allows
+you to define advanced versioning strategies via PHP classes. The two built-in
+strategies are the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/EmptyVersionStrategy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/EmptyVersionStrategy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/EmptyVersionStrategy.html" title="Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy"><span class="pre">EmptyVersionStrategy</span></a></code>,
+which doesn&#8217;t add any version to the asset and <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/StaticVersionStrategy.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/StaticVersionStrategy.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/StaticVersionStrategy.html" title="Symfony\Component\Asset\VersionStrategy\StaticVersionStrategy"><span class="pre">StaticVersionStrategy</span></a></code>,
+which allows you to set the version with a format string.</p>
+<p>In this example, the <code class="docutils literal"><span class="pre">StaticVersionStrategy</span></code> is used to append the <code class="docutils literal"><span class="pre">v1</span></code>
+suffix to any asset path:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\Package</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\VersionStrategy\StaticVersionStrategy</span><span class="p">;</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Package</span><span class="p">(</span><span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">));</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/image.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: /image.png?v1</span>
+</pre></div>
+</div>
+<p>In case you want to modify the version format, pass a sprintf-compatible format
+string as the second argument of the <code class="docutils literal"><span class="pre">StaticVersionStrategy</span></code> constructor:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// put the &#39;version&#39; word before the version value</span>
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Package</span><span class="p">(</span><span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span> <span class="s1">&#39;%s?version=%s&#39;</span><span class="p">));</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/image.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: /image.png?version=v1</span>
+
+<span class="c1">// put the asset version before its path</span>
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Package</span><span class="p">(</span><span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span> <span class="s1">&#39;%2$s/%1$s&#39;</span><span class="p">));</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/image.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: /v1/image.png</span>
+</pre></div>
+</div>
+<div class="section" id="custom-version-strategies">
+<h4>Custom Version Strategies<a class="headerlink" href="#custom-version-strategies" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>Use the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/VersionStrategyInterface.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/VersionStrategyInterface.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/VersionStrategy/VersionStrategyInterface.html" title="Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface"><span class="pre">VersionStrategyInterface</span></a></code>
+to define your own versioning strategy. For example, your application may need
+to append the current date to all its web assets in order to bust the cache
+every day:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DateVersionStrategy</span> <span class="k">implements</span> <span class="nx">VersionStrategyInterface</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$version</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">version</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Ymd&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getVersion</span><span class="p">(</span><span class="nv">$path</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">version</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">applyVersion</span><span class="p">(</span><span class="nv">$path</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">sprintf</span><span class="p">(</span><span class="s1">&#39;%s?v=%s&#39;</span><span class="p">,</span> <span class="nv">$path</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getVersion</span><span class="p">(</span><span class="nv">$path</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="grouped-assets">
+<span id="component-assets-path-package"></span><h3>Grouped Assets<a class="headerlink" href="#grouped-assets" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Often, many assets live under a common path (e.g. <code class="docutils literal"><span class="pre">/static/images</span></code>). If
+that&#8217;s your case, replace the default <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/Package.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/Package.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/Package.html" title="Symfony\Component\Asset\Package"><span class="pre">Package</span></a></code>
+class with <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/PathPackage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/PathPackage.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/PathPackage.html" title="Symfony\Component\Asset\PathPackage"><span class="pre">PathPackage</span></a></code> to avoid repeating
+that path over and over again:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\PathPackage</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PathPackage</span><span class="p">(</span><span class="s1">&#39;/static/images&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">));</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: /static/images/logo.png?v1</span>
+</pre></div>
+</div>
+<div class="section" id="request-context-aware-assets">
+<h4>Request Context Aware Assets<a class="headerlink" href="#request-context-aware-assets" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>If you are also using the <a class="reference internal" href="introduction-1.html" tppabs="http://symfony.cn/docs/components/http_foundation/introduction.html"><em>HttpFoundation</em></a>
+component in your project (for instance, in a Symfony application), the <code class="docutils literal"><span class="pre">PathPackage</span></code>
+class can take into account the context of the current request:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\PathPackage</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\Context\RequestStackContext</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PathPackage</span><span class="p">(</span>
+    <span class="s1">&#39;/static/images&#39;</span><span class="p">,</span>
+    <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">RequestStackContext</span><span class="p">(</span><span class="nv">$requestStack</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: /somewhere/static/images/logo.png?v1</span>
+</pre></div>
+</div>
+<p>Now that the request context is set, the <code class="docutils literal"><span class="pre">PathPackage</span></code> will prepend the
+current request base URL. So, for example, if your entire site is hosted under
+the <code class="docutils literal"><span class="pre">/somewhere</span></code> directory of your web server root directory and the configured
+base path is <code class="docutils literal"><span class="pre">/static/images</span></code>, all paths will be prefixed with
+<code class="docutils literal"><span class="pre">/somewhere/static/images</span></code>.</p>
+</div>
+</div>
+<div class="section" id="absolute-assets-and-cdns">
+<span id="component-assets-cdn"></span><h3>Absolute Assets and CDNs<a class="headerlink" href="#absolute-assets-and-cdns" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Applications that host their assets on different domains and CDNs (<em>Content
+Delivery Networks</em>) should use the <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/UrlPackage.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/UrlPackage.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/UrlPackage.html" title="Symfony\Component\Asset\UrlPackage"><span class="pre">UrlPackage</span></a></code>
+class to generate absolute URLs for their assets:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\UrlPackage</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPackage</span><span class="p">(</span>
+    <span class="s1">&#39;http://static.example.com/images/&#39;</span><span class="p">,</span>
+    <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: http://static.example.com/images/logo.png?v1</span>
+</pre></div>
+</div>
+<p>You can also pass a schema-agnostic URL:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\UrlPackage</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPackage</span><span class="p">(</span>
+    <span class="s1">&#39;//static.example.com/images/&#39;</span><span class="p">,</span>
+    <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: //static.example.com/images/logo.png?v1</span>
+</pre></div>
+</div>
+<p>This is useful because assets will automatically be requested via HTTPS if
+a visitor is viewing your site in https. Just make sure that your CDN host
+supports https.</p>
+<p>In case you serve assets from more than one domain to improve application
+performance, pass an array of URLs as the first argument to the <code class="docutils literal"><span class="pre">UrlPackage</span></code>
+constructor:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\UrlPackage</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$urls</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;//static1.example.com/images/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;//static2.example.com/images/&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPackage</span><span class="p">(</span><span class="nv">$urls</span><span class="p">,</span> <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">));</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: http://static1.example.com/images/logo.png?v1</span>
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/icon.png&#39;</span><span class="p">);</span>
+<span class="c1">// result: http://static2.example.com/images/icon.png?v1</span>
+</pre></div>
+</div>
+<p>For each asset, one of the URLs will be randomly used. But, the selection
+is deterministic, meaning that each asset will be always served by the same
+domain. This behavior simplifies the management of HTTP cache.</p>
+<div class="section" id="id1">
+<h4>Request Context Aware Assets<a class="headerlink" href="#id1" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p>Similarly to application-relative assets, absolute assets can also take into
+account the context of the current request. In this case, only the request
+scheme is considered, in order to select the appropriate base URL (HTTPs or
+protocol-relative URLs for HTTPs requests, any base URL for HTTP requests):</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\UrlPackage</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\Context\RequestStackContext</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPackage</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;http://example.com/&#39;</span><span class="p">,</span> <span class="s1">&#39;https://example.com/&#39;</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">RequestStackContext</span><span class="p">(</span><span class="nv">$requestStack</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">);</span>
+<span class="c1">// assuming the RequestStackContext says that we are on a secure host</span>
+<span class="c1">// result: https://example.com/logo.png?v1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="named-packages">
+<h3>Named Packages<a class="headerlink" href="#named-packages" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Applications that manage lots of different assets may need to group them in
+packages with the same versioning strategy and base path. The Asset component
+includes a <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/Asset/Packages.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/Asset/Packages.html'" tppabs="http://api.symfony.com/master/Symfony/Component/Asset/Packages.html" title="Symfony\Component\Asset\Packages"><span class="pre">Packages</span></a></code> class to simplify
+management of several packages.</p>
+<p>In the following example, all packages use the same versioning strategy, but
+they all have different base paths:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Symfony\Component\Asset\Package</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\PathPackage</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\UrlPackage</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\Asset\Packages</span><span class="p">;</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$versionStrategy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StaticVersionStrategy</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">);</span>
+
+<span class="nv">$defaultPackage</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Package</span><span class="p">(</span><span class="nv">$versionStrategy</span><span class="p">);</span>
+
+<span class="nv">$namedPackages</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;img&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">UrlPackage</span><span class="p">(</span><span class="s1">&#39;http://img.example.com/&#39;</span><span class="p">,</span> <span class="nv">$versionStrategy</span><span class="p">),</span>
+    <span class="s1">&#39;doc&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">PathPackage</span><span class="p">(</span><span class="s1">&#39;/somewhere/deep/for/documents&#39;</span><span class="p">,</span> <span class="nv">$versionStrategy</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="nv">$packages</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Packages</span><span class="p">(</span><span class="nv">$defaultPackage</span><span class="p">,</span> <span class="nv">$namedPackages</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">Packages</span></code> class allows to define a default package, which will be applied
+to assets that don&#8217;t define the name of package to use. In addition, this
+application defines a package named <code class="docutils literal"><span class="pre">img</span></code> to serve images from an external
+domain and a <code class="docutils literal"><span class="pre">doc</span></code> package to avoid repeating long paths when linking to a
+document inside a template:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$packages</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/main.css&#39;</span><span class="p">);</span>
+<span class="c1">// result: /main.css?v1</span>
+
+<span class="k">echo</span> <span class="nv">$packages</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/logo.png&#39;</span><span class="p">,</span> <span class="s1">&#39;img&#39;</span><span class="p">);</span>
+<span class="c1">// result: http://img.example.com/logo.png?v1</span>
+
+<span class="k">echo</span> <span class="nv">$packages</span><span class="o">-&gt;</span><span class="na">getUrl</span><span class="p">(</span><span class="s1">&#39;/resume.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;doc&#39;</span><span class="p">);</span>
+<span class="c1">// result: /somewhere/deep/for/documents/resume.pdf?v1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html" class="btn btn-neutral float-right" title="ClassLoader">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html" class="btn btn-neutral" title="Asset"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

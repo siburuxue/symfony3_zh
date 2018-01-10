@@ -1,0 +1,1005 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Symfony Twig Extensions &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../index.html"/>
+        <link rel="up" title="å‚è€ƒ" href="index.html"/>
+        <link rel="next" title="The Dependency Injection Tags" href="dic_tags.html"/>
+        <link rel="prev" title="Twig Template Form Function and Variable Reference" href="forms/twig_reference.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a> &raquo;</li>
+      
+    <li>Symfony Twig Extensions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="twig_reference-1.txt.htm" tppabs="http://symfony.cn/docs/_sources/reference/twig_reference.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="symfony-twig-extensions">
+<span id="symfony2-twig-extensions"></span><span id="index-0"></span><h1>Symfony Twig Extensions<a class="headerlink" href="#symfony-twig-extensions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>Twig is the default template engine for Symfony. By itself, it already contains
+a lot of built-in functions, filters, tags and tests (learn more about them
+from the <a class="reference external" href="javascript:if(confirm('http://twig.sensiolabs.org/documentation  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twig.sensiolabs.org/documentation#reference'" tppabs="http://twig.sensiolabs.org/documentation#reference">Twig Reference</a>).</p>
+<p>Symfony adds custom extensions on top of Twig to integrate some components
+into the Twig templates. The following sections describe the custom
+<a class="reference internal" href="#reference-twig-functions"><span>functions</span></a>, <a class="reference internal" href="#reference-twig-filters"><span>filters</span></a>,
+<a class="reference internal" href="#reference-twig-tags"><span>tags</span></a> and <a class="reference internal" href="#reference-twig-tests"><span>tests</span></a>
+that are available when using the Symfony Core Framework.</p>
+<p>There may also be tags in bundles you use that aren&#8217;t listed here.</p>
+<div class="section" id="functions">
+<span id="reference-twig-functions"></span><h2>Functions<a class="headerlink" href="#functions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="render">
+<span id="reference-twig-function-render"></span><h3>render<a class="headerlink" href="#render" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">render</span><span class="o">(</span><span class="nv">uri</span><span class="o">,</span> <span class="nv">options</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">uri</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> | <code class="docutils literal"><span class="pre">ControllerReference</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">options</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders the fragment for the given controller (using the <a class="reference internal" href="#controller">controller</a> function)
+or URI. For more information, see <a class="reference internal" href="templating.html#templating-embedding-controller" tppabs="http://symfony.cn/docs/book/templating.html#templating-embedding-controller"><span>åµŒå…¥Controller</span></a>.</p>
+<p>The render strategy can be specified in the <code class="docutils literal"><span class="pre">strategy</span></code> key of the options.</p>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">The URI can be generated by other functions, like <a class="reference internal" href="#path">path</a> and <a class="reference internal" href="#url">url</a>.</p>
+</div>
+</div>
+<div class="section" id="render-esi">
+<span id="reference-twig-function-render-esi"></span><h3>render_esi<a class="headerlink" href="#render-esi" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">render_esi</span><span class="o">(</span><span class="nv">uri</span><span class="o">,</span> <span class="nv">options</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">uri</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> | <code class="docutils literal"><span class="pre">ControllerReference</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">options</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Generates an ESI tag when possible or falls back to the behavior of
+<a class="reference internal" href="#render">render</a> function instead. For more information, see
+<a class="reference internal" href="templating.html#templating-embedding-controller" tppabs="http://symfony.cn/docs/book/templating.html#templating-embedding-controller"><span>åµŒå…¥Controller</span></a>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">The URI can be generated by other functions, like <a class="reference internal" href="#path">path</a> and <a class="reference internal" href="#url">url</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">å°æŠ€å·§</p>
+<p class="last">The <code class="docutils literal"><span class="pre">render_esi()</span></code> function is an example of the shortcut functions
+of <code class="docutils literal"><span class="pre">render</span></code>. It automatically sets the strategy based on what&#8217;s given
+in the function name, e.g. <code class="docutils literal"><span class="pre">render_hinclude()</span></code> will use the hinclude.js
+strategy. This works for all <code class="docutils literal"><span class="pre">render_*()</span></code> functions.</p>
+</div>
+</div>
+<div class="section" id="controller">
+<h3>controller<a class="headerlink" href="#controller" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">controller</span><span class="o">(</span><span class="nv">controller</span><span class="o">,</span> <span class="nv">attributes</span><span class="o">,</span> <span class="nv">query</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">controller</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">attributes</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">query</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Returns an instance of <code class="docutils literal"><span class="pre">ControllerReference</span></code> to be used with functions like
+<a class="reference internal" href="#reference-twig-function-render"><span>render()</span></a> and
+<a class="reference internal" href="#reference-twig-function-render-esi"><span>render_esi()</span></a>.</p>
+</div>
+<div class="section" id="asset">
+<h3>asset<a class="headerlink" href="#asset" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="nv">path</span><span class="o">,</span> <span class="nv">packageName</span><span class="o">,</span> <span class="nv">absolute</span> <span class="o">=</span> <span class="kp">false</span><span class="o">,</span> <span class="nv">version</span> <span class="o">=</span> <span class="nv">null</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">path</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">packageName</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string``|``null</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">absolute</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">false</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">version</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong> <code class="docutils literal"><span class="pre">null</span></code></dd>
+</dl>
+<p>Returns a public path to <code class="docutils literal"><span class="pre">path</span></code>, which takes into account the base path set
+for the package and the URL path. More information in
+<a class="reference internal" href="templating.html#book-templating-assets" tppabs="http://symfony.cn/docs/book/templating.html#book-templating-assets"><span>é“¾æ¥é™æ€æ–‡ä»¶</span></a>. For asset versioning, see <a class="reference internal" href="framework.html#ref-framework-assets-version" tppabs="http://symfony.cn/docs/reference/configuration/framework.html#ref-framework-assets-version"><span>assets_version</span></a>.</p>
+</div>
+<div class="section" id="asset-version">
+<h3>asset_version<a class="headerlink" href="#asset-version" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">asset_version</span><span class="o">(</span><span class="nv">packageName</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">packageName</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> | <code class="docutils literal"><span class="pre">null</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+</dl>
+<p>Returns the current version of the package, more information in
+<a class="reference internal" href="templating.html#book-templating-assets" tppabs="http://symfony.cn/docs/book/templating.html#book-templating-assets"><span>é“¾æ¥é™æ€æ–‡ä»¶</span></a>.</p>
+</div>
+<div class="section" id="form">
+<h3>form<a class="headerlink" href="#form" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders the HTML of a complete form, more information in
+<a class="reference internal" href="twig_reference.html#reference-forms-twig-form" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-form"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-start">
+<h3>form_start<a class="headerlink" href="#form-start" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_start</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders the HTML start tag of a form, more information in
+<a class="reference internal" href="twig_reference.html#reference-forms-twig-start" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-start"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-end">
+<h3>form_end<a class="headerlink" href="#form-end" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_end</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders the HTML end tag of a form together with all fields that have not been
+rendered yet, more information in <a class="reference internal" href="twig_reference.html#reference-forms-twig-end" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-end"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-enctype">
+<h3>form_enctype<a class="headerlink" href="#form-enctype" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_enctype</span><span class="o">(</span><span class="nv">view</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+</dl>
+<p>Renders the required <code class="docutils literal"><span class="pre">enctype=&quot;multipart/form-data&quot;</span></code> attribute if the form
+contains at least one file upload field, more information in
+<a class="reference internal" href="twig_reference.html#reference-forms-twig-enctype" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-enctype"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-widget">
+<h3>form_widget<a class="headerlink" href="#form-widget" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_widget</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders a complete form or a specific HTML widget of a field, more information
+in <a class="reference internal" href="twig_reference.html#reference-forms-twig-widget" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-widget"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-errors">
+<h3>form_errors<a class="headerlink" href="#form-errors" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_errors</span><span class="o">(</span><span class="nv">view</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+</dl>
+<p>Renders any errors for the given field or the global errors, more information
+in <a class="reference internal" href="twig_reference.html#reference-forms-twig-errors" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-errors"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-label">
+<h3>form_label<a class="headerlink" href="#form-label" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_label</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">label</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">label</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders the label for the given field, more information in
+<a class="reference internal" href="twig_reference.html#reference-forms-twig-label" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-label"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-row">
+<h3>form_row<a class="headerlink" href="#form-row" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_row</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders the row (the field&#8217;s label, errors and widget) of the given field, more
+information in <a class="reference internal" href="twig_reference.html#reference-forms-twig-row" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-row"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="form-rest">
+<h3>form_rest<a class="headerlink" href="#form-rest" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">form_rest</span><span class="o">(</span><span class="nv">view</span><span class="o">,</span> <span class="nv">variables</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">view</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">variables</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+</dl>
+<p>Renders all fields that have not yet been rendered, more information in
+<a class="reference internal" href="twig_reference.html#reference-forms-twig-rest" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html#reference-forms-twig-rest"><span>the Twig Form reference</span></a>.</p>
+</div>
+<div class="section" id="csrf-token">
+<h3>csrf_token<a class="headerlink" href="#csrf-token" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">csrf_token</span><span class="o">(</span><span class="nv">intention</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">intention</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Renders a CSRF token. Use this function if you want CSRF protection without
+creating a form.</p>
+</div>
+<div class="section" id="is-granted">
+<h3>is_granted<a class="headerlink" href="#is-granted" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">is_granted</span><span class="o">(</span><span class="nv">role</span><span class="o">,</span> <span class="nv">object</span><span class="o">,</span> <span class="nv">field</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">role</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">object</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">object</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">field</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Returns <code class="docutils literal"><span class="pre">true</span></code> if the current user has the required role. Optionally, an
+object can be pasted to be used by the voter. More information can be found in
+<a class="reference internal" href="security.html#book-security-template" tppabs="http://symfony.cn/docs/book/security.html#book-security-template"><span>åœ¨æ¨¡æ¿ä¸­è¿›è¡Œæƒé™æ§åˆ¶</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">You can also pass in the field to use ACE for a specific field. Read more
+about this in <a class="reference internal" href="acl_advanced.html#cookbook-security-acl-field-scope" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#cookbook-security-acl-field-scope"><span>Scope of Access Control Entries</span></a>.</p>
+</div>
+</div>
+<div class="section" id="logout-path">
+<h3>logout_path<a class="headerlink" href="#logout-path" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">logout_path</span><span class="o">(</span><span class="nv">key</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">key</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Generates a relative logout URL for the given firewall.</p>
+</div>
+<div class="section" id="logout-url">
+<h3>logout_url<a class="headerlink" href="#logout-url" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">logout_url</span><span class="o">(</span><span class="nv">key</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">key</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Equal to the <a class="reference internal" href="#logout-path">logout_path</a> function, but it&#8217;ll generate an absolute URL
+instead of a relative one.</p>
+</div>
+<div class="section" id="path">
+<h3>path<a class="headerlink" href="#path" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">path</span><span class="o">(</span><span class="nv">name</span><span class="o">,</span> <span class="nv">parameters</span><span class="o">,</span> <span class="nv">relative</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">name</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">parameters</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">relative</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">false</span></code></dd>
+</dl>
+<p>Returns the relative URL (without the scheme and host) for the given route. If
+<code class="docutils literal"><span class="pre">relative</span></code> is enabled, it&#8217;ll create a path relative to the current path. More
+information in <a class="reference internal" href="templating.html#book-templating-pages" tppabs="http://symfony.cn/docs/book/templating.html#book-templating-pages"><span>åˆ›å»ºé“¾æ¥</span></a>.</p>
+</div>
+<div class="section" id="url">
+<h3>url<a class="headerlink" href="#url" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">url</span><span class="o">(</span><span class="nv">name</span><span class="o">,</span> <span class="nv">parameters</span><span class="o">,</span> <span class="nv">schemeRelative</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">name</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">parameters</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">schemeRelative</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">false</span></code></dd>
+</dl>
+<p>Returns the absolute URL (with scheme and host) for the given route. If
+<code class="docutils literal"><span class="pre">schemeRelative</span></code> is enabled, it&#8217;ll create a scheme-relative URL. More
+information in <a class="reference internal" href="templating.html#book-templating-pages" tppabs="http://symfony.cn/docs/book/templating.html#book-templating-pages"><span>åˆ›å»ºé“¾æ¥</span></a>.</p>
+</div>
+<div class="section" id="absolute-url">
+<h3>absolute_url<a class="headerlink" href="#absolute-url" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><span class="pre">absolute_url</span></code> function was introduced in Symfony 2.7</p>
+</div>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">absolute_url</span><span class="o">(</span><span class="nv">path</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">path</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Returns the absolute URL for the given absolute path. This is useful to convert
+an existing path:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">absolute_url</span><span class="o">(</span><span class="nv">asset</span><span class="o">(</span><span class="nv">path</span><span class="o">))</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="relative-path">
+<h3>relative_path<a class="headerlink" href="#relative-path" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><span class="pre">relative_path</span></code> function was introduced in Symfony 2.7</p>
+</div>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">relative_path</span><span class="o">(</span><span class="nv">path</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">path</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Returns a relative path for the given absolute path (based on the current
+request path). For instance, if the current path is
+<code class="docutils literal"><span class="pre">/article/news/welcome.html</span></code>, the relative path for <code class="docutils literal"><span class="pre">/article/image.png</span></code> is
+<code class="docutils literal"><span class="pre">../images.png</span></code>.</p>
+</div>
+<div class="section" id="expression">
+<h3>expression<a class="headerlink" href="#expression" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>Creates an <code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Component/ExpressionLanguage/Expression.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Component/ExpressionLanguage/Expression.html'" tppabs="http://api.symfony.com/master/Symfony/Component/ExpressionLanguage/Expression.html" title="Symfony\Component\ExpressionLanguage\Expression"><span class="pre">Expression</span></a></code> in
+Twig. See &#8220;<a class="reference internal" href="security.html#book-security-template-expression" tppabs="http://symfony.cn/docs/book/security.html#book-security-template-expression"><span>Template Expressions</span></a>&#8221;.</p>
+</div>
+</div>
+<div class="section" id="filters">
+<span id="reference-twig-filters"></span><h2>Filters<a class="headerlink" href="#filters" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="humanize">
+<h3>humanize<a class="headerlink" href="#humanize" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">text</span><span class="o">|</span><span class="nf">humanize</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">text</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Makes a technical name human readable (i.e. replaces underscores by spaces and
+capitalizes the string).</p>
+</div>
+<div class="section" id="trans">
+<h3>trans<a class="headerlink" href="#trans" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">message</span><span class="o">|</span><span class="nf">trans</span><span class="o">(</span><span class="nv">arguments</span><span class="o">,</span> <span class="nv">domain</span><span class="o">,</span> <span class="nv">locale</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">message</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">arguments</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">domain</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">locale</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+</dl>
+<p>Translates the text into the current language. More information in
+<a class="reference internal" href="translation.html#book-translation-filters" tppabs="http://symfony.cn/docs/book/translation.html#book-translation-filters"><span>Translation Filters</span></a>.</p>
+</div>
+<div class="section" id="transchoice">
+<h3>transchoice<a class="headerlink" href="#transchoice" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">message</span><span class="o">|</span><span class="nf">transchoice</span><span class="o">(</span><span class="nv">count</span><span class="o">,</span> <span class="nv">arguments</span><span class="o">,</span> <span class="nv">domain</span><span class="o">,</span> <span class="nv">locale</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">message</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">count</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">arguments</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">domain</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">locale</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+</dl>
+<p>Translates the text with pluralization support. More information in
+<a class="reference internal" href="translation.html#book-translation-filters" tppabs="http://symfony.cn/docs/book/translation.html#book-translation-filters"><span>Translation Filters</span></a>.</p>
+</div>
+<div class="section" id="yaml-encode">
+<h3>yaml_encode<a class="headerlink" href="#yaml-encode" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">input</span><span class="o">|</span><span class="nf">yaml_encode</span><span class="o">(</span><span class="nv">inline</span><span class="o">,</span> <span class="nv">dumpObjects</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">input</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">mixed</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">inline</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">0</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">dumpObjects</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">false</span></code></dd>
+</dl>
+<p>Transforms the input into YAML syntax. See <a class="reference internal" href="introduction-19.html#components-yaml-dump" tppabs="http://symfony.cn/docs/components/yaml/introduction.html#components-yaml-dump"><span>Writing YAML Files</span></a> for more
+information.</p>
+</div>
+<div class="section" id="yaml-dump">
+<h3>yaml_dump<a class="headerlink" href="#yaml-dump" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">value</span><span class="o">|</span><span class="nf">yaml_dump</span><span class="o">(</span><span class="nv">inline</span><span class="o">,</span> <span class="nv">dumpObjects</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">value</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">mixed</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">inline</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">0</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">dumpObjects</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">false</span></code></dd>
+</dl>
+<p>Does the same as <a class="reference external" href="javascript:if(confirm('http://symfony.cn/docs/reference/yaml_encode  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://symfony.cn/docs/reference/yaml_encode'" tppabs="http://symfony.cn/docs/reference/yaml_encode">yaml_encode()</a>, but includes the type in the output.</p>
+</div>
+<div class="section" id="abbr-class">
+<h3>abbr_class<a class="headerlink" href="#abbr-class" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">class</span><span class="o">|</span><span class="nf">abbr_class</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">class</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Generates an <code class="docutils literal"><span class="pre">&lt;abbr&gt;</span></code> element with the short name of a PHP class (the FQCN
+will be shown in a tooltip when a user hovers over the element).</p>
+</div>
+<div class="section" id="abbr-method">
+<h3>abbr_method<a class="headerlink" href="#abbr-method" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">method</span><span class="o">|</span><span class="nf">abbr_method</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">method</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Generates an <code class="docutils literal"><span class="pre">&lt;abbr&gt;</span></code> element using the <code class="docutils literal"><span class="pre">FQCN::method()</span></code> syntax. If <code class="docutils literal"><span class="pre">method</span></code>
+is <code class="docutils literal"><span class="pre">Closure</span></code>, <code class="docutils literal"><span class="pre">Closure</span></code> will be used instead and if <code class="docutils literal"><span class="pre">method</span></code> doesn&#8217;t have a
+class name, it&#8217;s shown as a function (<code class="docutils literal"><span class="pre">method()</span></code>).</p>
+</div>
+<div class="section" id="format-args">
+<h3>format_args<a class="headerlink" href="#format-args" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">args</span><span class="o">|</span><span class="nf">format_args</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">args</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code></dd>
+</dl>
+<p>Generates a string with the arguments and their types (within <code class="docutils literal"><span class="pre">&lt;em&gt;</span></code> elements).</p>
+</div>
+<div class="section" id="format-args-as-text">
+<h3>format_args_as_text<a class="headerlink" href="#format-args-as-text" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">args</span><span class="o">|</span><span class="nf">format_args_as_text</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">args</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code></dd>
+</dl>
+<p>Equal to the <a class="reference internal" href="#format-args">format_args</a> filter, but without using HTML tags.</p>
+</div>
+<div class="section" id="file-excerpt">
+<h3>file_excerpt<a class="headerlink" href="#file-excerpt" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">file</span><span class="o">|</span><span class="nf">file_excerpt</span><span class="o">(</span><span class="nv">line</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">file</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">line</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code></dd>
+</dl>
+<p>Generates an excerpt of seven lines around the given <code class="docutils literal"><span class="pre">line</span></code>.</p>
+</div>
+<div class="section" id="format-file">
+<h3>format_file<a class="headerlink" href="#format-file" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">file</span><span class="o">|</span><span class="nf">format_file</span><span class="o">(</span><span class="nv">line</span><span class="o">,</span> <span class="nv">text</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">file</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">line</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">text</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+</dl>
+<p>Generates the file path inside an <code class="docutils literal"><span class="pre">&lt;a&gt;</span></code> element. If the path is inside the
+kernel root directory, the kernel root directory path is replaced by
+<code class="docutils literal"><span class="pre">kernel.root_dir</span></code> (showing the full path in a tooltip on hover).</p>
+</div>
+<div class="section" id="format-file-from-text">
+<h3>format_file_from_text<a class="headerlink" href="#format-file-from-text" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">text</span><span class="o">|</span><span class="nf">format_file_from_text</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">text</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Uses <a class="reference internal" href="#format-file">format_file</a> to improve the output of default PHP errors.</p>
+</div>
+<div class="section" id="file-link">
+<h3>file_link<a class="headerlink" href="#file-link" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{{</span> <span class="nv">file</span><span class="o">|</span><span class="nf">file_link</span><span class="o">(</span><span class="nv">line</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">line</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code></dd>
+</dl>
+<p>Generates a link to the provided file (and optionally line number) using a
+preconfigured scheme.</p>
+</div>
+</div>
+<div class="section" id="tags">
+<span id="reference-twig-tags"></span><h2>Tags<a class="headerlink" href="#tags" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="form-theme">
+<h3>form_theme<a class="headerlink" href="#form-theme" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">form_theme</span> <span class="nv">form</span> <span class="nv">resources</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">form</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">FormView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">resources</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> | <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Sets the resources to override the form theme for the given form view instance.
+You can use <code class="docutils literal"><span class="pre">_self</span></code> as resources to set it to the current resource. More
+information in <a class="reference internal" href="form_customization.html" tppabs="http://symfony.cn/docs/cookbook/form/form_customization.html"><em>How to Customize Form Rendering</em></a>.</p>
+</div>
+<div class="section" id="id2">
+<h3>trans<a class="headerlink" href="#id2" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">trans</span> <span class="k">with</span> <span class="nv">vars</span> <span class="nv">from</span> <span class="nv">domain</span> <span class="nv">into</span> <span class="nv">locale</span> <span class="cp">%}{%</span> <span class="k">endtrans</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">vars</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">domain</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">locale</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Renders the translation of the content. More information in <a class="reference internal" href="translation.html#book-translation-tags" tppabs="http://symfony.cn/docs/book/translation.html#book-translation-tags"><span>Twigæ¨¡æ¿</span></a>.</p>
+</div>
+<div class="section" id="id3">
+<h3>transchoice<a class="headerlink" href="#id3" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">transchoice</span> <span class="nv">count</span> <span class="k">with</span> <span class="nv">vars</span> <span class="nv">from</span> <span class="nv">domain</span> <span class="nv">into</span> <span class="nv">locale</span> <span class="cp">%}{%</span> <span class="k">endtranschoice</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">count</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">integer</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">vars</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">array</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">[]</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">domain</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">locale</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">null</span></code></dd>
+</dl>
+<p>Renders the translation of the content with pluralization support, more
+information in <a class="reference internal" href="translation.html#book-translation-tags" tppabs="http://symfony.cn/docs/book/translation.html#book-translation-tags"><span>Twigæ¨¡æ¿</span></a>.</p>
+</div>
+<div class="section" id="trans-default-domain">
+<h3>trans_default_domain<a class="headerlink" href="#trans-default-domain" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">trans_default_domain</span> <span class="nv">domain</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">domain</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>This will set the default domain in the current template.</p>
+</div>
+<div class="section" id="stopwatch">
+<h3>stopwatch<a class="headerlink" href="#stopwatch" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">stopwatch</span> <span class="s1">&#39;name&#39;</span> <span class="cp">%}</span><span class="x">...</span><span class="cp">{%</span> <span class="k">endstopwatch</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>This will time the run time of the code inside it and put that on the timeline
+of the WebProfilerBundle.</p>
+</div>
+</div>
+<div class="section" id="tests">
+<span id="reference-twig-tests"></span><h2>Tests<a class="headerlink" href="#tests" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="selectedchoice">
+<h3>selectedchoice<a class="headerlink" href="#selectedchoice" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">choice</span> <span class="k">is</span> <span class="nf">selectedchoice</span><span class="o">(</span><span class="nv">selectedValue</span><span class="o">)</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">choice</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">ChoiceView</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">selectedValue</span></code></dt>
+<dd><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code></dd>
+</dl>
+<p>Checks if <code class="docutils literal"><span class="pre">selectedValue</span></code> was checked for the provided choice field. Using
+this test is the most effective way.</p>
+</div>
+</div>
+<div class="section" id="global-variables">
+<h2>Global Variables<a class="headerlink" href="#global-variables" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="section" id="app">
+<span id="reference-twig-global-app"></span><h3>app<a class="headerlink" href="#app" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">app</span></code> variable is available everywhere and gives access to many commonly
+needed objects and values. It is an instance of
+<code class="docutils literal"><a class="reference external" href="javascript:if(confirm('http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.html'" tppabs="http://api.symfony.com/master/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.html" title="Symfony\Bundle\FrameworkBundle\Templating\GlobalVariables"><span class="pre">GlobalVariables</span></a></code>.</p>
+<p>The available attributes are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">app.user</span></code></li>
+<li><code class="docutils literal"><span class="pre">app.request</span></code></li>
+<li><code class="docutils literal"><span class="pre">app.session</span></code></li>
+<li><code class="docutils literal"><span class="pre">app.environment</span></code></li>
+<li><code class="docutils literal"><span class="pre">app.debug</span></code></li>
+<li><code class="docutils literal"><span class="pre">app.security</span></code></li>
+</ul>
+<div class="versionadded">
+<p><span class="versionmodified">2.6 æ–°ç‰ˆåŠŸèƒ½: </span>The <code class="docutils literal"><span class="pre">app.security</span></code> global is deprecated as of 2.6. The user is already available
+as <code class="docutils literal"><span class="pre">app.user</span></code> and <code class="docutils literal"><span class="pre">is_granted()</span></code> is registered as function.</p>
+</div>
+</div>
+</div>
+<div class="section" id="symfony-standard-edition-extensions">
+<h2>Symfony Standard Edition Extensions<a class="headerlink" href="#symfony-standard-edition-extensions" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The Symfony Standard Edition adds some bundles to the Symfony Core Framework.
+Those bundles can have other Twig extensions:</p>
+<ul class="simple">
+<li><strong>Twig Extensions</strong> includes some interesting extensions that do not belong to the
+Twig core. You can read more in <a class="reference external" href="javascript:if(confirm('http://twig.sensiolabs.org/doc/extensions/index.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twig.sensiolabs.org/doc/extensions/index.html'" tppabs="http://twig.sensiolabs.org/doc/extensions/index.html">the official Twig Extensions documentation</a>;</li>
+<li><strong>Assetic</strong> adds the <code class="docutils literal"><span class="pre">{%</span> <span class="pre">stylesheets</span> <span class="pre">%}</span></code>, <code class="docutils literal"><span class="pre">{%</span> <span class="pre">javascripts</span> <span class="pre">%}</span></code> and
+<code class="docutils literal"><span class="pre">{%</span> <span class="pre">image</span> <span class="pre">%}</span></code> tags. You can read more about them in
+<a class="reference internal" href="asset_management.html" tppabs="http://symfony.cn/docs/cookbook/assetic/asset_management.html"><em>the Assetic Documentation</em></a>.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html" class="btn btn-neutral float-right" title="The Dependency Injection Tags">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html" class="btn btn-neutral" title="Twig Template Form Function and Variable Reference"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

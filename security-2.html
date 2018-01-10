@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SecurityBundle Configuration (â€œsecurityâ€) &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="å‚è€ƒ" href="../index.html"/>
+        <link rel="next" title="AsseticBundle Configuration (â€œasseticâ€)" href="assetic.html"/>
+        <link rel="prev" title="DoctrineBundle Configuration (â€œdoctrineâ€)" href="doctrine.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a> &raquo;</li>
+      
+    <li>SecurityBundle Configuration (&#8220;security&#8221;)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="security-2.txt" tppabs="http://symfony.cn/docs/_sources/reference/configuration/security.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="securitybundle-configuration-security">
+<span id="index-0"></span><h1>SecurityBundle Configuration (&#8220;security&#8221;)<a class="headerlink" href="#securitybundle-configuration-security" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<p>The security system is one of the most powerful parts of Symfony, and can
+largely be controlled via its configuration.</p>
+<div class="section" id="full-default-configuration">
+<h2>Full default Configuration<a class="headerlink" href="#full-default-configuration" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The following is the full default configuration for the security system.
+Each part will be explained in the next section.</p>
+<div class="versionadded">
+<p><span class="versionmodified">2.5 æ–°ç‰ˆåŠŸèƒ½: </span>Support for restricting security firewalls to specific http methods was introduced in
+Symfony 2.5.</p>
+</div>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">access_denied_url</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">~</span> <span class="c1"># Example: /foo/error403</span>
+
+    <span class="c1"># strategy can be: none, migrate, invalidate</span>
+    <span class="l-Scalar-Plain">session_fixation_strategy</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">migrate</span>
+    <span class="l-Scalar-Plain">hide_user_not_found</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">always_authenticate_before_granting</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">false</span>
+    <span class="l-Scalar-Plain">erase_credentials</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">access_decision_manager</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">strategy</span><span class="p-Indicator">:</span>             <span class="l-Scalar-Plain">affirmative</span>
+        <span class="l-Scalar-Plain">allow_if_all_abstain</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">false</span>
+        <span class="l-Scalar-Plain">allow_if_equal_granted_denied</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">acl</span><span class="p-Indicator">:</span>
+
+        <span class="c1"># any name configured in doctrine.dbal section</span>
+        <span class="l-Scalar-Plain">connection</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">~</span>
+        <span class="l-Scalar-Plain">cache</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span>                   <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">prefix</span><span class="p-Indicator">:</span>               <span class="l-Scalar-Plain">sf2_acl_</span>
+        <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span>             <span class="l-Scalar-Plain">~</span>
+        <span class="l-Scalar-Plain">tables</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span>                <span class="l-Scalar-Plain">acl_classes</span>
+            <span class="l-Scalar-Plain">entry</span><span class="p-Indicator">:</span>                <span class="l-Scalar-Plain">acl_entries</span>
+            <span class="l-Scalar-Plain">object_identity</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">acl_object_identities</span>
+            <span class="l-Scalar-Plain">object_identity_ancestors</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">acl_object_identity_ancestors</span>
+            <span class="l-Scalar-Plain">security_identity</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">acl_security_identities</span>
+        <span class="l-Scalar-Plain">voter</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">allow_if_object_identity_unavailable</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">true</span>
+
+    <span class="l-Scalar-Plain">encoders</span><span class="p-Indicator">:</span>
+        <span class="c1"># Examples:</span>
+        <span class="l-Scalar-Plain">Acme\DemoBundle\Entity\User1</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">sha512</span>
+        <span class="l-Scalar-Plain">Acme\DemoBundle\Entity\User2</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">algorithm</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">sha512</span>
+            <span class="l-Scalar-Plain">encode_as_base64</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">true</span>
+            <span class="l-Scalar-Plain">iterations</span><span class="p-Indicator">:</span>          <span class="l-Scalar-Plain">5000</span>
+
+        <span class="c1"># PBKDF2 encoder</span>
+        <span class="c1"># see the note about PBKDF2 below for details on security and speed</span>
+        <span class="l-Scalar-Plain">Acme\Your\Class\Name</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">algorithm</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">pbkdf2</span>
+            <span class="l-Scalar-Plain">hash_algorithm</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">sha512</span>
+            <span class="l-Scalar-Plain">encode_as_base64</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">true</span>
+            <span class="l-Scalar-Plain">iterations</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">1000</span>
+            <span class="l-Scalar-Plain">key_length</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">40</span>
+
+        <span class="c1"># Example options/values for what a custom encoder might look like</span>
+        <span class="l-Scalar-Plain">Acme\DemoBundle\Entity\User3</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span>                   <span class="l-Scalar-Plain">my.encoder.id</span>
+
+        <span class="c1"># BCrypt encoder</span>
+        <span class="c1">#Â see the note about bcrypt below for details on specific dependencies</span>
+        <span class="l-Scalar-Plain">Acme\DemoBundle\Entity\User4</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">algorithm</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">bcrypt</span>
+            <span class="l-Scalar-Plain">cost</span><span class="p-Indicator">:</span>                 <span class="l-Scalar-Plain">13</span>
+
+        <span class="c1">#Â Plaintext encoder</span>
+        <span class="c1"># it does not do any encoding</span>
+        <span class="l-Scalar-Plain">Acme\DemoBundle\Entity\User5</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">algorithm</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">plaintext</span>
+            <span class="l-Scalar-Plain">ignore_case</span><span class="p-Indicator">:</span>          <span class="l-Scalar-Plain">false</span>
+
+    <span class="l-Scalar-Plain">providers</span><span class="p-Indicator">:</span>            <span class="c1"># Required</span>
+        <span class="c1"># Examples:</span>
+        <span class="l-Scalar-Plain">my_in_memory_provider</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">memory</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">users</span><span class="p-Indicator">:</span>
+                    <span class="l-Scalar-Plain">foo</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">foo</span>
+                        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span>              <span class="l-Scalar-Plain">ROLE_USER</span>
+                    <span class="l-Scalar-Plain">bar</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">bar</span>
+                        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span>              <span class="p-Indicator">[</span><span class="nv">ROLE_USER</span><span class="p-Indicator">,</span> <span class="nv">ROLE_ADMIN</span><span class="p-Indicator">]</span>
+
+        <span class="l-Scalar-Plain">my_entity_provider</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">entity</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span>              <span class="l-Scalar-Plain">SecurityBundle:User</span>
+                <span class="l-Scalar-Plain">property</span><span class="p-Indicator">:</span>           <span class="l-Scalar-Plain">username</span>
+                <span class="c1"># name of a non-default entity manager</span>
+                <span class="l-Scalar-Plain">manager_name</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">~</span>
+
+        <span class="c1"># Example custom provider</span>
+        <span class="l-Scalar-Plain">my_some_custom_provider</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span>                   <span class="l-Scalar-Plain">~</span>
+
+        <span class="c1"># Chain some providers</span>
+        <span class="l-Scalar-Plain">my_chain_provider</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">chain</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">providers</span><span class="p-Indicator">:</span>          <span class="p-Indicator">[</span> <span class="nv">my_in_memory_provider</span><span class="p-Indicator">,</span> <span class="nv">my_entity_provider</span> <span class="p-Indicator">]</span>
+
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>            <span class="c1"># Required</span>
+        <span class="c1"># Examples:</span>
+        <span class="l-Scalar-Plain">somename</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">pattern</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">.*</span>
+            <span class="c1"># restrict the firewall to a specific host</span>
+            <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">admin\.example\.com</span>
+             <span class="l-Scalar-Plain"># restrict the firewall to specific http methods</span>
+            <span class="l-Scalar-Plain">methods</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">GET</span><span class="p-Indicator">,</span> <span class="nv">POST</span><span class="p-Indicator">]</span>
+            <span class="l-Scalar-Plain">request_matcher</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some.service.id</span>
+            <span class="l-Scalar-Plain">access_denied_url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/foo/error403</span>
+            <span class="l-Scalar-Plain">access_denied_handler</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some.service.id</span>
+            <span class="l-Scalar-Plain">entry_point</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some.service.id</span>
+            <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some_key_from_above</span>
+            <span class="c1"># manages where each firewall stores session information</span>
+            <span class="c1"># See &quot;Firewall Context&quot; below for more details</span>
+            <span class="l-Scalar-Plain">context</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">context_key</span>
+            <span class="l-Scalar-Plain">stateless</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+            <span class="l-Scalar-Plain">x509</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some_key_from_above</span>
+            <span class="l-Scalar-Plain">remote_user</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some_key_from_above</span>
+            <span class="l-Scalar-Plain">http_basic</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some_key_from_above</span>
+            <span class="l-Scalar-Plain">http_digest</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some_key_from_above</span>
+            <span class="l-Scalar-Plain">form_login</span><span class="p-Indicator">:</span>
+                <span class="c1"># submit the login form here</span>
+                <span class="l-Scalar-Plain">check_path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/login_check</span>
+
+                <span class="c1"># the user is redirected here when they need to log in</span>
+                <span class="l-Scalar-Plain">login_path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/login</span>
+
+                <span class="c1"># if true, forward the user to the login form instead of redirecting</span>
+                <span class="l-Scalar-Plain">use_forward</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+
+                <span class="c1"># login success redirecting options (read further below)</span>
+                <span class="l-Scalar-Plain">always_use_default_target_path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+                <span class="l-Scalar-Plain">default_target_path</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">/</span>
+                <span class="l-Scalar-Plain">target_path_parameter</span><span class="p-Indicator">:</span>          <span class="l-Scalar-Plain">_target_path</span>
+                <span class="l-Scalar-Plain">use_referer</span><span class="p-Indicator">:</span>                    <span class="l-Scalar-Plain">false</span>
+
+                <span class="c1"># login failure redirecting options (read further below)</span>
+                <span class="l-Scalar-Plain">failure_path</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">/foo</span>
+                <span class="l-Scalar-Plain">failure_forward</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+                <span class="l-Scalar-Plain">failure_path_parameter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_failure_path</span>
+                <span class="l-Scalar-Plain">failure_handler</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some.service.id</span>
+                <span class="l-Scalar-Plain">success_handler</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some.service.id</span>
+
+                <span class="c1"># field names for the username and password fields</span>
+                <span class="l-Scalar-Plain">username_parameter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_username</span>
+                <span class="l-Scalar-Plain">password_parameter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_password</span>
+
+                <span class="c1"># csrf token options</span>
+                <span class="l-Scalar-Plain">csrf_parameter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_csrf_token</span>
+                <span class="l-Scalar-Plain">intention</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">authenticate</span>
+                <span class="l-Scalar-Plain">csrf_provider</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">my.csrf_provider.id</span>
+
+                <span class="c1"># by default, the login form *must* be a POST, not a GET</span>
+                <span class="l-Scalar-Plain">post_only</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">true</span>
+                <span class="l-Scalar-Plain">remember_me</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">false</span>
+
+                <span class="c1"># by default, a session must exist before submitting an authentication request</span>
+                <span class="c1"># if false, then Request::hasPreviousSession is not called during authentication</span>
+                <span class="c1"># new in Symfony 2.3</span>
+                <span class="l-Scalar-Plain">require_previous_session</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+
+            <span class="l-Scalar-Plain">remember_me</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">token_provider</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">name</span>
+                <span class="l-Scalar-Plain">key</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">someS3cretKey</span>
+                <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">NameOfTheCookie</span>
+                <span class="l-Scalar-Plain">lifetime</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3600</span> <span class="c1"># in seconds</span>
+                <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/foo</span>
+                <span class="l-Scalar-Plain">domain</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">somedomain.foo</span>
+                <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+                <span class="l-Scalar-Plain">httponly</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+                <span class="l-Scalar-Plain">always_remember_me</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+                <span class="l-Scalar-Plain">remember_me_parameter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_remember_me</span>
+            <span class="l-Scalar-Plain">logout</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/logout</span>
+                <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/</span>
+                <span class="l-Scalar-Plain">invalidate_session</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+                <span class="l-Scalar-Plain">delete_cookies</span><span class="p-Indicator">:</span>
+                    <span class="l-Scalar-Plain">a</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">null</span><span class="p-Indicator">,</span> <span class="nv">domain</span><span class="p-Indicator">:</span> <span class="nv">null</span> <span class="p-Indicator">}</span>
+                    <span class="l-Scalar-Plain">b</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">null</span><span class="p-Indicator">,</span> <span class="nv">domain</span><span class="p-Indicator">:</span> <span class="nv">null</span> <span class="p-Indicator">}</span>
+                <span class="l-Scalar-Plain">handlers</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">some.service.id</span><span class="p-Indicator">,</span> <span class="nv">another.service.id</span><span class="p-Indicator">]</span>
+                <span class="l-Scalar-Plain">success_handler</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">some.service.id</span>
+            <span class="l-Scalar-Plain">anonymous</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">~</span>
+
+        <span class="c1"># Default values and options for any firewall</span>
+        <span class="l-Scalar-Plain">some_firewall_listener</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">pattern</span><span class="p-Indicator">:</span>              <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>             <span class="l-Scalar-Plain">true</span>
+            <span class="l-Scalar-Plain">request_matcher</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">access_denied_url</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">access_denied_handler</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">entry_point</span><span class="p-Indicator">:</span>          <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span>             <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">stateless</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">false</span>
+            <span class="l-Scalar-Plain">context</span><span class="p-Indicator">:</span>              <span class="l-Scalar-Plain">~</span>
+            <span class="l-Scalar-Plain">logout</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">csrf_parameter</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">_csrf_token</span>
+                <span class="l-Scalar-Plain">csrf_provider</span><span class="p-Indicator">:</span>        <span class="l-Scalar-Plain">~</span>
+                <span class="l-Scalar-Plain">intention</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">logout</span>
+                <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>                 <span class="l-Scalar-Plain">/logout</span>
+                <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span>               <span class="l-Scalar-Plain">/</span>
+                <span class="l-Scalar-Plain">success_handler</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">~</span>
+                <span class="l-Scalar-Plain">invalidate_session</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">true</span>
+                <span class="l-Scalar-Plain">delete_cookies</span><span class="p-Indicator">:</span>
+
+                    <span class="c1"># Prototype</span>
+                    <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span>
+                        <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>                 <span class="l-Scalar-Plain">~</span>
+                        <span class="l-Scalar-Plain">domain</span><span class="p-Indicator">:</span>               <span class="l-Scalar-Plain">~</span>
+                <span class="l-Scalar-Plain">handlers</span><span class="p-Indicator">:</span>             <span class="p-Indicator">[]</span>
+            <span class="l-Scalar-Plain">anonymous</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">key</span><span class="p-Indicator">:</span>                  <span class="l-Scalar-Plain">4f954a0667e01</span>
+            <span class="l-Scalar-Plain">switch_user</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">provider</span><span class="p-Indicator">:</span>             <span class="l-Scalar-Plain">~</span>
+                <span class="l-Scalar-Plain">parameter</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">_switch_user</span>
+                <span class="l-Scalar-Plain">role</span><span class="p-Indicator">:</span>                 <span class="l-Scalar-Plain">ROLE_ALLOWED_TO_SWITCH</span>
+
+    <span class="l-Scalar-Plain">access_control</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">requires_channel</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">~</span>
+
+        <span class="c1"># use the urldecoded format</span>
+        <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>                 <span class="l-Scalar-Plain">~</span> <span class="c1"># Example: ^/path to resource/</span>
+        <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span>                 <span class="l-Scalar-Plain">~</span>
+        <span class="l-Scalar-Plain">ips</span><span class="p-Indicator">:</span>                  <span class="p-Indicator">[]</span>
+        <span class="l-Scalar-Plain">methods</span><span class="p-Indicator">:</span>              <span class="p-Indicator">[]</span>
+        <span class="l-Scalar-Plain">roles</span><span class="p-Indicator">:</span>                <span class="p-Indicator">[]</span>
+    <span class="l-Scalar-Plain">role_hierarchy</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">ROLE_ADMIN</span><span class="p-Indicator">:</span>      <span class="p-Indicator">[</span><span class="nv">ROLE_ORGANIZER</span><span class="p-Indicator">,</span> <span class="nv">ROLE_USER</span><span class="p-Indicator">]</span>
+        <span class="l-Scalar-Plain">ROLE_SUPERADMIN</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">ROLE_ADMIN</span><span class="p-Indicator">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="form-login-configuration">
+<span id="reference-security-firewall-form-login"></span><h2>Form Login Configuration<a class="headerlink" href="#form-login-configuration" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>When using the <code class="docutils literal"><span class="pre">form_login</span></code> authentication listener beneath a firewall,
+there are several common options for configuring the &#8220;form login&#8221; experience.</p>
+<p>For even more details, see <a class="reference internal" href="form_login.html" tppabs="http://symfony.cn/docs/cookbook/security/form_login.html"><em>How to Customize your Form Login</em></a>.</p>
+<div class="section" id="the-login-form-and-process">
+<h3>The Login Form and Process<a class="headerlink" href="#the-login-form-and-process" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<div class="section" id="login-path">
+<h4>login_path<a class="headerlink" href="#login-path" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">/login</span></code></p>
+<p>This is the route or path that the user will be redirected to (unless <code class="docutils literal"><span class="pre">use_forward</span></code>
+is set to <code class="docutils literal"><span class="pre">true</span></code>) when they try to access a protected resource but isn&#8217;t
+fully authenticated.</p>
+<p>This path <strong>must</strong> be accessible by a normal, un-authenticated user, else
+you may create a redirect loop. For details, see
+&#8220;<a class="reference internal" href="form_login_setup.html#book-security-common-pitfalls" tppabs="http://symfony.cn/docs/cookbook/security/form_login_setup.html#book-security-common-pitfalls"><span>Avoid Common Pitfalls</span></a>&#8221;.</p>
+</div>
+<div class="section" id="check-path">
+<h4>check_path<a class="headerlink" href="#check-path" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">/login_check</span></code></p>
+<p>This is the route or path that your login form must submit to. The firewall
+will intercept any requests (<code class="docutils literal"><span class="pre">POST</span></code> requests only, by default) to this
+URL and process the submitted login credentials.</p>
+<p>Be sure that this URL is covered by your main firewall (i.e. don&#8217;t create
+a separate firewall just for <code class="docutils literal"><span class="pre">check_path</span></code> URL).</p>
+</div>
+<div class="section" id="use-forward">
+<h4>use_forward<a class="headerlink" href="#use-forward" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p><strong>type</strong>: <code class="docutils literal"><span class="pre">Boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">false</span></code></p>
+<p>If you&#8217;d like the user to be forwarded to the login form instead of being
+redirected, set this option to <code class="docutils literal"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="username-parameter">
+<h4>username_parameter<a class="headerlink" href="#username-parameter" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">_username</span></code></p>
+<p>This is the field name that you should give to the username field of your
+login form. When you submit the form to <code class="docutils literal"><span class="pre">check_path</span></code>, the security system
+will look for a POST parameter with this name.</p>
+</div>
+<div class="section" id="password-parameter">
+<h4>password_parameter<a class="headerlink" href="#password-parameter" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p><strong>type</strong>: <code class="docutils literal"><span class="pre">string</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">_password</span></code></p>
+<p>This is the field name that you should give to the password field of your
+login form. When you submit the form to <code class="docutils literal"><span class="pre">check_path</span></code>, the security system
+will look for a POST parameter with this name.</p>
+</div>
+<div class="section" id="post-only">
+<h4>post_only<a class="headerlink" href="#post-only" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h4>
+<p><strong>type</strong>: <code class="docutils literal"><span class="pre">Boolean</span></code> <strong>default</strong>: <code class="docutils literal"><span class="pre">true</span></code></p>
+<p>By default, you must submit your login form to the <code class="docutils literal"><span class="pre">check_path</span></code> URL as
+a POST request. By setting this option to <code class="docutils literal"><span class="pre">false</span></code>, you can send a GET request
+to the <code class="docutils literal"><span class="pre">check_path</span></code> URL.</p>
+</div>
+</div>
+<div class="section" id="redirecting-after-login">
+<h3>Redirecting after Login<a class="headerlink" href="#redirecting-after-login" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">always_use_default_target_path</span></code> (type: <code class="docutils literal"><span class="pre">Boolean</span></code>, default: <code class="docutils literal"><span class="pre">false</span></code>)</li>
+<li><code class="docutils literal"><span class="pre">default_target_path</span></code> (type: <code class="docutils literal"><span class="pre">string</span></code>, default: <code class="docutils literal"><span class="pre">/</span></code>)</li>
+<li><code class="docutils literal"><span class="pre">target_path_parameter</span></code> (type: <code class="docutils literal"><span class="pre">string</span></code>, default: <code class="docutils literal"><span class="pre">_target_path</span></code>)</li>
+<li><code class="docutils literal"><span class="pre">use_referer</span></code> (type: <code class="docutils literal"><span class="pre">Boolean</span></code>, default: <code class="docutils literal"><span class="pre">false</span></code>)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-the-pbkdf2-encoder-security-and-speed">
+<span id="reference-security-pbkdf2"></span><h2>Using the PBKDF2 Encoder: Security and Speed<a class="headerlink" href="#using-the-pbkdf2-encoder-security-and-speed" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>The <a class="reference external" href="javascript:if(confirm('http://en.wikipedia.org/wiki/PBKDF2  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://en.wikipedia.org/wiki/PBKDF2'" tppabs="http://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> encoder provides a high level of Cryptographic security, as
+recommended by the National Institute of Standards and Technology (NIST).</p>
+<p>You can see an example of the <code class="docutils literal"><span class="pre">pbkdf2</span></code> encoder in the YAML block on this page.</p>
+<p>But using PBKDF2 also warrants a warning: using it (with a high number
+of iterations) slows down the process. Thus, PBKDF2 should be used with
+caution and care.</p>
+<p>A good configuration lies around at least 1000 iterations and sha512
+for the hash algorithm.</p>
+</div>
+<div class="section" id="using-the-bcrypt-password-encoder">
+<span id="reference-security-bcrypt"></span><h2>Using the BCrypt Password Encoder<a class="headerlink" href="#using-the-bcrypt-password-encoder" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<div class="admonition caution">
+<p class="first admonition-title">è­¦å‘Š</p>
+<p class="last">To use this encoder, you either need to use PHP Version 5.5 or install
+the <a class="reference external" href="javascript:if(confirm('https://packagist.org/packages/ircmaxell/password-compat  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://packagist.org/packages/ircmaxell/password-compat'" tppabs="https://packagist.org/packages/ircmaxell/password-compat">ircmaxell/password-compat</a> library via Composer.</p>
+</div>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">encoders</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">Symfony\Component\Security\Core\User\User</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">algorithm</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">bcrypt</span>
+            <span class="l-Scalar-Plain">cost</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">15</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="nt">&lt;config&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;encoder</span>
+        <span class="na">class=</span><span class="s">&quot;Symfony\Component\Security\Core\User\User&quot;</span>
+        <span class="na">algorithm=</span><span class="s">&quot;bcrypt&quot;</span>
+        <span class="na">cost=</span><span class="s">&quot;15&quot;</span>
+    <span class="nt">/&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// ...</span>
+    <span class="s1">&#39;encoders&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Symfony\Component\Security\Core\User\User&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;algorithm&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;bcrypt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cost&#39;</span>      <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>The <code class="docutils literal"><span class="pre">cost</span></code> can be in the range of <code class="docutils literal"><span class="pre">4-31</span></code> and determines how long a password
+will be encoded. Each increment of <code class="docutils literal"><span class="pre">cost</span></code> <em>doubles</em> the time it takes to
+encode a password.</p>
+<p>If you don&#8217;t provide the <code class="docutils literal"><span class="pre">cost</span></code> option, the default cost of <code class="docutils literal"><span class="pre">13</span></code> is used.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">You can change the cost at any time â€” even if you already have some
+passwords encoded using a different cost. New passwords will be encoded
+using the new cost, while the already encoded ones will be validated
+using a cost that was used back when they were encoded.</p>
+</div>
+<p>A salt for each new password is generated automatically and need not be
+persisted. Since an encoded password contains the salt used to encode it,
+persisting the encoded password alone is enough.</p>
+<div class="admonition note">
+<p class="first admonition-title">æ³¨è§£</p>
+<p class="last">All the encoded passwords are <code class="docutils literal"><span class="pre">60</span></code> characters long, so make sure to
+allocate enough space for them to be persisted.</p>
+</div>
+</div>
+<div class="section" id="firewall-context">
+<span id="reference-security-firewall-context"></span><h2>Firewall Context<a class="headerlink" href="#firewall-context" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>Most applications will only need one <a class="reference internal" href="security.html#book-security-firewalls" tppabs="http://symfony.cn/docs/book/security.html#book-security-firewalls"><span>firewall</span></a>.
+But if your application <em>does</em> use multiple firewalls, you&#8217;ll notice that
+if you&#8217;re authenticated in one firewall, you&#8217;re not automatically authenticated
+in another. In other words, the systems don&#8217;t share a common &#8220;context&#8221;: each
+firewall acts like a separate security system.</p>
+<p>However, each firewall has an optional <code class="docutils literal"><span class="pre">context</span></code> key (which defaults to
+the name of the firewall), which is used when storing and retrieving security
+data to and from the session. If this key were set to the same value across
+multiple firewalls, the &#8220;context&#8221; could actually be shared:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="c1"># ...</span>
+
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">somename</span><span class="p-Indicator">:</span>
+            <span class="c1"># ...</span>
+            <span class="l-Scalar-Plain">context</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">my_context</span>
+        <span class="l-Scalar-Plain">othername</span><span class="p-Indicator">:</span>
+            <span class="c1"># ...</span>
+            <span class="l-Scalar-Plain">context</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">my_context</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="nt">&lt;security:config&gt;</span>
+    <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;somename&quot;</span> <span class="na">context=</span><span class="s">&quot;my_context&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;! ... -&gt;</span>
+    <span class="nt">&lt;/firewall&gt;</span>
+    <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;othername&quot;</span> <span class="na">context=</span><span class="s">&quot;my_context&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;! ... -&gt;</span>
+    <span class="nt">&lt;/firewall&gt;</span>
+<span class="nt">&lt;/security:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;somename&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="c1">// ...</span>
+            <span class="s1">&#39;context&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;my_context&#39;</span>
+        <span class="p">),</span>
+        <span class="s1">&#39;othername&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="c1">// ...</span>
+            <span class="s1">&#39;context&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;my_context&#39;</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="http-digest-authentication">
+<h2>HTTP-Digest Authentication<a class="headerlink" href="#http-digest-authentication" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h2>
+<p>To use HTTP-Digest authentication you need to provide a realm and a key:</p>
+<div class="configuration-block">
+<ul class="simple">
+<li><em>YAML</em><div class="highlight-yaml"><div class="highlight"><pre><span class="c1"># app/config/security.yml</span>
+<span class="l-Scalar-Plain">security</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">firewalls</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">somename</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">http_digest</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">key</span><span class="p-Indicator">:</span> <span class="s">&quot;a_random_string&quot;</span>
+                <span class="l-Scalar-Plain">realm</span><span class="p-Indicator">:</span> <span class="s">&quot;secure-api&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><em>XML</em><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- app/config/security.xml --&gt;</span>
+<span class="nt">&lt;security:config&gt;</span>
+    <span class="nt">&lt;firewall</span> <span class="na">name=</span><span class="s">&quot;somename&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;http-digest</span> <span class="na">key=</span><span class="s">&quot;a_random_string&quot;</span> <span class="na">realm=</span><span class="s">&quot;secure-api&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/firewall&gt;</span>
+<span class="nt">&lt;/security:config&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><em>PHP</em><div class="highlight-php"><div class="highlight"><pre><span class="c1">// app/config/security.php</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">loadFromExtension</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;firewalls&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;somename&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;http_digest&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="s1">&#39;key&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;a_random_string&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;realm&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;secure-api&#39;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html" class="btn btn-neutral float-right" title="AsseticBundle Configuration (â€œasseticâ€)">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html" class="btn btn-neutral" title="DoctrineBundle Configuration (â€œdoctrineâ€)"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

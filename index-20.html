@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Security &mdash; Symfony Framework Documentation  æ–‡æ¡£</title>
+  
+
+  
+  
+
+  
+  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
+  
+    <link rel="top" title="Symfony Framework Documentation  æ–‡æ¡£" href="../../index.html"/>
+        <link rel="up" title="æ‰‹å†Œ" href="../index.html"/>
+        <link rel="next" title="How to Build a Traditional Login Form" href="form_login_setup.html"/>
+        <link rel="prev" title="How to Pass Extra Information from a Route to a Controller" href="../routing/extra_information.html"/> 
+
+  
+  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">å¿«é€Ÿå…¥é—¨</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">æ€»è§ˆ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">è§†å›¾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">ä»£ç ç»“æ„</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">æ•™ç¨‹</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfonyå’ŒHTTPåŸºç¡€å·¥å…·</a></li>
+<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs çº¯PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html" tppabs="http://symfony.cn/docs/book/installation.html">å®‰è£…å’Œé…ç½®Symfony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">åˆ›å»ºé¡µé¢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">è·¯ç”±ï¼ˆRoutingï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">åˆ›å»ºå’Œä½¿ç”¨æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">æ•°æ®åº“å’ŒDoctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">æ•°æ®åº“å’ŒPropel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">æµ‹è¯•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">æ ¡éªŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">å®‰å…¨æ€§</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTPç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">å¤šè¯­è¨€</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">æœåŠ¡å®¹å™¨ï¼ˆService Containerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">æ€§èƒ½</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">æ ¸å¿ƒåŠŸèƒ½</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">é™æ€æ–‡ä»¶å¤„ç†ï¼ˆAsseticï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">åŒ…ï¼ˆBundleï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">ç¼“å­˜</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">é…ç½®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">å‘½ä»¤è¡Œ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">éƒ¨ç½²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">é‚®ä»¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">äº‹ä»¶åˆ†å‘å™¨ï¼ˆDispatcherï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">è¡¨è¾¾å¼ï¼ˆExpressionï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">æœ€ä½³å®è·µ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfonyæ¡†æ¶æœ€ä½³å®è·µ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">åˆ›å»ºé¡¹ç›®</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">é…ç½®å‚æ•°</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">ä¸šåŠ¡é€»è¾‘ä»£ç çš„ç»„ç»‡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">æ§åˆ¶å™¨ï¼ˆControllerï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">æ¨¡æ¿</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">è¡¨å•</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">å¤šè¯­è¨€æ”¯æŒ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">å®‰å…¨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">é™æ€æ–‡ä»¶ï¼ˆAssetsï¼‰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">æµ‹è¯•</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">ç»„ä»¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">å‚è€ƒ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">è´¡çŒ®</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">è´¡çŒ®ä»£ç </a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">è´¡çŒ®æ–‡æ¡£</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">ç¤¾åŒº</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">æ‰‹å†Œ</a> &raquo;</li>
+      
+    <li>Security</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="index-19.txt" tppabs="http://symfony.cn/docs/_sources/cookbook/security/index.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="security">
+<h1>Security<a class="headerlink" href="#security" title="æ°¸ä¹…é“¾æ¥è‡³æ ‡é¢˜">Â¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="form_login_setup.html" tppabs="http://symfony.cn/docs/cookbook/security/form_login_setup.html">How to Build a Traditional Login Form</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="form_login_setup.html#redirecting-after-success" tppabs="http://symfony.cn/docs/cookbook/security/form_login_setup.html#redirecting-after-success">Redirecting after Success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="form_login_setup.html#avoid-common-pitfalls" tppabs="http://symfony.cn/docs/cookbook/security/form_login_setup.html#avoid-common-pitfalls">Avoid common Pitfalls</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entity_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html">How to Load Security Users from the Database (the Entity Provider)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#introduction" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#create-your-user-entity" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#create-your-user-entity">1) Create your User Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#configure-security-to-load-from-your-entity" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#configure-security-to-load-from-your-entity">2) Configure Security to load from your Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#forbid-inactive-users-advanceduserinterface" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#forbid-inactive-users-advanceduserinterface">Forbid Inactive Users (AdvancedUserInterface)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#using-a-custom-query-to-load-the-user" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#using-a-custom-query-to-load-the-user">Using a Custom Query to Load the User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#managing-roles-in-the-database" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#managing-roles-in-the-database">Managing Roles in the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_provider.html#understanding-serialize-and-how-a-user-is-saved-in-the-session" tppabs="http://symfony.cn/docs/cookbook/security/entity_provider.html#understanding-serialize-and-how-a-user-is-saved-in-the-session">Understanding serialize and how a User is Saved in the Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="remember_me.html" tppabs="http://symfony.cn/docs/cookbook/security/remember_me.html">How to Add &#8220;Remember Me&#8221; Login Functionality</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="remember_me.html#forcing-the-user-to-re-authenticate-before-accessing-certain-resources" tppabs="http://symfony.cn/docs/cookbook/security/remember_me.html#forcing-the-user-to-re-authenticate-before-accessing-certain-resources">Forcing the User to Re-authenticate before Accessing certain Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="impersonating_user.html" tppabs="http://symfony.cn/docs/cookbook/security/impersonating_user.html">How to Impersonate a User</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voters.html" tppabs="http://symfony.cn/docs/cookbook/security/voters.html">How to Implement your own Voter to Blacklist IP Addresses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="voters.html#the-voter-interface" tppabs="http://symfony.cn/docs/cookbook/security/voters.html#the-voter-interface">The Voter Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters.html#creating-a-custom-voter" tppabs="http://symfony.cn/docs/cookbook/security/voters.html#creating-a-custom-voter">Creating a custom Voter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters.html#declaring-the-voter-as-a-service" tppabs="http://symfony.cn/docs/cookbook/security/voters.html#declaring-the-voter-as-a-service">Declaring the Voter as a Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters.html#changing-the-access-decision-strategy" tppabs="http://symfony.cn/docs/cookbook/security/voters.html#changing-the-access-decision-strategy">Changing the Access Decision Strategy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="voters_data_permission.html" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html">How to Use Voters to Check User Permissions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="voters_data_permission.html#how-symfony-uses-voters" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html#how-symfony-uses-voters">How Symfony Uses Voters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters_data_permission.html#the-voter-interface" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html#the-voter-interface">The Voter Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters_data_permission.html#creating-the-custom-voter" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html#creating-the-custom-voter">Creating the custom Voter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters_data_permission.html#declaring-the-voter-as-a-service" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html#declaring-the-voter-as-a-service">Declaring the Voter as a Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voters_data_permission.html#how-to-use-the-voter-in-a-controller" tppabs="http://symfony.cn/docs/cookbook/security/voters_data_permission.html#how-to-use-the-voter-in-a-controller">How to Use the Voter in a Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acl.html" tppabs="http://symfony.cn/docs/cookbook/security/acl.html">How to Use Access Control Lists (ACLs)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="acl.html#bootstrapping" tppabs="http://symfony.cn/docs/cookbook/security/acl.html#bootstrapping">Bootstrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl.html#getting-started" tppabs="http://symfony.cn/docs/cookbook/security/acl.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl.html#cumulative-permissions" tppabs="http://symfony.cn/docs/cookbook/security/acl.html#cumulative-permissions">Cumulative Permissions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acl_advanced.html" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html">How to Use advanced ACL Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="acl_advanced.html#design-concepts" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#design-concepts">Design Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl_advanced.html#database-table-structure" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#database-table-structure">Database Table Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl_advanced.html#scope-of-access-control-entries" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#scope-of-access-control-entries">Scope of Access Control Entries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl_advanced.html#pre-authorization-decisions" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#pre-authorization-decisions">Pre-Authorization Decisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl_advanced.html#post-authorization-decisions" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#post-authorization-decisions">Post Authorization Decisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acl_advanced.html#process-for-reaching-authorization-decisions" tppabs="http://symfony.cn/docs/cookbook/security/acl_advanced.html#process-for-reaching-authorization-decisions">Process for Reaching Authorization Decisions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="force_https.html" tppabs="http://symfony.cn/docs/cookbook/security/force_https.html">How to Force HTTPS or HTTP for different URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firewall_restriction.html" tppabs="http://symfony.cn/docs/cookbook/security/firewall_restriction.html">How to Restrict Firewalls to a Specific Request</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firewall_restriction.html#restricting-by-pattern" tppabs="http://symfony.cn/docs/cookbook/security/firewall_restriction.html#restricting-by-pattern">Restricting by Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall_restriction.html#restricting-by-host" tppabs="http://symfony.cn/docs/cookbook/security/firewall_restriction.html#restricting-by-host">Restricting by Host</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall_restriction.html#restricting-by-http-methods" tppabs="http://symfony.cn/docs/cookbook/security/firewall_restriction.html#restricting-by-http-methods">Restricting by HTTP Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="host_restriction.html" tppabs="http://symfony.cn/docs/cookbook/security/host_restriction.html">How to Restrict Firewalls to a Specific Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form_login.html" tppabs="http://symfony.cn/docs/cookbook/security/form_login.html">How to Customize your Form Login</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="form_login.html#form-login-configuration-reference" tppabs="http://symfony.cn/docs/cookbook/security/form_login.html#form-login-configuration-reference">Form Login Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="form_login.html#redirecting-after-success" tppabs="http://symfony.cn/docs/cookbook/security/form_login.html#redirecting-after-success">Redirecting after Success</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="securing_services.html" tppabs="http://symfony.cn/docs/cookbook/security/securing_services.html">How to Secure any Service or Method in your Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="securing_services.html#securing-methods-using-annotations" tppabs="http://symfony.cn/docs/cookbook/security/securing_services.html#securing-methods-using-annotations">Securing Methods Using Annotations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html">How to Create a custom User Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom_provider.html#create-a-user-class" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html#create-a-user-class">Create a User Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_provider.html#create-a-user-provider" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html#create-a-user-provider">Create a User Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_provider.html#create-a-service-for-the-user-provider" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html#create-a-service-for-the-user-provider">Create a Service for the User Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_provider.html#modify-security-yml" tppabs="http://symfony.cn/docs/cookbook/security/custom_provider.html#modify-security-yml">Modify <code class="docutils literal"><span class="pre">security.yml</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom_password_authenticator.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_password_authenticator.html">How to Create a Custom Form Password Authenticator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom_password_authenticator.html#the-password-authenticator" tppabs="http://symfony.cn/docs/cookbook/security/custom_password_authenticator.html#the-password-authenticator">The Password Authenticator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_password_authenticator.html#how-it-works" tppabs="http://symfony.cn/docs/cookbook/security/custom_password_authenticator.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_password_authenticator.html#configuration" tppabs="http://symfony.cn/docs/cookbook/security/custom_password_authenticator.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_key_authentication.html" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html">How to Authenticate Users with API Keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_key_authentication.html#the-api-key-authenticator" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html#the-api-key-authenticator">The API Key Authenticator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_key_authentication.html#handling-authentication-failure" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html#handling-authentication-failure">Handling Authentication Failure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_key_authentication.html#configuration" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_key_authentication.html#storing-authentication-in-the-session" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html#storing-authentication-in-the-session">Storing Authentication in the Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_key_authentication.html#only-authenticating-for-certain-urls" tppabs="http://symfony.cn/docs/cookbook/security/api_key_authentication.html#only-authenticating-for-certain-urls">Only Authenticating for Certain URLs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom_authentication_provider.html" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html">How to Create a custom Authentication Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#meet-wsse" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#meet-wsse">Meet WSSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#the-token" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#the-token">The Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#the-listener" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#the-listener">The Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#the-authentication-provider" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#the-authentication-provider">The Authentication Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#the-factory" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#the-factory">The Factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#configuration" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_authentication_provider.html#a-little-extra" tppabs="http://symfony.cn/docs/cookbook/security/custom_authentication_provider.html#a-little-extra">A little Extra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pre_authenticated.html" tppabs="http://symfony.cn/docs/cookbook/security/pre_authenticated.html">Using pre Authenticated Security Firewalls</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pre_authenticated.html#x-509-client-certificate-authentication" tppabs="http://symfony.cn/docs/cookbook/security/pre_authenticated.html#x-509-client-certificate-authentication">X.509 Client Certificate Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_authenticated.html#remote-user-based-authentication" tppabs="http://symfony.cn/docs/cookbook/security/pre_authenticated.html#remote-user-based-authentication">REMOTE_USER Based Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="target_path.html" tppabs="http://symfony.cn/docs/cookbook/security/target_path.html">How to Change the default Target Path Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csrf_in_login_form.html" tppabs="http://symfony.cn/docs/cookbook/security/csrf_in_login_form.html">Using CSRF Protection in the Login Form</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="csrf_in_login_form.html#configuring-csrf-protection" tppabs="http://symfony.cn/docs/cookbook/security/csrf_in_login_form.html#configuring-csrf-protection">Configuring CSRF Protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csrf_in_login_form.html#rendering-the-csrf-field" tppabs="http://symfony.cn/docs/cookbook/security/csrf_in_login_form.html#rendering-the-csrf-field">Rendering the CSRF field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="named_encoders.html" tppabs="http://symfony.cn/docs/cookbook/security/named_encoders.html">How to Choose the Password Encoder Algorithm Dynamically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access_control.html" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html">How Does the Security access_control Work?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="access_control.html#matching-options" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html#matching-options">1. Matching Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_control.html#access-enforcement" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html#access-enforcement">2. Access Enforcement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_control.html#matching-access-control-by-ip" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html#matching-access-control-by-ip">Matching access_control By IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_control.html#forcing-a-channel-http-https" tppabs="http://symfony.cn/docs/cookbook/security/access_control.html#forcing-a-channel-http-https">Forcing a Channel (http, https)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multiple_user_providers.html" tppabs="http://symfony.cn/docs/cookbook/security/multiple_user_providers.html">How to Use multiple User Providers</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="form_login_setup.html" tppabs="http://symfony.cn/docs/cookbook/security/form_login_setup.html" class="btn btn-neutral float-right" title="How to Build a Traditional Login Form">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="extra_information.html" tppabs="http://symfony.cn/docs/cookbook/routing/extra_information.html" class="btn btn-neutral" title="How to Pass Extra Information from a Route to a Controller"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; ç‰ˆæƒæ‰€æœ‰ Creative Commons Attribution-Share Alike 3.0 Unported.
+    </p>
+  </div>
+
+  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
