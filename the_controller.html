@@ -214,7 +214,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
         <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
             <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-            <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+            <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony框架开发文档</a>
         </nav>
         <div class="wy-nav-content">
             <div class="rst-content">
@@ -224,7 +224,7 @@
                         <li><a href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">快速入门</a> &raquo; </li>
                         <li>控制器（Controller）</li>
                         <li class="wy-breadcrumbs-aside">
-                            <a href="the_controller.txt" tppabs="http://symfony.cn/docs/_sources/quick_tour/the_controller.txt" rel="nofollow"> View page source</a>
+                            <a href="the_controller.txt" tppabs="http://symfony.cn/docs/_sources/quick_tour/the_controller.txt" rel="nofollow"> 查看网页源代码</a>
                         </li>
                     </ul>
                     <hr/>
@@ -422,9 +422,9 @@
                         </div>
                         <div class="section" id="redirecting">
                             <span id="redirecting-and-forwarding"></span>
-                            <h2>Redirecting<a class="headerlink" href="#redirecting" title="永久链接至标题">¶</a></h2>
+                            <h2>重定向<a class="headerlink" href="#redirecting" title="永久链接至标题">¶</a></h2>
                             <p>
-                                If you want to redirect the user to another page, use the <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method:
+                                如果您想将用户重定向到另一个页面，请使用<code class="docutils literal"><span class="pre">redirectToRoute()</span></code>方法：
                             </p>
                             <div class="highlight-php">
                                 <div class="highlight">
@@ -444,14 +444,14 @@
                                 </div>
                             </div>
                             <p>
-                                The <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> method takes as arguments the route name and an optional array of parameters and redirects the user to the URL generated with those arguments.
+                                <code class="docutils literal"><span class="pre">redirectToRoute()</span></code> 方法将路由名称和可选的参数数组作为参数，并将用户重定向到使用这些参数生成的URL。
                             </p>
                         </div>
                         <div class="section" id="displaying-error-pages">
-                            <h2>Displaying Error Pages<a class="headerlink" href="#displaying-error-pages" title="永久链接至标题">¶</a></h2>
+                            <h2>显示错误页面<a class="headerlink" href="#displaying-error-pages" title="永久链接至标题">¶</a></h2>
                             <p>
-                                Errors will inevitably happen during the execution of every web application.
-                                In the case of <code class="docutils literal"><span class="pre">404</span></code> errors, Symfony includes a handy shortcut that you can use in your controllers:
+                                在每个Web应用程序的执行过程中，错误都将不可避免地发生。 在出现<code class="docutils literal"><span class="pre">404</span></code>错误的情况下，
+                                Symfony包含一个可以在控制器中使用的快捷方便的方法：
                             </p>
                             <div class="highlight-php">
                                 <div class="highlight">
@@ -473,7 +473,8 @@
                                 </div>
                             </div>
                             <p>
-                                For <code class="docutils literal"><span class="pre">500</span></code> errors, just throw a regular PHP exception inside the controller and Symfony will transform it into a proper <code class="docutils literal"><span class="pre">500</span></code> error page:
+                                对于<code class="docutils literal"><span class="pre">500</span></code>错误，只要在控制器内部抛出一个普通的PHP异常，
+                                Symfony就会把它转换成适当的<code class="docutils literal"><span class="pre">500</span></code>错误页面：
                             </p>
                             <div class="highlight-php">
                                 <div class="highlight">
@@ -496,11 +497,11 @@
                             </div>
                         </div>
                         <div class="section" id="getting-information-from-the-request">
-                            <h2>Getting Information from the Request<a class="headerlink" href="#getting-information-from-the-request" title="永久链接至标题">¶</a></h2>
+                            <h2>从请求中获取信息<a class="headerlink" href="#getting-information-from-the-request" title="永久链接至标题">¶</a></h2>
                             <p>
-                                Sometimes your controllers need to access the information related to the user request, such as their preferred language, IP address or the URL query parameters.
-                                To get access to this information, add a new argument of type <code class="docutils literal"><span class="pre">Request</span></code> to the action. The name of this new argument doesn&#8217;t matter,
-                                but it must be preceded by the <code class="docutils literal"><span class="pre">Request</span></code> type in order to work (don&#8217;t forget to add the new <code class="docutils literal"><span class="pre">use</span></code> statement that imports this <code class="docutils literal"><span class="pre">Request</span></code> class):
+                                有时您的控制器需要访问与用户请求有关的信息，例如他们的首选语言，IP地址或URL查询参数。
+                                要访问这些信息，请在操作中添加一个类型为<code class="docutils literal"><span class="pre">Request</span></code>的新参数
+                                这个新参数的类型名称并不重要，但是为了工作，它必须在<code class="docutils literal"><span class="pre">Request</span></code>类型的前面（不要忘记添加<code class="docutils literal"><span class="pre">use</span></code>语句导入这个新的<code class="docutils literal"><span class="pre">Request</span></code>类）：
                             </p>
                             <div class="highlight-php">
                                 <div class="highlight">
@@ -536,7 +537,7 @@
                                 </div>
                             </div>
                             <p>
-                                In a template, you can also access the <code class="docutils literal"><span class="pre">Request</span></code> object via the special <code class="docutils literal"><span class="pre">app.request</span></code> variable automatically provided by Symfony:
+                                在模板中，您还可以通过Symfony自动提供的特殊<code class="docutils literal"><span class="pre">app.request</span></code>变量来访问<code class="docutils literal"><span class="pre">Request</span></code>对象：
                             </p>
                             <div class="highlight-html+jinja">
                                 <div class="highlight">
@@ -549,14 +550,13 @@
                             </div>
                         </div>
                         <div class="section" id="persisting-data-in-the-session">
-                            <h2>Persisting Data in the Session<a class="headerlink" href="#persisting-data-in-the-session" title="永久链接至标题">¶</a></h2>
+                            <h2>会话中的持久数据<a class="headerlink" href="#persisting-data-in-the-session" title="永久链接至标题">¶</a></h2>
                             <p>
-                                Even if the HTTP protocol is stateless,
-                                Symfony provides a nice session object that represents the client (be it a real person using a browser, a bot, or a web service).
-                                Between two requests, Symfony stores the attributes in a cookie by using native PHP sessions.
+                                即使HTTP协议是无状态的，Symfony也提供了一个很好的会话对象来表示客户端（不管是使用浏览器，机器人还是Web服务）。
+                                在两个请求之间，Symfony通过使用本地PHP会话将属性存储在cookie中。
                             </p>
                             <p>
-                                Storing and retrieving information from the session can be easily achieved from any controller:
+                                从任何控制器可轻松实现从会话中存储和检索信息：
                             </p>
                             <div class="highlight-php">
                                 <div class="highlight">
@@ -579,8 +579,7 @@
                                 </div>
                             </div>
                             <p>
-                                You can also store &#8220;flash messages&#8221; that will auto-delete after the next request.
-                                They are useful when you need to set a success message before redirecting the user to another page (which will then show the message):
+                                您也可以存储下一个请求后自动删除的“Flash消息”。 在将用户重定向到另一个页面（然后将显示该消息）之前，需要设置成功消息时，它们非常有用：
                             </p>
                             <div class="highlight-php">
                                 <div class="highlight">
@@ -595,7 +594,7 @@
                                 </div>
                             </div>
                             <p>
-                                And you can display the flash message in the template like this:
+                                你可以在模板中显示这样的flash消息：
                             </p>
                             <div class="highlight-html+jinja">
                                 <div class="highlight">
@@ -607,12 +606,12 @@
                             </div>
                         </div>
                         <div class="section" id="final-thoughts">
-                            <h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="永久链接至标题">¶</a></h2>
+                            <h2>最后的思考<a class="headerlink" href="#final-thoughts" title="永久链接至标题">¶</a></h2>
                             <p>
-                                That&#8217;s all there is to it, and I&#8217;m not even sure you&#8217;ll have spent the full 10 minutes.
-                                You were briefly introduced to bundles in the first part, and all the features you&#8217;ve learned about so far are part of the core framework bundle.
-                                But thanks to bundles, everything in Symfony can be extended or replaced.
-                                That&#8217;s the topic of the <a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html"><em>next part of this tutorial</em></a>.
+                                就这样，我甚至不确定你会花整整10分钟。
+                                在第一部分中，您简要地介绍了bundles，到目前为止，您已经了解到的所有特性都是核心框架包的一部分。
+                                但是，由于bundles，Symfony中的所有内容都可以扩展或替换。
+                                这是本教程<a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html"><em>下一部分的主题</em></a>。
                             </p>
                         </div>
                     </div>
