@@ -1,648 +1,988 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>安装和配置Symfony &mdash; Symfony Framework Documentation  文档</title>
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
-  
+    <title>安装和配置Symfony &mdash; Symfony Framework Documentation 文档</title>
 
-  
-  <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css" tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'>
 
-  
-  
-    
+    <link href="css-family=Lato-400,700,400italic,700italic-Roboto+Slab-400,700-Inconsolata-400,700&subset=latin,cyrillic.css"
+          tppabs="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic"
+          rel='stylesheet' type='text/css'>
 
-  
 
-  
-  
-    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css" />
-  
+    <link rel="stylesheet" href="theme.css" tppabs="http://symfony.cn/docs/_static/css/theme.css" type="text/css"/>
 
-  
 
-  
-    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css" />
-  
+    <link rel="stylesheet" href="custom.css" tppabs="http://symfony.cn/docs/_static/custom.css" type="text/css"/>
+
     <link rel="top" title="Symfony Framework Documentation  文档" href="../index.html"/>
-        <link rel="up" title="教程" href="index.html"/>
-        <link rel="next" title="创建页面" href="page_creation.html"/>
-        <link rel="prev" title="Symfony vs 纯PHP" href="from_flat_php_to_symfony2.html"/> 
+    <link rel="up" title="教程" href="index.html"/>
+    <link rel="next" title="创建页面" href="page_creation.html"/>
+    <link rel="prev" title="Symfony vs 纯PHP" href="from_flat_php_to_symfony2.html"/>
 
-  
-  <script src="modernizr.min.js" tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+    <script src="modernizr.min.js"
+            tppabs="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+<div class="wy-grid-for-nav">
 
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" tppabs="http://symfony.cn/docs/index.html" class="fa fa-home"> Symfony Framework Documentation</a>
-        
-        
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-          
-          
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The Documentation Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015" tppabs="http://symfony.cn/docs/changelog.html#february-2015">February, 2015</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015" tppabs="http://symfony.cn/docs/changelog.html#january-2015">January, 2015</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014" tppabs="http://symfony.cn/docs/changelog.html#december-2014">December, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014" tppabs="http://symfony.cn/docs/changelog.html#november-2014">November, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014" tppabs="http://symfony.cn/docs/changelog.html#october-2014">October, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014" tppabs="http://symfony.cn/docs/changelog.html#september-2014">September, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014" tppabs="http://symfony.cn/docs/changelog.html#august-2014">August, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014" tppabs="http://symfony.cn/docs/changelog.html#july-2014">July, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014" tppabs="http://symfony.cn/docs/changelog.html#june-2014">June, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014" tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014" tppabs="http://symfony.cn/docs/changelog.html#april-2014">April, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014" tppabs="http://symfony.cn/docs/changelog.html#march-2014">March, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014" tppabs="http://symfony.cn/docs/changelog.html#february-2014">February, 2014</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014" tppabs="http://symfony.cn/docs/changelog.html#january-2014">January, 2014</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index-1.html" tppabs="http://symfony.cn/docs/quick_tour/index.html">快速入门</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="the_big_picture.html" tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="the_view.html" tppabs="http://symfony.cn/docs/quick_tour/the_view.html">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="the_controller.html" tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">控制器（Controller）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="the_architecture.html" tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">代码结构</a></li>
-</ul>
-</li>
-</ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">教程</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="http_fundamentals.html" tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfony和HTTP基础工具</a></li>
-<li class="toctree-l2"><a class="reference internal" href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony vs 纯PHP</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">安装和配置Symfony</a></li>
-<li class="toctree-l2"><a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html">创建页面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html" tppabs="http://symfony.cn/docs/book/controller.html">控制器（Controller）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html" tppabs="http://symfony.cn/docs/book/routing.html">路由（Routing）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templating.html" tppabs="http://symfony.cn/docs/book/templating.html">创建和使用模板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doctrine.html" tppabs="http://symfony.cn/docs/book/doctrine.html">数据库和Doctrine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="propel.html" tppabs="http://symfony.cn/docs/book/propel.html">数据库和Propel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testing.html" tppabs="http://symfony.cn/docs/book/testing.html">测试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="validation.html" tppabs="http://symfony.cn/docs/book/validation.html">校验</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forms.html" tppabs="http://symfony.cn/docs/book/forms.html">表单</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html" tppabs="http://symfony.cn/docs/book/security.html">安全性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http_cache.html" tppabs="http://symfony.cn/docs/book/http_cache.html">HTTP缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="translation.html" tppabs="http://symfony.cn/docs/book/translation.html">多语言</a></li>
-<li class="toctree-l2"><a class="reference internal" href="service_container.html" tppabs="http://symfony.cn/docs/book/service_container.html">服务容器（Service Container）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html" tppabs="http://symfony.cn/docs/book/performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="internals.html" tppabs="http://symfony.cn/docs/book/internals.html">核心功能</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html">手册</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index-4.html" tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">静态文件处理（Assetic）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-5.html" tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">包（Bundle）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-6.html" tppabs="http://symfony.cn/docs/cookbook/cache/index.html">缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing Composer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-7.html" tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-8.html" tppabs="http://symfony.cn/docs/cookbook/console/index.html">命令行</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-9.html" tppabs="http://symfony.cn/docs/cookbook/controller/index.html">控制器（Controller）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debugging.html" tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to Optimize your Development Environment for Debugging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-10.html" tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">部署</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-11.html" tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-12.html" tppabs="http://symfony.cn/docs/cookbook/email/index.html">邮件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-13.html" tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">事件分发器（Dispatcher）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-14.html" tppabs="http://symfony.cn/docs/cookbook/expression/index.html">表达式（Expression）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-15.html" tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-16.html" tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-17.html" tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-18.html" tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-19.html" tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-20.html" tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a></li>
-<li class="toctree-l2"><a class="reference internal" href="serializer.html" tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use the Serializer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-21.html" tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service Container</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-22.html" tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="symfony1.html" tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2 Differs from Symfony1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-23.html" tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-24.html" tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrading.html" tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade Your Symfony Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-25.html" tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-26.html" tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-27.html" tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-28.html" tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index-29.html" tppabs="http://symfony.cn/docs/best_practices/index.html">最佳实践</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html" tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfony框架最佳实践</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating-the-project.html" tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">创建项目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration.html" tppabs="http://symfony.cn/docs/best_practices/configuration.html">配置参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="business-logic.html" tppabs="http://symfony.cn/docs/best_practices/business-logic.html">业务逻辑代码的组织</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controllers.html" tppabs="http://symfony.cn/docs/best_practices/controllers.html">控制器（Controller）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates.html" tppabs="http://symfony.cn/docs/best_practices/templates.html">模板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forms-1.html" tppabs="http://symfony.cn/docs/best_practices/forms.html">表单</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i18n.html" tppabs="http://symfony.cn/docs/best_practices/i18n.html">多语言支持</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security-1.html" tppabs="http://symfony.cn/docs/best_practices/security.html">安全</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-assets.html" tppabs="http://symfony.cn/docs/best_practices/web-assets.html">静态文件（Assets）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.html" tppabs="http://symfony.cn/docs/best_practices/tests.html">测试</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index-30.html" tppabs="http://symfony.cn/docs/components/index.html">组件</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using_components.html" tppabs="http://symfony.cn/docs/components/using_components.html">How to Install and Use the Symfony Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-31.html" tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-32.html" tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-33.html" tppabs="http://symfony.cn/docs/components/config/index.html">Config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-34.html" tppabs="http://symfony.cn/docs/components/console/index.html">Console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="css_selector.html" tppabs="http://symfony.cn/docs/components/css_selector.html">The CssSelector Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-35.html" tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-36.html" tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dom_crawler.html" tppabs="http://symfony.cn/docs/components/dom_crawler.html">The DomCrawler Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-37.html" tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-38.html" tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression Language</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-39.html" tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="finder.html" tppabs="http://symfony.cn/docs/components/finder.html">The Finder Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-40.html" tppabs="http://symfony.cn/docs/components/form/index.html">Form</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-41.html" tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-42.html" tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intl.html" tppabs="http://symfony.cn/docs/components/intl.html">The Intl Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options_resolver.html" tppabs="http://symfony.cn/docs/components/options_resolver.html">The OptionsResolver Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="process.html" tppabs="http://symfony.cn/docs/components/process.html">The Process Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-43.html" tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-44.html" tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-45.html" tppabs="http://symfony.cn/docs/components/security/index.html">Security</a></li>
-<li class="toctree-l2"><a class="reference internal" href="serializer-1.html" tppabs="http://symfony.cn/docs/components/serializer.html">The Serializer Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stopwatch.html" tppabs="http://symfony.cn/docs/components/stopwatch.html">The Stopwatch Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-46.html" tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-47.html" tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-48.html" tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-49.html" tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index-50.html" tppabs="http://symfony.cn/docs/reference/index.html">参考</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="framework.html" tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle Configuration (&#8220;framework&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doctrine-1.html" tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle Configuration (&#8220;doctrine&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security-2.html" tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle Configuration (&#8220;security&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assetic.html" tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle Configuration (&#8220;assetic&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="swiftmailer.html" tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle Configuration (&#8220;swiftmailer&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twig.html" tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle Configuration (&#8220;twig&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monolog.html" tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle Configuration (&#8220;monolog&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_profiler.html" tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle Configuration (&#8220;web_profiler&#8221;)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kernel.html" tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring in the Kernel (e.g. AppKernel)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="types.html" tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constraints.html" tppabs="http://symfony.cn/docs/reference/constraints.html">Validation Constraints Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twig_reference.html" tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig Template Form Function and Variable Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html" tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony Twig Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dic_tags.html" tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency Injection Tags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html" tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements for Running Symfony</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index-51.html" tppabs="http://symfony.cn/docs/contributing/index.html">贡献</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index-52.html" tppabs="http://symfony.cn/docs/contributing/code/index.html">贡献代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-53.html" tppabs="http://symfony.cn/docs/contributing/documentation/index.html">贡献文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index-54.html" tppabs="http://symfony.cn/docs/contributing/community/index.html">社区</a></li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      </div>
-      &nbsp;
+        <div class="wy-side-nav-search">
+            <a href="index.html" class="fa fa-home">Symfony框架开发文档</a>
+            <div role="search">
+                <form id="rtd-search-form" class="wy-form" action="http://symfony.cn/docs/search.html" method="get">
+                    <input type="text" name="q" placeholder="Search docs">
+                    <input type="hidden" name="check_keywords" value="yes">
+                    <input type="hidden" name="area" value="default">
+                </form>
+            </div>
+        </div>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="changelog.html" tppabs="http://symfony.cn/docs/changelog.html">The
+                        Documentation Changelog</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2015"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#february-2015">February,2015</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2015"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#january-2015">January,2015</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#december-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#december-2014">December,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#november-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#november-2014">November,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#october-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#october-2014">October,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#september-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#september-2014">September,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#august-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#august-2014">August,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#july-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#july-2014">July,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#june-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#june-2014">June,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#may-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#may-2014">May, 2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#april-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#april-2014">April,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#march-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#march-2014">March,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#february-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#february-2014">February,2014</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="changelog.html#january-2014"
+                                                  tppabs="http://symfony.cn/docs/changelog.html#january-2014">January,2014</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-1.html"
+                       tppabs="http://symfony.cn/docs/quick_tour/index.html">快速入门</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="the_big_picture.html"
+                                                  tppabs="http://symfony.cn/docs/quick_tour/the_big_picture.html">总览</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="the_view.html"
+                                                  tppabs="http://symfony.cn/docs/quick_tour/the_view.html">视图</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="the_controller.html"
+                                                  tppabs="http://symfony.cn/docs/quick_tour/the_controller.html">控制器（Controller）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="the_architecture.html"
+                                                  tppabs="http://symfony.cn/docs/quick_tour/the_architecture.html">代码结构</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1 current">
+                    <a class="reference internal" href="index-2.html"
+                       tppabs="http://symfony.cn/docs/book/index.html">教程</a>
+                    <ul>
+                        <li class="toctree-l2 "><a class="reference internal" href="http_fundamentals.html"
+                                                   tppabs="http://symfony.cn/docs/book/http_fundamentals.html">Symfony和HTTP基础工具</a>
+                        </li>
+                        <li class="toctree-l2 "><a class="reference internal" href="from_flat_php_to_symfony2.html"
+                                                          tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html">Symfony
+                            vs 纯PHP</a></li>
+                        <li class="toctree-l2 current"><a class="reference internal" href="installation.html"
+                                                  tppabs="http://symfony.cn/docs/book/installation.html">安装和配置Symfony</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="page_creation.html"
+                                                  tppabs="http://symfony.cn/docs/book/page_creation.html">创建页面</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="controller.html"
+                                                  tppabs="http://symfony.cn/docs/book/controller.html">控制器（Controller）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="routing.html"
+                                                  tppabs="http://symfony.cn/docs/book/routing.html">路由（Routing）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="templating.html"
+                                                  tppabs="http://symfony.cn/docs/book/templating.html">创建和使用模板</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="doctrine.html"
+                                                  tppabs="http://symfony.cn/docs/book/doctrine.html">数据库和Doctrine</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="propel.html"
+                                                  tppabs="http://symfony.cn/docs/book/propel.html">数据库和Propel</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="testing.html"
+                                                  tppabs="http://symfony.cn/docs/book/testing.html">测试</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="validation.html"
+                                                  tppabs="http://symfony.cn/docs/book/validation.html">校验</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="forms.html"
+                                                  tppabs="http://symfony.cn/docs/book/forms.html">表单</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="security.html"
+                                                  tppabs="http://symfony.cn/docs/book/security.html">安全性</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="http_cache.html"
+                                                  tppabs="http://symfony.cn/docs/book/http_cache.html">HTTP缓存</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="translation.html"
+                                                  tppabs="http://symfony.cn/docs/book/translation.html">多语言</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="service_container.html"
+                                                  tppabs="http://symfony.cn/docs/book/service_container.html">服务容器（Service
+                            Container）</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="performance.html"
+                                                  tppabs="http://symfony.cn/docs/book/performance.html">性能</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="internals.html"
+                                                  tppabs="http://symfony.cn/docs/book/internals.html">核心功能</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-3.html"
+                       tppabs="http://symfony.cn/docs/cookbook/index.html">手册</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="index-4.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/assetic/index.html">静态文件处理（Assetic）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-5.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/bundles/index.html">包（Bundle）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-6.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/cache/index.html">缓存</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="composer.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/composer.html">Installing
+                            Composer</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-7.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/configuration/index.html">配置</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-8.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/console/index.html">命令行</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-9.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/controller/index.html">控制器（Controller）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="debugging.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/debugging.html">How to
+                            Optimize your Development Environment for Debugging</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-10.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/deployment/index.html">部署</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-11.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/doctrine/index.html">Doctrine</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-12.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/email/index.html">邮件</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-13.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/event_dispatcher/index.html">事件分发器（Dispatcher）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-14.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/expression/index.html">表达式（Expression）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-15.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/form/index.html">Form</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-16.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/logging/index.html">Logging</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-17.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/profiler/index.html">Profiler</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-18.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/request/index.html">Request</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-19.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/routing/index.html">Routing</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-20.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/security/index.html">Security</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="serializer.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/serializer.html">How to Use
+                            the Serializer</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-21.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/service_container/index.html">Service
+                            Container</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-22.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/session/index.html">Sessions</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="symfony1.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/symfony1.html">How Symfony2
+                            Differs from Symfony1</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-23.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/templating/index.html">Templating</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-24.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/testing/index.html">Testing</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="upgrading.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/upgrading.html">How to Upgrade
+                            Your Symfony Project</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-25.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/validation/index.html">Validation</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-26.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/web_server/index.html">Web
+                            Server</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-27.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/web_services/index.html">Web
+                            Services</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-28.html"
+                                                  tppabs="http://symfony.cn/docs/cookbook/workflow/index.html">Workflow</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-29.html"
+                       tppabs="http://symfony.cn/docs/best_practices/index.html">最佳实践</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="introduction.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/introduction.html">Symfony框架最佳实践</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="creating-the-project.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/creating-the-project.html">创建项目</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="configuration.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/configuration.html">配置参数</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="business-logic.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/business-logic.html">业务逻辑代码的组织</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="controllers.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/controllers.html">控制器（Controller）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="templates.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/templates.html">模板</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="forms-1.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/forms.html">表单</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="i18n.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/i18n.html">多语言支持</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="security-1.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/security.html">安全</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="web-assets.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/web-assets.html">静态文件（Assets）</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="tests.html"
+                                                  tppabs="http://symfony.cn/docs/best_practices/tests.html">测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-30.html"
+                       tppabs="http://symfony.cn/docs/components/index.html">组件</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="using_components.html"
+                                                  tppabs="http://symfony.cn/docs/components/using_components.html">How
+                            to Install and Use the Symfony Components</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-31.html"
+                                                  tppabs="http://symfony.cn/docs/components/asset/index.html">Asset</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-32.html"
+                                                  tppabs="http://symfony.cn/docs/components/class_loader/index.html">ClassLoader</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-33.html"
+                                                  tppabs="http://symfony.cn/docs/components/config/index.html">Config</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-34.html"
+                                                  tppabs="http://symfony.cn/docs/components/console/index.html">Console</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="css_selector.html"
+                                                  tppabs="http://symfony.cn/docs/components/css_selector.html">The
+                            CssSelector Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-35.html"
+                                                  tppabs="http://symfony.cn/docs/components/debug/index.html">Debug</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-36.html"
+                                                  tppabs="http://symfony.cn/docs/components/dependency_injection/index.html">DependencyInjection</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="dom_crawler.html"
+                                                  tppabs="http://symfony.cn/docs/components/dom_crawler.html">The
+                            DomCrawler Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-37.html"
+                                                  tppabs="http://symfony.cn/docs/components/event_dispatcher/index.html">EventDispatcher</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-38.html"
+                                                  tppabs="http://symfony.cn/docs/components/expression_language/index.html">Expression
+                            Language</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-39.html"
+                                                  tppabs="http://symfony.cn/docs/components/filesystem/index.html">Filesystem</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="finder.html"
+                                                  tppabs="http://symfony.cn/docs/components/finder.html">The Finder
+                            Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-40.html"
+                                                  tppabs="http://symfony.cn/docs/components/form/index.html">Form</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-41.html"
+                                                  tppabs="http://symfony.cn/docs/components/http_foundation/index.html">HttpFoundation</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-42.html"
+                                                  tppabs="http://symfony.cn/docs/components/http_kernel/index.html">HttpKernel</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="intl.html"
+                                                  tppabs="http://symfony.cn/docs/components/intl.html">The Intl
+                            Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="options_resolver.html"
+                                                  tppabs="http://symfony.cn/docs/components/options_resolver.html">The
+                            OptionsResolver Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="process.html"
+                                                  tppabs="http://symfony.cn/docs/components/process.html">The Process
+                            Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-43.html"
+                                                  tppabs="http://symfony.cn/docs/components/property_access/index.html">PropertyAccess</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-44.html"
+                                                  tppabs="http://symfony.cn/docs/components/routing/index.html">Routing</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-45.html"
+                                                  tppabs="http://symfony.cn/docs/components/security/index.html">Security</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="serializer-1.html"
+                                                  tppabs="http://symfony.cn/docs/components/serializer.html">The
+                            Serializer Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="stopwatch.html"
+                                                  tppabs="http://symfony.cn/docs/components/stopwatch.html">The
+                            Stopwatch Component</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-46.html"
+                                                  tppabs="http://symfony.cn/docs/components/templating/index.html">Templating</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-47.html"
+                                                  tppabs="http://symfony.cn/docs/components/translation/index.html">Translation</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-48.html"
+                                                  tppabs="http://symfony.cn/docs/components/var_dumper/index.html">VarDumper</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-49.html"
+                                                  tppabs="http://symfony.cn/docs/components/yaml/index.html">Yaml</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-50.html"
+                       tppabs="http://symfony.cn/docs/reference/index.html">参考</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="framework.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/framework.html">FrameworkBundle
+                            Configuration (“framework”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="doctrine-1.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/doctrine.html">DoctrineBundle
+                            Configuration (“doctrine”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="security-2.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/security.html">SecurityBundle
+                            Configuration (“security”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="assetic.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/assetic.html">AsseticBundle
+                            Configuration (“assetic”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="swiftmailer.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/swiftmailer.html">SwiftmailerBundle
+                            Configuration (“swiftmailer”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="twig.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/twig.html">TwigBundle
+                            Configuration (“twig”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="monolog.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/monolog.html">MonologBundle
+                            Configuration (“monolog”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="web_profiler.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/web_profiler.html">WebProfilerBundle
+                            Configuration (“web_profiler”)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="kernel.html"
+                                                  tppabs="http://symfony.cn/docs/reference/configuration/kernel.html">Configuring
+                            in the Kernel (e.g. AppKernel)</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="types.html"
+                                                  tppabs="http://symfony.cn/docs/reference/forms/types.html">Form Types
+                            Reference</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="constraints.html"
+                                                  tppabs="http://symfony.cn/docs/reference/constraints.html">Validation
+                            Constraints Reference</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="twig_reference.html"
+                                                  tppabs="http://symfony.cn/docs/reference/forms/twig_reference.html">Twig
+                            Template Form Function and Variable Reference</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="twig_reference-1.html"
+                                                  tppabs="http://symfony.cn/docs/reference/twig_reference.html">Symfony
+                            Twig Extensions</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="dic_tags.html"
+                                                  tppabs="http://symfony.cn/docs/reference/dic_tags.html">The Dependency
+                            Injection Tags</a></li>
+                        <li class="toctree-l2"><a class="reference internal" href="requirements.html"
+                                                  tppabs="http://symfony.cn/docs/reference/requirements.html">Requirements
+                            for Running Symfony</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li class="toctree-l1">
+                    <a class="reference internal" href="index-51.html"
+                       tppabs="http://symfony.cn/docs/contributing/index.html">贡献</a>
+                    <ul>
+                        <li class="toctree-l2"><a class="reference internal" href="index-52.html"
+                                                  tppabs="http://symfony.cn/docs/contributing/code/index.html">贡献代码</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-53.html"
+                                                  tppabs="http://symfony.cn/docs/contributing/documentation/index.html">贡献文档</a>
+                        </li>
+                        <li class="toctree-l2"><a class="reference internal" href="index-54.html"
+                                                  tppabs="http://symfony.cn/docs/contributing/community/index.html">社区</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>&nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
-      </nav>
+
+        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="index.html" tppabs="http://symfony.cn/docs/index.html">Symfony Framework Documentation</a>
+        </nav>
 
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">教程</a> &raquo;</li>
-      
-    <li>安装和配置Symfony</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          <a href="installation.txt" tppabs="http://symfony.cn/docs/_sources/book/installation.txt" rel="nofollow"> View page source</a>
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document">
-            
-  <div class="section" id="installing-and-configuring-symfony">
-<span id="index-0"></span><h1>安装和配置Symfony<a class="headerlink" href="#installing-and-configuring-symfony" title="永久链接至标题">¶</a></h1>
-<p>The goal of this chapter is to get you up and running with a working application
-built on top of Symfony. In order to simplify the process of creating new
-applications, Symfony provides an installer that must be installed before
-creating the first application.</p>
-<div class="section" id="installing-the-symfony-installer">
-<h2>Symfony安装工具<a class="headerlink" href="#installing-the-symfony-installer" title="永久链接至标题">¶</a></h2>
-<p>Using the Symfony Installer is the only recommended way to create new Symfony
-applications. This installer is a PHP application that has to be installed
-only once and then it can create any number of Symfony applications.</p>
-<div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">The installer requires PHP 5.4 or higher. If you still use the legacy
-PHP 5.3 version, you cannot use the Symfony Installer. Read the
-<a class="reference internal" href="#book-creating-applications-without-the-installer"><span>不使用安装工具创建应用</span></a> section to learn how
-to proceed.</p>
-</div>
-<p>Depending on your operating system, the installer must be installed in different
-ways.</p>
-<div class="section" id="linux-and-mac-os-x-systems">
-<h3>Linux和Mac OS X系统<a class="headerlink" href="#linux-and-mac-os-x-systems" title="永久链接至标题">¶</a></h3>
-<p>Open your command console and execute the following three commands:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>curl -LsS http://symfony.com/installer &gt; symfony.phar
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="index.html" tppabs="http://symfony.cn/docs/index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="index-2.html" tppabs="http://symfony.cn/docs/book/index.html">教程</a> &raquo;</li>
+
+                        <li>安装和配置Symfony</li>
+                        <li class="wy-breadcrumbs-aside">
+
+                            <a href="installation.txt" tppabs="http://symfony.cn/docs/_sources/book/installation.txt"
+                               rel="nofollow"> 查看网页源代码</a>
+
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document">
+
+                    <div class="section" id="installing-and-configuring-symfony">
+                        <span id="index-0"></span>
+                        <h1>安装和配置Symfony<a class="headerlink" href="#installing-and-configuring-symfony"
+                                           title="永久链接至标题">¶</a></h1>
+                        <p>本章的目标是通过构建在Symfony之上的工作应用程序来启动和运行。 为了简化创建新应用程序的过程，Symfony提供了一个必须在创建第一个应用程序之前安装的安装程序。</p>
+                        <div class="section" id="installing-the-symfony-installer">
+                            <h2>Symfony安装工具<a class="headerlink" href="#installing-the-symfony-installer"
+                                              title="永久链接至标题">¶</a></h2>
+                            <p>使用Symfony安装程序是创建新的Symfony应用程序的唯一推荐方式。 这个安装程序是一个只能安装一次的PHP应用程序，然后它可以创建任意数量的Symfony应用程序。</p>
+                            <div class="admonition note">
+                                <p class="first admonition-title">注解</p>
+                                <p class="last">
+                                    安装程序需要PHP 5.4或更高版本。 如果您仍然使用旧版PHP 5.3版本，则不能使用Symfony安装程序。 阅读“<a class="reference internal" href="#book-creating-applications-without-the-installer"><span>不使用安装工具创建应用</span></a>”部分，了解如何继续。
+                                </p>
+                            </div>
+                            <p>根据您的操作系统，安装程序必须以不同的方式安装。</p>
+                            <div class="section" id="linux-and-mac-os-x-systems">
+                                <h3>Linux和Mac OS X系统<a class="headerlink" href="#linux-and-mac-os-x-systems"
+                                                       title="永久链接至标题">¶</a></h3>
+                                <p>打开您的命令控制台并执行以下三个命令：</p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ </span>curl -LsS http://symfony.com/installer &gt; symfony.phar
 <span class="nv">$ </span>sudo mv symfony.phar /usr/local/bin/symfony
 <span class="nv">$ </span>chmod a+x /usr/local/bin/symfony
-</pre></div>
-</div>
-<p>This will create a global <code class="docutils literal"><span class="pre">symfony</span></code> command in your system that will be used
-to create new Symfony applications.</p>
-</div>
-<div class="section" id="windows-systems">
-<h3>Windows系统<a class="headerlink" href="#windows-systems" title="永久链接至标题">¶</a></h3>
-<p>Open your command console and execute the following command:</p>
-<div class="highlight-bash"><div class="highlight"><pre>c:<span class="se">\&gt;</span> php -r <span class="s2">&quot;readfile(&#39;http://symfony.com/installer&#39;);&quot;</span> &gt; symfony.phar
-</pre></div>
-</div>
-<p>Then, move the downloaded <code class="docutils literal"><span class="pre">symfony.phar</span></code> file to your projects directory and
-execute it as follows:</p>
-<div class="highlight-bash"><div class="highlight"><pre>c:<span class="se">\&gt;</span> move symfony.phar c:<span class="se">\p</span>rojects
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    这将在您的系统中创建一个全局<code class="docutils literal"><span
+                                            class="pre">symfony</span></code>命令，用于创建新的Symfony应用程序。
+                                </p>
+                            </div>
+                            <div class="section" id="windows-systems">
+                                <h3>Windows系统<a class="headerlink" href="#windows-systems" title="永久链接至标题">¶</a></h3>
+                                <p>打开您的命令控制台并执行以下命令：</p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre>c:<span class="se">\&gt;</span> php -r <span class="s2">&quot;readfile(&#39;http://symfony.com/installer&#39;);&quot;</span> &gt; symfony.phar
+</pre>
+                                    </div>
+                                </div>
+                                <p>然后，将下载的symfony.phar文件移动到您的项目目录并执行它，如下所示：</p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre>c:<span
+                                            class="se">\&gt;</span> move symfony.phar c:<span class="se">\p</span>rojects
 c:<span class="se">\p</span>rojects<span class="se">\&gt;</span> php symfony.phar
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="creating-the-symfony-application">
-<h2>创建Symfony应用<a class="headerlink" href="#creating-the-symfony-application" title="永久链接至标题">¶</a></h2>
-<p>Once the Symfony Installer is ready, create your first Symfony application with
-the <code class="docutils literal"><span class="pre">new</span></code> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Linux, Mac OS X</span>
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="creating-the-symfony-application">
+                            <h2>创建Symfony应用<a class="headerlink" href="#creating-the-symfony-application"
+                                              title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Symfony安装程序准备就绪后，使用<code class="docutils literal"><span class="pre">新</span></code>命令创建您的第一个Symfony应用程序：
+                            </p>
+                            <div class="highlight-bash">
+                                <div class="highlight"><pre><span class="c"># Linux, Mac OS X</span>
 <span class="nv">$ </span>symfony new my_project_name
 
 <span class="c"># Windows</span>
 c:<span class="se">\&gt;</span> <span class="nb">cd </span>projects/
 c:<span class="se">\p</span>rojects<span class="se">\&gt;</span> php symfony.phar new my_project_name
-</pre></div>
-</div>
-<p>This command creates a new directory called <code class="docutils literal"><span class="pre">my_project_name</span></code> that contains a
-fresh new project based on the most recent stable Symfony version available. In
-addition, the installer checks if your system meets the technical requirements
-to execute Symfony applications. If not, you&#8217;ll see the list of changes needed
-to meet those requirements.</p>
-<div class="admonition tip">
-<p class="first admonition-title">小技巧</p>
-<p class="last">For security reasons, all Symfony versions are digitally signed before
-distributing them. If you want to verify the integrity of any Symfony
-version, follow the steps <a class="reference external" href="javascript:if(confirm('http://fabien.potencier.org/article/73/signing-project-releases  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://fabien.potencier.org/article/73/signing-project-releases'" tppabs="http://fabien.potencier.org/article/73/signing-project-releases">explained in this post</a>.</p>
-</div>
-<div class="section" id="basing-your-project-on-a-specific-symfony-version">
-<h3>基于某个Symfony版本来创建应用<a class="headerlink" href="#basing-your-project-on-a-specific-symfony-version" title="永久链接至标题">¶</a></h3>
-<p>If your project needs to be based on a specific Symfony version, pass the version
-number as the second argument of the <code class="docutils literal"><span class="pre">new</span></code> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Linux, Mac OS X</span>
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                该命令创建一个名为<code class="docutils literal"><span
+                                        class="pre">my_project_name</span></code>的新目录，其中包含基于最新稳定的Symfony版本的全新项目。 另外，安装程序会检查您的系统是否符合执行Symfony应用程序的技术要求。 如果没有，您会看到满足这些要求所需的更改列表。
+                            </p>
+                            <div class="admonition tip">
+                                <p class="first admonition-title">小技巧</p>
+                                <p class="last">
+                                    出于安全原因，所有Symfony版本在分发之前都进行了数字签名。 如果您想验证任何Symfony版本的完整性，请按照<a class="reference external"
+                                                                                                 href="javascript:if(confirm('http://fabien.potencier.org/article/73/signing-project-releases  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://fabien.potencier.org/article/73/signing-project-releases'"
+                                                                                                 tppabs="http://fabien.potencier.org/article/73/signing-project-releases">本文中介绍</a>的步骤操作。
+                                </p>
+                            </div>
+                            <div class="section" id="basing-your-project-on-a-specific-symfony-version">
+                                <h3>基于某个Symfony版本来创建应用<a class="headerlink"
+                                                         href="#basing-your-project-on-a-specific-symfony-version"
+                                                         title="永久链接至标题">¶</a></h3>
+                                <p>
+                                    如果您的项目需要基于特定的Symfony版本，请将版本号作为<code class="docutils literal"><span
+                                            class="pre">新</span></code>命令的第二个参数传递：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="c"># Linux, Mac OS X</span>
 <span class="nv">$ </span>symfony new my_project_name 2.3.23
 
 <span class="c"># Windows</span>
 c:<span class="se">\p</span>rojects<span class="se">\&gt;</span> php symfony.phar new my_project_name 2.3.23
-</pre></div>
-</div>
-<p>If you want your project to be based on the latest <a class="reference internal" href="releases.html#releases-lts" tppabs="http://symfony.cn/docs/contributing/community/releases.html#releases-lts"><span>Symfony LTS version</span></a>,
-pass <code class="docutils literal"><span class="pre">lts</span></code> as the second argument of the <code class="docutils literal"><span class="pre">new</span></code> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Linux, Mac OS X</span>
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    如果您希望您的项目基于最新的<a class="reference internal"
+                                                     href="releases.html#releases-lts"
+                                                     tppabs="http://symfony.cn/docs/contributing/community/releases.html#releases-lts"><span>Symfony LTS版本</span></a>，请将<code class="docutils literal"><span class="pre">lts</span></code>作为<code class="docutils literal"><span
+                                            class="pre">新</span></code>命令的第二个参数：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="c"># Linux, Mac OS X</span>
 <span class="nv">$ </span>symfony new my_project_name lts
 
 <span class="c"># Windows</span>
 c:<span class="se">\p</span>rojects<span class="se">\&gt;</span> php symfony.phar new my_project_name lts
-</pre></div>
-</div>
-<p>Read the <a class="reference internal" href="releases.html" tppabs="http://symfony.cn/docs/contributing/community/releases.html"><em>Symfony Release process</em></a>
-to better understand why there are several Symfony versions and which one
-to use for your projects.</p>
-</div>
-</div>
-<div class="section" id="creating-symfony-applications-without-the-installer">
-<span id="book-creating-applications-without-the-installer"></span><h2>不使用安装工具创建应用<a class="headerlink" href="#creating-symfony-applications-without-the-installer" title="永久链接至标题">¶</a></h2>
-<p>If you still use PHP 5.3, or if you can&#8217;t execute the installer for any reason,
-you can create Symfony applications using the alternative installation method
-based on <a class="reference external" href="javascript:if(confirm('http://getcomposer.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://getcomposer.org/'" tppabs="http://getcomposer.org/">Composer</a>.</p>
-<p>Composer is the dependency manager used by modern PHP applications and it can
-also be used to create new applications based on the Symfony framework. If you
-don&#8217;t have installed it globally, start by reading the next section.</p>
-<div class="section" id="installing-composer-globally">
-<h3>全局安装Composer<a class="headerlink" href="#installing-composer-globally" title="永久链接至标题">¶</a></h3>
-<p>Start with <a class="reference internal" href="composer.html" tppabs="http://symfony.cn/docs/cookbook/composer.html"><em>installing Composer globally</em></a>.</p>
-</div>
-<div class="section" id="creating-a-symfony-application-with-composer">
-<h3>通过Composer安装Symfony应用<a class="headerlink" href="#creating-a-symfony-application-with-composer" title="永久链接至标题">¶</a></h3>
-<p>Once Composer is installed on your computer, execute the <code class="docutils literal"><span class="pre">create-project</span></code>
-command to create a new Symfony application based on its latest stable version:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>composer create-project symfony/framework-standard-edition my_project_name
-</pre></div>
-</div>
-<p>If you need to base your application on a specific Symfony version, provide that
-version as the second argument of the <code class="docutils literal"><span class="pre">create-project</span></code> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>composer create-project symfony/framework-standard-edition my_project_name <span class="s2">&quot;2.3.*&quot;</span>
-</pre></div>
-</div>
-<div class="admonition tip">
-<p class="first admonition-title">小技巧</p>
-<p class="last">If your Internet connection is slow, you may think that Composer is not
-doing anything. If that&#8217;s your case, add the <code class="docutils literal"><span class="pre">-vvv</span></code> flag to the previous
-command to display a detailed output of everything that Composer is doing.</p>
-</div>
-</div>
-</div>
-<div class="section" id="running-the-symfony-application">
-<h2>运行Symfony应用<a class="headerlink" href="#running-the-symfony-application" title="永久链接至标题">¶</a></h2>
-<p>Symfony leverages the internal web server provided by PHP to run applications
-while developing them. Therefore, running a Symfony application is a matter of
-browsing the project directory and executing this command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_project_name/
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    阅读 <a class="reference internal" href="releases.html"
+                                          tppabs="http://symfony.cn/docs/contributing/community/releases.html"><em>Symfony发布流程</em></a>以更好地理解为什么有几个Symfony版本以及哪个版本用于您的项目。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section" id="creating-symfony-applications-without-the-installer">
+                            <span id="book-creating-applications-without-the-installer"></span>
+                            <h2>不使用安装工具创建应用<a class="headerlink"
+                                              href="#creating-symfony-applications-without-the-installer"
+                                              title="永久链接至标题">¶</a></h2>
+                            <p>
+                                如果您仍然使用PHP 5.3，或者因为任何原因无法执行安装程序，则可以使用基于<a class="reference external"
+                                                                          href="javascript:if(confirm('http://getcomposer.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://getcomposer.org/'"
+                                                                          tppabs="http://getcomposer.org/">Composer</a>的替代安装方法创建Symfony应用程序。
+                            </p>
+                            <p>Composer是现代PHP应用程序使用的依赖管理器，它也可以用来创建基于Symfony框架的新应用程序。 如果您没有在全局安装它，请先阅读下一节。</p>
+                            <div class="section" id="installing-composer-globally">
+                                <h3>全局安装Composer<a class="headerlink" href="#installing-composer-globally"
+                                                   title="永久链接至标题">¶</a></h3>
+                                <p>
+                                    从<a class="reference internal" href="composer.html"
+                                        tppabs="http://symfony.cn/docs/cookbook/composer.html"><em>全局安装Composer</em></a>开始。
+                                </p>
+                            </div>
+                            <div class="section" id="creating-a-symfony-application-with-composer">
+                                <h3>通过Composer安装Symfony应用<a class="headerlink"
+                                                            href="#creating-a-symfony-application-with-composer"
+                                                            title="永久链接至标题">¶</a></h3>
+                                <p>
+                                    将Composer安装到您的计算机上后，执行<code
+                                            class="docutils literal"><span class="pre">create-project</span></code>命令，基于其最新的稳定版本创建新的Symfony应用程序：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ </span>composer create-project symfony/framework-standard-edition my_project_name
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    如果您需要将应用程序基于特定的Symfony版本，请将该版本作为<code class="docutils literal"><span
+                                            class="pre">create-project</span></code>命令的第二个参数提供：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ </span>composer create-project symfony/framework-standard-edition my_project_name <span
+                                            class="s2">&quot;2.3.*&quot;</span>
+</pre>
+                                    </div>
+                                </div>
+                                <div class="admonition tip">
+                                    <p class="first admonition-title">小技巧</p>
+                                    <p class="last">
+                                        如果您的互联网连接速度很慢，您可能会认为Composer没有做任何事情。 如果这是您的情况，请将<code
+                                                class="docutils literal"><span class="pre">-vvv</span></code>标志添加到上一个命令以显示Composer正在执行的所有操作的详细输出。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="running-the-symfony-application">
+                            <h2>运行Symfony应用<a class="headerlink" href="#running-the-symfony-application"
+                                              title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Symfony利用PHP提供的内部Web服务器在开发应用程序时运行它们。 因此，运行Symfony应用程序需要浏览项目目录并执行以下命令：
+                            </p>
+                            <div class="highlight-bash">
+                                <div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_project_name/
 <span class="nv">$ </span>php app/console server:run
-</pre></div>
-</div>
-<p>Then, open your browser and access the <code class="docutils literal"><span class="pre">http://localhost:8000</span></code> URL to see the
-Welcome page of Symfony:</p>
-<img alt="Symfony Welcome Page" class="align-center" src="welcome.png" tppabs="http://symfony.cn/docs/_images/welcome.png" />
-<p>Instead of the Welcome Page, you may see a blank page or an error page.
-This is caused by a directory permission misconfiguration. There are several
-possible solutions depending on your operating system. All of them are
-explained in the <a class="reference internal" href="#book-installation-permissions"><span>Setting up Permissions</span></a>
-section.</p>
-<div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">PHP&#8217;s internal web server is available in PHP 5.4 or higher versions. If you
-still use the legacy PHP 5.3 version, you&#8217;ll have to configure a <em>virtual host</em>
-in your web server.</p>
-</div>
-<p>The <code class="docutils literal"><span class="pre">server:run</span></code> command is only suitable while developing the application. In
-order to run Symfony applications on production servers, you&#8217;ll have to configure
-your <a class="reference external" href="javascript:if(confirm('http://httpd.apache.org/docs/current/mod/core.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://httpd.apache.org/docs/current/mod/core.html#documentroot'" tppabs="http://httpd.apache.org/docs/current/mod/core.html#documentroot">Apache</a> or <a class="reference external" href="javascript:if(confirm('http://wiki.nginx.org/Symfony  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://wiki.nginx.org/Symfony'" tppabs="http://wiki.nginx.org/Symfony">Nginx</a> web server as explained in
-<a class="reference internal" href="web_server_configuration.html" tppabs="http://symfony.cn/docs/cookbook/configuration/web_server_configuration.html"><em>Web服务器的配置</em></a>.</p>
-<p>When you are finished working on your Symfony application, you can stop the
-server with the <code class="docutils literal"><span class="pre">server:stop</span></code> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console server:stop
-</pre></div>
-</div>
-</div>
-<div class="section" id="checking-symfony-application-configuration-and-setup">
-<h2>检查Symfony应用的配置和运行环境<a class="headerlink" href="#checking-symfony-application-configuration-and-setup" title="永久链接至标题">¶</a></h2>
-<p>Symfony applications come with a visual server configuration tester to show if
-your environment is ready to use Symfony. Access the following URL to check your
-configuration:</p>
-<div class="highlight-text"><div class="highlight"><pre>http://localhost:8000/config.php
-</pre></div>
-</div>
-<p>If there are any issues, correct them now before moving on.</p>
-<div class="sidebar" id="book-installation-permissions">
-<p class="first sidebar-title">Setting up Permissions</p>
-<p>One common issue when installing Symfony is that the <code class="docutils literal"><span class="pre">app/cache</span></code> and
-<code class="docutils literal"><span class="pre">app/logs</span></code> directories must be writable both by the web server and the
-command line user. On a UNIX system, if your web server user is different
-from your command line user, you can try one of the following solutions.</p>
-<p><strong>1. Use the same user for the CLI and the web server</strong></p>
-<p>In development environments, it is a common practice to use the same UNIX
-user for the CLI and the web server because it avoids any of these permissions
-issues when setting up new projects. This can be done by editing your web server
-configuration (e.g. commonly httpd.conf or apache2.conf for Apache) and setting
-its user to be the same as your CLI user (e.g. for Apache, update the <code class="docutils literal"><span class="pre">User</span></code>
-and <code class="docutils literal"><span class="pre">Group</span></code> values).</p>
-<p><strong>2. Using ACL on a system that supports chmod +a</strong></p>
-<p>Many systems allow you to use the <code class="docutils literal"><span class="pre">chmod</span> <span class="pre">+a</span></code> command. Try this first,
-and if you get an error - try the next method. This uses a command to
-try to determine your web server user and set it as <code class="docutils literal"><span class="pre">HTTPDUSER</span></code>:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>rm -rf app/cache/*
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                然后，打开浏览器并访问<code class="docutils literal"><span class="pre">http://localhost:8000</span></code>URL以查看Symfony的欢迎页面：
+                            </p>
+                            <img alt="Symfony Welcome Page" class="align-center" src="welcome.png"
+                                 tppabs="http://symfony.cn/docs/_images/welcome.png"/>
+                            <p>
+                                您可能会看到空白页面或错误页面，而不是欢迎页面。 这是由目录权限配置错误引起的。 根据您的操作系统，有几种可能的解决方案。 所有这些都在<a class="reference internal"
+                                                                                                       href="#book-installation-permissions"><span>设置权限</span></a>部分进行了解释。
+                            </p>
+                            <div class="admonition note">
+                                <p class="first admonition-title">注解</p>
+                                <p class="last">
+                                    PHP的内部Web服务器可用于PHP 5.4或更高版本。 如果您仍然使用旧版PHP 5.3版本，则必须在Web服务器中配置<em>虚拟主机</em>。
+                                </p>
+                            </div>
+                            <p>
+                                <code class="docutils literal"><span class="pre">server:run</span></code>命令仅适用于开发应用程序。 为了在生产服务器上运行Symfony应用程序，您必须按照<a class="reference internal" href="web_server_configuration.html"
+                                                                                                                                                      tppabs="http://symfony.cn/docs/cookbook/configuration/web_server_configuration.html"><em>Web服务器的配置</em></a>中的说明配置<a class="reference external"
+                                                                                                                                                                         href="javascript:if(confirm('http://httpd.apache.org/docs/current/mod/core.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://httpd.apache.org/docs/current/mod/core.html#documentroot'"
+                                                                                                                                                                         tppabs="http://httpd.apache.org/docs/current/mod/core.html#documentroot">Apache</a>或<a class="reference external"
+                                                                                                                                                                                                                                                                href="javascript:if(confirm('http://wiki.nginx.org/Symfony  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://wiki.nginx.org/Symfony'"
+                                                                                                                                                                                                                                                                tppabs="http://wiki.nginx.org/Symfony">Nginx</a> Web服务器。
+                            </p>
+                            <p>
+                                当您完成Symfony应用程序的工作时，可以使用<code class="docutils literal"><span
+                                        class="pre">server:stop</span></code>命令停止服务器：
+                            </p>
+                            <div class="highlight-bash">
+                                <div class="highlight"><pre><span class="nv">$ </span>php app/console server:stop
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section" id="checking-symfony-application-configuration-and-setup">
+                            <h2>检查Symfony应用的配置和运行环境<a class="headerlink"
+                                                      href="#checking-symfony-application-configuration-and-setup"
+                                                      title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Symfony应用程序随附可视化服务器配置测试程序，以显示您的环境是否可以使用Symfony。 访问以下URL以检查您的配置：
+                            </p>
+                            <div class="highlight-text">
+                                <div class="highlight"><pre>http://localhost:8000/config.php
+</pre>
+                                </div>
+                            </div>
+                            <p>如果有任何问题，请在继续之前对其进行更正。</p>
+                            <div class="sidebar" id="book-installation-permissions">
+                                <p class="first sidebar-title">Setting up Permissions</p>
+                                <p>
+                                    安装Symfony时的一个常见问题是<code
+                                            class="docutils literal"><span class="pre">app/cache</span></code>和 <code class="docutils literal"><span class="pre">app/logs</span></code>目录必须由Web服务器和命令行用户写入。 在UNIX系统上，如果您的Web服务器用户与您的命令行用户不同，您可以尝试以下解决方案之一。
+                                </p>
+                                <p><strong>1. 使用CLI和Web服务器的相同用户</strong></p>
+                                <p>
+                                    在开发环境中，为CLI和Web服务器使用相同的UNIX用户是一种常见做法，因为它在设置新项目时避免了任何这些权限问题。 这可以通过编辑Web服务器配置来完成（例如，通常为Apache的httpd.conf或apache2.conf）并将其用户设置为与CLI用户相同（例如，对于Apache，更新<code
+                                            class="docutils literal"><span class="pre">用户</span></code>和<code class="docutils literal"><span class="pre">用户组</span></code>）。
+                                </p>
+                                <p><strong>2. 使用ACL的系统支持chmod +a命令</strong></p>
+                                <p>
+                                    许多系统允许你使用<code class="docutils literal"><span class="pre">chmod</span>
+                                        <span class="pre">+a</span></code>命令。 首先尝试一下，如果出现错误 - 请尝试下一个方法。 这使用命令来尝试确定您的Web服务器用户并将其设置为<code
+                                            class="docutils literal"><span class="pre">HTTPDUSER</span></code>：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ </span>rm -rf app/cache/*
 <span class="nv">$ </span>rm -rf app/logs/*
 
-<span class="nv">$ HTTPDUSER</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -E <span class="s1">&#39;[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx&#39;</span> <span class="p">|</span> grep -v root <span class="p">|</span> head -1 <span class="p">|</span> cut -d<span class="se">\ </span> -f1<span class="sb">`</span>
-<span class="nv">$ </span>sudo chmod +a <span class="s2">&quot;</span><span class="nv">$HTTPDUSER</span><span class="s2"> allow delete,write,append,file_inherit,directory_inherit&quot;</span> app/cache app/logs
+<span class="nv">$ HTTPDUSER</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -E <span
+                                                class="s1">&#39;[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx&#39;</span> <span
+                                                class="p">|</span> grep -v root <span class="p">|</span> head -1 <span
+                                                class="p">|</span> cut -d<span class="se">\ </span> -f1<span class="sb">`</span>
+<span class="nv">$ </span>sudo chmod +a <span class="s2">&quot;</span><span class="nv">$HTTPDUSER</span><span
+                                                class="s2"> allow delete,write,append,file_inherit,directory_inherit&quot;</span> app/cache app/logs
 <span class="nv">$ </span>sudo chmod +a <span class="s2">&quot;`whoami` allow delete,write,append,file_inherit,directory_inherit&quot;</span> app/cache app/logs
-</pre></div>
-</div>
-<p><strong>3. Using ACL on a system that does not support chmod +a</strong></p>
-<p>Some systems don&#8217;t support <code class="docutils literal"><span class="pre">chmod</span> <span class="pre">+a</span></code>, but do support another utility
-called <code class="docutils literal"><span class="pre">setfacl</span></code>. You may need to <a class="reference external" href="javascript:if(confirm('https://help.ubuntu.com/community/FilePermissionsACLs  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://help.ubuntu.com/community/FilePermissionsACLs'" tppabs="https://help.ubuntu.com/community/FilePermissionsACLs">enable ACL support</a> on your partition
-and install setfacl before using it (as is the case with Ubuntu). This
-uses a command to try to determine your web server user and set it as
-<code class="docutils literal"><span class="pre">HTTPDUSER</span></code>:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ HTTPDUSER</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -E <span class="s1">&#39;[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx&#39;</span> <span class="p">|</span> grep -v root <span class="p">|</span> head -1 <span class="p">|</span> cut -d<span class="se">\ </span> -f1<span class="sb">`</span>
-<span class="nv">$ </span>sudo setfacl -R -m u:<span class="s2">&quot;</span><span class="nv">$HTTPDUSER</span><span class="s2">&quot;</span>:rwX -m u:<span class="sb">`</span>whoami<span class="sb">`</span>:rwX app/cache app/logs
-<span class="nv">$ </span>sudo setfacl -dR -m u:<span class="s2">&quot;</span><span class="nv">$HTTPDUSER</span><span class="s2">&quot;</span>:rwX -m u:<span class="sb">`</span>whoami<span class="sb">`</span>:rwX app/cache app/logs
-</pre></div>
-</div>
-<p>If this doesn&#8217;t work, try adding <code class="docutils literal"><span class="pre">-n</span></code> option.</p>
-<p><strong>4. Without using ACL</strong></p>
-<p>If none of the previous methods work for you, change the umask so that the
-cache and log directories will be group-writable or world-writable (depending
-if the web server user and the command line user are in the same group or not).
-To achieve this, put the following line at the beginning of the <code class="docutils literal"><span class="pre">app/console</span></code>,
-<code class="docutils literal"><span class="pre">web/app.php</span></code> and <code class="docutils literal"><span class="pre">web/app_dev.php</span></code> files:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="nb">umask</span><span class="p">(</span><span class="mo">0002</span><span class="p">);</span> <span class="c1">// This will let the permissions be 0775</span>
+</pre>
+                                    </div>
+                                </div>
+                                <p><strong>3. 使用ACL的系统不支持chmod +a命令</strong></p>
+                                <p>
+                                    有些系统不支持<code class="docutils literal"><span class="pre">chmod</span>
+                                        <span class="pre">+a</span></code>，但支持另一个名为<code class="docutils literal"><span class="pre">setfacl</span></code>的实用程序。 您可能需要在分区上启用<a class="reference external"
+                                                                                                                                                                              href="javascript:if(confirm('https://help.ubuntu.com/community/FilePermissionsACLs  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://help.ubuntu.com/community/FilePermissionsACLs'"
+                                                                                                                                                                              tppabs="https://help.ubuntu.com/community/FilePermissionsACLs">enable
+                                        ACL 支持</a>，并在使用之前安装setfacl（与Ubuntu相同）。 这使用命令来尝试确定您的Web服务器用户并将其设置为 <code class="docutils literal"><span class="pre">HTTPDUSER</span></code>：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ HTTPDUSER</span><span
+                                            class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -E <span
+                                            class="s1">&#39;[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx&#39;</span> <span
+                                            class="p">|</span> grep -v root <span class="p">|</span> head -1 <span
+                                            class="p">|</span> cut -d<span class="se">\ </span> -f1<span
+                                            class="sb">`</span>
+<span class="nv">$ </span>sudo setfacl -R -m u:<span class="s2">&quot;</span><span class="nv">$HTTPDUSER</span><span
+                                                class="s2">&quot;</span>:rwX -m u:<span class="sb">`</span>whoami<span
+                                                class="sb">`</span>:rwX app/cache app/logs
+<span class="nv">$ </span>sudo setfacl -dR -m u:<span class="s2">&quot;</span><span class="nv">$HTTPDUSER</span><span
+                                                class="s2">&quot;</span>:rwX -m u:<span class="sb">`</span>whoami<span
+                                                class="sb">`</span>:rwX app/cache app/logs
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    如果这不起作用，请尝试添加<code class="docutils literal"><span
+                                            class="pre">-n</span></code>选项。
+                                </p>
+                                <p><strong>4. 不使用ACL</strong></p>
+                                <p>
+                                    如果前面的方法都不适用于您，请更改umask，以便缓存和日志目录可以分组写入或全局可写（取决于Web服务器用户和命令行用户是否在同一组中）。 为了达到这个目的，在<code
+                                            class="docutils literal"><span class="pre">app/console</span></code>，<code class="docutils literal"><span class="pre">web/app.php</span></code>和<code
+                                            class="docutils literal"><span class="pre">web/app_dev.php</span></code>文件的开始放置以下行：
+                                </p>
+                                <div class="highlight-php">
+                                    <div class="highlight"><pre><span class="nb">umask</span><span
+                                            class="p">(</span><span class="mo">0002</span><span
+                                            class="p">);</span> <span class="c1">// This will let the permissions be 0775</span>
 
 <span class="c1">// or</span>
 
-<span class="nb">umask</span><span class="p">(</span><span class="mo">0000</span><span class="p">);</span> <span class="c1">// This will let the permissions be 0777</span>
-</pre></div>
-</div>
-<p class="last">Note that using the ACL is recommended when you have access to them
-on your server because changing the umask is not thread-safe.</p>
-</div>
-</div>
-<div class="section" id="updating-symfony-applications">
-<span id="installation-updating-vendors"></span><h2>Symfony应用升级<a class="headerlink" href="#updating-symfony-applications" title="永久链接至标题">¶</a></h2>
-<p>At this point, you&#8217;ve created a fully-functional Symfony application in which
-you&#8217;ll start to develop your own project. A Symfony application depends on
-a number of external libraries. These are downloaded into the <code class="docutils literal"><span class="pre">vendor/</span></code> directory
-and they are managed exclusively by Composer.</p>
-<p>Updating those third-party libraries frequently is a good practice to prevent bugs
-and security vulnerabilities. Execute the <code class="docutils literal"><span class="pre">update</span></code> Composer command to update
-them all at once:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_project_name/
+<span class="nb">umask</span><span class="p">(</span><span class="mo">0000</span><span class="p">);</span> <span
+                                                class="c1">// This will let the permissions be 0777</span>
+</pre>
+                                    </div>
+                                </div>
+                                <p class="last">请注意，当您在服务器上访问ACL时，建议使用ACL，因为更改umask不是线程安全的。</p>
+                            </div>
+                        </div>
+                        <div class="section" id="updating-symfony-applications">
+                            <span id="installation-updating-vendors"></span>
+                            <h2>Symfony应用升级<a class="headerlink" href="#updating-symfony-applications"
+                                              title="永久链接至标题">¶</a></h2>
+                            <p>
+                                此时，您已经创建了一个功能齐全的Symfony应用程序，您将在其中开始开发自己的项目。 Symfony应用程序依赖于许多外部库。 这些被下载到<code
+                                        class="docutils literal"><span class="pre">vendor/</span></code>目录中，并由Composer专门管理。
+                            </p>
+                            <p>
+                                频繁更新这些第三方库是防止错误和安全漏洞的良好做法。 执行<code class="docutils literal"><span
+                                        class="pre">更新</span></code>Composer命令以一次全部更新它们：
+                            </p>
+                            <div class="highlight-bash">
+                                <div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_project_name/
 <span class="nv">$ </span>composer update
-</pre></div>
-</div>
-<p>Depending on the complexity of your project, this update process can take up to
-several minutes to complete.</p>
-<div class="admonition tip">
-<p class="first admonition-title">小技巧</p>
-<p>Symfony provides a command to check whether your project&#8217;s dependencies
-contain any know security vulnerability:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php app/console security:check
-</pre></div>
-</div>
-<p class="last">A good security practice is to execute this command regularly to be able to
-update or replace compromised dependencies as soon as possible.</p>
-</div>
-</div>
-<div class="section" id="installing-a-symfony-distribution">
-<span id="installing-a-symfony2-distribution"></span><h2>安装Symfony发行版<a class="headerlink" href="#installing-a-symfony-distribution" title="永久链接至标题">¶</a></h2>
-<p>Symfony project packages &#8220;distributions&#8221;, which are fully-functional applications
-that include the Symfony core libraries, a selection of useful bundles, a
-sensible directory structure and some default configuration. In fact, when you
-created a Symfony application in the previous sections, you actually downloaded the
-default distribution provided by Symfony, which is called <em>Symfony Standard Edition</em>.</p>
-<p>The <em>Symfony Standard Edition</em> is by far the most popular distribution and it&#8217;s
-also the best choice for developers starting with Symfony. However, the Symfony
-Community has published other popular distributions that you may use in your
-applications:</p>
-<ul class="simple">
-<li>The <a class="reference external" href="javascript:if(confirm('https://github.com/symfony-cmf/symfony-cmf-standard  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/symfony-cmf/symfony-cmf-standard'" tppabs="https://github.com/symfony-cmf/symfony-cmf-standard">Symfony CMF Standard Edition</a> is the best distribution to get started
-with the <a class="reference external" href="javascript:if(confirm('http://cmf.symfony.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://cmf.symfony.com/'" tppabs="http://cmf.symfony.com/">Symfony CMF</a> project, which is a project that makes it easier for
-developers to add CMS functionality to applications built with the Symfony
-framework.</li>
-<li>The <a class="reference external" href="javascript:if(confirm('https://github.com/gimler/symfony-rest-edition  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/gimler/symfony-rest-edition'" tppabs="https://github.com/gimler/symfony-rest-edition">Symfony REST Edition</a> shows how to build an application that provides a
-RESTful API using the FOSRestBundle and several other related bundles.</li>
-</ul>
-</div>
-<div class="section" id="using-source-control">
-<h2>使用代码管理工具<a class="headerlink" href="#using-source-control" title="永久链接至标题">¶</a></h2>
-<p>If you&#8217;re using a version control system like <a class="reference external" href="javascript:if(confirm('http://git-scm.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git-scm.com/'" tppabs="http://git-scm.com/">Git</a>, you can safely commit all
-your project&#8217;s code. The reason is that Symfony applications already contain a
-<code class="docutils literal"><span class="pre">.gitignore</span></code> file specially prepared for Symfony.</p>
-<p>For specific instructions on how best to set up your project to be stored
-in Git, see <a class="reference internal" href="new_project_git.html" tppabs="http://symfony.cn/docs/cookbook/workflow/new_project_git.html"><em>How to Create and Store a Symfony Project in Git</em></a>.</p>
-<div class="section" id="checking-out-a-versioned-symfony-application">
-<h3>检出Symfony应用<a class="headerlink" href="#checking-out-a-versioned-symfony-application" title="永久链接至标题">¶</a></h3>
-<p>When using Composer to manage application&#8217;s dependencies, it&#8217;s recommended to
-ignore the entire <code class="docutils literal"><span class="pre">vendor/</span></code> directory before committing its code to the
-repository. This means that when checking out a Symfony application from a Git
-repository, there will be no <code class="docutils literal"><span class="pre">vendor/</span></code> directory and the application won&#8217;t
-work out-of-the-box.</p>
-<p>In order to make it work, check out the Symfony application and then execute the
-<code class="docutils literal"><span class="pre">install</span></code> Composer command to download and install all the dependencies required
-by the application:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_project_name/
+</pre>
+                                </div>
+                            </div>
+                            <p>
+                                根据项目的复杂程度，此更新过程可能需要几分钟才能完成。
+                            </p>
+                            <div class="admonition tip">
+                                <p class="first admonition-title">小技巧</p>
+                                <p>Symfony提供了一个命令来检查项目的依赖关系是否包含任何已知的安全漏洞：</p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ </span>php app/console security:check
+</pre>
+                                    </div>
+                                </div>
+                                <p class="last">一个好的安全措施是定期执行这个命令，以便能够尽快更新或替换受损的依赖关系。</p>
+                            </div>
+                        </div>
+                        <div class="section" id="installing-a-symfony-distribution">
+                            <span id="installing-a-symfony2-distribution"></span>
+                            <h2>安装Symfony发行版<a class="headerlink" href="#installing-a-symfony-distribution"
+                                               title="永久链接至标题">¶</a></h2>
+                            <p>
+                                Symfony项目包“发行版”，这些发行版是全功能的应用程序，其中包括Symfony核心库，一系列有用的软件包，合理的目录结构和一些默认配置。 实际上，当您在前面的章节中创建Symfony应用程序时，实际上是下载了由Symfony提供的默认分配，该分配称为<em>Symfony标准版</em>。
+                            </p>
+                            <p>
+                                <em>Symfony标准版</em>是迄今为止最受欢迎的发行版，它也是开始使用Symfony的开发者的最佳选择。 但是，Symfony社区已经发布了其他可以在您的应用程序中使用的流行发行版：
+                            </p>
+                            <ul class="simple">
+                                <li>
+                                    <a class="reference external"
+                                       href="javascript:if(confirm('https://github.com/symfony-cmf/symfony-cmf-standard  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/symfony-cmf/symfony-cmf-standard'"
+                                       tppabs="https://github.com/symfony-cmf/symfony-cmf-standard">Symfony CMF标准版</a>是开始使用<a class="reference external"
+                                                                                                                              href="javascript:if(confirm('http://cmf.symfony.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://cmf.symfony.com/'"
+                                                                                                                              tppabs="http://cmf.symfony.com/">Symfony CMF</a>项目的最佳发行版，该项目使开发人员可以更轻松地将CMS功能添加到使用Symfony框架构建的应用程序中。
+                                </li>
+                                <li>
+                                    <a class="reference external"
+                                       href="javascript:if(confirm('https://github.com/gimler/symfony-rest-edition  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/gimler/symfony-rest-edition'"
+                                       tppabs="https://github.com/gimler/symfony-rest-edition">Symfony REST
+                                        Edition</a> 展示了如何构建一个应用程序，该应用程序使用FOSRestBundle和其他几个相关软件包来提供RESTful API。
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section" id="using-source-control">
+                            <h2>使用代码管理工具<a class="headerlink" href="#using-source-control" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                如果您使用<a class="reference external"
+                                        href="javascript:if(confirm('http://git-scm.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git-scm.com/'"
+                                        tppabs="http://git-scm.com/">Git</a>等版本控制系统，则可以安全地提交所有项目的代码。 原因是Symfony应用程序已经包含专门为Symfony准备的<code class="docutils literal"><span class="pre">.gitignore</span></code>文件。
+                            </p>
+                            <p>
+                                有关如何最好地将项目设置为存储在Git中的具体说明，请参阅<a class="reference internal" href="new_project_git.html"
+                                                                tppabs="http://symfony.cn/docs/cookbook/workflow/new_project_git.html"><em>如何在Git中创建和存储Symfony项目</em></a>。
+                            </p>
+                            <div class="section" id="checking-out-a-versioned-symfony-application">
+                                <h3>检出Symfony应用<a class="headerlink"
+                                                  href="#checking-out-a-versioned-symfony-application"
+                                                  title="永久链接至标题">¶</a></h3>
+                                <p>
+                                    使用Composer管理应用程序的依赖关系时，建议在将代码提交到存储库之前忽略整个<code class="docutils literal"><span
+                                            class="pre">vendor/</span></code>目录。 这意味着，当从Git存储库中检出Symfony应用程序时，将不会有<code class="docutils literal"><span class="pre">vendor/</span></code>目录，并且该应用程序不能立即使用。
+                                </p>
+                                <p>
+                                    为了使其工作，请检查Symfony应用程序，然后执行<code class="docutils literal"><span class="pre">install</span></code> Composer命令以下载并安装应用程序所需的所有依赖项：
+                                </p>
+                                <div class="highlight-bash">
+                                    <div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_project_name/
 <span class="nv">$ </span>composer install
-</pre></div>
-</div>
-<p>How does Composer know which specific dependencies to install? Because when a
-Symfony application is committed to a repository, the <code class="docutils literal"><span class="pre">composer.json</span></code> and
-<code class="docutils literal"><span class="pre">composer.lock</span></code> files are also committed. These files tell Composer which
-dependencies (and which specific versions) to install for the application.</p>
-</div>
-</div>
-<div class="section" id="beginning-development">
-<h2>开始开发工作<a class="headerlink" href="#beginning-development" title="永久链接至标题">¶</a></h2>
-<p>Now that you have a fully-functional Symfony application, you can begin
-development! Your distribution may contain some sample code - check the
-<code class="docutils literal"><span class="pre">README.md</span></code> file included with the distribution (open it as a text file)
-to learn about what sample code was included with your distribution.</p>
-<p>If you&#8217;re new to Symfony, check out &#8220;<a class="reference internal" href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html"><em>创建页面</em></a>&#8221;, where you&#8217;ll
-learn how to create pages, change configuration, and do everything else you&#8217;ll
-need in your new application.</p>
-<p>Be sure to also check out the <a class="reference internal" href="index-3.html" tppabs="http://symfony.cn/docs/cookbook/index.html"><em>Cookbook</em></a>, which contains
-a wide variety of articles about solving specific problems with Symfony.</p>
-<div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">If you want to remove the sample code from your distribution, take a look
-at this cookbook article: &#8220;<a class="reference internal" href="remove.html" tppabs="http://symfony.cn/docs/cookbook/bundles/remove.html"><em>如何删除AcmeDemoBundle</em></a>&#8220;</p>
-</div>
-</div>
-</div>
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    Composer如何知道要安装哪些特定的依赖关系？ 因为当Symfony应用程序被提交到存储库时，<code
+                                            class="docutils literal"><span class="pre">composer.json</span></code>和<code class="docutils literal"><span class="pre">composer.lock</span></code>文件也被提交。 这些文件告诉Composer为应用程序安装哪些依赖项（以及哪些特定版本）。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section" id="beginning-development">
+                            <h2>开始开发工作<a class="headerlink" href="#beginning-development" title="永久链接至标题">¶</a></h2>
+                            <p>
+                                现在您已经拥有了功能完整的Symfony应用程序，您可以开始开发！ 您的发行版可能包含一些示例代码 - 查看发行版中包含的<code class="docutils literal"><span class="pre">README.md</span></code>文件（将其作为文本文件打开），以了解您的发行版包含哪些示例代码。
+                            </p>
+                            <p>
+                                如果您是Symfony的新手，请查看“<a class="reference internal"
+                                                      href="page_creation.html"
+                                                      tppabs="http://symfony.cn/docs/book/page_creation.html"><em>创建页面</em></a>”，在这里您将学习如何创建页面，更改配置以及在新应用程序中执行其他所有操作。
+                            </p>
+                            <p>
+                                请务必查看<a class="reference internal" href="index-3.html"
+                                        tppabs="http://symfony.cn/docs/cookbook/index.html"><em>手册</em></a>，其中包含有关解决Symfony特定问题的各种文章。
+                            </p>
+                            <div class="admonition note">
+                                <p class="first admonition-title">注解</p>
+                                <p class="last">
+                                    如果您想从发行版中删除示例代码，请查看本手册文章：“<a class="reference internal" href="remove.html"
+                                                                      tppabs="http://symfony.cn/docs/cookbook/bundles/remove.html"><em>如何删除AcmeDemoBundle</em></a>”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
 
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html" class="btn btn-neutral float-right" title="创建页面">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="from_flat_php_to_symfony2.html" tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html" class="btn btn-neutral" title="Symfony vs 纯PHP"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
+                </div>
+                <footer>
 
-  <hr/>
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  <div role="contentinfo">
-    <p>
-        &copy; 版权所有 Creative Commons Attribution-Share Alike 3.0 Unported.
-    </p>
-  </div>
+                        <a href="page_creation.html" tppabs="http://symfony.cn/docs/book/page_creation.html"
+                           class="btn btn-neutral float-right" title="创建页面">Next <span
+                                class="fa fa-arrow-circle-right"></span></a>
 
-  Built with <a href="javascript:if(confirm('http://sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx-doc.org/'" tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/snide/sphinx_rtd_theme'" tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="javascript:if(confirm('https://readthedocs.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://readthedocs.org/'" tppabs="https://readthedocs.org/">Read the Docs</a>.
-  
-</footer>
+
+                        <a href="from_flat_php_to_symfony2.html"
+                           tppabs="http://symfony.cn/docs/book/from_flat_php_to_symfony2.html" class="btn btn-neutral"
+                           title="Symfony vs 纯PHP"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; 版权所有 Creative Commons Attribution-Share Alike 3.0 Unported.
+                        </p>
+                    </div>
+
+                    Built with <a
+                        href="javascript:if(confirm('http://sphinx-doc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sphinx-doc.org/'"
+                        tppabs="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="javascript:if(confirm('https://github.com/snide/sphinx_rtd_theme  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/snide/sphinx_rtd_theme'"
+                        tppabs="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+                        href="javascript:if(confirm('https://readthedocs.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://readthedocs.org/'"
+                        tppabs="https://readthedocs.org/">Read the Docs</a>.
+
+                </footer>
+            </div>
         </div>
-      </div>
 
     </section>
 
-  </div>
-  
+</div>
 
 
-  
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true
+    };
+</script>
+<script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
+<script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
+<script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
+<script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="jquery.js" tppabs="http://symfony.cn/docs/_static/jquery.js"></script>
-      <script type="text/javascript" src="underscore.js" tppabs="http://symfony.cn/docs/_static/underscore.js"></script>
-      <script type="text/javascript" src="doctools.js" tppabs="http://symfony.cn/docs/_static/doctools.js"></script>
-      <script type="text/javascript" src="translations.js" tppabs="http://symfony.cn/docs/_static/translations.js"></script>
 
-  
+<script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
 
-  
-  
-    <script type="text/javascript" src="theme.js" tppabs="http://symfony.cn/docs/_static/js/theme.js"></script>
-  
 
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.StickyNav.enable();
+    });
+</script>
+
 
 </body>
 </html>
